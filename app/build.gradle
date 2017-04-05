@@ -1,23 +1,146 @@
+buildscript {
+    repositories {
+        jcenter()
+        add project.repositories.ivy
+    }
+
+    dependencies {
+        classpath 'mobi:tabasco-gradle:1.0.46'
+    }
+}
+
 apply plugin: 'com.android.application'
+apply plugin: 'ivy-publish'
+apply plugin: 'tabasco'
 
 android {
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
+    signingConfigs {
+        defaultSigning {
+            storeFile file('signing/signing.keystore')
+            storePassword 'BODYAvNhGWueUNSFgKIkelkCoLqVGKlfVJPhdWFAmcrolTDbDb'
+            keyAlias 'Componentsdemo'
+            keyPassword 'mAojtTLercNvERQrlmMYjBdDmGSnCSZsEJvGTZjWpsJiiaoLbF'
+        }
+        debugSigning {
+            storeFile file('signing/debug.keystore')
+            storePassword 'XQRlUyXRrZbUtYdqUywTYlxShiwfVTyCgeyyxdmoqizHAKyPCV'
+            keyAlias 'Componentsdemo'
+            keyPassword 'vRayMuokhxgsVLtGygRIvkicCBlmJNfDjGlyjBVHlVBKgKcZeA'
+        }
+    }
     defaultConfig {
         applicationId "mobi.lab.componentsdemo"
         minSdkVersion 16
         targetSdkVersion 25
-        versionCode 1
-        versionName "1.0"
+        signingConfig signingConfigs.defaultSigning
+        versionName project.ext.versionName
+        versionCode project.ext.versionCode
+
+        println 'CONF: versionName is set to: ' + versionName
+        println 'CONF: versionCode is set to: ' + versionCode
+        println 'CONF: is a release build: ' + project.ext.isRelease
     }
     buildTypes {
         release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            // Proguard is enabled by default
+            // (Think about the logging lib before turning this off)
+            minifyEnabled true
         }
+
+        debug {
+            signingConfig signingConfigs.debugSigning
+        }
+    }
+    lintOptions {
+        // In general we want to check for problems. Any time, all the time.
+        checkReleaseBuilds true
+        // And fail the build if we have errors
+        abortOnError true
+
+        // Level depends on the type of the job
+        /// Fail the build if buildGreenhouseRelease target is called and we have missing translations!
+        project.ext.isRelease ? error("MissingTranslation") : warning("MissingTranslation")
+        // Error level things
+        /// Hardcoded text should not exist or should have case by case exceptions
+        error "HardcodedText"
+        // Warning level things
+        warning "ImpliedQuantity"
+        // Retrofit uses Okio and that generates this warning
+        warning "InvalidPackage"
     }
 }
 
 dependencies {
     compile 'com.android.support:appcompat-v7:25.3.1'
 }
+
+project.ext.apkFiles = fileTree('build/outputs/apk') {
+    include '*.apk'
+}
+
+project.ext.proguardFiles = fileTree('build/outputs/mapping/release') {
+    include 'mapping.txt'
+}
+
+tabasco {
+    id = 'mobi-solutions'
+    secret = '3da541559918a808c2402bba5012f6c60b27661c'
+    repoPattern = "https://nexus.lab.mobi/content/repositories/mobi-gradle/$project.group/$project.name/[revision]/[filename]-[revision].[ext]"
+    files = apkFiles
+    release = project.ext.isRelease
+    verbose = false
+}
+
+task(reg_artifacts) << {
+    apkFiles.each { File file ->
+        IvyArtifact artifact = publishing.publications.ivy.artifact(file)
+        artifact.setName(file.getName().substring(0, file.getName().lastIndexOf('.')));
+        println "Added artifact " + artifact.name
+    }
+    proguardFiles.each { File file ->
+        IvyArtifact artifact = publishing.publications.ivy.artifact(file)
+        artifact.setName(file.getName().substring(0, file.getName().lastIndexOf('.')));
+        println "Added artifact " + artifact.name
+    }
+}
+
+assemble.doLast {
+    tasks.reg_artifacts.execute()
+}
+
+publishing {
+    publications {
+        ivy(IvyPublication) {
+        }
+    }
+    repositories {
+        ivy {
+            credentials {
+                username project.nexusUser
+                password project.nexusPass
+            }
+            url "https://nexus.lab.mobi/content/repositories/mobi-gradle/"
+            ivyPattern "https://nexus.lab.mobi/content/repositories/mobi-gradle/[organisation]/[module](/[branch])/[revision]/ivy.xml"
+            artifactPattern "https://nexus.lab.mobi/content/repositories/mobi-gradle/[organisation]/[module](/[branch])/[revision]/[artifact].[ext]"
+        }
+    }
+}
+
+def GROUP_BUILD_TASKS = 'Build'
+task buildGreenhouseDebug(dependsOn: ['clean', 'build', 'publish', 'tabasco_publish'])
+buildGreenhouseDebug.group = GROUP_BUILD_TASKS
+buildGreenhouseDebug.description = "Build and publish the debug version with GreenhouseCI"
+
+task buildGreenhouseRelease(dependsOn: ['buildGreenhouseDebug'])
+buildGreenhouseRelease.group = GROUP_BUILD_TASKS
+buildGreenhouseRelease.description = "Build and publish the release version with GreenhouseCI"
+
+build.mustRunAfter clean
+publish.mustRunAfter build
+tabasco_publish.mustRunAfter publish
