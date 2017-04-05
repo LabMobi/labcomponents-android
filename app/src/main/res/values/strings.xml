@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ComponentsDemo</string>
+    <string name="title_bounded_view">BoundedView</string>
 </resources>
