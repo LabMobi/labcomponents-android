@@ -9,11 +9,9 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/item_bounded_view"
-            style="@style/ComponentText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/title_bounded_view"/>
+            android:text="Bounded view" />
 
     </LinearLayout>
 

@@ -8,4 +8,15 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="ComponentText" parent="TextAppearance.AppCompat.Large">
+        <!-- Customize your theme here. -->
+        <item name="android:paddingLeft">@dimen/margin_def_2</item>
+        <item name="android:paddingRight">@dimen/margin_def_2</item>
+        <item name="android:paddingTop">@dimen/margin_def</item>
+        <item name="android:paddingBottom">@dimen/margin_def</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:minHeight">?attr/listPreferredItemHeight</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
 </resources>
