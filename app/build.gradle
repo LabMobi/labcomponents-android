@@ -1,25 +1,23 @@
 buildscript {
     repositories {
         jcenter()
-        add project.repositories.ivy
-    }
-
-    dependencies {
-        classpath 'mobi:tabasco-gradle:1.0.46'
+        google()
     }
 }
 
+repositories {
+    jcenter()
+    google()
+}
+
 apply plugin: 'com.android.application'
-apply plugin: 'ivy-publish'
-apply plugin: 'tabasco'
 
 android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_7
         targetCompatibility JavaVersion.VERSION_1_7
     }
-    compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    compileSdkVersion 28
     signingConfigs {
         defaultSigning {
             storeFile file('signing/signing.keystore')
@@ -37,7 +35,7 @@ android {
     defaultConfig {
         applicationId "mobi.lab.componentsdemo"
         minSdkVersion 16
-        targetSdkVersion 25
+        targetSdkVersion 28
         signingConfig signingConfigs.defaultSigning
         versionName project.ext.versionName
         versionCode project.ext.versionCode
@@ -45,6 +43,7 @@ android {
         println 'CONF: versionName is set to: ' + versionName
         println 'CONF: versionCode is set to: ' + versionCode
         println 'CONF: is a release build: ' + project.ext.isRelease
+        println 'CONF: BUILD_NUMBER: ' + "$System.env.BUILD_NUMBER"
     }
     buildTypes {
         release {
@@ -77,63 +76,11 @@ android {
 }
 
 dependencies {
-    compile 'com.android.support:appcompat-v7:25.3.1'
-}
-
-project.ext.apkFiles = fileTree('build/outputs/apk') {
-    include '*.apk'
-}
-
-project.ext.proguardFiles = fileTree('build/outputs/mapping/release') {
-    include 'mapping.txt'
-}
-
-tabasco {
-    id = 'mobi-solutions'
-    secret = '3da541559918a808c2402bba5012f6c60b27661c'
-    repoPattern = "https://nexus.lab.mobi/content/repositories/mobi-gradle/$project.group/$project.name/[revision]/[filename]-[revision].[ext]"
-    files = apkFiles
-    release = project.ext.isRelease
-    verbose = false
-}
-
-task(reg_artifacts) << {
-    apkFiles.each { File file ->
-        IvyArtifact artifact = publishing.publications.ivy.artifact(file)
-        artifact.setName(file.getName().substring(0, file.getName().lastIndexOf('.')));
-        println "Added artifact " + artifact.name
-    }
-    proguardFiles.each { File file ->
-        IvyArtifact artifact = publishing.publications.ivy.artifact(file)
-        artifact.setName(file.getName().substring(0, file.getName().lastIndexOf('.')));
-        println "Added artifact " + artifact.name
-    }
-}
-
-assemble.doLast {
-    tasks.reg_artifacts.execute()
-}
-
-publishing {
-    publications {
-        ivy(IvyPublication) {
-        }
-    }
-    repositories {
-        ivy {
-            credentials {
-                username project.nexusUser
-                password project.nexusPass
-            }
-            url "https://nexus.lab.mobi/content/repositories/mobi-gradle/"
-            ivyPattern "https://nexus.lab.mobi/content/repositories/mobi-gradle/[organisation]/[module](/[branch])/[revision]/ivy.xml"
-            artifactPattern "https://nexus.lab.mobi/content/repositories/mobi-gradle/[organisation]/[module](/[branch])/[revision]/[artifact].[ext]"
-        }
-    }
+    implementation 'com.android.support:appcompat-v7:28.0.0'
 }
 
 def GROUP_BUILD_TASKS = 'Build'
-task buildGreenhouseDebug(dependsOn: ['clean', 'build', 'publish', 'tabasco_publish'])
+task buildGreenhouseDebug(dependsOn: ['clean', 'build'])
 buildGreenhouseDebug.group = GROUP_BUILD_TASKS
 buildGreenhouseDebug.description = "Build and publish the debug version with GreenhouseCI"
 
@@ -142,5 +89,3 @@ buildGreenhouseRelease.group = GROUP_BUILD_TASKS
 buildGreenhouseRelease.description = "Build and publish the release version with GreenhouseCI"
 
 build.mustRunAfter clean
-publish.mustRunAfter build
-tabasco_publish.mustRunAfter publish
