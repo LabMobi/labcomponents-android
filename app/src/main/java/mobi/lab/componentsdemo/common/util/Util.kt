@@ -1,8 +1,6 @@
 package mobi.lab.componentsdemo.common.util
 
-import android.Manifest
 import android.content.Context
-import android.content.pm.PackageManager
 import android.graphics.Color
 import android.util.TypedValue
 import android.view.View
@@ -11,26 +9,11 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import androidx.annotation.ColorInt
 import androidx.annotation.StringRes
-import androidx.core.content.ContextCompat
 import mobi.lab.componentsdemo.BuildConfig
-import mobi.lab.componentsdemo.R
-import mobi.lab.componentsdemo.domain.entities.ErrorCode
 import kotlin.math.roundToInt
-
-fun hasExternalStorageWritePermission(context: Context): Boolean {
-    return ContextCompat.checkSelfPermission(context, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED
-}
-
-fun isExternalStorageMounted(): Boolean {
-    return android.os.Environment.MEDIA_MOUNTED == android.os.Environment.getExternalStorageState()
-}
 
 fun isDebugBuild(): Boolean {
     return BuildConfig.DEBUG
-}
-
-fun isCrashlyticsEnabled(): Boolean {
-    return !isDebugBuild()
 }
 
 fun showToast(ctx: Context?, message: CharSequence) {
@@ -75,17 +58,6 @@ fun setColorAlpha(alpha: Float, @ColorInt color: Int): Int {
         Color.green(color),
         Color.blue(color)
     )
-}
-
-fun formatErrorCode(context: Context?, error: ErrorCode?, @StringRes default: Int = R.string.error_generic): String {
-    if (context == null) {
-        return ""
-    }
-    val resId = when (error) {
-        ErrorCode.LOCAL_NO_NETWORK -> R.string.error_no_network
-        else -> default
-    }
-    return context.getString(resId)
 }
 
 fun dpToPx(context: Context?, dp: Int): Float {

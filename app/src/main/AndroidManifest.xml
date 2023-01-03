@@ -26,8 +26,8 @@
         </provider>
 
         <activity
-            android:name="mobi.lab.componentsdemo.splash.SplashActivity"
-            android:theme="@style/AppTheme.Splash"
+            android:name="mobi.lab.componentsdemo.main.MainActivity"
+            android:theme="@style/AppTheme"
             android:exported="true"
             >
             <intent-filter>
@@ -36,21 +36,6 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
-        </activity>
-
-        <activity
-            android:name="mobi.lab.componentsdemo.login.LoginActivity"
-            android:theme="@style/AppTheme">
-        </activity>
-
-        <activity
-            android:name="mobi.lab.componentsdemo.main.MainActivity"
-            android:theme="@style/AppTheme">
-        </activity>
-
-        <activity
-            android:name="mobi.lab.componentsdemo.prototype.PrototypeActivity"
-            android:theme="@style/AppTheme">
         </activity>
     </application>
 </manifest>

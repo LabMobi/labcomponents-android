@@ -6,28 +6,6 @@ apply plugin: "com.android.application"
 apply plugin: "kotlin-android"
 apply plugin: "kotlin-parcelize"
 apply plugin: "kotlin-kapt"
-apply plugin: "com.google.gms.google-services"
-apply plugin: "com.google.firebase.crashlytics"
-
-ext {
-    /* Versioning information:
-     * The versions are in the format x.y.z
-     * x - Major version
-     * y - Minor version
-     * z - Patch version
-     * w - Build version
-     *
-     * versionName will be x.y.z
-     * versionCode will be a number in the format xxyyzzw.
-     * This means that every version (except build version) has up to 2 digits until it starts affecting other numbers.
-     * w (versionBuild) is for making a release with the same version name, but different version code.
-     */
-    versionMajor = 0
-    versionMinor = 0
-    versionPatch = 1
-    versionBuild = 0 // Use this when builds with the same version are needed. Change to 0 once done
-    initVersioning()
-}
 
 android {
     namespace "mobi.lab.componentsdemo"
@@ -53,14 +31,12 @@ android {
         targetSdkVersion libs.versions.android.sdk.target.get()
         minSdkVersion libs.versions.android.sdk.min.get()
         applicationId "mobi.lab.componentsdemo"
-        testInstrumentationRunner "mobi.lab.componentsdemo.util.CustomTestRunner"
 
-        versionCode project.ext.versionCode
-        versionName project.ext.versionName
+        versionCode 1
+        versionName "0.0.1"
 
         println "CONF: versionName is set to: " + versionName
         println "CONF: versionCode is set to: " + versionCode
-        println "CONF: is a release build: " + project.ext.isRelease
     }
 
     signingConfigs {
@@ -117,7 +93,7 @@ android {
 
         // Level depends on the type of the job
         /// Fail the build if buildNevercodeRelease target is called and we have missing translations!
-        project.ext.isRelease ? error("MissingTranslation") : warning("MissingTranslation")
+        warning("MissingTranslation")
         // Error level things
         /// Hardcoded text should not exist or should have case by case exceptions
         error "HardcodedText"
@@ -135,97 +111,33 @@ android {
 }
 
 dependencies {
-    // Dagger
-    libsHelper.addDaggerDependencies(it)
     libsHelper.addUnitTestDependencies(it)
     libsHelper.addInstrumentationTestDependencies(it)
 
     implementation libs.kotlin
-    implementation libs.androidx.legacy
-    implementation libs.androidx.livedata
-    implementation libs.androidx.viewmodel
     coreLibraryDesugaring libs.jdk.desugar
-
-    // Analytics
-    implementation libs.firebase.analytics
-    implementation libs.firebase.crashlytics
-
-    // RxJava
-    implementation libs.rxjava
-    implementation libs.rxjava.android
 
     // Util
     implementation libs.androidx.lifecycle.extensions
-    implementation libs.scrolls
     implementation libs.timber
+    implementation libs.scrolls
     implementation libs.eventbus
 
     // UI
     implementation libs.androidx.appcompat
     implementation libs.androidx.fragment.ktx
-    implementation libs.androidx.splashscreen
     implementation libs.constraintlayout
     implementation libs.material
     implementation libs.material.progressbar
     implementation libs.material.dialogs
-
-    implementation project(":app-infrastructure")
-    implementation project(":app-domain")
-    implementation project(":app-common")
-    implementation project(":lib-mvvm")
 }
 
 def GROUP_CI_BUILD_TASKS = "Build"
 
-task buildAllDebug(dependsOn: [
-        ":app-common:build",
-        ":app-domain:build",
-        ":app-infrastructure:build",
-        ":lib-mvvm:build",
-        "build"
-])
+task buildAllDebug(dependsOn: ["build"])
 buildAllDebug.group = GROUP_CI_BUILD_TASKS
 buildAllDebug.description = "Build the debug version"
 
 task buildAllRelease(dependsOn: ["buildAllDebug", "bundleRelease"])
 buildAllRelease.group = GROUP_CI_BUILD_TASKS
 buildAllRelease.description = "Build the release version"
-
-def initVersioning() {
-    // versionMajor is not limited
-    checkVersioningNumber(versionMinor, 99, "Minor")
-    checkVersioningNumber(versionPatch, 99, "Patch")
-    checkVersioningNumber(versionBuild, 9, "Build")
-
-    // Yes yes, I am cheating here.
-    project.ext.isRelease = project.gradle.startParameter.taskNames.contains("buildAllRelease")
-
-    String versionName
-    int versionCode
-
-    String baseVersionName = "$versionMajor.$versionMinor.$versionPatch"
-    if (isRelease) {
-        versionName = baseVersionName
-        versionCode = versionMajor * 100000 + versionMinor * 1000 + versionPatch * 10 + versionBuild
-    } else {
-        String suppliedBuildNumber = "$System.env.BUILD_NUMBER"
-        if (suppliedBuildNumber == null || suppliedBuildNumber == "" || suppliedBuildNumber == "null") {
-            suppliedBuildNumber = 1
-        }
-
-        versionName = "${baseVersionName}.devbuild-$suppliedBuildNumber"
-        versionCode = 1
-    }
-
-    project.ext.versionName = versionName
-    project.ext.versionCode = versionCode
-}
-
-static def checkVersioningNumber(int number, int limit, String fieldName) {
-    if (number < 0) {
-        throw new GradleException("$fieldName version number can\'t be less than 0")
-    } else if (number > limit) {
-        throw new GradleException("$fieldName version number can\'t be greater than $limit")
-    }
-}
-

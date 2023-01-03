@@ -10,11 +10,9 @@ definitions:
     - app/build/outputs/**/*.aab
     - app/build/outputs/**/mapping.txt
   debug-emails: &debugEmails
-    # TODO change this email
-    - android@lab.mobi
+    - lauris.kruusamae@lab.mobi
   release-emails: &releaseEmails
-    # TODO change this email
-    - android@lab.mobi
+    - lauris.kruusamae@lab.mobi
   scripts:
     # Local setup
     - &stepLocalSetup

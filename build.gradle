@@ -18,9 +18,7 @@ buildscript {
     dependencies {
         classpath libs.gradle.plugin.android
         classpath libs.gradle.plugin.kotlin
-        classpath libs.gradle.plugin.crashlytics
         classpath libs.gradle.plugin.ktlint
-        classpath libs.gradle.plugin.googleservices
         classpath libs.gradle.plugin.gradleversions
         classpath libs.gradle.plugin.detekt
     }

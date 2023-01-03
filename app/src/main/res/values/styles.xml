@@ -19,18 +19,6 @@
         <item name="android:windowLightStatusBar">true</item>
     </style>
 
-    <style name="AppTheme.Splash" parent="Theme.SplashScreen">
-        <!-- Splash screen background -->
-        <item name="windowSplashScreenBackground">@color/white</item>
-
-        <!-- Use adaptive launcher icon's foreground and background for splash -->
-        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
-        <item name="windowSplashScreenIconBackgroundColor">@color/ic_launcher_background</item>
-
-        <!-- Set the theme of the Activity that directly follows your splash screen. -->
-        <item name="postSplashScreenTheme">@style/AppTheme</item>
-    </style>
-
     <style name="Text" parent="">
         <!-- Base text styles with fonts, etc.-->
         <!-- Add custom Text styles as neede. For example Text.Body.16 or Text.Title, Text.Subtitle.-->

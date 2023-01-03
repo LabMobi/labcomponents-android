@@ -1,7 +1,3 @@
 rootProject.name = "ComponentsDemo"
-include ":app",
-        ":app-domain",
-        ":app-infrastructure",
-        ":app-common",
-        ":lib-mvvm"
+include ":app"
 

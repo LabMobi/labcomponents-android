@@ -25,14 +25,5 @@ ext.libsHelper = [
             handler.androidTestImplementation libs.test.androidx.core
             handler.androidTestImplementation libs.test.androidx.espresso.core
             handler.androidTestImplementation libs.test.androidx.espresso.intents
-
-            handler.androidTestImplementation libs.dagger
-            handler.androidTestAnnotationProcessor libs.dagger.compiler
-            handler.kaptAndroidTest libs.dagger.compiler
         },
-
-        addDaggerDependencies: { handler ->
-            handler.implementation libs.dagger
-            handler.kapt libs.dagger.compiler
-        }
 ]

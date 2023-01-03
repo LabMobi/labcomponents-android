@@ -3,7 +3,7 @@ package mobi.lab.componentsdemo.common.dialog
 import android.os.Bundle
 import android.text.TextUtils
 import mobi.lab.componentsdemo.common.eventbus.DataEvent
-import mobi.lab.componentsdemo.app.common.exhaustive
+import mobi.lab.componentsdemo.common.util.exhaustive
 
 class DialogEvent(val tag: String, val action: Action, bundle: Bundle? = null) : DataEvent<Bundle?>(bundle) {
 

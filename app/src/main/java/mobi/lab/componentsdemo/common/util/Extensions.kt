@@ -2,19 +2,16 @@ package mobi.lab.componentsdemo.common.util
 
 import android.text.SpannableString
 import android.text.Spanned
+import android.text.TextUtils
 import android.widget.EditText
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.LinearSmoothScroller
 import androidx.recyclerview.widget.RecyclerView
-import mobi.lab.componentsdemo.app.common.isStringEmpty
-import mobi.lab.componentsdemo.domain.entities.DomainException
-import mobi.lab.componentsdemo.domain.entities.ErrorCode
 import timber.log.Timber
 
-// TODO add more here
 fun EditText.setTextAndSelection(text: CharSequence) {
-    if (isStringEmpty(text)) {
+    if (TextUtils.isEmpty(text)) {
         getText().clear()
     } else {
         setText(text)
@@ -67,6 +64,29 @@ fun RecyclerView.smoothScrollToTop(smoothOffsetY: Int = 10) {
     manager.startSmoothScroll(scroller)
 }
 
-fun Throwable.errorCode(): ErrorCode {
-    return if (this is DomainException) code else ErrorCode.UNKNOWN
-}
+/**
+ * when statement only creates a compiler error for sealed classes when used as an expression.
+ * Use this .exhaustive extensions in other cases to get the compiler error when not all available options are defined.
+ *
+ * sealed class A
+ *
+ * class B : A()
+ * class C : A()
+ *
+ * // Compiler error
+ * val y = when(x) {
+ *   is B ->
+ * }
+ *
+ * // No compiler error
+ * when(x) {
+ *   is B ->
+ * }
+ *
+ * // Compiler error
+ * when(x) {
+ *   is B ->
+ * }.exhaustive
+ */
+val <T> T.exhaustive: T
+    get() = this

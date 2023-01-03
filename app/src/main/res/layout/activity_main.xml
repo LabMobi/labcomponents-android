@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.google.android.material.appbar.MaterialToolbar
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         style="@style/Toolbar"
         android:layout_width="0dp"
@@ -13,7 +13,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:title="@string/title_debug" />
+        app:title="@string/title_prototype" />
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="0dp"
@@ -48,7 +48,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/size_48"
-                android:text="@string/text_debug_options"
+                android:text="@string/text_experience_prototype"
                 app:layout_constraintEnd_toEndOf="@id/guide_end"
                 app:layout_constraintStart_toStartOf="@id/guide_start"
                 app:layout_constraintTop_toTopOf="parent"/>
@@ -59,45 +59,22 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/size_24"
-                android:text="@string/text_debug_menu_description"
+                android:text="@string/text_experience_prototype_description"
                 app:layout_constraintEnd_toEndOf="@id/guide_end"
                 app:layout_constraintStart_toStartOf="@id/guide_start"
                 app:layout_constraintTop_toBottomOf="@id/text_title"/>
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/button_scrolls"
+                android:id="@+id/button_open"
                 style="@style/Button"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/size_48"
-                android:text="@string/button_view_logs"
+                android:text="@string/title_open_prototype"
                 app:layout_constraintEnd_toEndOf="@id/guide_end"
                 app:layout_constraintStart_toStartOf="@id/guide_start"
                 app:layout_constraintTop_toBottomOf="@id/text_description" />
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/button_crash"
-                style="@style/Button"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/size_48"
-                android:text="@string/button_crash"
-                app:layout_constraintEnd_toEndOf="@id/guide_end"
-                app:layout_constraintStart_toStartOf="@id/guide_start"
-                app:layout_constraintTop_toBottomOf="@id/button_scrolls" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/button_logout"
-                style="@style/Button"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/size_48"
-                android:text="@string/button_invalidate"
-                app:layout_constraintEnd_toEndOf="@id/guide_end"
-                app:layout_constraintStart_toStartOf="@id/guide_start"
-                app:layout_constraintTop_toBottomOf="@id/button_crash" />
-
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
-

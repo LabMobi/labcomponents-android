@@ -3,20 +3,12 @@ package mobi.lab.componentsdemo.common
 import android.os.Bundle
 import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.LifecycleOwner
-import mobi.lab.componentsdemo.mvvm.MvvmLiveDataExtensions
 import timber.log.Timber
 
-open class BaseActivity : AppCompatActivity, MvvmLiveDataExtensions {
+open class BaseActivity : AppCompatActivity {
 
     constructor() : super()
     constructor(@LayoutRes contentLayoutId: Int) : super(contentLayoutId)
-
-    /**
-     * Activity Lifecycle is also connected to it's View lifecycle so we want to return
-     * the lifecycle of the Activity itself here. See [BaseMvvmFragment] for why you'd want something different.
-     */
-    override fun getLifecycleOwner(): LifecycleOwner = this
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

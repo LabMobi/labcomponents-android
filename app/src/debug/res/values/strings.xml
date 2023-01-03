@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="text_debug_options">Debug Options</string>
-    <string name="text_debug_menu_description">The following debugging capabilities are only available for non-release builds</string>
-    <string name="button_invalidate">Invalidate session</string>
-    <string name="button_crash">Force crash</string>
-    <string name="button_view_logs">View logs</string>
-</resources>

@@ -2,16 +2,15 @@ package mobi.lab.componentsdemo.main
 
 import android.content.Context
 import android.content.Intent
-import androidx.fragment.app.Fragment
-import mobi.lab.componentsdemo.common.BaseFragmentActivity
+import android.os.Bundle
+import mobi.lab.componentsdemo.common.BaseActivity
 
-class MainActivity : BaseFragmentActivity() {
+class MainActivity : BaseActivity() {
 
-    override val tag: String
-        get() = MainFragment::class.java.name
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
 
-    override fun createFragment(): Fragment {
-        return MainFragment.newInstance()
+
     }
 
     companion object {
