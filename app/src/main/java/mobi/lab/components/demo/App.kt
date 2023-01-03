@@ -5,7 +5,6 @@ import android.app.ActivityManager
 import android.app.Application
 import android.os.Process
 import android.os.StrictMode
-import mobi.lab.components.demo.BuildConfig
 import mobi.lab.components.demo.common.logging.ScrollsTree
 import mobi.lab.components.demo.common.util.isDebugBuild
 import mobi.lab.scrolls.LogPost
