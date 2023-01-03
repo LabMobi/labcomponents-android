@@ -1,56 +1,85 @@
-ext {
-    versionName = "0.0.1"
-    versionCode = 1
-    isRelease = false
-}
-
-static def getDate() {
-    def date = new Date()
-    def formattedDate = date.format('yyyy.MM.dd')
-    return formattedDate
-}
-
+apply plugin: "com.github.ben-manes.versions"
 
 allprojects {
-    buildscript {
-        project.group = "mobi"
-        // Yes yes, I am cheating here.
-        project.ext.isRelease = project.gradle.startParameter.taskNames.contains("buildGreenhouseRelease")
-
-        String suppliedBuildNumber = "$System.env.BUILD_NUMBER"
-        // VersionName
-        if (suppliedBuildNumber == null || suppliedBuildNumber.equals("") || suppliedBuildNumber.equals("null")) {
-            project.ext.versionName = getDate() + (isRelease ? ".r" : ".d") + "1"
-        } else {
-            project.ext.versionName = getDate() + (isRelease ? ".r" : ".d") + suppliedBuildNumber
-        }
-        // This is the synonym
-        project.version = project.ext.versionName
-
-        // VersionCode
-        if (suppliedBuildNumber == null || suppliedBuildNumber.equals("") || suppliedBuildNumber.equals("null")) {
-            project.ext.versionCode = 1
-        } else {
-            project.ext.versionCode = Integer.valueOf(suppliedBuildNumber)
-        }
-
-        repositories {
-            google()
-            jcenter()
-            mavenCentral()
-        }
-
-        dependencies {
-            classpath 'com.android.tools.build:gradle:3.5.0'
-        }
-    }
     repositories {
         google()
-        jcenter()
         mavenCentral()
     }
 }
 
+buildscript {
+    apply from: "$rootDir/dependencies.gradle"
+    repositories {
+        google()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath libs.gradle.plugin.android
+        classpath libs.gradle.plugin.kotlin
+        classpath libs.gradle.plugin.crashlytics
+        classpath libs.gradle.plugin.ktlint
+        classpath libs.gradle.plugin.googleservices
+        classpath libs.gradle.plugin.gradleversions
+        classpath libs.gradle.plugin.detekt
+    }
+}
+
+subprojects {
+    // KTLint (Kotlin code style enforcer)
+    apply plugin: "org.jlleitschuh.gradle.ktlint"
+    ktlint {
+        android = true
+        outputToConsole = true
+    }
+
+    // Detekt (Kotlin static analyser)
+    apply plugin: "io.gitlab.arturbosch.detekt"
+    detekt {
+        allRules = true // Include all rules
+        buildUponDefaultConfig = true // preconfigure defaults (see the rule set file below for explanations)
+        config = files("${project.rootDir}/config/detekt/detekt-config.yaml") // point to your custom config defining rules to run, overwriting default behavior
+
+        reports {
+            html.enabled = true // Create a HTML report
+            xml.enabled = false // XML report not needed
+            txt.enabled = false // txt report not needed
+        }
+    }
+    tasks.detekt.jvmTarget = "1.8"
+    afterEvaluate {
+        // Make sure detekt is executed with all the other linters for all modules
+        check.dependsOn "detekt"
+    }
+
+    def GROUP_VERIFICATION_TASKS = "Verification"
+    task checkCode(dependsOn: ["detekt", "ktlintCheck"])
+    checkCode.group = GROUP_VERIFICATION_TASKS
+    checkCode.description = "Run detekt and ktlint"
+}
+
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+
+// Don't show non stable updates for current stable versions
+def isNonStable = { String version ->
+    def stableKeyword = ["RELEASE", "FINAL", "GA"].any { keyword -> version.toUpperCase().contains(keyword) }
+    def regex = /^[0-9,.v-]+(-r)?$/
+    return !stableKeyword && !(version ==~ regex)
+}
+
+dependencyUpdates {
+    checkForGradleUpdate = true
+
+    resolutionStrategy {
+        componentSelection {
+            all {
+                if (isNonStable(candidate.version) && !isNonStable(currentVersion)) {
+                    reject("Release candidate")
+                }
+            }
+        }
+    }
 }

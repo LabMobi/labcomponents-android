@@ -1,8 +1,30 @@
+# ignore vim swap files
+*.swp
+# ignore test files
+TEST-*.xml
+# ignore eclipse .settings files
+.settings/
+.project
+.classpath
+
+# ignore idea files
 *.iml
-.gradle
-/local.properties
-/.idea/
+.idea/*
+
+# ignore mac stuff Mac
 .DS_Store
-/build
-/captures
-.externalNativeBuild
+
+# ignore eclipse/idea/ant/maven/gradle output
+bin/
+local.properties
+signing.properties
+build/
+gen/
+classes
+.gradle
+out/
+target
+captures/
+
+# Allow sharing inspection profiles
+!.idea/inspectionProfiles/

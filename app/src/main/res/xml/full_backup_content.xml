@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <!-- Everything is allowed atm -->
+    <!-- NB: If you start doing GCM push messages then the key for that should be omitted -->
+    <exclude domain="sharedpref" path="storage.xml"/>
+</full-backup-content>

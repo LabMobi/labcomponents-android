@@ -1,69 +1,122 @@
-buildscript {
-    repositories {
-        jcenter()
-        google()
-    }
-}
-
 repositories {
-    jcenter()
-    google()
+    maven { url "https://jitpack.io" }
 }
 
-apply plugin: 'com.android.application'
+apply plugin: "com.android.application"
+apply plugin: "kotlin-android"
+apply plugin: "kotlin-parcelize"
+apply plugin: "kotlin-kapt"
+apply plugin: "com.google.gms.google-services"
+apply plugin: "com.google.firebase.crashlytics"
+
+ext {
+    /* Versioning information:
+     * The versions are in the format x.y.z
+     * x - Major version
+     * y - Minor version
+     * z - Patch version
+     * w - Build version
+     *
+     * versionName will be x.y.z
+     * versionCode will be a number in the format xxyyzzw.
+     * This means that every version (except build version) has up to 2 digits until it starts affecting other numbers.
+     * w (versionBuild) is for making a release with the same version name, but different version code.
+     */
+    versionMajor = 0
+    versionMinor = 0
+    versionPatch = 1
+    versionBuild = 0 // Use this when builds with the same version are needed. Change to 0 once done
+    initVersioning()
+}
 
 android {
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_7
-        targetCompatibility JavaVersion.VERSION_1_7
+    namespace "mobi.lab.componentsdemo"
+
+    buildFeatures {
+        viewBinding = true
     }
-    compileSdkVersion 28
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    compileOptions {
+        // Flag to enable support for the new language APIs
+        coreLibraryDesugaringEnabled true
+
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        compileSdkVersion libs.versions.android.sdk.compile.get()
+        targetSdkVersion libs.versions.android.sdk.target.get()
+        minSdkVersion libs.versions.android.sdk.min.get()
+        applicationId "mobi.lab.componentsdemo"
+        testInstrumentationRunner "mobi.lab.componentsdemo.util.CustomTestRunner"
+
+        versionCode project.ext.versionCode
+        versionName project.ext.versionName
+
+        println "CONF: versionName is set to: " + versionName
+        println "CONF: versionCode is set to: " + versionCode
+        println "CONF: is a release build: " + project.ext.isRelease
+    }
+
     signingConfigs {
-        defaultSigning {
-            storeFile file('signing/signing.keystore')
-            storePassword 'BODYAvNhGWueUNSFgKIkelkCoLqVGKlfVJPhdWFAmcrolTDbDb'
-            keyAlias 'Componentsdemo'
-            keyPassword 'mAojtTLercNvERQrlmMYjBdDmGSnCSZsEJvGTZjWpsJiiaoLbF'
+        releaseSigning {
+            storeFile file("signing/signing.keystore")
+            storePassword "JthvvZuFHcubhcfdNEwlaozMsBwgStijeJuaUIKsBwrNNCHQdn"
+            keyAlias "ComponentsDemo"
+            keyPassword "XZdAtrAzsIvTLgqPjpfzxpqEnOENBRRpMZOWgsUXyCXSHolTJo"
         }
         debugSigning {
-            storeFile file('signing/debug.keystore')
-            storePassword 'XQRlUyXRrZbUtYdqUywTYlxShiwfVTyCgeyyxdmoqizHAKyPCV'
-            keyAlias 'Componentsdemo'
-            keyPassword 'vRayMuokhxgsVLtGygRIvkicCBlmJNfDjGlyjBVHlVBKgKcZeA'
+            storeFile file("signing/debug.keystore")
+            storePassword "PzIzJAqvONJmhryYnzDgDfFAXMotnJZQhuPCgbFteBYAmNLbwY"
+            keyAlias "ComponentsDemo"
+            keyPassword "ouHhtZOSoyLaMOKYPJmZsGdZSOAisscmDNFhMpOkpBUpTzzgbe"
         }
     }
-    defaultConfig {
-        applicationId "mobi.lab.componentsdemo"
-        minSdkVersion 16
-        targetSdkVersion 28
-        signingConfig signingConfigs.defaultSigning
-        versionName project.ext.versionName
-        versionCode project.ext.versionCode
-
-        println 'CONF: versionName is set to: ' + versionName
-        println 'CONF: versionCode is set to: ' + versionCode
-        println 'CONF: is a release build: ' + project.ext.isRelease
-        println 'CONF: BUILD_NUMBER: ' + "$System.env.BUILD_NUMBER"
-    }
+    
     buildTypes {
         release {
             // Proguard is enabled by default
             // (Think about the logging lib before turning this off)
             minifyEnabled true
+            proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
+            signingConfig signingConfigs.releaseSigning
         }
 
         debug {
             signingConfig signingConfigs.debugSigning
         }
     }
+
+    testOptions {
+        animationsDisabled = true
+
+        unitTests.all {
+            testLogging {
+                events "passed", "skipped", "failed", "standardOut", "standardError"
+                // Always show output even if the result has not changed
+                outputs.upToDateWhen { false }
+                // Show standard stream outputs if used
+                showStandardStreams = true
+            }
+        }
+    }
+
     lintOptions {
+        // Workaround for a bug in Kotlin extension's Parcelize
+        warning "ParcelCreator"
+
         // In general we want to check for problems. Any time, all the time.
         checkReleaseBuilds true
         // And fail the build if we have errors
         abortOnError true
 
         // Level depends on the type of the job
-        /// Fail the build if buildGreenhouseRelease target is called and we have missing translations!
+        /// Fail the build if buildNevercodeRelease target is called and we have missing translations!
         project.ext.isRelease ? error("MissingTranslation") : warning("MissingTranslation")
         // Error level things
         /// Hardcoded text should not exist or should have case by case exceptions
@@ -73,19 +126,106 @@ android {
         // Retrofit uses Okio and that generates this warning
         warning "InvalidPackage"
     }
+
+    android.applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            output.outputFileName = "${rootProject.name}-${variant.name}-${variant.versionName}.apk"
+        }
+    }
 }
 
 dependencies {
-    implementation 'com.android.support:appcompat-v7:28.0.0'
+    // Dagger
+    libsHelper.addDaggerDependencies(it)
+    libsHelper.addUnitTestDependencies(it)
+    libsHelper.addInstrumentationTestDependencies(it)
+
+    implementation libs.kotlin
+    implementation libs.androidx.legacy
+    implementation libs.androidx.livedata
+    implementation libs.androidx.viewmodel
+    coreLibraryDesugaring libs.jdk.desugar
+
+    // Analytics
+    implementation libs.firebase.analytics
+    implementation libs.firebase.crashlytics
+
+    // RxJava
+    implementation libs.rxjava
+    implementation libs.rxjava.android
+
+    // Util
+    implementation libs.androidx.lifecycle.extensions
+    implementation libs.scrolls
+    implementation libs.timber
+    implementation libs.eventbus
+
+    // UI
+    implementation libs.androidx.appcompat
+    implementation libs.androidx.fragment.ktx
+    implementation libs.androidx.splashscreen
+    implementation libs.constraintlayout
+    implementation libs.material
+    implementation libs.material.progressbar
+    implementation libs.material.dialogs
+
+    implementation project(":app-infrastructure")
+    implementation project(":app-domain")
+    implementation project(":app-common")
+    implementation project(":lib-mvvm")
 }
 
-def GROUP_BUILD_TASKS = 'Build'
-task buildGreenhouseDebug(dependsOn: ['clean', 'build'])
-buildGreenhouseDebug.group = GROUP_BUILD_TASKS
-buildGreenhouseDebug.description = "Build and publish the debug version with GreenhouseCI"
+def GROUP_CI_BUILD_TASKS = "Build"
 
-task buildGreenhouseRelease(dependsOn: ['buildGreenhouseDebug'])
-buildGreenhouseRelease.group = GROUP_BUILD_TASKS
-buildGreenhouseRelease.description = "Build and publish the release version with GreenhouseCI"
+task buildAllDebug(dependsOn: [
+        ":app-common:build",
+        ":app-domain:build",
+        ":app-infrastructure:build",
+        ":lib-mvvm:build",
+        "build"
+])
+buildAllDebug.group = GROUP_CI_BUILD_TASKS
+buildAllDebug.description = "Build the debug version"
 
-build.mustRunAfter clean
+task buildAllRelease(dependsOn: ["buildAllDebug", "bundleRelease"])
+buildAllRelease.group = GROUP_CI_BUILD_TASKS
+buildAllRelease.description = "Build the release version"
+
+def initVersioning() {
+    // versionMajor is not limited
+    checkVersioningNumber(versionMinor, 99, "Minor")
+    checkVersioningNumber(versionPatch, 99, "Patch")
+    checkVersioningNumber(versionBuild, 9, "Build")
+
+    // Yes yes, I am cheating here.
+    project.ext.isRelease = project.gradle.startParameter.taskNames.contains("buildAllRelease")
+
+    String versionName
+    int versionCode
+
+    String baseVersionName = "$versionMajor.$versionMinor.$versionPatch"
+    if (isRelease) {
+        versionName = baseVersionName
+        versionCode = versionMajor * 100000 + versionMinor * 1000 + versionPatch * 10 + versionBuild
+    } else {
+        String suppliedBuildNumber = "$System.env.BUILD_NUMBER"
+        if (suppliedBuildNumber == null || suppliedBuildNumber == "" || suppliedBuildNumber == "null") {
+            suppliedBuildNumber = 1
+        }
+
+        versionName = "${baseVersionName}.devbuild-$suppliedBuildNumber"
+        versionCode = 1
+    }
+
+    project.ext.versionName = versionName
+    project.ext.versionCode = versionCode
+}
+
+static def checkVersioningNumber(int number, int limit, String fieldName) {
+    if (number < 0) {
+        throw new GradleException("$fieldName version number can\'t be less than 0")
+    } else if (number > limit) {
+        throw new GradleException("$fieldName version number can\'t be greater than $limit")
+    }
+}
+
