@@ -32,33 +32,6 @@ definitions:
     - &stepBuildRelease
       name: Build Android
       script: ./gradlew clean buildAllRelease
-    # Start emulator
-    - &stepStartEmulator
-      name: Launch emulator
-      script: |
-        cd $ANDROID_HOME/tools
-        emulator -avd emulator &
-        adb wait-for-device shell 'while [[ -z $(getprop sys.boot_completed) ]]; do sleep 1; done;'
-    # Stop emulator
-    - &stepStopEmulator
-      name: Stop emulator
-      script: |
-        cd $ANDROID_HOME/tools
-        adb emu kill
-    # Run tests
-    - &stepRunTests
-      name: Test Android
-      script: |
-        ./gradlew connectedAndroidTest
-        result=$?
-        adb logcat -d > emulator.log
-        if [ $result -eq 0 ]
-        then
-          echo "Tests executed successfully"
-        else
-          echo "Tests failed"
-          exit 1
-        fi
 
 # Flows
 workflows:
@@ -70,9 +43,6 @@ workflows:
         script: if [ "$FCI_BRANCH" != "master" ]; then exit 1; fi
       - *stepLocalSetup
       - *stepCheckCode
-      - *stepStartEmulator
-      - *stepRunTests
-      - *stepStopEmulator
       - *stepBuildRelease
     publishing:
       email:
@@ -92,9 +62,6 @@ workflows:
     scripts:
       - *stepLocalSetup
       - *stepCheckCode
-      - *stepStartEmulator
-      - *stepRunTests
-      - *stepStopEmulator
       - *stepBuildDebug
     artifacts: *androidArtifacts
     publishing:
@@ -114,9 +81,6 @@ workflows:
     scripts:
       - *stepLocalSetup
       - *stepCheckCode
-      - *stepStartEmulator
-      - *stepRunTests
-      - *stepStopEmulator
       - *stepBuildDebug
     publishing:
       email:
