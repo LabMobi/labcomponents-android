@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
 
-    <style name="AppTheme.Base" parent="Theme.MaterialComponents.Light.NoActionBar">
+    <style name="AppTheme.Base" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/primary</item>
         <item name="colorAccent">@color/primary</item>
         <!--Workaround for Material lib's inflater which replaces all buttons (dialogs, menus, etc)-->
-        <item name="viewInflaterClass">mobi.lab.componentsdemo.common.ui.CustomMaterialComponentViewInflater</item>
+        <item name="viewInflaterClass">mobi.lab.components.demo.common.ui.CustomMaterialComponentViewInflater</item>
     </style>
 
     <style name="AppTheme" parent="AppTheme.Base">

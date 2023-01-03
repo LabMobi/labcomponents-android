@@ -114,6 +114,10 @@ dependencies {
     libsHelper.addUnitTestDependencies(it)
     libsHelper.addInstrumentationTestDependencies(it)
 
+    implementation project(":ui-shared")
+    implementation project(":ui-textfield")
+    implementation project(":ui-button")
+
     implementation libs.kotlin
     coreLibraryDesugaring libs.jdk.desugar
 

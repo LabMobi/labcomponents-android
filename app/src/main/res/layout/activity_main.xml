@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:ignore="HardcodedText">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -13,7 +14,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:title="@string/title_prototype" />
+        app:title="@string/app_name" />
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="0dp"
@@ -24,57 +25,56 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/toolbar">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guide_start"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintGuide_begin="@dimen/size_48" />
-
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guide_end"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintGuide_end="@dimen/size_48" />
-
-            <TextView
-                android:id="@+id/text_title"
-                style="@style/Text.Heading1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/size_48"
-                android:text="@string/text_experience_prototype"
-                app:layout_constraintEnd_toEndOf="@id/guide_end"
-                app:layout_constraintStart_toStartOf="@id/guide_start"
-                app:layout_constraintTop_toTopOf="parent"/>
-
-            <TextView
-                android:id="@+id/text_description"
-                style="@style/Text.Body16"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/size_24"
-                android:text="@string/text_experience_prototype_description"
-                app:layout_constraintEnd_toEndOf="@id/guide_end"
-                app:layout_constraintStart_toStartOf="@id/guide_start"
-                app:layout_constraintTop_toBottomOf="@id/text_title"/>
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/margin"
+            android:paddingBottom="@dimen/margin">
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/button_open"
-                style="@style/Button"
-                android:layout_width="0dp"
+                style="@style/Widget.Lab.ButtonPrimary"
+                android:id="@+id/button_switch_mode"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/size_48"
-                android:text="@string/title_open_prototype"
-                app:layout_constraintEnd_toEndOf="@id/guide_end"
-                app:layout_constraintStart_toStartOf="@id/guide_start"
-                app:layout_constraintTop_toBottomOf="@id/text_description" />
+                android:layout_marginBottom="@dimen/size_48"
+                android:layout_marginStart="@dimen/margin"
+                android:text="Switch modes" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.Lab.ButtonPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin"
+                android:layout_marginStart="@dimen/margin"
+                android:text="Primary Enabled" />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.Lab.ButtonPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin"
+                android:layout_marginStart="@dimen/margin"
+                android:enabled="false"
+                android:text="Primary Disabled" />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.Lab.ButtonSecondary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin"
+                android:layout_marginStart="@dimen/margin"
+                android:text="Secondary Enabled" />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.Lab.ButtonSecondary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin"
+                android:layout_marginStart="@dimen/margin"
+                android:enabled="false"
+                android:text="Secondary Disabled" />
+
+        </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

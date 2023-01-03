@@ -1,4 +1,6 @@
 rootProject.name = "ComponentsDemo"
 include ":app",
+        ":ui-textfield",
+        ":ui-button",
         ":ui-shared"
 
