@@ -1,4 +1,4 @@
-package mobi.lab.componentsdemo.common.eventbus
+package mobi.lab.components.demo.common.eventbus
 
 open class Event {
     val error: Throwable?

@@ -1,12 +1,13 @@
-package mobi.lab.componentsdemo
+package mobi.lab.components.demo
 
 import android.annotation.SuppressLint
 import android.app.ActivityManager
 import android.app.Application
 import android.os.Process
 import android.os.StrictMode
-import mobi.lab.componentsdemo.common.logging.ScrollsTree
-import mobi.lab.componentsdemo.common.util.isDebugBuild
+import mobi.lab.components.demo.BuildConfig
+import mobi.lab.components.demo.common.logging.ScrollsTree
+import mobi.lab.components.demo.common.util.isDebugBuild
 import mobi.lab.scrolls.LogPost
 import mobi.lab.scrolls.LogPostBuilder
 import mobi.lab.scrolls.LogPostImpl

@@ -6,7 +6,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
     <application
-        android:name="mobi.lab.componentsdemo.App"
+        android:name="mobi.lab.components.demo.App"
         android:allowBackup="true"
         android:fullBackupContent="@xml/full_backup_content"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -26,7 +26,7 @@
         </provider>
 
         <activity
-            android:name="mobi.lab.componentsdemo.main.MainActivity"
+            android:name="mobi.lab.components.demo.main.MainActivity"
             android:theme="@style/AppTheme"
             android:exported="true"
             >

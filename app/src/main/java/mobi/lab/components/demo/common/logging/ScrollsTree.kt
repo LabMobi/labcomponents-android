@@ -1,4 +1,4 @@
-package mobi.lab.componentsdemo.common.logging
+package mobi.lab.components.demo.common.logging
 
 import android.content.Context
 import mobi.lab.scrolls.Log

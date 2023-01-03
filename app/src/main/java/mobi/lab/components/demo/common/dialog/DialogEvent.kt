@@ -1,9 +1,9 @@
-package mobi.lab.componentsdemo.common.dialog
+package mobi.lab.components.demo.common.dialog
 
 import android.os.Bundle
 import android.text.TextUtils
-import mobi.lab.componentsdemo.common.eventbus.DataEvent
-import mobi.lab.componentsdemo.common.util.exhaustive
+import mobi.lab.components.demo.common.eventbus.DataEvent
+import mobi.lab.components.demo.common.util.exhaustive
 
 class DialogEvent(val tag: String, val action: Action, bundle: Bundle? = null) : DataEvent<Bundle?>(bundle) {
 

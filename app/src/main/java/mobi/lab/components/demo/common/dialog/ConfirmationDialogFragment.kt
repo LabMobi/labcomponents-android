@@ -1,11 +1,11 @@
-package mobi.lab.componentsdemo.common.dialog
+package mobi.lab.components.demo.common.dialog
 
 import android.app.Dialog
 import android.content.DialogInterface
 import android.os.Bundle
 import androidx.fragment.app.DialogFragment
 import com.afollestad.materialdialogs.MaterialDialog
-import mobi.lab.componentsdemo.common.eventbus.Bus
+import mobi.lab.components.demo.common.eventbus.Bus
 
 class ConfirmationDialogFragment : DialogFragment() {
 

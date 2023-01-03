@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ComponentsDemo</string>
+    <string name="notification_channel_name">Notifications</string>
+    <string name="title_error">Error</string>
+    <string name="text_loading">Loading</string>
+    <string name="title_email">Email</string>
+    <string name="title_password">Password</string>
+    <string name="title_login">Login</string>
+    <string name="text_required">Required</string>
+    <string name="text_experience_prototype">Experience the prototype</string>
+    <string name="text_experience_prototype_description">Tap on the link below to experience the flow of the already created designs.</string>
+    <string name="title_open_prototype">Open the prototype</string>
+    <string name="title_logout">Log out</string>
+    <string name="title_prototype">Prototype</string>
+    <string name="title_debug">Debug menu</string>
+
+    <string name="error_generic">Something went wrong. Please try again.</string>
+    <string name="error_no_network">Connection error. Please try again.</string>
+</resources>

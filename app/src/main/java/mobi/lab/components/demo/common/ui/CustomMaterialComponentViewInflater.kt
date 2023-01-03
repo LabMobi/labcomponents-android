@@ -1,4 +1,4 @@
-package mobi.lab.componentsdemo.common.ui
+package mobi.lab.components.demo.common.ui
 
 import android.content.Context
 import android.util.AttributeSet

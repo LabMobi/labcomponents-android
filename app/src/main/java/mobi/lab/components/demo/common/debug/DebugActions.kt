@@ -1,4 +1,4 @@
-package mobi.lab.componentsdemo.common.debug
+package mobi.lab.components.demo.common.debug
 
 import android.content.Context
 

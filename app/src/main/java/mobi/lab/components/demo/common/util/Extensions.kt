@@ -1,4 +1,4 @@
-package mobi.lab.componentsdemo.common.util
+package mobi.lab.components.demo.common.util
 
 import android.text.SpannableString
 import android.text.Spanned

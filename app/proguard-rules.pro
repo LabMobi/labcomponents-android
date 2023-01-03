@@ -30,7 +30,7 @@
 ## SearchView
 
 ## ViewInflater
--keep class mobi.lab.componentsdemo.common.ui.CustomMaterialComponentViewInflater { *; }
+-keep class mobi.lab.components.demo.common.ui.CustomMaterialComponentViewInflater { *; }
 ## ViewInflater
 
 ## Greenrobot EventBus

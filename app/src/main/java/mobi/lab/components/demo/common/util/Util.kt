@@ -1,4 +1,4 @@
-package mobi.lab.componentsdemo.common.util
+package mobi.lab.components.demo.common.util
 
 import android.content.Context
 import android.graphics.Color
@@ -9,7 +9,7 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import androidx.annotation.ColorInt
 import androidx.annotation.StringRes
-import mobi.lab.componentsdemo.BuildConfig
+import mobi.lab.components.demo.BuildConfig
 import kotlin.math.roundToInt
 
 fun isDebugBuild(): Boolean {

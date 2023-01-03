@@ -8,7 +8,7 @@ apply plugin: "kotlin-parcelize"
 apply plugin: "kotlin-kapt"
 
 android {
-    namespace "mobi.lab.componentsdemo"
+    namespace "mobi.lab.components.demo"
 
     buildFeatures {
         viewBinding = true
@@ -30,7 +30,7 @@ android {
         compileSdkVersion libs.versions.android.sdk.compile.get()
         targetSdkVersion libs.versions.android.sdk.target.get()
         minSdkVersion libs.versions.android.sdk.min.get()
-        applicationId "mobi.lab.componentsdemo"
+        applicationId "mobi.lab.components.demo"
 
         versionCode 1
         versionName "0.0.1"

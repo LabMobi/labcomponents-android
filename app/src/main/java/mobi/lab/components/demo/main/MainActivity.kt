@@ -1,9 +1,9 @@
-package mobi.lab.componentsdemo.main
+package mobi.lab.components.demo.main
 
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import mobi.lab.componentsdemo.common.BaseActivity
+import mobi.lab.components.demo.common.BaseActivity
 
 class MainActivity : BaseActivity() {
 

@@ -1,6 +1,6 @@
-package mobi.lab.componentsdemo.common.eventbus
+package mobi.lab.components.demo.common.eventbus
 
-import mobi.lab.componentsdemo.common.util.isDebugBuild
+import mobi.lab.components.demo.common.util.isDebugBuild
 import org.greenrobot.eventbus.EventBus
 
 object Bus {
