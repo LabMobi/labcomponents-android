@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- TextField start -->
+    <style name="Widget.Lab.TextField" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxBackgroundMode">none</item>
+<!--        <item name="android:maxWidth">@null</item>-->
+        <item name="materialThemeOverlay">@style/ThemeOverlay.Lab.TextField</item>
+
+<!--        <item name="boxStrokeColor">@color/wla_default_textfield_stroke</item>-->
+<!--        <item name="boxStrokeErrorColor">@color/error</item>-->
+<!--        <item name="boxStrokeWidth">@dimen/wla_stroke_width</item>-->
+<!--        <item name="boxStrokeWidthFocused">@dimen/wla_stroke_width</item>-->
+
+<!--        &lt;!&ndash; Remove unnecessary top padding &ndash;&gt;-->
+<!--        <item name="hintEnabled">false</item>-->
+<!--        <item name="errorEnabled">true</item>-->
+<!--        <item name="errorTextAppearance">@style/Wla.Text.FormLabel</item>-->
+<!--        <item name="errorIconDrawable">@null</item>-->
+<!--        <item name="placeholderTextAppearance">@style/Wla.Text.Body16Strong</item>-->
+<!--        <item name="placeholderTextColor">@color/grey2_daynight</item>-->
+<!--        <item name="android:descendantFocusability">afterDescendants</item>-->
+<!--        <item name="android:focusable">false</item>-->
+<!--        <item name="android:focusableInTouchMode">false</item>-->
+    </style>
+
+    <style name="ThemeOverlay.Lab.TextField" parent="">
+<!--        <item name="colorControlActivated">@color/secondary_accent</item>-->
+<!--        <item name="colorPrimary">@color/primary_accent</item>-->
+<!--        <item name="colorOnSurface">@color/on_primary</item>-->
+<!--        <item name="colorError">@color/error</item>-->
+        <item name="editTextStyle">@style/Wla.TextInputEditText</item>
+    </style>
+
+    <style name="Wla.TextInputEditText" parent="@style/Widget.Material3.TextInputEditText.OutlinedBox">
+        <item name="android:background">#5000FFFF</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+
+<!--        <item name="android:background">@drawable/wla_default_bg_textfield</item>-->
+<!--        <item name="android:textAppearance">@style/Wla.Text.Body16Strong</item>-->
+<!--        <item name="android:textColor">@color/wla_default_textfield_text</item>-->
+
+<!--        <item name="hintTextAppearance">@style/Wla.Text.Body16Strong</item>-->
+<!--        <item name="android:textColorHint">@color/wla_textfield_hint</item>-->
+<!--        <item name="android:paddingLeft">@dimen/wla_textfield_horizontal_padding</item>-->
+<!--        <item name="android:paddingRight">@dimen/wla_textfield_horizontal_padding</item>-->
+    </style>
+    <!-- TextField end -->
+</resources>

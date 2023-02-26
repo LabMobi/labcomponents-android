@@ -1,5 +1,5 @@
 rootProject.name = "ComponentsDemo"
-include ":app",
+include ":app-demo",
         ":ui-textfield",
         ":ui-button",
         ":ui-shared"
