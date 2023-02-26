@@ -19,9 +19,6 @@ android {
     }
 
     compileOptions {
-        // Flag to enable support for the new language APIs
-        coreLibraryDesugaringEnabled true
-
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
@@ -119,21 +116,14 @@ dependencies {
     implementation project(":ui-button")
 
     implementation libs.kotlin
-    coreLibraryDesugaring libs.jdk.desugar
 
     // Util
-    implementation libs.androidx.lifecycle.extensions
     implementation libs.timber
-    implementation libs.scrolls
-    implementation libs.eventbus
 
     // UI
     implementation libs.androidx.appcompat
-    implementation libs.androidx.fragment.ktx
     implementation libs.constraintlayout
     implementation libs.material
-    implementation libs.material.progressbar
-    implementation libs.material.dialogs
 }
 
 def GROUP_CI_BUILD_TASKS = "Build"

@@ -6,7 +6,6 @@ import android.content.res.Configuration
 import android.os.Bundle
 import android.view.LayoutInflater
 import androidx.appcompat.app.AppCompatDelegate
-import mobi.lab.components.demo.common.BaseActivity
 import mobi.lab.components.demo.databinding.ActivityMainBinding
 
 class MainActivity : BaseActivity() {

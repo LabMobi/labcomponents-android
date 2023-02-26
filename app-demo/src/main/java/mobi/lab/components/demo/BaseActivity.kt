@@ -1,4 +1,4 @@
-package mobi.lab.components.demo.common
+package mobi.lab.components.demo
 
 import android.os.Bundle
 import androidx.annotation.LayoutRes
