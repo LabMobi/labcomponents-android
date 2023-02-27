@@ -9,8 +9,8 @@
         android:id="@+id/container_background"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/textfield_bg_outline"
-        android:minHeight="56dp"
+        android:background="@drawable/lab_bg_textfield_outline"
+        android:paddingTop="@dimen/lab_size_24"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
@@ -43,8 +43,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp"
             app:suffixText="This is a suffix">
 
             <mobi.lab.components.ui.textfield.LabTextInputEditText
@@ -52,6 +50,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </mobi.lab.components.ui.textfield.LabTextInputLayout>
+
     </FrameLayout>
 
     <TextView
@@ -66,4 +65,11 @@
         app:layout_constraintStart_toStartOf="@id/container_background"
         app:layout_constraintEnd_toEndOf="@id/container_background"
         app:layout_constraintTop_toBottomOf="@id/container_background" />
+
+    <View
+        android:layout_width="64dp"
+        android:layout_height="8dp"
+        android:background="#0000FF"
+        app:layout_constraintStart_toStartOf="@id/container_background"
+        app:layout_constraintBottom_toBottomOf="@id/container_background" />
 </merge>

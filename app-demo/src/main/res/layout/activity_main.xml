@@ -32,96 +32,7 @@
             android:paddingTop="@dimen/margin"
             android:paddingBottom="@dimen/margin">
 
-            <com.google.android.material.button.MaterialButton
-                style="@style/Widget.Lab.ButtonPrimary"
-                android:id="@+id/button_switch_mode"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/size_48"
-                android:layout_marginStart="@dimen/margin"
-                android:text="Switch modes" />
-
-            <com.google.android.material.button.MaterialButton
-                style="@style/Widget.Lab.ButtonPrimary"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/margin"
-                android:layout_marginStart="@dimen/margin"
-                android:text="Primary Enabled" />
-
-            <com.google.android.material.button.MaterialButton
-                style="@style/Widget.Lab.ButtonPrimary"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/margin"
-                android:layout_marginStart="@dimen/margin"
-                android:enabled="false"
-                android:text="Primary Disabled" />
-
-            <com.google.android.material.button.MaterialButton
-                style="@style/Widget.Lab.ButtonSecondary"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/margin"
-                android:layout_marginStart="@dimen/margin"
-                android:text="Secondary Enabled" />
-
-            <com.google.android.material.button.MaterialButton
-                style="@style/Widget.Lab.ButtonSecondary"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/margin"
-                android:layout_marginStart="@dimen/margin"
-                android:enabled="false"
-                android:text="Secondary Disabled" />
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/textfield_bg_outline"
-                android:layout_marginBottom="@dimen/margin"
-                android:layout_marginStart="@dimen/margin"
-                android:layout_marginEnd="@dimen/margin">
-
-                <mobi.lab.components.ui.textfield.LabTextInputLayout
-                    android:id="@+id/input_layout"
-                    style="@style/Widget.Lab.TextField"
-                    android:background="#500000FF"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingTop="8dp"
-                    android:hint="TextFieldjgqp">
-
-                    <mobi.lab.components.ui.textfield.LabTextInputEditText
-                        android:id="@+id/edit_text"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-                </mobi.lab.components.ui.textfield.LabTextInputLayout>
-
-                <View
-                    android:layout_width="8dp"
-                    android:layout_height="56dp"
-                    android:background="#FF0000" />
-            </FrameLayout>
-
-            <mobi.lab.components.ui.textfield.LabTextInputLayout
-                android:id="@+id/input_layout_2"
-                style="@style/Widget.Material3.TextInputLayout.FilledBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/margin"
-                android:layout_marginStart="@dimen/margin"
-                android:layout_marginEnd="@dimen/margin"
-                android:hint="TextField2">
-
-                <mobi.lab.components.ui.textfield.LabTextInputEditText
-                    android:id="@+id/edit_text_2"
-                    style="@style/Widget.Material3.TextInputEditText.FilledBox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-            </mobi.lab.components.ui.textfield.LabTextInputLayout>
-
-            <FrameLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -131,22 +42,31 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/margin"
                     android:layout_marginStart="@dimen/margin"
-                    android:layout_marginEnd="@dimen/margin">
-                </mobi.lab.components.ui.textfield.LabTextField>
+                    android:layout_marginEnd="@dimen/margin"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
 
                 <View
                     android:layout_width="8dp"
                     android:layout_height="56dp"
                     android:layout_marginStart="@dimen/margin"
-                    android:background="#FFFF00" />
+                    android:background="#FFFF00"
+                    app:layout_constraintStart_toStartOf="@id/text_field"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
 
                 <View
                     android:layout_width="8dp"
                     android:layout_height="28dp"
                     android:layout_marginStart="@dimen/margin"
-                    android:background="#FF0000" />
+                    android:background="#FF0000"
+                    app:layout_constraintStart_toStartOf="@id/text_field"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
 
-            </FrameLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

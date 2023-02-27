@@ -5,6 +5,8 @@ import android.content.Intent
 import android.content.res.Configuration
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.Menu
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatDelegate
 import mobi.lab.components.demo.databinding.ActivityMainBinding
 
@@ -16,21 +18,34 @@ class MainActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(LayoutInflater.from(this))
         setContentView(binding.root)
-
         initUi(binding)
     }
 
-    private fun initUi(binding: ActivityMainBinding) {
-        binding.textField.setHint("This is a hint")
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menu.add(0, MENU_ITEM_SWITCH_UI_MODE, 0, "Switch UI mode")
+        return true
+    }
 
-        binding.buttonSwitchMode.setOnClickListener {
-            val nightMode = if (isNightModeEnabled()) {
-                AppCompatDelegate.MODE_NIGHT_NO
-            } else {
-                AppCompatDelegate.MODE_NIGHT_YES
-            }
-            AppCompatDelegate.setDefaultNightMode(nightMode)
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (MENU_ITEM_SWITCH_UI_MODE == item.itemId) {
+            toggleUiMode()
+            return true
         }
+        return super.onOptionsItemSelected(item)
+    }
+
+    private fun initUi(binding: ActivityMainBinding) {
+        setSupportActionBar(binding.toolbar)
+        binding.textField.setHint("This is a hint")
+    }
+
+    private fun toggleUiMode() {
+        val nightMode = if (isNightModeEnabled()) {
+            AppCompatDelegate.MODE_NIGHT_NO
+        } else {
+            AppCompatDelegate.MODE_NIGHT_YES
+        }
+        AppCompatDelegate.setDefaultNightMode(nightMode)
     }
 
     private fun isNightModeEnabled(): Boolean {
@@ -39,6 +54,8 @@ class MainActivity : BaseActivity() {
     }
 
     companion object {
+        private const val MENU_ITEM_SWITCH_UI_MODE = 0
+
         fun getIntent(context: Context): Intent {
             return Intent(context, MainActivity::class.java)
         }

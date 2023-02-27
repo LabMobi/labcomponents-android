@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="size_12">12dp</dimen>
-    <dimen name="size_48">48dp</dimen>
-
-    <dimen name="size_1">1dp</dimen>
-
-    <!--    TODO get from theme-->
-    <dimen name="button_corner_radius">4dp</dimen>
+    <!-- TODO get from theme-->
+    <dimen name="lab_size_12">12dp</dimen>
+    <dimen name="lab_button_corner_radius">4dp</dimen>
 </resources>

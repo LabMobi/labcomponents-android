@@ -32,13 +32,9 @@
     </style>
 
     <style name="Wla.TextInputEditText" parent="@style/Widget.Material3.TextInputEditText.OutlinedBox">
-        <item name="android:background">#5000FFFF</item>
-        <item name="android:paddingLeft">16dp</item>
-        <item name="android:paddingRight">16dp</item>
-        <item name="android:paddingStart">16dp</item>
-        <item name="android:paddingEnd">16dp</item>
+        <item name="android:background">#00FFFF</item>
         <item name="android:paddingTop">0dp</item>
-        <item name="android:paddingBottom">0dp</item>
+        <item name="android:paddingBottom">8dp</item>
 
 <!--        <item name="android:background">@drawable/wla_default_bg_textfield</item>-->
 <!--        <item name="android:textAppearance">@style/Wla.Text.Body16Strong</item>-->

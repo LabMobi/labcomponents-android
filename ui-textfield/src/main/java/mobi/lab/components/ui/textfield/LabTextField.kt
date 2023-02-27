@@ -8,6 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.StringRes
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.view.updatePadding
+import mobi.lab.components.ui.shared.dpToPx
 import mobi.lab.components.ui.textfield.databinding.ViewTextFieldBinding
 
 /**
@@ -78,6 +80,9 @@ class LabTextField @JvmOverloads constructor(
         hintValue = text
         binding.inputLayout.hint = text
         updateHintLayout()
+
+        // TODO remove
+        binding.editText.updatePadding(bottom = dpToPx(context, 24))
     }
 
     fun setPlaceholderText(text: CharSequence?) {
