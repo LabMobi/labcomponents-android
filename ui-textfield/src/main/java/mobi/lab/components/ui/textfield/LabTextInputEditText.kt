@@ -8,6 +8,7 @@ import android.text.TextWatcher
 import android.util.AttributeSet
 import android.view.MotionEvent
 import com.google.android.material.textfield.TextInputEditText
+import mobi.lab.components.ui.shared.ParcelCompat
 
 @Suppress("ClickableViewAccessibility")
 class LabTextInputEditText : TextInputEditText {
@@ -70,7 +71,7 @@ class LabTextInputEditText : TextInputEditText {
         }
 
         // Workaround to avoid duplicate text changed calls
-        super.onRestoreInstanceState(state.getParcelable(STATE_PARENT))
+        super.onRestoreInstanceState(ParcelCompat.getParcelable(state, STATE_PARENT))
         restoreStateInProgress = false
     }
 

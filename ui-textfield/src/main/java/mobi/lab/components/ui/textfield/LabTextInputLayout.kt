@@ -8,6 +8,7 @@ import android.util.AttributeSet
 import android.view.View
 import android.view.ViewGroup
 import com.google.android.material.textfield.TextInputLayout
+import mobi.lab.components.ui.shared.ParcelCompat
 
 class LabTextInputLayout @JvmOverloads constructor(
     context: Context,
@@ -61,11 +62,8 @@ class LabTextInputLayout @JvmOverloads constructor(
             super.onRestoreInstanceState(state)
             return
         }
-
         error = state.getCharSequence(STATE_ERROR)
-
-        val parentState: Parcelable? = state.getParcelable(STATE_PARENT)
-        super.onRestoreInstanceState(parentState)
+        super.onRestoreInstanceState(ParcelCompat.getParcelable(state, STATE_PARENT))
     }
 
     fun getText(): String {
