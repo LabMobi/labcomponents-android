@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="LabTextFieldErrorState">
+        <attr name="state_error" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="LabTextField">
+        <attr name="textPaddingTop" format="dimension"/>
+        <attr name="textPaddingBottom" format="dimension"/>
+        <attr name="textPaddingLeft" format="dimension"/>
+        <attr name="textPaddingRight" format="dimension"/>
+
+        <!-- Override attrs -->
+        <attr name="background" format="reference" />
+        <attr name="hintTextAppearance" />
+        <attr name="boxCollapsedPaddingTop" />
+
+    </declare-styleable>
+</resources>

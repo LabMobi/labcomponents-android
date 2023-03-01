@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ColorPalette">
+        <attr name="labColorPrimary" format="color"/>
+        <attr name="labColorOnPrimary" format="color"/>
+        <attr name="labColorSecondary" format="color"/>
+        <attr name="labColorOnSecondary" format="color"/>
+        <attr name="labColorOnSurface" format="color"/>
+    </declare-styleable>
+</resources>

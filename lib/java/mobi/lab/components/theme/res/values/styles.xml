@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Lab.Theme.DayNight" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:statusBarColor">@color/lab_primary</item>
+
+        <!-- TODO can I share themes somehow? -->
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">#FFFFFF</item>
+
+        <!-- ColorPalette -->
+        <item name="labColorPrimary">#0F82FF</item>
+        <item name="labColorOnPrimary">#FFFFFF</item>
+        <item name="labColorSecondary">#CCE2F9</item>
+        <item name="labColorOnSecondary">#000000</item>
+        <item name="labColorOnSurface">#000000</item>
+
+        <!-- Shape -->
+        <item name="labCornerSize">4dp</item>
+        <item name="labCornerSizeTopLeft">?attr/labCornerSize</item>
+        <item name="labCornerSizeTopRight">?attr/labCornerSize</item>
+        <item name="labCornerSizeBottomLeft">?attr/labCornerSize</item>
+        <item name="labCornerSizeBottomRight">?attr/labCornerSize</item>
+
+        <!-- TextField -->
+
+        <!-- DEBUG VALUES -->
+        <item name="colorPrimary">@color/lab_todo</item>
+        <item name="colorOnPrimary">@color/lab_todo</item>
+        <item name="colorSecondary">@color/lab_todo</item>
+        <item name="colorOnSecondary">@color/lab_todo</item>
+        <item name="colorAccent">@color/lab_todo</item>
+        <item name="colorOnSurface">@color/lab_todo</item>
+    </style>
+
+    <!-- TODO add light and dark themes -->
+
+<!--    <style name="Theme.Lab.Light" parent="Theme.Material3.Light.NoActionBar">-->
+<!--        &lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+<!--        <item name="colorPrimary">@color/lab_primary</item>-->
+<!--        <item name="colorAccent">@color/lab_primary</item>-->
+<!--        <item name="android:statusBarColor">@color/lab_primary</item>-->
+<!--        -->
+<!--    </style>-->
+
+<!--    <style name="Theme.Lab.Dark" parent="Theme.Material3.Dark.NoActionBar">-->
+<!--        &lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+<!--        <item name="colorPrimary">@color/lab_primary</item>-->
+<!--        <item name="colorAccent">@color/lab_primary</item>-->
+<!--        <item name="android:statusBarColor">@color/lab_primary</item>-->
+<!--        -->
+<!--        -->
+<!--    </style>-->
+
+</resources>

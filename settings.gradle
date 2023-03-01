@@ -1,6 +1,4 @@
-rootProject.name = "ComponentsDemo"
+rootProject.name = "LabComponents"
 include ":app-demo",
-        ":ui-textfield",
-        ":ui-button",
-        ":ui-shared"
+        ":lib"
 

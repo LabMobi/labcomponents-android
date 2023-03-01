@@ -1,0 +1,70 @@
+apply plugin: "com.android.library"
+apply plugin: "kotlin-android"
+
+def srcDirs = [
+        'mobi/lab/components/button',
+        'mobi/lab/components/shape',
+        'mobi/lab/components/shared',
+        'mobi/lab/components/textfield',
+        'mobi/lab/components/theme',
+]
+
+android {
+    namespace "mobi.lab.components"
+
+    buildFeatures {
+        viewBinding = true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    // A trick taken from material-components-android to keep everything in a single R namespace
+    // and still keep the sources separate for maintainability.
+    sourceSets {
+        main.java.srcDir 'java'
+        main.java.includes = srcDirs.collect { it + '/**/*.kt' }
+        main.java.excludes = [
+                '**/build/**',
+        ]
+        srcDirs.forEach {
+            main.res.srcDirs += 'java/' + it + '/res'
+            main.res.srcDirs += 'java/' + it + '/res-public'
+        }
+    }
+
+    defaultConfig {
+        compileSdkVersion libs.versions.android.sdk.compile.get()
+        targetSdkVersion libs.versions.android.sdk.target.get()
+        minSdkVersion libs.versions.android.sdk.min.get()
+    }
+
+    lintOptions {
+        // Workaround for a bug in Kotlin extension's Parcelize
+        warning "ParcelCreator"
+    }
+
+    testOptions.unitTests.all {
+        testLogging {
+            events "passed", "skipped", "failed", "standardOut", "standardError"
+            // Always show output even if the result has not changed
+            outputs.upToDateWhen { false }
+            // Show standard stream outputs if used
+            showStandardStreams = true
+        }
+    }
+}
+
+dependencies {
+    implementation libs.kotlin
+
+    // Util
+    implementation libs.timber
+
+    // UI
+    implementation libs.androidx.appcompat
+    implementation libs.constraintlayout
+    implementation libs.material
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ShapeAppearance">
+        <!-- Corner size to be used in the ShapeAppearance. All corners default to this value -->
+        <attr name="labCornerSize" format="dimension|fraction" />
+        <!-- Top left corner size to be used in the ShapeAppearance. -->
+        <attr name="labCornerSizeTopLeft" format="dimension|fraction" />
+        <!-- Top right corner size to be used in the ShapeAppearance. -->
+        <attr name="labCornerSizeTopRight" format="dimension|fraction" />
+        <!-- Bottom right corner size to be used in the ShapeAppearance. -->
+        <attr name="labCornerSizeBottomRight" format="dimension|fraction" />
+        <!-- Bottom left corner size to be used in the ShapeAppearance. -->
+        <attr name="labCornerSizeBottomLeft" format="dimension|fraction" />
+    </declare-styleable>
+</resources>
