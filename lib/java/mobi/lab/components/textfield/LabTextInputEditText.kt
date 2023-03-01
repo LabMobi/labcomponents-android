@@ -94,6 +94,6 @@ class LabTextInputEditText : TextInputEditText {
     }
 
     companion object {
-        private const val STATE_PARENT = "STATE_PARENT"
+        private const val STATE_PARENT = "LabTextInputEditText.STATE_PARENT"
     }
 }

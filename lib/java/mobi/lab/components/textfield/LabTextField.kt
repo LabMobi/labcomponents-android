@@ -1,26 +1,23 @@
 package mobi.lab.components.textfield
 
 import android.content.Context
+import android.os.Bundle
+import android.os.Parcelable
+import android.text.TextUtils
 import android.util.AttributeSet
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.widget.FrameLayout
+import android.view.KeyEvent
 import androidx.annotation.Dimension
-import androidx.annotation.StringRes
 import androidx.core.view.updatePadding
+import com.google.android.material.textfield.TextInputLayout
 import mobi.lab.components.R
-import mobi.lab.components.databinding.LabViewTextFieldBinding
+import mobi.lab.components.shared.ParcelCompat
 import timber.log.Timber
 
-/**
- * OnFocusChangedListener is overwritten in onAttachedToWindow
- */
 class LabTextField @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
-    defStyleAttr: Int = 0,
-) : FrameLayout(context, attrs, defStyleAttr) {
+    defStyleAttr: Int = 0
+) : TextInputLayout(context, attrs, defStyleAttr) {
 
     interface Listener {
         fun onTextChanged(text: String?)
@@ -28,100 +25,80 @@ class LabTextField @JvmOverloads constructor(
         fun onErrorCleared()
     }
 
+    // TODO comment
     var listener: Listener? = null
+    // TODO comment
+    var clearErrorOnFocus: Boolean = true
+    // TODO comment
+    val editText: LabTextInputEditText
 
-    private val binding = LabViewTextFieldBinding.inflate(LayoutInflater.from(context), this)
+    private var errorState = false
 
-    private val inputListener = object : LabTextInputLayout.Listener {
-        override fun onTextChanged(text: String?) {
-            listener?.onTextChanged(text)
+    init {
+        editText = LabTextInputEditText(context, attrs)
+        editText.id = ID_EDIT_TEXT
+        editText.layoutParams = LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT)
+        addView(editText)
+        initEditText(editText)
+    }
+
+    override fun onCreateDrawableState(extraSpace: Int): IntArray {
+        val parentState = super.onCreateDrawableState(extraSpace + 1)
+        if (errorState) {
+            mergeDrawableStates(parentState, intArrayOf(R.attr.state_error))
         }
+        return parentState
+    }
 
-        override fun onErrorCleared() {
-            listener?.onErrorCleared()
+    override fun setError(error: CharSequence?) {
+        errorState = !TextUtils.isEmpty(error)
+        editText.errorState = errorState
+        refreshDrawableState()
+        super.setError(error)
+    }
+
+    override fun onSaveInstanceState(): Parcelable {
+        val parentState = super.onSaveInstanceState()
+        val bundle = Bundle()
+        bundle.putParcelable(STATE_PARENT, parentState)
+        bundle.putCharSequence(STATE_ERROR, error)
+        return bundle
+    }
+
+    override fun onRestoreInstanceState(state: Parcelable?) {
+        if (state == null || state !is Bundle) {
+            super.onRestoreInstanceState(state)
+            return
+        }
+        error = state.getCharSequence(STATE_ERROR)
+        super.onRestoreInstanceState(ParcelCompat.getParcelable(state, STATE_PARENT))
+    }
+
+    override fun onAttachedToWindow() {
+        super.onAttachedToWindow()
+        editText.setOnFocusChangeListener { _, hasFocus ->
+            listener?.onFocusChanged(hasFocus)
         }
     }
 
-    init {
-        attrs?.let {
-            val attributes = context.obtainStyledAttributes(attrs, R.styleable.LabTextField, 0, defStyleAttr)
-            try {
-                val textPaddingLeft = attributes.getDimensionPixelSize(R.styleable.LabTextField_textPaddingLeft, NO_VALUE_INT)
-                val textPaddingTop = attributes.getDimensionPixelSize(R.styleable.LabTextField_textPaddingTop, NO_VALUE_INT)
-                val textPaddingRight = attributes.getDimensionPixelSize(R.styleable.LabTextField_textPaddingRight, NO_VALUE_INT)
-                val textPaddingBottom = attributes.getDimensionPixelSize(R.styleable.LabTextField_textPaddingBottom, NO_VALUE_INT)
-                setTextPaddingInternal(leftPx = textPaddingLeft, topPx = textPaddingTop, rightPx = textPaddingRight, bottomPx = textPaddingBottom)
-
-                val boxCollapsedPaddingTop = attributes.getDimensionPixelSize(R.styleable.LabTextField_boxCollapsedPaddingTop, NO_VALUE_INT)
-                if (boxCollapsedPaddingTop != NO_VALUE_INT) {
-                    binding.inputLayout.boxCollapsedPaddingTop = boxCollapsedPaddingTop
-                }
-            } finally {
-                attributes.recycle()
-            }
-        }
-
-        setAddStatesFromChildren(true)
-        descendantFocusability = ViewGroup.FOCUS_AFTER_DESCENDANTS
+    override fun onDetachedFromWindow() {
+        super.onDetachedFromWindow()
+        editText.onFocusChangeListener = null
     }
 
     fun getText(): String {
-        return binding.inputLayout.getText()
+        return editText.text.toString()
     }
 
     fun setText(text: CharSequence?) {
-        binding.inputLayout.listener = null
-        binding.inputLayout.setText(text)
-        binding.inputLayout.listener = inputListener
+        editText.setText(text)
     }
 
     fun setTextAndSelection(text: CharSequence?) {
         setText(text)
-        binding.editText.apply {
+        editText.apply {
             val value = getText()?.toString() ?: ""
             setSelection(value.length)
-        }
-    }
-
-    fun setHint(@StringRes textId: Int) {
-        setHint(resources.getString(textId))
-    }
-
-    fun setHint(text: CharSequence?) {
-        binding.inputLayout.hint = text
-    }
-
-    fun setPlaceholderText(text: CharSequence?) {
-        binding.inputLayout.placeholderText = text
-    }
-
-    fun setError(text: CharSequence?) {
-        binding.inputLayout.error = text
-    }
-
-    fun setInputType(inputType: Int) {
-        binding.apply {
-            if (editText.inputType != inputType) {
-                // Some input types change the typeface. Let's reuse the old typeface
-                val typeface = editText.typeface
-                editText.inputType = inputType
-                editText.typeface = typeface
-            }
-        }
-    }
-
-    fun setImeAction(imeAction: Int, onImeAction: () -> Unit) {
-        binding.editText.apply {
-            if (imeOptions != imeAction) {
-                imeOptions = imeAction
-            }
-            setOnEditorActionListener { _, actionId, _ ->
-                if (actionId == imeAction) {
-                    onImeAction()
-                    return@setOnEditorActionListener true
-                }
-                return@setOnEditorActionListener false
-            }
         }
     }
 
@@ -134,56 +111,70 @@ class LabTextField @JvmOverloads constructor(
         setTextPaddingInternal(leftPx = leftPx, topPx = topPx, rightPx = rightPx, bottomPx = bottomPx)
     }
 
-    override fun setEnabled(enabled: Boolean) {
-        super.setEnabled(enabled)
-        binding.inputLayout.isEnabled = enabled
+    fun setImeActionHandler(imeAction: Int, onImeAction: (keyEvent: KeyEvent) -> Unit) {
+        editText.apply {
+            if (imeOptions != imeAction) {
+                imeOptions = imeAction
+            }
+            setOnEditorActionListener { _, actionId, keyEvent ->
+                if (actionId == imeAction) {
+                    onImeAction(keyEvent)
+                    return@setOnEditorActionListener true
+                }
+                return@setOnEditorActionListener false
+            }
+        }
     }
 
-    override fun onAttachedToWindow() {
-        super.onAttachedToWindow()
-        binding.editText.setOnFocusChangeListener { _, hasFocus ->
-            listener?.onFocusChanged(hasFocus)
+    fun setInputType(inputType: Int) {
+        if (editText.inputType != inputType) {
+            // Some input types change the typeface. Let's reuse the old typeface
+            val typeface = editText.typeface
+            editText.inputType = inputType
+            editText.typeface = typeface
         }
-        binding.inputLayout.listener = inputListener
     }
 
-    override fun onDetachedFromWindow() {
-        super.onDetachedFromWindow()
-        binding.editText.onFocusChangeListener = null
-        binding.inputLayout.listener = null
-    }
-
-    // TODO remove
-    private fun updateAlpha(view: View, alpha: Float, animate: Boolean = true) {
-        if (view.alpha == alpha) {
-            return
-        }
-        if (animate) {
-            view.animate()
-                .alpha(alpha)
-                .setDuration(DURATION_ANIMATION_MS)
-                .start()
-        } else {
-            view.alpha = alpha
-        }
+    // TODO do we actually need this? I don't think so...
+    fun clearError() {
+        error = null
+        listener?.onErrorCleared()
     }
 
     private fun setTextPaddingInternal(leftPx: Int, topPx: Int, rightPx: Int, bottomPx: Int) {
         // TODO remove logging
         Timber.e("setTextPaddingInternal leftPx=$leftPx topPx=$topPx rightPx=$rightPx bottomPx=$bottomPx")
-        binding.apply {
-            val noValue = NO_VALUE_INT
-            val left = if (leftPx != noValue) leftPx else editText.paddingLeft
-            val top = if (topPx != noValue) topPx else editText.paddingTop
-            val right = if (rightPx != noValue) rightPx else editText.paddingRight
-            val bottom = if (bottomPx != noValue) bottomPx else editText.paddingBottom
 
-            editText.updatePadding(left = left, top = top, right = right, bottom = bottom)
+        val left = if (leftPx != NO_VALUE_INT) leftPx else editText.paddingLeft
+        val top = if (topPx != NO_VALUE_INT) topPx else editText.paddingTop
+        val right = if (rightPx != NO_VALUE_INT) rightPx else editText.paddingRight
+        val bottom = if (bottomPx != NO_VALUE_INT) bottomPx else editText.paddingBottom
+
+        editText.updatePadding(left = left, top = top, right = right, bottom = bottom)
+    }
+
+    // TODO verify with Elmo that automatic clear error on focus should be a part of the component
+    private fun initEditText(editText: LabTextInputEditText) {
+        editText.focusedListener = {
+            if (clearErrorOnFocus) {
+                clearError()
+            }
+        }
+        editText.textChangedListener = { text, stateRestore ->
+            if (!stateRestore) {
+                listener?.onTextChanged(text.toString())
+                // Only reset errors when the user enters text
+                clearError()
+            }
         }
     }
 
     companion object {
-        private const val DURATION_ANIMATION_MS = 60L
+        private const val STATE_ERROR = "LabTextField.STATE_ERROR"
+        private const val STATE_PARENT = "LabTextField.STATE_PARENT"
+
         private const val NO_VALUE_INT: Int = -1
+
+        const val ID_EDIT_TEXT = android.R.id.text1
     }
 }

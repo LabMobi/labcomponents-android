@@ -5,6 +5,9 @@
         <attr name="labColorOnPrimary" format="color"/>
         <attr name="labColorSecondary" format="color"/>
         <attr name="labColorOnSecondary" format="color"/>
+        <attr name="labColorSurface" format="color"/>
         <attr name="labColorOnSurface" format="color"/>
+        <attr name="labColorBackground" format="color"/>
+        <attr name="labColorOnBackground" format="color"/>
     </declare-styleable>
 </resources>

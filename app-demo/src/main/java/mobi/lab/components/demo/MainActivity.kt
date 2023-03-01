@@ -35,8 +35,15 @@ class MainActivity : BaseActivity() {
     }
 
     private fun initUi(binding: ActivityMainBinding) {
-        setSupportActionBar(binding.toolbar)
-        binding.textField.setHint("This is a hint")
+        binding.apply {
+            setSupportActionBar(toolbar)
+            textField.hint = "This is a hint"
+
+
+            checkTextField2.setOnCheckedChangeListener { _, isChecked -> textField2.isEnabled = isChecked }
+            textField2.hint = "This is a hint"
+            textField2.placeholderText = "This is a placeholder"
+        }
     }
 
     private fun toggleUiMode() {

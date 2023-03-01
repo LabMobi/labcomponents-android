@@ -41,15 +41,32 @@
                 android:layout_marginStart="@dimen/margin"
                 android:layout_marginEnd="@dimen/margin" />
 
-            <mobi.lab.components.textfield.LabTextField
-                android:id="@+id/text_field_2"
-                style="@style/Lab.Widget.TextField"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin"
-                android:layout_marginStart="@dimen/margin"
-                android:layout_marginEnd="@dimen/margin"
-                android:layout_marginBottom="@dimen/margin" />
+                android:orientation="horizontal">
+
+                <mobi.lab.components.textfield.LabTextField
+                    android:id="@+id/text_field_2"
+                    style="@style/Lab.Widget.TextField"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="@dimen/margin"
+                    android:layout_marginStart="@dimen/margin"
+                    android:layout_marginEnd="@dimen/lab_size_8" />
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/check_text_field_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_weight="0"
+                    android:text="Enabled"
+                    android:checked="true"/>
+
+            </LinearLayout>
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>

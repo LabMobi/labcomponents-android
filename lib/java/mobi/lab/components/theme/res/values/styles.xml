@@ -1,19 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Lab.Theme.DayNight" parent="Theme.Material3.DayNight.NoActionBar">
-        <item name="android:statusBarColor">@color/lab_primary</item>
+    <!-- TODO add material 3 theme? -->
+
+    <style name="Lab.Theme.DayNight" parent="Theme.MaterialComponents.DayNight.NoActionBar.Bridge">
+        <item name="android:statusBarColor">@color/lab_black</item>
+        <item name="android:windowBackground">#FFFFFF</item>
 
         <!-- TODO can I share themes somehow? -->
         <!-- Customize your theme here. -->
-        <item name="android:windowBackground">#FFFFFF</item>
 
         <!-- ColorPalette -->
+        <!-- TODO create stateful colors -->
         <item name="labColorPrimary">#0F82FF</item>
         <item name="labColorOnPrimary">#FFFFFF</item>
         <item name="labColorSecondary">#CCE2F9</item>
-        <item name="labColorOnSecondary">#000000</item>
-        <item name="labColorOnSurface">#000000</item>
+        <item name="labColorOnSecondary">#191C21</item>
+        <item name="labColorSurface">#FFFFFF</item>
+        <item name="labColorOnSurface">#191C21</item>
+        <item name="labColorBackground">#FFFFFF</item>
+        <item name="labColorOnBackground">#191C21</item>
 
         <!-- Shape -->
         <item name="labCornerSize">4dp</item>
@@ -24,13 +30,59 @@
 
         <!-- TextField -->
 
-        <!-- DEBUG VALUES -->
-        <item name="colorPrimary">@color/lab_todo</item>
-        <item name="colorOnPrimary">@color/lab_todo</item>
-        <item name="colorSecondary">@color/lab_todo</item>
-        <item name="colorOnSecondary">@color/lab_todo</item>
-        <item name="colorAccent">@color/lab_todo</item>
-        <item name="colorOnSurface">@color/lab_todo</item>
+        <!-- Material theme overrides START -->
+
+        <item name="colorAccent">?attr/labColorPrimary</item>
+        <item name="colorPrimary">?attr/labColorPrimary</item>
+        <item name="colorOnPrimary">?attr/labColorOnPrimary</item>
+        <item name="colorSecondary">?attr/labColorSecondary</item>
+        <item name="colorOnSecondary">?attr/labColorOnSecondary</item>
+        <item name="colorSurface">?attr/labColorSurface</item>
+        <item name="colorOnSurface">?attr/labColorOnSurface</item>
+        <item name="android:colorBackground">?attr/labColorBackground</item>
+        <item name="colorOnBackground">?attr/labColorOnBackground</item>
+
+        <!-- Material theme overrides END -->
+
+        <!-- TODO go over these overrides -->
+        <!-- DEBUG VALUES START -->
+        <item name="colorPrimaryInverse">@color/lab_todo</item>
+        <item name="colorPrimaryContainer">@color/lab_todo</item>
+        <item name="colorOnPrimaryContainer">@color/lab_todo</item>
+        <item name="colorSecondaryContainer">@color/lab_todo</item>
+        <item name="colorOnSecondaryContainer">@color/lab_todo</item>
+        <item name="colorTertiary">@color/lab_todo</item>
+        <item name="colorOnTertiary">@color/lab_todo</item>
+        <item name="colorTertiaryContainer">@color/lab_todo</item>
+        <item name="colorOnTertiaryContainer">@color/lab_todo</item>
+        <item name="colorSurfaceVariant">@color/lab_todo</item>
+        <item name="colorOnSurfaceVariant">@color/lab_todo</item>
+        <item name="colorSurfaceInverse">@color/lab_todo</item>
+        <item name="colorOnSurfaceInverse">@color/lab_todo</item>
+        <item name="colorOutline">@color/lab_todo</item>
+        <item name="colorOutlineVariant">@color/lab_todo</item>
+        <item name="colorError">@color/lab_todo</item>
+        <item name="colorOnError">@color/lab_todo</item>
+        <item name="colorErrorContainer">@color/lab_todo</item>
+        <item name="colorOnErrorContainer">@color/lab_todo</item>
+
+        <!-- TODO go over these overrides -->
+        <item name="android:textColorPrimary">@color/lab_todo_2</item>
+        <item name="android:textColorPrimaryInverse">@color/lab_todo_2</item>
+        <item name="android:textColorSecondary">@color/lab_todo_2</item>
+        <item name="android:textColorSecondaryInverse">@color/lab_todo_2</item>
+        <item name="android:textColorTertiary">@color/lab_todo_2</item>
+        <item name="android:textColorTertiaryInverse">@color/lab_todo_2</item>
+        <item name="android:textColorPrimaryDisableOnly">@color/lab_todo_2</item>
+        <item name="android:textColorPrimaryInverseDisableOnly">@color/lab_todo_2</item>
+        <item name="android:textColorHint">@color/lab_todo_2</item>
+        <item name="android:textColorHintInverse">@color/lab_todo_2</item>
+        <item name="android:textColorHighlight">@color/lab_todo_2</item>
+        <item name="android:textColorHighlightInverse">@color/lab_todo_2</item>
+        <item name="android:textColorLink">@color/lab_todo_2</item>
+        <item name="android:textColorLinkInverse">@color/lab_todo_2</item>
+        <item name="android:textColorAlertDialogListItem">@color/lab_todo_2</item>
+        <!-- DEBUG VALUES END -->
     </style>
 
     <!-- TODO add light and dark themes -->

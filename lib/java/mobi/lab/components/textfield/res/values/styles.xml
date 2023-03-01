@@ -1,35 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- TextField start -->
-    <style name="Lab.Widget.TextField" parent="">
+    <style name="Lab.Widget.TextField" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
         <item name="textPaddingTop">24dp</item>
         <item name="textPaddingBottom">10dp</item>
         <item name="textPaddingLeft">16dp</item>
         <item name="textPaddingRight">16dp</item>
         <item name="boxCollapsedPaddingTop">10dp</item>
 
-        <!--        <item name="boxStrokeColor">@color/wla_default_textfield_stroke</item>-->
-        <!--        <item name="boxStrokeErrorColor">@color/error</item>-->
-        <!--        <item name="boxStrokeWidth">@dimen/wla_stroke_width</item>-->
-        <!--        <item name="boxStrokeWidthFocused">@dimen/wla_stroke_width</item>-->
-
-        <!--        &lt;!&ndash; Remove unnecessary top padding &ndash;&gt;-->
-        <!--        <item name="hintEnabled">false</item>-->
-        <!--        <item name="errorEnabled">true</item>-->
-        <!--        <item name="errorTextAppearance">@style/Wla.Text.FormLabel</item>-->
-        <!--        <item name="errorIconDrawable">@null</item>-->
-        <!--        <item name="placeholderTextAppearance">@style/Wla.Text.Body16Strong</item>-->
-        <!--        <item name="placeholderTextColor">@color/grey2_daynight</item>-->
-        <!--        <item name="android:descendantFocusability">afterDescendants</item>-->
-        <!--        <item name="android:focusable">false</item>-->
-        <!--        <item name="android:focusableInTouchMode">false</item>-->
-<!--        <item name="theme">@style/Lab.ThemeDefaults.TextField</item>-->
-    </style>
-
-    <style name="Lab.TextField.TextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
         <item name="boxBackgroundMode">filled</item>
         <item name="boxStrokeWidthFocused">0dp</item>
         <item name="boxStrokeWidth">0dp</item>
+        <item name="materialThemeOverlay">@style/Lab.ThemeOverlay.TextInputLayout</item>
 
         <!-- TODO official items. We should override these values in the TextField theme? -->
 <!--        <item name="enforceMaterialTheme">true</item>-->
@@ -74,7 +56,11 @@
 <!--        <item name="shapeAppearanceOverlay">@null</item>-->
     </style>
 
-    <style name="Lab.TextField.EditTextStyle" parent="">
+    <style name="Lab.ThemeOverlay.TextInputLayout" parent="">
+        <item name="editTextStyle">@style/Lab.TextField.EditTextStyle</item>
+    </style>
+
+    <style name="Lab.TextField.EditTextStyle" parent="Widget.MaterialComponents.TextInputEditText.FilledBox">
         <item name="android:background">@drawable/lab_bg_textfield_outline</item>
 
         <!-- TODO add support for setting top and bottom paddings separately? -->
