@@ -38,11 +38,22 @@ class MainActivity : BaseActivity() {
         binding.apply {
             setSupportActionBar(toolbar)
             textField.hint = "This is a hint"
-
-
-            checkTextField2.setOnCheckedChangeListener { _, isChecked -> textField2.isEnabled = isChecked }
             textField2.hint = "This is a hint"
-            textField2.placeholderText = "This is a placeholder"
+            checkTextFieldEnabled.setOnCheckedChangeListener { _, isChecked ->
+                textField.isEnabled = isChecked
+                textField2.isEnabled = isChecked
+            }
+            checkTextFieldError.setOnCheckedChangeListener { _, isChecked ->
+                var errorText = ""
+                if (isChecked) {
+                    errorText = textField2.getText()
+                    if (errorText.isEmpty()) {
+                        errorText = "This is an error!"
+                    }
+                }
+                textField.error = errorText
+                textField2.error = errorText
+            }
         }
     }
 

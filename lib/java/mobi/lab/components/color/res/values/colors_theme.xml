@@ -2,4 +2,5 @@
 <resources>
     <color name="lab_todo">#FF00FF</color>
     <color name="lab_todo_2">#00FFFF</color>
+    <color name="lab_todo_3">#FFFF00</color>
 </resources>

@@ -7,8 +7,7 @@
     <declare-styleable name="LabTextField">
         <attr name="textPaddingTop" format="dimension"/>
         <attr name="textPaddingBottom" format="dimension"/>
-        <attr name="textPaddingLeft" format="dimension"/>
-        <attr name="textPaddingRight" format="dimension"/>
+        <attr name="textPaddingHorizontal" format="dimension"/>
         <attr name="clearErrorOnFocus" format="boolean"/>
 
         <!-- Override attrs -->

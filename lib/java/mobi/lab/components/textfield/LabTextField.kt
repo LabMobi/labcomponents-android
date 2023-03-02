@@ -37,9 +37,27 @@ class LabTextField @JvmOverloads constructor(
     init {
         editText = LabTextInputEditText(context, attrs)
         editText.id = ID_EDIT_TEXT
+        editText.hint = null
         editText.layoutParams = LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT)
         addView(editText)
         initEditText(editText)
+
+        attrs?.let {
+            val attributes = context.obtainStyledAttributes(attrs, R.styleable.LabTextField, 0, defStyleAttr)
+            try {
+                setTextPaddingVertical(
+                    topPx = attributes.getDimensionPixelSize(R.styleable.LabTextField_textPaddingTop, NO_VALUE_INT),
+                    bottomPx = attributes.getDimensionPixelSize(R.styleable.LabTextField_textPaddingBottom, NO_VALUE_INT),
+                )
+                setTextPaddingHorizontal(attributes.getDimensionPixelSize(R.styleable.LabTextField_textPaddingHorizontal, NO_VALUE_INT))
+
+                clearErrorOnFocus = attributes.getBoolean(R.styleable.LabTextField_clearErrorOnFocus, clearErrorOnFocus)
+
+                // TODO (2): Background
+            } finally {
+                attributes.recycle()
+            }
+        }
     }
 
     override fun onCreateDrawableState(extraSpace: Int): IntArray {
@@ -102,13 +120,20 @@ class LabTextField @JvmOverloads constructor(
         }
     }
 
-    fun setTextPadding(
-        @Dimension(unit = Dimension.PX) leftPx: Int,
-        @Dimension(unit = Dimension.PX) topPx: Int,
-        @Dimension(unit = Dimension.PX) rightPx: Int,
-        @Dimension(unit = Dimension.PX) bottomPx: Int,
-    ) {
-        setTextPaddingInternal(leftPx = leftPx, topPx = topPx, rightPx = rightPx, bottomPx = bottomPx)
+    fun setTextPaddingVertical(@Dimension(unit = Dimension.PX) topPx: Int, @Dimension(unit = Dimension.PX) bottomPx: Int) {
+        // TODO remove logging
+        Timber.e("setTextPaddingVertical topPx=$topPx bottomPx=$bottomPx")
+        val top = if (topPx != NO_VALUE_INT) topPx else editText.paddingTop
+        val bottom = if (bottomPx != NO_VALUE_INT) bottomPx else editText.paddingBottom
+        editText.updatePadding(top = top, bottom = bottom)
+    }
+
+    fun setTextPaddingHorizontal(@Dimension(unit = Dimension.PX) paddingPx: Int) {
+        // TODO remove logging
+        Timber.e("setTextPaddingHorizontal paddingPx=$paddingPx")
+        if (paddingPx != NO_VALUE_INT) {
+            editText.compoundDrawablePadding = paddingPx
+        }
     }
 
     fun setImeActionHandler(imeAction: Int, onImeAction: (keyEvent: KeyEvent) -> Unit) {
@@ -139,18 +164,6 @@ class LabTextField @JvmOverloads constructor(
     fun clearError() {
         error = null
         listener?.onErrorCleared()
-    }
-
-    private fun setTextPaddingInternal(leftPx: Int, topPx: Int, rightPx: Int, bottomPx: Int) {
-        // TODO remove logging
-        Timber.e("setTextPaddingInternal leftPx=$leftPx topPx=$topPx rightPx=$rightPx bottomPx=$bottomPx")
-
-        val left = if (leftPx != NO_VALUE_INT) leftPx else editText.paddingLeft
-        val top = if (topPx != NO_VALUE_INT) topPx else editText.paddingTop
-        val right = if (rightPx != NO_VALUE_INT) rightPx else editText.paddingRight
-        val bottom = if (bottomPx != NO_VALUE_INT) bottomPx else editText.paddingBottom
-
-        editText.updatePadding(left = left, top = top, right = right, bottom = bottom)
     }
 
     // TODO verify with Elmo that automatic clear error on focus should be a part of the component

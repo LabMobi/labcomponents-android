@@ -36,14 +36,131 @@
                 style="@style/Text.SectionHeadline"
                 android:text="Text inputs" />
 
-            <mobi.lab.components.textfield.LabTextField
-                android:id="@+id/text_field"
-                style="@style/Lab.Widget.TextField"
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/margin"
-                android:layout_marginStart="@dimen/margin"
-                android:layout_marginEnd="@dimen/margin" />
+                android:background="#DEDEDE">
+
+                <View
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:background="#500FFFFF"
+                    app:layout_constraintStart_toStartOf="@id/text_field"
+                    app:layout_constraintTop_toTopOf="@id/text_field"
+                    />
+
+                <View
+                    android:layout_width="16dp"
+                    android:layout_height="56dp"
+                    android:background="#50FF00FF"
+                    android:layout_marginBottom="20dp"
+                    app:layout_constraintStart_toStartOf="@id/text_field"
+                    app:layout_constraintTop_toTopOf="@id/text_field"
+                    app:layout_constraintBottom_toBottomOf="@id/text_field"
+                    />
+
+                <View
+                    android:layout_width="16dp"
+                    android:layout_height="56dp"
+                    android:background="#50FF00FF"
+                    android:layout_marginBottom="20dp"
+                    app:layout_constraintEnd_toEndOf="@id/text_field"
+                    app:layout_constraintTop_toTopOf="@id/text_field"
+                    app:layout_constraintBottom_toBottomOf="@id/text_field"
+                    />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="16dp"
+                    android:background="#50FF00FF"
+                    android:layout_marginBottom="20dp"
+                    app:layout_constraintStart_toStartOf="@id/text_field"
+                    app:layout_constraintEnd_toEndOf="@id/text_field"
+                    app:layout_constraintTop_toTopOf="@id/text_field"
+                    />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="16dp"
+                    android:background="#50FF00FF"
+                    android:layout_marginBottom="20dp"
+                    app:layout_constraintStart_toStartOf="@id/text_field"
+                    app:layout_constraintEnd_toEndOf="@id/text_field"
+                    app:layout_constraintBottom_toBottomOf="@id/text_field"
+                    />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="8dp"
+                    android:background="#50FF0000"
+                    android:layout_marginBottom="20dp"
+                    app:layout_constraintStart_toStartOf="@id/text_field"
+                    app:layout_constraintEnd_toEndOf="@id/text_field"
+                    app:layout_constraintBottom_toBottomOf="@id/text_field"
+                    />
+
+                <View
+                    android:layout_width="8dp"
+                    android:layout_height="56dp"
+                    android:background="#50FF0000"
+                    android:layout_marginBottom="20dp"
+                    app:layout_constraintStart_toStartOf="@id/text_field"
+                    app:layout_constraintTop_toTopOf="@id/text_field"
+                    app:layout_constraintBottom_toBottomOf="@id/text_field"
+                    />
+
+                <View
+                    android:layout_width="8dp"
+                    android:layout_height="56dp"
+                    android:background="#50FF0000"
+                    android:layout_marginBottom="20dp"
+                    app:layout_constraintEnd_toEndOf="@id/text_field"
+                    app:layout_constraintTop_toTopOf="@id/text_field"
+                    app:layout_constraintBottom_toBottomOf="@id/text_field"
+                    />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="8dp"
+                    android:background="#50FF0000"
+                    android:layout_marginBottom="20dp"
+                    app:layout_constraintStart_toStartOf="@id/text_field"
+                    app:layout_constraintEnd_toEndOf="@id/text_field"
+                    app:layout_constraintTop_toTopOf="@id/text_field"
+                    />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="8dp"
+                    android:background="#50FF0000"
+                    android:layout_marginBottom="20dp"
+                    app:layout_constraintStart_toStartOf="@id/text_field"
+                    app:layout_constraintEnd_toEndOf="@id/text_field"
+                    app:layout_constraintBottom_toBottomOf="@id/text_field"
+                    />
+
+                <mobi.lab.components.textfield.LabTextField
+                    android:id="@+id/text_field"
+                    style="@style/Lab.Widget.TextField"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin"
+                    android:layout_marginStart="@dimen/margin"
+                    android:layout_marginEnd="@dimen/margin"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:endIconDrawable="@drawable/icon_clear"
+                    app:endIconMode="clear_text"
+                    app:startIconDrawable="@drawable/icon_clear"
+                    app:placeholderText="This is a placeholder"
+                    app:helperText="This is a helper text"
+                    app:suffixText="Suffix"
+                    app:prefixText="Prefix"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="19"
+                    />
+                <!--                    app:startIconDrawable="@drawable/icon_clear"-->
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -58,17 +175,34 @@
                     android:layout_weight="1"
                     android:layout_marginTop="@dimen/margin"
                     android:layout_marginStart="@dimen/margin"
-                    android:layout_marginEnd="@dimen/lab_size_8" />
+                    android:layout_marginEnd="@dimen/lab_size_8"
+                    app:placeholderText="This is a placeholder"
+                    />
 
-                <com.google.android.material.checkbox.MaterialCheckBox
-                    android:id="@+id/check_text_field_2"
+                <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:layout_marginEnd="12dp"
                     android:layout_weight="0"
-                    android:text="Enabled"
-                    android:checked="true"/>
+                    android:orientation="vertical">
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/check_text_field_enabled"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:text="Enabled"
+                        android:checked="true"/>
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/check_text_field_error"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="12dp"
+                        android:text="Error"
+                        android:checked="false"/>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
             </LinearLayout>
 
             <TextView

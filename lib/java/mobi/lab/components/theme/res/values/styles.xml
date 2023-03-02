@@ -3,7 +3,7 @@
 
     <!-- TODO add material 3 theme? -->
 
-    <style name="Lab.Theme.DayNight" parent="Theme.MaterialComponents.DayNight.NoActionBar.Bridge">
+    <style name="Lab.Theme.DayNight" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="android:statusBarColor">@color/lab_ref_palette_neutral_0</item>
         <item name="android:windowBackground">?attr/labColorBackground</item>
 
@@ -74,6 +74,20 @@
         <item name="labFontFamilySemibold">@string/lab_ref_font_family_medium</item>
         <item name="labFontFamilyBold">@string/lab_ref_font_family_black</item>
 
+        <item name="labTextAppearanceHeadlineLarge">@style/Lab.TextAppearance.HeadlineLarge</item>
+        <item name="labTextAppearanceHeadlineMedium">@style/Lab.TextAppearance.HeadlineMedium</item>
+        <item name="labTextAppearanceHeadlineSmall">@style/Lab.TextAppearance.HeadlineSmall</item>
+        <item name="labTextAppearanceTitleLarge">@style/Lab.TextAppearance.TitleLarge</item>
+        <item name="labTextAppearanceTitleMedium">@style/Lab.TextAppearance.TitleMedium</item>
+        <item name="labTextAppearanceTitleSmall">@style/Lab.TextAppearance.TitleSmall</item>
+        <!-- TODO do we need emphasis styles here, too?-->
+        <item name="labTextAppearanceBodyLarge">@style/Lab.TextAppearance.BodyLarge</item>
+        <item name="labTextAppearanceBodyMedium">@style/Lab.TextAppearance.BodyMedium</item>
+        <item name="labTextAppearanceBodySmall">@style/Lab.TextAppearance.BodySmall</item>
+        <item name="labTextAppearanceLabelLarge">@style/Lab.TextAppearance.LabelLarge</item>
+        <item name="labTextAppearanceLabelMedium">@style/Lab.TextAppearance.LabelMedium</item>
+        <item name="labTextAppearanceLabelSmall">@style/Lab.TextAppearance.LabelSmall</item>
+
         <!-- Shape -->
         <item name="labCornerSize">4dp</item>
         <item name="labCornerSizeTopLeft">?attr/labCornerSize</item>
@@ -83,7 +97,9 @@
 
         <!-- TextField -->
 
-        <!-- Material theme overrides START -->
+        <!-- Material 3 theme overrides START -->
+        <item name="elevationOverlayEnabled">true</item>
+        <item name="elevationOverlayColor">?attr/labColorSurface</item>
 
         <item name="colorAccent">?attr/labColorPrimary</item>
         <item name="colorPrimary">?attr/labColorPrimary</item>
@@ -92,8 +108,12 @@
         <item name="colorOnSecondary">?attr/labColorOnSecondary</item>
         <item name="colorSurface">?attr/labColorSurface</item>
         <item name="colorOnSurface">?attr/labColorOnSurface</item>
+        <item name="colorSurfaceVariant">?attr/labColorSurface</item>
+        <item name="colorOnSurfaceVariant">?attr/labColorOnSurface</item>
         <item name="android:colorBackground">?attr/labColorBackground</item>
         <item name="colorOnBackground">?attr/labColorOnBackground</item>
+        <item name="colorError">?attr/labColorError</item>
+        <item name="colorOnError">@color/lab_todo</item>
 
         <!-- TODO go over these overrides -->
         <!-- DEBUG VALUES START -->
@@ -106,14 +126,10 @@
         <item name="colorOnTertiary">@color/lab_todo</item>
         <item name="colorTertiaryContainer">@color/lab_todo</item>
         <item name="colorOnTertiaryContainer">@color/lab_todo</item>
-        <item name="colorSurfaceVariant">@color/lab_todo</item>
-        <item name="colorOnSurfaceVariant">@color/lab_todo</item>
         <item name="colorSurfaceInverse">@color/lab_todo</item>
         <item name="colorOnSurfaceInverse">@color/lab_todo</item>
         <item name="colorOutline">@color/lab_todo</item>
         <item name="colorOutlineVariant">@color/lab_todo</item>
-        <item name="colorError">@color/lab_todo</item>
-        <item name="colorOnError">@color/lab_todo</item>
         <item name="colorErrorContainer">@color/lab_todo</item>
         <item name="colorOnErrorContainer">@color/lab_todo</item>
 

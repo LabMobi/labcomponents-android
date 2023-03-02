@@ -1,17 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- TextField start -->
-    <style name="Lab.Widget.TextField" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
-        <item name="textPaddingTop">24dp</item>
-        <item name="textPaddingBottom">10dp</item>
-        <item name="textPaddingLeft">16dp</item>
-        <item name="textPaddingRight">16dp</item>
-        <item name="boxCollapsedPaddingTop">10dp</item>
+    <style name="Lab.Widget.TextField" parent="Widget.Material3.TextInputLayout.FilledBox">
+        <item name="textPaddingTop">@dimen/lab_size_24</item>
+        <item name="textPaddingBottom">@dimen/lab_size_8</item>
+        <!-- Additional padding before and after the input text -->
+        <item name="textPaddingHorizontal">@dimen/lab_size_2</item>
+        <item name="boxCollapsedPaddingTop">@dimen/lab_size_12</item>
 
         <item name="boxBackgroundMode">filled</item>
         <item name="boxStrokeWidthFocused">0dp</item>
         <item name="boxStrokeWidth">0dp</item>
         <item name="materialThemeOverlay">@style/Lab.ThemeOverlay.TextInputLayout</item>
+
+        <item name="endIconMinSize">@dimen/lab_size_56</item>
+        <item name="startIconMinSize">@dimen/lab_size_56</item>
+        <item name="endIconTint">?attr/labColorSelectorTextSecondary</item>
+        <item name="startIconTint">?attr/labColorSelectorTextSecondary</item>
+
+        <item name="counterTextAppearance">?attr/labTextAppearanceLabelMedium</item>
+        <item name="counterOverflowTextAppearance">?attr/labTextAppearanceLabelMedium</item>
+        <item name="errorTextAppearance">?attr/labTextAppearanceLabelMedium</item>
+        <item name="helperTextTextAppearance">?attr/labTextAppearanceLabelMedium</item>
+        <item name="hintTextAppearance">?attr/labTextAppearanceLabelMedium</item>
+        <item name="placeholderTextAppearance">?attr/labTextAppearanceBodyLarge</item>
+        <item name="prefixTextAppearance">?attr/labTextAppearanceBodyLarge</item>
+        <item name="suffixTextAppearance">?attr/labTextAppearanceBodyLarge</item>
+        <item name="android:textAppearance">?attr/labTextAppearanceBodyLarge</item>
+
+        <item name="counterTextColor">?attr/labColorSelectorTextSecondary</item>
+        <item name="counterOverflowTextColor">?attr/labColorError</item>
+        <item name="errorTextColor">?attr/labColorError</item>
+        <item name="helperTextTextColor">?attr/labColorSelectorTextSecondary</item>
+        <item name="hintTextColor">?attr/labColorPrimary</item>
+        <item name="android:textColorHint">?attr/labColorSelectorTextSecondary</item>
+        <item name="placeholderTextColor">?attr/labColorSelectorTextSecondary</item>
+        <item name="prefixTextColor">?attr/labColorSelectorTextSecondary</item>
+        <item name="suffixTextColor">?attr/labColorSelectorTextSecondary</item>
+        <item name="android:textColor">?attr/labColorSelectorTextPrimary</item>
+
 
         <!-- TODO official items. We should override these values in the TextField theme? -->
 <!--        <item name="enforceMaterialTheme">true</item>-->
@@ -21,36 +48,17 @@
 <!--        <item name="android:maxWidth">@dimen/material_textinput_max_width</item>-->
 <!--&lt;!&ndash;        <item name="boxBackgroundMode">outline</item>&ndash;&gt;-->
 <!--        <item name="boxBackgroundColor">@null</item>-->
+
 <!--        <item name="errorIconDrawable">@drawable/mtrl_ic_error</item>-->
 <!--        <item name="errorIconTint">@color/mtrl_error</item>-->
 <!--        <item name="endIconTint">@color/mtrl_outlined_icon_tint</item>-->
 <!--        <item name="startIconTint">@color/mtrl_outlined_icon_tint</item>-->
+
 <!--        <item name="boxCollapsedPaddingTop">0dp</item>-->
 <!--        <item name="boxStrokeColor">@color/mtrl_outlined_stroke_color</item>-->
 <!--        <item name="boxStrokeErrorColor">@color/mtrl_error</item>-->
 <!--        <item name="boxStrokeWidth">@dimen/mtrl_textinput_box_stroke_width_default</item>-->
 <!--        <item name="boxStrokeWidthFocused">@dimen/mtrl_textinput_box_stroke_width_focused</item>-->
-
-<!--        <item name="counterTextAppearance">?attr/textAppearanceCaption</item>-->
-<!--        <item name="counterOverflowTextAppearance">?attr/textAppearanceCaption</item>-->
-<!--        <item name="errorTextAppearance">?attr/textAppearanceCaption</item>-->
-<!--        <item name="helperTextTextAppearance">?attr/textAppearanceCaption</item>-->
-<!--        <item name="hintTextAppearance">?attr/textAppearanceCaption</item>-->
-<!--        <item name="placeholderTextAppearance">?attr/textAppearanceSubtitle1</item>-->
-<!--        <item name="prefixTextAppearance">?attr/textAppearanceSubtitle1</item>-->
-<!--        <item name="suffixTextAppearance">?attr/textAppearanceSubtitle1</item>-->
-
-<!--        <item name="counterTextColor">@color/mtrl_indicator_text_color</item>-->
-<!--        <item name="counterOverflowTextColor">@color/mtrl_error</item>-->
-<!--        <item name="errorTextColor">@color/mtrl_error</item>-->
-<!--        <item name="helperTextTextColor">@color/mtrl_indicator_text_color</item>-->
-
-<!--        <item name="hintTextColor">?attr/colorPrimary</item>-->
-<!--        <item name="placeholderTextColor">@color/mtrl_indicator_text_color</item>-->
-<!--        <item name="prefixTextColor">@color/mtrl_indicator_text_color</item>-->
-<!--        <item name="suffixTextColor">@color/mtrl_indicator_text_color</item>-->
-
-<!--        <item name="android:textColorHint">@color/mtrl_indicator_text_color</item>-->
 
 <!--        <item name="shapeAppearance">?attr/shapeAppearanceSmallComponent</item>-->
 <!--        <item name="shapeAppearanceOverlay">@null</item>-->
@@ -60,8 +68,9 @@
         <item name="editTextStyle">@style/Lab.TextField.EditTextStyle</item>
     </style>
 
-    <style name="Lab.TextField.EditTextStyle" parent="Widget.MaterialComponents.TextInputEditText.FilledBox">
+    <style name="Lab.TextField.EditTextStyle" parent="Widget.Material3.TextInputEditText.FilledBox">
         <item name="android:background">@drawable/lab_bg_textfield_outline</item>
+        <item name="android:drawablePadding">10dp</item>
 
         <!-- TODO add support for setting top and bottom paddings separately? -->
 <!--        <item name="android:background">@drawable/wla_default_bg_textfield</item>-->

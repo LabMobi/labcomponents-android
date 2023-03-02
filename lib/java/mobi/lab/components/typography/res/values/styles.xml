@@ -2,7 +2,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="NewApi">
     <!-- TODO verify if this is correct. Letter spacing calculated by Figma size / text size -->
 
-    <style name="Lab.TextAppearance" parent="Base.TextAppearance.AppCompat">
+    <style name="Lab.TextAppearance" parent="TextAppearance.Material3.BodyLarge">
         <!-- Add base styles here -->
         <item name="android:textColor">@color/lab_default_color_selector_text_primary</item>
         <item name="android:textStyle">normal</item>
