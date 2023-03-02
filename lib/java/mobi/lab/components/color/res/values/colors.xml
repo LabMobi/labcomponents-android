@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <color name="lab_white">#FFFFFF</color>
-    <color name="lab_black">#000000</color>
-    <color name="lab_primary">@color/lab_black</color>
-    <color name="lab_on_primary">@color/lab_white</color>
-    <color name="lab_todo">#FF00FF</color>
-    <color name="lab_todo_2">#00FFFF</color>
-</resources>

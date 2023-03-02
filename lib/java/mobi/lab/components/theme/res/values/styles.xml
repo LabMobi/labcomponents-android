@@ -4,22 +4,75 @@
     <!-- TODO add material 3 theme? -->
 
     <style name="Lab.Theme.DayNight" parent="Theme.MaterialComponents.DayNight.NoActionBar.Bridge">
-        <item name="android:statusBarColor">@color/lab_black</item>
-        <item name="android:windowBackground">#FFFFFF</item>
+        <item name="android:statusBarColor">@color/lab_ref_palette_neutral_0</item>
+        <item name="android:windowBackground">?attr/labColorBackground</item>
 
         <!-- TODO can I share themes somehow? -->
         <!-- Customize your theme here. -->
 
         <!-- ColorPalette -->
         <!-- TODO create stateful colors -->
-        <item name="labColorPrimary">#0F82FF</item>
-        <item name="labColorOnPrimary">#FFFFFF</item>
-        <item name="labColorSecondary">#CCE2F9</item>
-        <item name="labColorOnSecondary">#191C21</item>
-        <item name="labColorSurface">#FFFFFF</item>
-        <item name="labColorOnSurface">#191C21</item>
-        <item name="labColorBackground">#FFFFFF</item>
-        <item name="labColorOnBackground">#191C21</item>
+        <item name="labColorPrimary">@color/lab_ref_palette_primary_50</item>
+        <item name="labColorOnPrimary">@color/lab_ref_palette_primary_99</item>
+        <item name="labColorSelectorPrimary">@color/lab_default_color_selector_primary</item>
+        <item name="labColorSelectorOnPrimary">@color/lab_default_color_selector_on_primary</item>
+
+        <item name="labColorSecondary">@color/lab_ref_palette_secondary_90</item>
+        <item name="labColorOnSecondary">@color/lab_ref_palette_secondary_10</item>
+        <item name="labColorSelectorSecondary">@color/lab_default_color_selector_secondary</item>
+        <item name="labColorSelectorOnSecondary">@color/lab_default_color_selector_on_secondary</item>
+
+        <item name="labColorSurface">@color/lab_ref_palette_neutral_100</item>
+        <item name="labColorOnSurface">@color/lab_ref_palette_neutral_10</item>h
+
+        <item name="labColorBackground">@color/lab_ref_palette_neutral_100</item>
+        <item name="labColorOnBackground">@color/lab_ref_palette_neutral_10</item>
+
+        <item name="labColorError">@color/lab_ref_palette_error_30</item>
+
+        <item name="labColorTextPrimary">@color/lab_ref_palette_neutral_10</item>
+        <item name="labColorTextSecondary">@color/lab_ref_palette_neutral_50</item>
+        <item name="labColorSelectorTextPrimary">@color/lab_default_color_selector_text_primary</item>
+        <item name="labColorSelectorTextSecondary">@color/lab_default_color_selector_text_secondary</item>
+
+        <!-- TODO add error, success, caution attributes ?-->
+
+        <!-- Individual color state overrides. These are used by top level colors by default. -->
+        <item name="labColorSelectorPrimaryRegular">?attr/labColorPrimary</item>
+        <item name="labColorSelectorPrimaryHover">@color/lab_ref_palette_primary_40</item>
+        <item name="labColorSelectorPrimaryPressed">@color/lab_ref_palette_primary_30</item>
+        <item name="labColorSelectorPrimaryDisabled">@color/lab_ref_palette_neutral_95</item>
+
+        <item name="labColorSelectorOnPrimaryRegular">?attr/labColorOnPrimary</item>
+        <item name="labColorSelectorOnPrimaryHover">?attr/labColorOnPrimary</item>
+        <item name="labColorSelectorOnPrimaryPressed">?attr/labColorOnPrimary</item>
+        <item name="labColorSelectorOnPrimaryDisabled">@color/lab_ref_palette_neutral_70</item>
+
+        <item name="labColorSelectorSecondaryRegular">?attr/labColorSecondary</item>
+        <item name="labColorSelectorSecondaryHover">@color/lab_ref_palette_secondary_80</item>
+        <item name="labColorSelectorSecondaryPressed">@color/lab_ref_palette_secondary_70</item>
+        <item name="labColorSelectorSecondaryDisabled">@color/lab_ref_palette_neutral_95</item>
+
+        <item name="labColorSelectorOnSecondaryRegular">?attr/labColorOnSecondary</item>
+        <item name="labColorSelectorOnSecondaryHover">?attr/labColorOnSecondary</item>
+        <item name="labColorSelectorOnSecondaryPressed">?attr/labColorOnSecondary</item>
+        <item name="labColorSelectorOnSecondaryDisabled">@color/lab_ref_palette_neutral_70</item>
+
+        <item name="labColorSelectorTextPrimaryRegular">?attr/labColorTextPrimary</item>
+        <item name="labColorSelectorTextPrimaryHover">?attr/labColorTextPrimary</item>
+        <item name="labColorSelectorTextPrimaryPressed">?attr/labColorTextPrimary</item>
+        <item name="labColorSelectorTextPrimaryDisabled">@color/lab_ref_palette_neutral_70</item>
+
+        <item name="labColorSelectorTextSecondaryRegular">?attr/labColorTextSecondary</item>
+        <item name="labColorSelectorTextSecondaryHover">?attr/labColorTextSecondary</item>
+        <item name="labColorSelectorTextSecondaryPressed">?attr/labColorTextSecondary</item>
+        <item name="labColorSelectorTextSecondaryDisabled">@color/lab_ref_palette_neutral_80</item>
+
+        <!-- Typography -->
+        <item name="labFontFamilyRegular">@string/lab_ref_font_family_light</item>
+        <item name="labFontFamilyMedium">@string/lab_ref_font_family_regular</item>
+        <item name="labFontFamilySemibold">@string/lab_ref_font_family_medium</item>
+        <item name="labFontFamilyBold">@string/lab_ref_font_family_black</item>
 
         <!-- Shape -->
         <item name="labCornerSize">4dp</item>
@@ -41,8 +94,6 @@
         <item name="colorOnSurface">?attr/labColorOnSurface</item>
         <item name="android:colorBackground">?attr/labColorBackground</item>
         <item name="colorOnBackground">?attr/labColorOnBackground</item>
-
-        <!-- Material theme overrides END -->
 
         <!-- TODO go over these overrides -->
         <!-- DEBUG VALUES START -->
@@ -86,22 +137,4 @@
     </style>
 
     <!-- TODO add light and dark themes -->
-
-<!--    <style name="Theme.Lab.Light" parent="Theme.Material3.Light.NoActionBar">-->
-<!--        &lt;!&ndash; Customize your theme here. &ndash;&gt;-->
-<!--        <item name="colorPrimary">@color/lab_primary</item>-->
-<!--        <item name="colorAccent">@color/lab_primary</item>-->
-<!--        <item name="android:statusBarColor">@color/lab_primary</item>-->
-<!--        -->
-<!--    </style>-->
-
-<!--    <style name="Theme.Lab.Dark" parent="Theme.Material3.Dark.NoActionBar">-->
-<!--        &lt;!&ndash; Customize your theme here. &ndash;&gt;-->
-<!--        <item name="colorPrimary">@color/lab_primary</item>-->
-<!--        <item name="colorAccent">@color/lab_primary</item>-->
-<!--        <item name="android:statusBarColor">@color/lab_primary</item>-->
-<!--        -->
-<!--        -->
-<!--    </style>-->
-
 </resources>

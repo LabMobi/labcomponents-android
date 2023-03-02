@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="labTextAppearanceHeadlineLarge" format="reference" />
+    <attr name="labTextAppearanceHeadlineMedium" format="reference" />
+    <attr name="labTextAppearanceHeadlineSmall" format="reference" />
+    <attr name="labTextAppearanceTitleLarge" format="reference" />
+    <attr name="labTextAppearanceTitleMedium" format="reference" />
+    <attr name="labTextAppearanceTitleSmall" format="reference" />
+    <attr name="labTextAppearanceBodyLarge" format="reference" />
+    <attr name="labTextAppearanceBodyMedium" format="reference" />
+    <attr name="labTextAppearanceBodySmall" format="reference" />
+    <attr name="labTextAppearanceLabelLarge" format="reference" />
+    <attr name="labTextAppearanceLabelMedium" format="reference" />
+    <attr name="labTextAppearanceLabelSmall" format="reference" />
+
+    <attr name="labFontFamilyRegular" format="reference" />
+    <attr name="labFontFamilyMedium" format="reference" />
+    <attr name="labFontFamilySemibold" format="reference" />
+    <attr name="labFontFamilyBold" format="reference" />
+</resources>

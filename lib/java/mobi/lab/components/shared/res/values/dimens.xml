@@ -11,9 +11,4 @@
 
     <!-- Off grid sizes -->
     <dimen name="lab_size_1">1dp</dimen>
-
-    <dimen name="lab_text_16">16sp</dimen>
-    <dimen name="lab_text_24">24sp</dimen>
-    <dimen name="lab_text_32">32sp</dimen>
-    <dimen name="lab_text_48">48sp</dimen>
 </resources>

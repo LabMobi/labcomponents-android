@@ -32,6 +32,10 @@
             android:paddingTop="@dimen/margin"
             android:paddingBottom="@dimen/margin">
 
+            <TextView
+                style="@style/Text.SectionHeadline"
+                android:text="Text inputs" />
+
             <mobi.lab.components.textfield.LabTextField
                 android:id="@+id/text_field"
                 style="@style/Lab.Widget.TextField"
@@ -65,6 +69,114 @@
                     android:layout_weight="0"
                     android:text="Enabled"
                     android:checked="true"/>
+            </LinearLayout>
+
+            <TextView
+                style="@style/Text.SectionHeadline"
+                android:text="Text styles" />
+
+            <TextView
+                style="@style/Text.TextStyle"
+                android:textAppearance="@style/Lab.TextAppearance.HeadlineLarge"
+                android:text="Lab.TextAppearance.HeadlineLarge" />
+
+            <TextView
+                style="@style/Text.TextStyle"
+                android:textAppearance="@style/Lab.TextAppearance.HeadlineMedium"
+                android:text="Lab.TextAppearance.HeadlineMedium" />
+
+            <TextView
+                style="@style/Text.TextStyle"
+                android:textAppearance="@style/Lab.TextAppearance.HeadlineSmall"
+                android:text="Lab.TextAppearance.HeadlineSmall" />
+
+            <TextView
+                style="@style/Text.TextStyle"
+                android:textAppearance="@style/Lab.TextAppearance.TitleLarge"
+                android:text="Lab.TextAppearance.TitleLarge" />
+
+            <TextView
+                style="@style/Text.TextStyle"
+                android:textAppearance="@style/Lab.TextAppearance.TitleMedium"
+                android:text="Lab.TextAppearance.TitleMedium" />
+
+            <TextView
+                style="@style/Text.TextStyle"
+                android:textAppearance="@style/Lab.TextAppearance.TitleSmall"
+                android:text="Lab.TextAppearance.TitleSmall" />
+
+            <TextView
+                style="@style/Text.TextStyle"
+                android:textAppearance="@style/Lab.TextAppearance.BodyLarge"
+                android:text="Lab.TextAppearance.BodyLarge" />
+
+            <TextView
+                style="@style/Text.TextStyle"
+                android:textAppearance="@style/Lab.TextAppearance.BodyLarge.Emphasis"
+                android:text="Lab.TextAppearance.BodyLarge.Emphasis" />
+
+            <TextView
+                style="@style/Text.TextStyle"
+                android:textAppearance="@style/Lab.TextAppearance.BodyMedium"
+                android:text="Lab.TextAppearance.BodyMedium" />
+
+            <TextView
+                style="@style/Text.TextStyle"
+                android:textAppearance="@style/Lab.TextAppearance.BodyMedium.Emphasis"
+                android:text="Lab.TextAppearance.BodyMedium.Emphasis" />
+
+            <TextView
+                style="@style/Text.TextStyle"
+                android:textAppearance="@style/Lab.TextAppearance.BodySmall"
+                android:text="Lab.TextAppearance.BodySmall" />
+
+            <TextView
+                style="@style/Text.TextStyle"
+                android:textAppearance="@style/Lab.TextAppearance.BodySmall.Emphasis"
+                android:text="Lab.TextAppearance.BodySmall.Emphasis" />
+
+            <TextView
+                style="@style/Text.TextStyle"
+                android:textAppearance="@style/Lab.TextAppearance.LabelLarge"
+                android:text="Lab.TextAppearance.LabelLarge" />
+
+            <TextView
+                style="@style/Text.TextStyle"
+                android:textAppearance="@style/Lab.TextAppearance.LabelMedium"
+                android:text="Lab.TextAppearance.LabelMedium" />
+
+            <TextView
+                style="@style/Text.TextStyle"
+                android:textAppearance="@style/Lab.TextAppearance.LabelSmall"
+                android:text="Lab.TextAppearance.LabelSmall" />
+
+            <TextView
+                style="@style/Text.SectionHeadline"
+                android:text="Buttons" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="?attr/labColorSelectorOnPrimary"
+                    android:text="Enabled"
+                    app:backgroundTint="?attr/labColorSelectorPrimary"
+                    />
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="?attr/labColorSelectorOnPrimary"
+                    android:text="Disabled"
+                    android:enabled="false"
+                    android:layout_marginStart="@dimen/margin"
+                    app:backgroundTint="?attr/labColorSelectorPrimary"
+                    />
 
             </LinearLayout>
 

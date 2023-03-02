@@ -8,6 +8,7 @@ def srcDirs = [
         'mobi/lab/components/shared',
         'mobi/lab/components/textfield',
         'mobi/lab/components/theme',
+        'mobi/lab/components/typography',
 ]
 
 android {
