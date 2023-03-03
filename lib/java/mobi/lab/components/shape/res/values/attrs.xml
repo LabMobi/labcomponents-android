@@ -2,14 +2,19 @@
 <resources>
     <declare-styleable name="ShapeAppearance">
         <!-- Corner size to be used in the ShapeAppearance. All corners default to this value -->
-        <attr name="labCornerSize" format="dimension|fraction" />
+        <attr name="labShapeCornerSize" format="dimension|fraction" />
         <!-- Top left corner size to be used in the ShapeAppearance. -->
-        <attr name="labCornerSizeTopLeft" format="dimension|fraction" />
+        <attr name="labShapeCornerSizeTopLeft" format="dimension|fraction" />
         <!-- Top right corner size to be used in the ShapeAppearance. -->
-        <attr name="labCornerSizeTopRight" format="dimension|fraction" />
+        <attr name="labShapeCornerSizeTopRight" format="dimension|fraction" />
         <!-- Bottom right corner size to be used in the ShapeAppearance. -->
-        <attr name="labCornerSizeBottomRight" format="dimension|fraction" />
+        <attr name="labShapeCornerSizeBottomRight" format="dimension|fraction" />
         <!-- Bottom left corner size to be used in the ShapeAppearance. -->
-        <attr name="labCornerSizeBottomLeft" format="dimension|fraction" />
+        <attr name="labShapeCornerSizeBottomLeft" format="dimension|fraction" />
+
+        <!-- Base shape appearance -->
+        <attr name="labShapeAppearance" format="reference" />
+        <!-- Shape appearance overlay to modify single values -->
+        <attr name="labShapeAppearanceOverlay" format="reference" />
     </declare-styleable>
 </resources>

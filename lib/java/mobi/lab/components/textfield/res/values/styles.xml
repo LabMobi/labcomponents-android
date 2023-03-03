@@ -6,10 +6,24 @@
         <item name="textPaddingBottom">@dimen/lab_size_8</item>
         <!-- Additional padding before and after the input text -->
         <item name="textPaddingHorizontal">@dimen/lab_size_2</item>
+        <item name="materialThemeOverlay">@style/Lab.ThemeOverlay.TextInputLayout</item>
+
+        <!-- Box attributes -->
+        <item name="boxBackgroundMode">filled</item>sd
         <item name="boxCollapsedPaddingTop">@dimen/lab_size_12</item>
 
-        <item name="boxBackgroundMode">filled</item>sd
-        <item name="materialThemeOverlay">@style/Lab.ThemeOverlay.TextInputLayout</item>
+        <item name="boxCornerRadiusTopStart">?attr/labShapeCornerSizeTopLeft</item>
+        <item name="boxCornerRadiusTopEnd">?attr/labShapeCornerSizeTopRight</item>
+        <item name="boxCornerRadiusBottomStart">?attr/labShapeCornerSizeBottomLeft</item>
+        <item name="boxCornerRadiusBottomEnd">?attr/labShapeCornerSizeBottomRight</item>
+
+        <item name="boxStrokeColor">@color/lab_default_textfield_stroke</item>
+        <item name="boxBackgroundColor">@android:color/transparent</item>
+        <item name="boxStrokeWidth">@dimen/lab_size_1</item>
+        <item name="boxStrokeWidthFocused">@dimen/lab_size_2</item>
+
+        <item name="shapeAppearance">?attr/labShapeAppearance</item>
+        <item name="shapeAppearanceOverlay">?attr/labShapeAppearanceOverlay</item>
 
         <item name="endIconMinSize">@dimen/lab_size_48</item>
         <item name="startIconMinSize">@dimen/lab_size_48</item>
@@ -35,7 +49,7 @@
         <item name="placeholderTextColor">?attr/labColorSelectorTextSecondary</item>
         <item name="prefixTextColor">?attr/labColorSelectorTextSecondary</item>
         <item name="suffixTextColor">?attr/labColorSelectorTextSecondary</item>
-        <item name="android:textColor">?attr/labColorSelectorTextPrimary</item>
+        <item name="android:textColor">@color/lab_default_textfield_text</item>
 
         <!-- TODO official items. We should override these values in the TextField theme? -->
 <!--        <item name="enforceMaterialTheme">true</item>-->
@@ -65,7 +79,7 @@
     </style>
 
     <style name="Lab.TextField.EditTextStyle" parent="Widget.Material3.TextInputEditText.FilledBox">
-        <item name="android:background">@drawable/lab_bg_textfield_outline</item>
+        <item name="android:background">@drawable/lab_default_textfield_background</item>
         <item name="android:paddingLeft">@dimen/lab_size_16</item>
         <item name="android:paddingRight">@dimen/lab_size_16</item>
         <item name="android:paddingTop">@dimen/lab_size_8</item>

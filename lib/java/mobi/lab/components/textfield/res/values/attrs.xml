@@ -10,8 +10,16 @@
         <attr name="textPaddingHorizontal" format="dimension"/>
         <attr name="clearErrorOnFocus" format="boolean"/>
 
-        <!-- Override attrs -->
-        <attr name="background" format="reference" />
-
+        <!-- Box attrs -->
+        <attr name="boxCornerRadiusTopStart" format="dimension"/>
+        <attr name="boxCornerRadiusTopEnd" format="dimension"/>
+        <attr name="boxCornerRadiusBottomStart" format="dimension"/>
+        <attr name="boxCornerRadiusBottomEnd" format="dimension"/>
+        <attr name="boxStrokeColor" format="color"/>
+        <attr name="boxBackgroundColor" format="color"/>
+        <attr name="boxStrokeWidth" format="dimension"/>
+        <attr name="boxStrokeWidthFocused" format="dimension"/>
+        <attr name="shapeAppearance"/>
+        <attr name="shapeAppearanceOverlay"/>
     </declare-styleable>
 </resources>

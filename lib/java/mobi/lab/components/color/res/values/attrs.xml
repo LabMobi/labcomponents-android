@@ -13,45 +13,58 @@
         <attr name="labColorTextPrimary" format="color"/>
         <attr name="labColorTextSecondary" format="color"/>
         <attr name="labColorError" format="color"/>
-
-        <attr name="labColorSelectorPrimary" format="color"/>
-        <attr name="labColorSelectorOnPrimary" format="color"/>
-        <attr name="labColorSelectorSecondary" format="color"/>
-        <attr name="labColorSelectorOnSecondary" format="color"/>
-        <attr name="labColorSelectorTextPrimary" format="color"/>
-        <attr name="labColorSelectorTextSecondary" format="color"/>
+        <attr name="labColorOutline" format="color"/>
 
         <!-- TODO add error, success, caution attributes ?-->
 
         <!-- Individual color state overrides. These are used by top level colors by default. -->
+        <attr name="labColorSelectorPrimary" format="color"/>
         <attr name="labColorSelectorPrimaryRegular" format="color"/>
         <attr name="labColorSelectorPrimaryHover" format="color"/>
+        <attr name="labColorSelectorPrimaryFocused" format="color"/>
         <attr name="labColorSelectorPrimaryPressed" format="color"/>
         <attr name="labColorSelectorPrimaryDisabled" format="color"/>
 
+        <attr name="labColorSelectorOnPrimary" format="color"/>
         <attr name="labColorSelectorOnPrimaryRegular" format="color"/>
         <attr name="labColorSelectorOnPrimaryHover" format="color"/>
+        <attr name="labColorSelectorOnPrimaryFocused" format="color"/>
         <attr name="labColorSelectorOnPrimaryPressed" format="color"/>
         <attr name="labColorSelectorOnPrimaryDisabled" format="color"/>
 
+        <attr name="labColorSelectorSecondary" format="color"/>
         <attr name="labColorSelectorSecondaryRegular" format="color"/>
         <attr name="labColorSelectorSecondaryHover" format="color"/>
+        <attr name="labColorSelectorSecondaryFocused" format="color"/>
         <attr name="labColorSelectorSecondaryPressed" format="color"/>
         <attr name="labColorSelectorSecondaryDisabled" format="color"/>
 
+        <attr name="labColorSelectorOnSecondary" format="color"/>
         <attr name="labColorSelectorOnSecondaryRegular" format="color"/>
         <attr name="labColorSelectorOnSecondaryHover" format="color"/>
+        <attr name="labColorSelectorOnSecondaryFocused" format="color"/>
         <attr name="labColorSelectorOnSecondaryPressed" format="color"/>
         <attr name="labColorSelectorOnSecondaryDisabled" format="color"/>
 
+        <attr name="labColorSelectorTextPrimary" format="color"/>
         <attr name="labColorSelectorTextPrimaryRegular" format="color"/>
         <attr name="labColorSelectorTextPrimaryHover" format="color"/>
+        <attr name="labColorSelectorTextPrimaryFocused" format="color"/>
         <attr name="labColorSelectorTextPrimaryPressed" format="color"/>
         <attr name="labColorSelectorTextPrimaryDisabled" format="color"/>
 
+        <attr name="labColorSelectorTextSecondary" format="color"/>
         <attr name="labColorSelectorTextSecondaryRegular" format="color"/>
         <attr name="labColorSelectorTextSecondaryHover" format="color"/>
+        <attr name="labColorSelectorTextSecondaryFocused" format="color"/>
         <attr name="labColorSelectorTextSecondaryPressed" format="color"/>
         <attr name="labColorSelectorTextSecondaryDisabled" format="color"/>
+
+        <attr name="labColorSelectorOutline" format="color"/>
+        <attr name="labColorSelectorOutlineRegular" format="color"/>
+        <attr name="labColorSelectorOutlineHover" format="color"/>
+        <attr name="labColorSelectorOutlineFocused" format="color"/>
+        <attr name="labColorSelectorOutlinePressed" format="color"/>
+        <attr name="labColorSelectorOutlineDisabled" format="color"/>
     </declare-styleable>
 </resources>

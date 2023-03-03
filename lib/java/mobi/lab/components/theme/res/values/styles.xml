@@ -35,36 +35,49 @@
         <item name="labColorSelectorTextPrimary">@color/lab_default_color_selector_text_primary</item>
         <item name="labColorSelectorTextSecondary">@color/lab_default_color_selector_text_secondary</item>
 
+        <item name="labColorSelectorOutline">@color/lab_default_color_selector_outline</item>
+        <item name="labColorSelectorOutlineRegular">@color/lab_ref_palette_neutral_70</item>
+        <item name="labColorSelectorOutlineHover">?attr/labColorPrimary</item>
+        <item name="labColorSelectorOutlineFocused">?attr/labColorPrimary</item>
+        <item name="labColorSelectorOutlinePressed">?attr/labColorPrimary</item>
+        <item name="labColorSelectorOutlineDisabled">@color/lab_ref_palette_neutral_90</item>
+
         <!-- TODO add error, success, caution attributes ?-->
 
         <!-- Individual color state overrides. These are used by top level colors by default. -->
         <item name="labColorSelectorPrimaryRegular">?attr/labColorPrimary</item>
         <item name="labColorSelectorPrimaryHover">@color/lab_ref_palette_primary_40</item>
+        <item name="labColorSelectorPrimaryFocused">@color/lab_ref_palette_primary_30</item>
         <item name="labColorSelectorPrimaryPressed">@color/lab_ref_palette_primary_30</item>
         <item name="labColorSelectorPrimaryDisabled">@color/lab_ref_palette_neutral_95</item>
 
         <item name="labColorSelectorOnPrimaryRegular">?attr/labColorOnPrimary</item>
         <item name="labColorSelectorOnPrimaryHover">?attr/labColorOnPrimary</item>
+        <item name="labColorSelectorOnPrimaryFocused">?attr/labColorOnPrimary</item>
         <item name="labColorSelectorOnPrimaryPressed">?attr/labColorOnPrimary</item>
         <item name="labColorSelectorOnPrimaryDisabled">@color/lab_ref_palette_neutral_70</item>
 
         <item name="labColorSelectorSecondaryRegular">?attr/labColorSecondary</item>
         <item name="labColorSelectorSecondaryHover">@color/lab_ref_palette_secondary_80</item>
+        <item name="labColorSelectorSecondaryFocused">@color/lab_ref_palette_secondary_70</item>
         <item name="labColorSelectorSecondaryPressed">@color/lab_ref_palette_secondary_70</item>
         <item name="labColorSelectorSecondaryDisabled">@color/lab_ref_palette_neutral_95</item>
 
         <item name="labColorSelectorOnSecondaryRegular">?attr/labColorOnSecondary</item>
         <item name="labColorSelectorOnSecondaryHover">?attr/labColorOnSecondary</item>
+        <item name="labColorSelectorOnSecondaryFocused">?attr/labColorOnSecondary</item>
         <item name="labColorSelectorOnSecondaryPressed">?attr/labColorOnSecondary</item>
         <item name="labColorSelectorOnSecondaryDisabled">@color/lab_ref_palette_neutral_70</item>
 
         <item name="labColorSelectorTextPrimaryRegular">?attr/labColorTextPrimary</item>
         <item name="labColorSelectorTextPrimaryHover">?attr/labColorTextPrimary</item>
+        <item name="labColorSelectorTextPrimaryFocused">?attr/labColorTextPrimary</item>
         <item name="labColorSelectorTextPrimaryPressed">?attr/labColorTextPrimary</item>
         <item name="labColorSelectorTextPrimaryDisabled">@color/lab_ref_palette_neutral_70</item>
 
         <item name="labColorSelectorTextSecondaryRegular">?attr/labColorTextSecondary</item>
         <item name="labColorSelectorTextSecondaryHover">?attr/labColorTextSecondary</item>
+        <item name="labColorSelectorTextSecondaryFocused">?attr/labColorTextSecondary</item>
         <item name="labColorSelectorTextSecondaryPressed">?attr/labColorTextSecondary</item>
         <item name="labColorSelectorTextSecondaryDisabled">@color/lab_ref_palette_neutral_80</item>
 
@@ -89,17 +102,21 @@
         <item name="labTextAppearanceLabelSmall">@style/Lab.TextAppearance.LabelSmall</item>
 
         <!-- Shape -->
-        <item name="labCornerSize">4dp</item>
-        <item name="labCornerSizeTopLeft">?attr/labCornerSize</item>
-        <item name="labCornerSizeTopRight">?attr/labCornerSize</item>
-        <item name="labCornerSizeBottomLeft">?attr/labCornerSize</item>
-        <item name="labCornerSizeBottomRight">?attr/labCornerSize</item>
+        <item name="labShapeCornerSize">@dimen/lab_size_4</item>
+        <item name="labShapeCornerSizeTopLeft">?attr/labShapeCornerSize</item>
+        <item name="labShapeCornerSizeTopRight">?attr/labShapeCornerSize</item>
+        <item name="labShapeCornerSizeBottomLeft">?attr/labShapeCornerSize</item>
+        <item name="labShapeCornerSizeBottomRight">?attr/labShapeCornerSize</item>
 
-        <!-- TextField -->
+        <item name="labShapeAppearance">@style/Lab.ShapeAppearance</item>
+        <item name="labShapeAppearanceOverlay">@style/Lab.ShapeAppearanceOverlay</item>
 
         <!-- Material 3 theme overrides START -->
         <item name="elevationOverlayEnabled">true</item>
         <item name="elevationOverlayColor">?attr/labColorSurface</item>
+
+        <item name="shapeAppearance">?attr/labShapeAppearance</item>
+        <item name="shapeAppearanceOverlay">?attr/labShapeAppearanceOverlay</item>
 
         <item name="colorAccent">?attr/labColorPrimary</item>
         <item name="colorPrimary">?attr/labColorPrimary</item>
