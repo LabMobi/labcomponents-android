@@ -50,7 +50,6 @@
         <item name="android:gravity">top</item>
     </style>
 
-
     <!-- TextField start -->
     <style name="Widget.LabComponents.TextField" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
         <item name="textPaddingTop">@dimen/lab_size_24</item>

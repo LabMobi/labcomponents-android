@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="HardcodedText">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/Toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Typography" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/margin">
+
+            <TextView
+                style="@style/Text.SectionHeadline"
+                android:text="Text styles" />
+
+            <TextView
+                style="@style/Text.TextStyle"
+                android:textAppearance="@style/TextAppearance.Lab.HeadlineLarge"
+                android:text="TextAppearance.Lab.HeadlineLarge" />
+
+            <TextView
+                style="@style/Text.TextStyle"
+                android:textAppearance="@style/TextAppearance.Lab.HeadlineMedium"
+                android:text="TextAppearance.Lab.HeadlineMedium" />
+
+            <TextView
+                style="@style/Text.TextStyle"
+                android:textAppearance="@style/TextAppearance.Lab.HeadlineSmall"
+                android:text="TextAppearance.Lab.HeadlineSmall" />
+
+            <TextView
+                style="@style/Text.TextStyle"
+                android:textAppearance="@style/TextAppearance.Lab.TitleLarge"
+                android:text="TextAppearance.Lab.TitleLarge" />
+
+            <TextView
+                style="@style/Text.TextStyle"
+                android:textAppearance="@style/TextAppearance.Lab.TitleMedium"
+                android:text="TextAppearance.Lab.TitleMedium" />
+
+            <TextView
+                style="@style/Text.TextStyle"
+                android:textAppearance="@style/TextAppearance.Lab.TitleSmall"
+                android:text="TextAppearance.Lab.TitleSmall" />
+
+            <TextView
+                style="@style/Text.TextStyle"
+                android:textAppearance="@style/TextAppearance.Lab.BodyLarge"
+                android:text="TextAppearance.Lab.BodyLarge" />
+
+            <TextView
+                style="@style/Text.TextStyle"
+                android:textAppearance="@style/TextAppearance.Lab.BodyLarge.Emphasis"
+                android:text="TextAppearance.Lab.BodyLarge.Emphasis" />
+
+            <TextView
+                style="@style/Text.TextStyle"
+                android:textAppearance="@style/TextAppearance.Lab.BodyMedium"
+                android:text="TextAppearance.Lab.BodyMedium" />
+
+            <TextView
+                style="@style/Text.TextStyle"
+                android:textAppearance="@style/TextAppearance.Lab.BodyMedium.Emphasis"
+                android:text="TextAppearance.Lab.BodyMedium.Emphasis" />
+
+            <TextView
+                style="@style/Text.TextStyle"
+                android:textAppearance="@style/TextAppearance.Lab.BodySmall"
+                android:text="TextAppearance.Lab.BodySmall" />
+
+            <TextView
+                style="@style/Text.TextStyle"
+                android:textAppearance="@style/TextAppearance.Lab.BodySmall.Emphasis"
+                android:text="TextAppearance.Lab.BodySmall.Emphasis" />
+
+            <TextView
+                style="@style/Text.TextStyle"
+                android:textAppearance="@style/TextAppearance.Lab.LabelLarge"
+                android:text="TextAppearance.Lab.LabelLarge" />
+
+            <TextView
+                style="@style/Text.TextStyle"
+                android:textAppearance="@style/TextAppearance.Lab.LabelMedium"
+                android:text="TextAppearance.Lab.LabelMedium" />
+
+            <TextView
+                style="@style/Text.TextStyle"
+                android:textAppearance="@style/TextAppearance.Lab.LabelSmall"
+                android:text="TextAppearance.Lab.LabelSmall" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

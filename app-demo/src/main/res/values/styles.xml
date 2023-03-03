@@ -6,6 +6,24 @@
         <item name="android:statusBarColor">@color/black</item>
     </style>
 
+    <style name="Divider" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@android:color/darker_gray</item>
+    </style>
+
+    <style name="Text.ListItem" parent="TextAppearance.Lab.BodyLarge">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">56dp</item>
+        <item name="android:paddingStart">@dimen/margin</item>
+        <item name="android:paddingEnd">@dimen/margin</item>
+        <item name="android:paddingTop">@dimen/size_8</item>
+        <item name="android:paddingBottom">@dimen/size_8</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
     <style name="Text.SectionHeadline" parent="TextAppearance.Lab.HeadlineLarge">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
@@ -22,7 +40,7 @@
         <item name="android:layout_marginStart">@dimen/margin</item>
         <item name="android:layout_marginEnd">@dimen/margin</item>
         <item name="android:layout_marginTop">@dimen/size_8</item>
-        <item name="android:layout_marginBottom">@dimen/size_8</item>
+        <item name="android:layout_marginBottom">12dp</item>
     </style>
 
     <style name="Toolbar" parent="Widget.MaterialComponents.Toolbar">
@@ -31,6 +49,11 @@
         <item name="titleTextColor">@color/white</item>
         <item name="titleMarginStart">@dimen/lab_size_64</item>
         <item name="android:theme">@style/Theme.Toolbar</item>
+    </style>
+
+    <style name="Switch" parent="Widget.Material3.CompoundButton.MaterialSwitch">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">14sp</item>
     </style>
 
     <style name="Theme.Toolbar" parent="">

@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- TODO add material 3 theme? -->
-
     <style name="Theme.Lab.DayNight" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="android:statusBarColor">@color/lab_ref_palette_neutral_0</item>
         <item name="android:windowBackground">?attr/labColorBackground</item>

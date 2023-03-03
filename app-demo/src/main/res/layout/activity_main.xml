@@ -29,207 +29,21 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingTop="@dimen/margin"
             android:paddingBottom="@dimen/margin">
 
             <TextView
-                style="@style/Text.SectionHeadline"
-                android:text="Text inputs" />
+                android:id="@+id/item_text_field"
+                style="@style/Text.ListItem"
+                android:text="TextField" />
 
-            <mobi.lab.components.textfield.LabTextField
-                android:id="@+id/text_field_3"
-                style="@style/Widget.LabComponents.TextField"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/margin"
-                android:layout_marginStart="@dimen/margin"
-                android:layout_marginEnd="@dimen/margin"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:endIconDrawable="@drawable/icon_clear"
-                app:endIconMode="clear_text"
-                app:startIconDrawable="@drawable/icon_clear"
-                app:placeholderText="This is a placeholder"
-                app:helperText="This is a helper text"
-                app:suffixText="Suffix"
-                app:prefixText="Prefix"
-                app:counterEnabled="true"
-                app:counterMaxLength="9"
-                />
-
-            <mobi.lab.components.textfield.LabTextField
-                android:id="@+id/text_field"
-                style="@style/Widget.Lab.TextField"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/margin"
-                android:layout_marginStart="@dimen/margin"
-                android:layout_marginEnd="@dimen/margin"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:endIconDrawable="@drawable/icon_clear"
-                app:endIconMode="clear_text"
-                app:startIconDrawable="@drawable/icon_clear"
-                app:placeholderText="This is a placeholder"
-                app:helperText="This is a helper text"
-                app:suffixText="Suffix"
-                app:prefixText="Prefix"
-                app:counterEnabled="true"
-                app:counterMaxLength="9"
-                />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <mobi.lab.components.textfield.LabTextField
-                    android:id="@+id/text_field_2"
-                    style="@style/Widget.Lab.TextField"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_marginTop="@dimen/margin"
-                    android:layout_marginStart="@dimen/margin"
-                    android:layout_marginEnd="@dimen/lab_size_8"
-                    app:placeholderText="This is a placeholder"
-                    />
-
-                <androidx.appcompat.widget.LinearLayoutCompat
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0"
-                    android:orientation="vertical">
-
-                    <com.google.android.material.checkbox.MaterialCheckBox
-                        android:id="@+id/check_text_field_enabled"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
-                        android:layout_marginEnd="12dp"
-                        android:text="Enabled"
-                        android:checked="true"/>
-
-                    <com.google.android.material.checkbox.MaterialCheckBox
-                        android:id="@+id/check_text_field_error"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="12dp"
-                        android:text="Error"
-                        android:checked="false"/>
-                </androidx.appcompat.widget.LinearLayoutCompat>
-
-            </LinearLayout>
+            <View style="@style/Divider" />
 
             <TextView
-                style="@style/Text.SectionHeadline"
-                android:text="Text styles" />
+                android:id="@+id/item_typography"
+                style="@style/Text.ListItem"
+                android:text="Typgraphy" />
 
-            <TextView
-                style="@style/Text.TextStyle"
-                android:textAppearance="@style/TextAppearance.Lab.HeadlineLarge"
-                android:text="TextAppearance.Lab.HeadlineLarge" />
-
-            <TextView
-                style="@style/Text.TextStyle"
-                android:textAppearance="@style/TextAppearance.Lab.HeadlineMedium"
-                android:text="TextAppearance.Lab.HeadlineMedium" />
-
-            <TextView
-                style="@style/Text.TextStyle"
-                android:textAppearance="@style/TextAppearance.Lab.HeadlineSmall"
-                android:text="TextAppearance.Lab.HeadlineSmall" />
-
-            <TextView
-                style="@style/Text.TextStyle"
-                android:textAppearance="@style/TextAppearance.Lab.TitleLarge"
-                android:text="TextAppearance.Lab.TitleLarge" />
-
-            <TextView
-                style="@style/Text.TextStyle"
-                android:textAppearance="@style/TextAppearance.Lab.TitleMedium"
-                android:text="TextAppearance.Lab.TitleMedium" />
-
-            <TextView
-                style="@style/Text.TextStyle"
-                android:textAppearance="@style/TextAppearance.Lab.TitleSmall"
-                android:text="TextAppearance.Lab.TitleSmall" />
-
-            <TextView
-                style="@style/Text.TextStyle"
-                android:textAppearance="@style/TextAppearance.Lab.BodyLarge"
-                android:text="TextAppearance.Lab.BodyLarge" />
-
-            <TextView
-                style="@style/Text.TextStyle"
-                android:textAppearance="@style/TextAppearance.Lab.BodyLarge.Emphasis"
-                android:text="TextAppearance.Lab.BodyLarge.Emphasis" />
-
-            <TextView
-                style="@style/Text.TextStyle"
-                android:textAppearance="@style/TextAppearance.Lab.BodyMedium"
-                android:text="TextAppearance.Lab.BodyMedium" />
-
-            <TextView
-                style="@style/Text.TextStyle"
-                android:textAppearance="@style/TextAppearance.Lab.BodyMedium.Emphasis"
-                android:text="TextAppearance.Lab.BodyMedium.Emphasis" />
-
-            <TextView
-                style="@style/Text.TextStyle"
-                android:textAppearance="@style/TextAppearance.Lab.BodySmall"
-                android:text="TextAppearance.Lab.BodySmall" />
-
-            <TextView
-                style="@style/Text.TextStyle"
-                android:textAppearance="@style/TextAppearance.Lab.BodySmall.Emphasis"
-                android:text="TextAppearance.Lab.BodySmall.Emphasis" />
-
-            <TextView
-                style="@style/Text.TextStyle"
-                android:textAppearance="@style/TextAppearance.Lab.LabelLarge"
-                android:text="TextAppearance.Lab.LabelLarge" />
-
-            <TextView
-                style="@style/Text.TextStyle"
-                android:textAppearance="@style/TextAppearance.Lab.LabelMedium"
-                android:text="TextAppearance.Lab.LabelMedium" />
-
-            <TextView
-                style="@style/Text.TextStyle"
-                android:textAppearance="@style/TextAppearance.Lab.LabelSmall"
-                android:text="TextAppearance.Lab.LabelSmall" />
-
-            <TextView
-                style="@style/Text.SectionHeadline"
-                android:text="Buttons" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/margin"
-                android:orientation="horizontal">
-
-                <com.google.android.material.button.MaterialButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="?attr/labColorSelectorOnPrimary"
-                    android:text="Enabled"
-                    app:backgroundTint="?attr/labColorSelectorPrimary"
-                    />
-
-                <com.google.android.material.button.MaterialButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="?attr/labColorSelectorOnPrimary"
-                    android:text="Disabled"
-                    android:enabled="false"
-                    android:layout_marginStart="@dimen/margin"
-                    app:backgroundTint="?attr/labColorSelectorPrimary"
-                    />
-
-            </LinearLayout>
-
+            <View style="@style/Divider" />
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

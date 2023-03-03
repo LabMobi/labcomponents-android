@@ -1,84 +1,38 @@
 package mobi.lab.components.demo
 
-import android.content.Context
+import android.app.Activity
 import android.content.Intent
-import android.content.res.Configuration
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.Menu
-import android.view.MenuItem
-import androidx.appcompat.app.AppCompatDelegate
+import androidx.appcompat.widget.Toolbar
 import mobi.lab.components.demo.databinding.ActivityMainBinding
+import kotlin.reflect.KClass
 
-class MainActivity : BaseActivity() {
+class MainActivity : BaseComponentActivity() {
 
     private lateinit var binding: ActivityMainBinding
+
+    override fun getToolbar(): Toolbar {
+        return binding.toolbar
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(LayoutInflater.from(this))
         setContentView(binding.root)
-        initUi(binding)
-    }
 
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        menu.add(0, MENU_ITEM_SWITCH_UI_MODE, 0, "Switch UI mode")
-        return true
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (MENU_ITEM_SWITCH_UI_MODE == item.itemId) {
-            toggleUiMode()
-            return true
-        }
-        return super.onOptionsItemSelected(item)
-    }
-
-    private fun initUi(binding: ActivityMainBinding) {
         binding.apply {
-            setSupportActionBar(toolbar)
-            textField.hint = "This is a hint"
-            textField2.hint = "This is a hint"
-            textField3.hint = "This is a hint"
-            checkTextFieldEnabled.setOnCheckedChangeListener { _, isChecked ->
-                textField.isEnabled = isChecked
-                textField2.isEnabled = isChecked
-                textField3.isEnabled = isChecked
-            }
-            checkTextFieldError.setOnCheckedChangeListener { _, isChecked ->
-                var errorText = ""
-                if (isChecked) {
-                    errorText = textField2.getText()
-                    if (errorText.isEmpty()) {
-                        errorText = "This is an error!"
-                    }
-                }
-                textField.error = errorText
-                textField2.error = errorText
-                textField3.error = errorText
-            }
+            itemTextField.setOnClickListener { startActivityInternal(TextFieldActivity::class) }
+            itemTypography.setOnClickListener { startActivityInternal(TypographyActivity::class) }
         }
     }
 
-    private fun toggleUiMode() {
-        val nightMode = if (isNightModeEnabled()) {
-            AppCompatDelegate.MODE_NIGHT_NO
-        } else {
-            AppCompatDelegate.MODE_NIGHT_YES
-        }
-        AppCompatDelegate.setDefaultNightMode(nightMode)
+    override fun onPostCreate(savedInstanceState: Bundle?) {
+        super.onPostCreate(savedInstanceState)
+        supportActionBar?.setDisplayHomeAsUpEnabled(false)
     }
 
-    private fun isNightModeEnabled(): Boolean {
-        val uiMode: Int = resources?.configuration?.uiMode ?: return false
-        return uiMode.and(Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_YES
-    }
-
-    companion object {
-        private const val MENU_ITEM_SWITCH_UI_MODE = 0
-
-        fun getIntent(context: Context): Intent {
-            return Intent(context, MainActivity::class.java)
-        }
+    private fun startActivityInternal(activityClass: KClass<out Activity>) {
+        startActivity(Intent(this, activityClass.java))
     }
 }
