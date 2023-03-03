@@ -1,22 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="AppTheme.Base" parent="Lab.Theme.DayNight">
+    <style name="AppTheme" parent="Lab.Theme.DayNight">
         <!-- Customize your theme here. -->
-    </style>
-
-    <style name="AppTheme" parent="AppTheme.Base">
         <item name="android:statusBarColor">@color/black</item>
-    </style>
-
-    <style name="Text" parent="">
-        <!-- Base text styles with fonts, etc.-->
-        <!-- Add custom Text styles as neede. For example Text.Body.16 or Text.Title, Text.Subtitle.-->
-<!--         <item name="android:textColor">@color/lab_primary</item>-->
-        <!-- <item name="android:fontFamily">@font/graphik_regular</item>-->
-        <!-- <item name="fontFamily">@font/graphik_regular</item>-->
-        <!-- <item name="android:lineHeight" tools:targetApi="p">@dimen/size_20</item>-->
-        <!-- <item name="lineHeight">@dimen/size_20</item>-->
     </style>
 
     <style name="Text.SectionHeadline" parent="Lab.TextAppearance.HeadlineLarge">
@@ -29,7 +16,7 @@
         <item name="android:textAllCaps">true</item>
     </style>
 
-    <style name="Text.TextStyle" parent="">
+    <style name="Text.TextStyle" parent="Lab.TextAppearance.BodyLarge">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginStart">@dimen/margin</item>
