@@ -24,6 +24,7 @@ class MainActivity : BaseComponentActivity() {
         binding.apply {
             itemTextField.setOnClickListener { startActivityInternal(TextFieldActivity::class) }
             itemTypography.setOnClickListener { startActivityInternal(TypographyActivity::class) }
+            itemColors.setOnClickListener { startActivityInternal(ColorsActivity::class) }
         }
     }
 

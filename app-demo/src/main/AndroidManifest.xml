@@ -26,16 +26,10 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-
         <activity
             android:name="mobi.lab.components.demo.TextFieldActivity"
-            android:windowSoftInputMode="adjustResize">
-        </activity>
-
-        <activity
-            android:name="mobi.lab.components.demo.TypographyActivity"
-            android:windowSoftInputMode="adjustResize">
-        </activity>
-
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name="mobi.lab.components.demo.TypographyActivity" />
+        <activity android:name="mobi.lab.components.demo.ColorsActivity" />
     </application>
 </manifest>

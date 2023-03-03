@@ -14,7 +14,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:title="@string/app_name" />
+        app:title="Colors" />
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="0dp"
@@ -32,25 +32,9 @@
             android:paddingBottom="@dimen/margin">
 
             <TextView
-                android:id="@+id/item_colors"
-                style="@style/Text.ListItem"
-                android:text="Colors" />
-
-            <View style="@style/Divider" />
-
-            <TextView
                 android:id="@+id/item_text_field"
-                style="@style/Text.ListItem"
-                android:text="TextField" />
-
-            <View style="@style/Divider" />
-
-            <TextView
-                android:id="@+id/item_typography"
-                style="@style/Text.ListItem"
-                android:text="Typography" />
-
-            <View style="@style/Divider" />
+                style="@style/Text.SectionHeadline"
+                android:text="Colors" />
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
