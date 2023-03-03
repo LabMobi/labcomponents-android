@@ -11,7 +11,6 @@ import androidx.core.view.updatePadding
 import com.google.android.material.textfield.TextInputLayout
 import mobi.lab.components.R
 import mobi.lab.components.shared.ParcelCompat
-import timber.log.Timber
 
 class LabTextField @JvmOverloads constructor(
     context: Context,
@@ -78,16 +77,16 @@ class LabTextField @JvmOverloads constructor(
         }
         inDrawableStateChanged = true
 
-        super.drawableStateChanged()
         boxHelper?.updateBoxState()
+        super.drawableStateChanged()
 
         inDrawableStateChanged = false
     }
 
     override fun setError(error: CharSequence?) {
-        errorState = !TextUtils.isEmpty(error)
-        editText.errorState = errorState
-        refreshDrawableState()
+        if (error != getError()) {
+            setErrorStateInternal(textError = !TextUtils.isEmpty(error))
+        }
         super.setError(error)
     }
 
@@ -137,16 +136,12 @@ class LabTextField @JvmOverloads constructor(
     }
 
     fun setTextPaddingVertical(@Dimension(unit = Dimension.PX) topPx: Int, @Dimension(unit = Dimension.PX) bottomPx: Int) {
-        // TODO remove logging
-        Timber.e("setTextPaddingVertical topPx=$topPx bottomPx=$bottomPx")
         val top = if (topPx != NO_VALUE_INT) topPx else editText.paddingTop
         val bottom = if (bottomPx != NO_VALUE_INT) bottomPx else editText.paddingBottom
         editText.updatePadding(top = top, bottom = bottom)
     }
 
     fun setTextPaddingHorizontal(@Dimension(unit = Dimension.PX) paddingPx: Int) {
-        // TODO remove logging
-        Timber.e("setTextPaddingHorizontal paddingPx=$paddingPx")
         if (paddingPx != NO_VALUE_INT) {
             editText.compoundDrawablePadding = paddingPx
         }
@@ -190,12 +185,32 @@ class LabTextField @JvmOverloads constructor(
             }
         }
         editText.textChangedListener = { text, stateRestore ->
+            setErrorStateInternal(counterError = isCounterError(text))
+
             if (!stateRestore) {
                 listener?.onTextChanged(text.toString())
                 // Only reset errors when the user enters text
                 clearError()
             }
         }
+    }
+
+    private fun isCounterError(text: CharSequence?): Boolean {
+        val textLength = text?.length ?: -1
+        return isCounterEnabled && textLength > counterMaxLength
+    }
+
+    private fun setErrorStateInternal(
+        textError: Boolean = !TextUtils.isEmpty(error),
+        counterError: Boolean = isCounterError(getText())
+    ) {
+        val newErrorState = textError || counterError
+        if (errorState == newErrorState) {
+            return
+        }
+        errorState = newErrorState
+        editText.errorState = newErrorState
+        refreshDrawableState()
     }
 
     companion object {

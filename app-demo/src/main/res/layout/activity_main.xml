@@ -54,7 +54,7 @@
                 app:suffixText="Suffix"
                 app:prefixText="Prefix"
                 app:counterEnabled="true"
-                app:counterMaxLength="19"
+                app:counterMaxLength="9"
                 />
 
             <LinearLayout

@@ -13,7 +13,7 @@ import com.google.android.material.shape.ShapeAppearanceModel
 import mobi.lab.components.R
 import mobi.lab.components.shared.util.ResourceUtil
 
-class LabTextFieldBoxHelper(
+internal class LabTextFieldBoxHelper(
     private val textField: LabTextField,
     attrs: AttributeSet?,
     defStyleAttr: Int
