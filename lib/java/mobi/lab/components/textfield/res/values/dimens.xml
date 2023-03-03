@@ -3,4 +3,5 @@
     <!-- Override icon margins as we don't want to have additional margins here -->
     <dimen name="mtrl_textinput_end_icon_margin_start" tools:override="true">0dp</dimen>
     <dimen name="mtrl_textinput_start_icon_margin_end" tools:override="true">0dp</dimen>
+    <dimen name="material_input_text_to_prefix_suffix_padding" tools:override="true">0dp</dimen>
 </resources>

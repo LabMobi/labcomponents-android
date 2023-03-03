@@ -69,10 +69,10 @@
         <item name="labColorSelectorTextSecondaryDisabled">@color/lab_ref_palette_neutral_80</item>
 
         <!-- Typography -->
-        <item name="labFontFamilyRegular">@string/lab_ref_font_family_light</item>
-        <item name="labFontFamilyMedium">@string/lab_ref_font_family_regular</item>
-        <item name="labFontFamilySemibold">@string/lab_ref_font_family_medium</item>
-        <item name="labFontFamilyBold">@string/lab_ref_font_family_black</item>
+        <item name="labFontFamilyRegular">@string/lab_ref_font_family_regular</item>
+        <item name="labFontFamilyMedium">@string/lab_ref_font_family_medium</item>
+        <item name="labFontFamilySemibold">@string/lab_ref_font_family_semibold</item>
+        <item name="labFontFamilyBold">@string/lab_ref_font_family_bold</item>
 
         <item name="labTextAppearanceHeadlineLarge">@style/Lab.TextAppearance.HeadlineLarge</item>
         <item name="labTextAppearanceHeadlineMedium">@style/Lab.TextAppearance.HeadlineMedium</item>
@@ -113,7 +113,6 @@
         <item name="android:colorBackground">?attr/labColorBackground</item>
         <item name="colorOnBackground">?attr/labColorOnBackground</item>
         <item name="colorError">?attr/labColorError</item>
-        <item name="colorOnError">@color/lab_todo</item>
 
         <!-- TODO go over these overrides -->
         <!-- DEBUG VALUES START -->
@@ -130,6 +129,7 @@
         <item name="colorOnSurfaceInverse">@color/lab_todo</item>
         <item name="colorOutline">@color/lab_todo</item>
         <item name="colorOutlineVariant">@color/lab_todo</item>
+        <item name="colorOnError">@color/lab_todo</item>
         <item name="colorErrorContainer">@color/lab_todo</item>
         <item name="colorOnErrorContainer">@color/lab_todo</item>
 

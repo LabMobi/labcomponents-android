@@ -8,13 +8,11 @@
         <item name="textPaddingHorizontal">@dimen/lab_size_2</item>
         <item name="boxCollapsedPaddingTop">@dimen/lab_size_12</item>
 
-        <item name="boxBackgroundMode">filled</item>
-        <item name="boxStrokeWidthFocused">0dp</item>
-        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxBackgroundMode">filled</item>sd
         <item name="materialThemeOverlay">@style/Lab.ThemeOverlay.TextInputLayout</item>
 
-        <item name="endIconMinSize">@dimen/lab_size_56</item>
-        <item name="startIconMinSize">@dimen/lab_size_56</item>
+        <item name="endIconMinSize">@dimen/lab_size_48</item>
+        <item name="startIconMinSize">@dimen/lab_size_48</item>
         <item name="endIconTint">?attr/labColorSelectorTextSecondary</item>
         <item name="startIconTint">?attr/labColorSelectorTextSecondary</item>
 
@@ -39,7 +37,6 @@
         <item name="suffixTextColor">?attr/labColorSelectorTextSecondary</item>
         <item name="android:textColor">?attr/labColorSelectorTextPrimary</item>
 
-
         <!-- TODO official items. We should override these values in the TextField theme? -->
 <!--        <item name="enforceMaterialTheme">true</item>-->
 <!--        <item name="enforceTextAppearance">true</item>-->
@@ -47,14 +44,13 @@
 <!--        <item name="android:minWidth">@dimen/material_textinput_min_width</item>-->
 <!--        <item name="android:maxWidth">@dimen/material_textinput_max_width</item>-->
 <!--&lt;!&ndash;        <item name="boxBackgroundMode">outline</item>&ndash;&gt;-->
-<!--        <item name="boxBackgroundColor">@null</item>-->
 
 <!--        <item name="errorIconDrawable">@drawable/mtrl_ic_error</item>-->
 <!--        <item name="errorIconTint">@color/mtrl_error</item>-->
 <!--        <item name="endIconTint">@color/mtrl_outlined_icon_tint</item>-->
 <!--        <item name="startIconTint">@color/mtrl_outlined_icon_tint</item>-->
 
-<!--        <item name="boxCollapsedPaddingTop">0dp</item>-->
+<!--        <item name="boxBackgroundColor">?attr/labColorSurface</item>-->
 <!--        <item name="boxStrokeColor">@color/mtrl_outlined_stroke_color</item>-->
 <!--        <item name="boxStrokeErrorColor">@color/mtrl_error</item>-->
 <!--        <item name="boxStrokeWidth">@dimen/mtrl_textinput_box_stroke_width_default</item>-->
@@ -70,29 +66,10 @@
 
     <style name="Lab.TextField.EditTextStyle" parent="Widget.Material3.TextInputEditText.FilledBox">
         <item name="android:background">@drawable/lab_bg_textfield_outline</item>
-        <item name="android:drawablePadding">10dp</item>
-
-        <!-- TODO add support for setting top and bottom paddings separately? -->
-<!--        <item name="android:background">@drawable/wla_default_bg_textfield</item>-->
-<!--        <item name="android:textAppearance">@style/Wla.Text.Body16Strong</item>-->
-<!--        <item name="android:textColor">@color/wla_default_textfield_text</item>-->
-
-<!--        <item name="android:textColorHint">@color/wla_textfield_hint</item>-->
-<!--        <item name="android:paddingLeft">@dimen/wla_textfield_horizontal_padding</item>-->
-<!--        <item name="android:paddingRight">@dimen/wla_textfield_horizontal_padding</item>-->
+        <item name="android:paddingLeft">@dimen/lab_size_16</item>
+        <item name="android:paddingRight">@dimen/lab_size_16</item>
+        <item name="android:paddingTop">@dimen/lab_size_8</item>
+        <item name="android:paddingBottom">@dimen/lab_size_8</item>
+        <item name="android:gravity">top</item>
     </style>
-
-    <!--    TODO remove-->
-    <style name="Lab.TextAppearance.Hint" parent="TextAppearance.Material3.TitleSmall">
-        <item name="android:textSize">40sp</item>
-        <item name="android:textStyle">bold</item>
-    </style>
-
-    <!--    TODO remove-->
-    <style name="Lab.TextAppearance.Todo" parent="TextAppearance.Material3.TitleSmall">
-        <item name="android:textSize">96sp</item>
-        <item name="android:textStyle">italic</item>
-        <item name="android:fontFamily">sans-serif-thin</item>
-    </style>
-    <!-- TextField end -->
 </resources>

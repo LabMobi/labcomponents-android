@@ -7,13 +7,6 @@
 
     <style name="AppTheme" parent="AppTheme.Base">
         <item name="android:statusBarColor">@color/black</item>
-
-        <!-- TODO remove these. We need them for verification purposes -->
-        <item name="labFontFamilyRegular">@font/font_regular</item>
-        <item name="labFontFamilyMedium">@font/font_medium</item>
-        <item name="labFontFamilySemibold">@font/font_semibold</item>
-        <item name="labFontFamilyBold">@font/font_bold</item>
-
     </style>
 
     <style name="Text" parent="">

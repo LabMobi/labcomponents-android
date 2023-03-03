@@ -1,13 +1,21 @@
 package mobi.lab.components.textfield
 
 import android.content.Context
+import android.content.res.ColorStateList
+import android.graphics.Color
+import android.graphics.drawable.Drawable
+import android.graphics.drawable.LayerDrawable
+import android.graphics.drawable.RippleDrawable
 import android.os.Bundle
 import android.os.Parcelable
 import android.text.TextUtils
 import android.util.AttributeSet
 import android.view.KeyEvent
 import androidx.annotation.Dimension
+import androidx.core.content.ContextCompat
 import androidx.core.view.updatePadding
+import com.google.android.material.color.MaterialColors
+import com.google.android.material.shape.MaterialShapeDrawable
 import com.google.android.material.textfield.TextInputLayout
 import mobi.lab.components.R
 import mobi.lab.components.shared.ParcelCompat
@@ -54,6 +62,148 @@ class LabTextField @JvmOverloads constructor(
                 clearErrorOnFocus = attributes.getBoolean(R.styleable.LabTextField_clearErrorOnFocus, clearErrorOnFocus)
 
                 // TODO (2): Background
+
+//                shapeAppearanceModel =
+//                    ShapeAppearanceModel.builder(context, attrs, defStyleAttr, DEF_STYLE_RES)
+//                        .build()
+
+//                boxLabelCutoutPaddingPx = context
+//                    .resources
+//                    .getDimensionPixelOffset(R.dimen.mtrl_textinput_box_label_cutout_padding)
+//                boxCollapsedPaddingTopPx =
+//                    a.getDimensionPixelOffset(R.styleable.TextInputLayout_boxCollapsedPaddingTop, 0)
+//
+//                boxStrokeWidthDefaultPx = a.getDimensionPixelSize(
+//                    R.styleable.TextInputLayout_boxStrokeWidth,
+//                    context
+//                        .resources
+//                        .getDimensionPixelSize(R.dimen.mtrl_textinput_box_stroke_width_default)
+//                )
+//                boxStrokeWidthFocusedPx = a.getDimensionPixelSize(
+//                    R.styleable.TextInputLayout_boxStrokeWidthFocused,
+//                    context
+//                        .resources
+//                        .getDimensionPixelSize(R.dimen.mtrl_textinput_box_stroke_width_focused)
+//                )
+//                boxStrokeWidthPx = boxStrokeWidthDefaultPx
+//
+//                val boxCornerRadiusTopStart: Float =
+//                    a.getDimension(R.styleable.TextInputLayout_boxCornerRadiusTopStart, -1f)
+//                val boxCornerRadiusTopEnd: Float =
+//                    a.getDimension(R.styleable.TextInputLayout_boxCornerRadiusTopEnd, -1f)
+//                val boxCornerRadiusBottomEnd: Float =
+//                    a.getDimension(R.styleable.TextInputLayout_boxCornerRadiusBottomEnd, -1f)
+//                val boxCornerRadiusBottomStart: Float =
+//                    a.getDimension(R.styleable.TextInputLayout_boxCornerRadiusBottomStart, -1f)
+//                val shapeBuilder = shapeAppearanceModel.toBuilder()
+//                if (boxCornerRadiusTopStart >= 0) {
+//                    shapeBuilder.setTopLeftCornerSize(boxCornerRadiusTopStart)
+//                }
+//                if (boxCornerRadiusTopEnd >= 0) {
+//                    shapeBuilder.setTopRightCornerSize(boxCornerRadiusTopEnd)
+//                }
+//                if (boxCornerRadiusBottomEnd >= 0) {
+//                    shapeBuilder.setBottomRightCornerSize(boxCornerRadiusBottomEnd)
+//                }
+//                if (boxCornerRadiusBottomStart >= 0) {
+//                    shapeBuilder.setBottomLeftCornerSize(boxCornerRadiusBottomStart)
+//                }
+//                shapeAppearanceModel = shapeBuilder.build()
+//
+//                val filledBackgroundColorStateList: ColorStateList =
+//                    MaterialResources.getColorStateList(
+//                        context, a, R.styleable.TextInputLayout_boxBackgroundColor
+//                    )
+//                if (filledBackgroundColorStateList != null) {
+//                    defaultFilledBackgroundColor = filledBackgroundColorStateList.defaultColor
+//                    boxBackgroundColor = defaultFilledBackgroundColor
+//                    if (filledBackgroundColorStateList.isStateful) {
+//                        disabledFilledBackgroundColor =
+//                            filledBackgroundColorStateList.getColorForState(
+//                                intArrayOf(-android.R.attr.state_enabled),
+//                                -1
+//                            )
+//                        focusedFilledBackgroundColor =
+//                            filledBackgroundColorStateList.getColorForState(
+//                                intArrayOf(
+//                                    android.R.attr.state_focused,
+//                                    android.R.attr.state_enabled
+//                                ), -1
+//                            )
+//                        hoveredFilledBackgroundColor =
+//                            filledBackgroundColorStateList.getColorForState(
+//                                intArrayOf(
+//                                    android.R.attr.state_hovered,
+//                                    android.R.attr.state_enabled
+//                                ), -1
+//                            )
+//                    } else {
+//                        focusedFilledBackgroundColor = defaultFilledBackgroundColor
+//                        val mtrlFilledBackgroundColorStateList =
+//                            AppCompatResources.getColorStateList(
+//                                context,
+//                                R.color.mtrl_filled_background_color
+//                            )
+//                        disabledFilledBackgroundColor =
+//                            mtrlFilledBackgroundColorStateList.getColorForState(
+//                                intArrayOf(-android.R.attr.state_enabled),
+//                                -1
+//                            )
+//                        hoveredFilledBackgroundColor =
+//                            mtrlFilledBackgroundColorStateList.getColorForState(
+//                                intArrayOf(android.R.attr.state_hovered),
+//                                -1
+//                            )
+//                    }
+//                } else {
+//                    boxBackgroundColor = Color.TRANSPARENT
+//                    defaultFilledBackgroundColor = Color.TRANSPARENT
+//                    disabledFilledBackgroundColor = Color.TRANSPARENT
+//                    focusedFilledBackgroundColor = Color.TRANSPARENT
+//                    hoveredFilledBackgroundColor = Color.TRANSPARENT
+//                }
+//
+//                if (a.hasValue(R.styleable.TextInputLayout_android_textColorHint)) {
+//                    focusedTextColor =
+//                        a.getColorStateList(R.styleable.TextInputLayout_android_textColorHint)
+//                    defaultHintTextColor = focusedTextColor
+//                }
+//
+//                val boxStrokeColorStateList: ColorStateList = MaterialResources.getColorStateList(
+//                    context,
+//                    a,
+//                    R.styleable.TextInputLayout_boxStrokeColor
+//                )
+//                // Default values for stroke colors if boxStrokeColorStateList is not stateful
+//                // Default values for stroke colors if boxStrokeColorStateList is not stateful
+//                focusedStrokeColor =
+//                    a.getColor(R.styleable.TextInputLayout_boxStrokeColor, Color.TRANSPARENT)
+//                defaultStrokeColor =
+//                    ContextCompat.getColor(context, R.color.mtrl_textinput_default_box_stroke_color)
+//                disabledColor =
+//                    ContextCompat.getColor(context, R.color.mtrl_textinput_disabled_color)
+//                hoveredStrokeColor =
+//                    ContextCompat.getColor(context, R.color.mtrl_textinput_hovered_box_stroke_color)
+//                // Values from boxStrokeColorStateList
+//                // Values from boxStrokeColorStateList
+//                if (boxStrokeColorStateList != null) {
+//                    setBoxStrokeColorStateList(boxStrokeColorStateList)
+//                }
+//                if (a.hasValue(R.styleable.TextInputLayout_boxStrokeErrorColor)) {
+//                    boxStrokeErrorColor = MaterialResources.getColorStateList(
+//                        context, a, R.styleable.TextInputLayout_boxStrokeErrorColor
+//                    )
+//                }
+
+                // We've read the attributes ourselves. Now clear the Filled TextInputLayout background's stroke
+                boxStrokeWidth = 0
+                boxStrokeWidthFocused = 0
+
+                val boxBackground = MaterialShapeDrawable(shapeAppearanceModel)
+                boxBackground.fillColor = ColorStateList.valueOf(boxBackgroundColor)
+
+//                editText.background = getOutlinedBoxBackgroundWithRipple(context, boxBackground, EDIT_TEXT_BACKGROUND_RIPPLE_STATE)
+
             } finally {
                 attributes.recycle()
             }
@@ -182,11 +332,33 @@ class LabTextField @JvmOverloads constructor(
         }
     }
 
+    private fun getOutlinedBoxBackgroundWithRipple(
+        context: Context,
+        boxBackground: MaterialShapeDrawable,
+        states: Array<IntArray>
+    ): Drawable {
+        val rippleColor = MaterialColors.getColor(editText, com.google.android.material.R.attr.colorControlHighlight)
+        val surfaceColor = MaterialColors.getColor(context, com.google.android.material.R.attr.colorSurface, "TextInputLayout")
+        val rippleBackground = MaterialShapeDrawable(boxBackground.shapeAppearanceModel)
+        val pressedBackgroundColor = MaterialColors.layer(rippleColor, surfaceColor, 0.1f)
+        val rippleBackgroundColors = intArrayOf(pressedBackgroundColor, Color.TRANSPARENT)
+        rippleBackground.fillColor = ColorStateList(states, rippleBackgroundColors)
+        rippleBackground.setTint(surfaceColor)
+        val colors = intArrayOf(pressedBackgroundColor, surfaceColor)
+        val rippleColorStateList = ColorStateList(states, colors)
+        val mask = MaterialShapeDrawable(boxBackground.shapeAppearanceModel)
+        mask.setTint(Color.WHITE)
+        val rippleDrawable: Drawable = RippleDrawable(rippleColorStateList, rippleBackground, mask)
+        val layers = arrayOf(rippleDrawable, boxBackground)
+        return LayerDrawable(layers)
+    }
+
     companion object {
         private const val STATE_ERROR = "LabTextField.STATE_ERROR"
         private const val STATE_PARENT = "LabTextField.STATE_PARENT"
 
         private const val NO_VALUE_INT: Int = -1
+        private val EDIT_TEXT_BACKGROUND_RIPPLE_STATE = arrayOf(intArrayOf(android.R.attr.state_pressed), intArrayOf())
 
         const val ID_EDIT_TEXT = android.R.id.text1
     }
