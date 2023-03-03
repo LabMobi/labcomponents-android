@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- TextField start -->
-    <style name="Lab.Widget.TextField" parent="Widget.Material3.TextInputLayout.FilledBox">
-        <item name="textPaddingTop">@dimen/lab_size_24</item>
-        <item name="textPaddingBottom">@dimen/lab_size_8</item>
-        <!-- Additional padding before and after the input text -->
-        <item name="textPaddingHorizontal">@dimen/lab_size_2</item>
-        <item name="materialThemeOverlay">@style/Lab.ThemeOverlay.TextInputLayout</item>
 
-        <!-- Box attributes -->
-        <item name="boxBackgroundMode">filled</item>sd
-        <item name="boxCollapsedPaddingTop">@dimen/lab_size_12</item>
-
+    <style name="Widget.Lab.TextField" parent="Widget.LabComponents.TextField">
         <item name="boxCornerRadiusTopStart">?attr/labShapeCornerSizeTopLeft</item>
         <item name="boxCornerRadiusTopEnd">?attr/labShapeCornerSizeTopRight</item>
         <item name="boxCornerRadiusBottomStart">?attr/labShapeCornerSizeBottomLeft</item>
@@ -50,40 +40,47 @@
         <item name="prefixTextColor">?attr/labColorSelectorTextSecondary</item>
         <item name="suffixTextColor">?attr/labColorSelectorTextSecondary</item>
         <item name="android:textColor">@color/lab_default_textfield_text</item>
-
-        <!-- TODO official items. We should override these values in the TextField theme? -->
-<!--        <item name="enforceMaterialTheme">true</item>-->
-<!--        <item name="enforceTextAppearance">true</item>-->
-
-<!--        <item name="android:minWidth">@dimen/material_textinput_min_width</item>-->
-<!--        <item name="android:maxWidth">@dimen/material_textinput_max_width</item>-->
-<!--&lt;!&ndash;        <item name="boxBackgroundMode">outline</item>&ndash;&gt;-->
-
-<!--        <item name="errorIconDrawable">@drawable/mtrl_ic_error</item>-->
-<!--        <item name="errorIconTint">@color/mtrl_error</item>-->
-<!--        <item name="endIconTint">@color/mtrl_outlined_icon_tint</item>-->
-<!--        <item name="startIconTint">@color/mtrl_outlined_icon_tint</item>-->
-
-<!--        <item name="boxBackgroundColor">?attr/labColorSurface</item>-->
-<!--        <item name="boxStrokeColor">@color/mtrl_outlined_stroke_color</item>-->
-<!--        <item name="boxStrokeErrorColor">@color/mtrl_error</item>-->
-<!--        <item name="boxStrokeWidth">@dimen/mtrl_textinput_box_stroke_width_default</item>-->
-<!--        <item name="boxStrokeWidthFocused">@dimen/mtrl_textinput_box_stroke_width_focused</item>-->
-
-<!--        <item name="shapeAppearance">?attr/shapeAppearanceSmallComponent</item>-->
-<!--        <item name="shapeAppearanceOverlay">@null</item>-->
     </style>
 
-    <style name="Lab.ThemeOverlay.TextInputLayout" parent="">
-        <item name="editTextStyle">@style/Lab.TextField.EditTextStyle</item>
+    <style name="ThemeOverlay.Lab.TextInputLayout" parent="ThemeOverlay.LabComponents.TextInputLayout">
+        <item name="editTextStyle">@style/Widget.Lab.TextFieldEditText</item>
     </style>
 
-    <style name="Lab.TextField.EditTextStyle" parent="Widget.Material3.TextInputEditText.FilledBox">
+    <style name="Widget.Lab.TextFieldEditText" parent="Widget.LabComponents.TextFieldEditText">
+        <item name="android:gravity">top</item>
+    </style>
+
+
+    <!-- TextField start -->
+    <style name="Widget.LabComponents.TextField" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="textPaddingTop">@dimen/lab_size_24</item>
+        <item name="textPaddingBottom">@dimen/lab_size_8</item>
+        <!-- Additional padding before and after the input text -->
+        <item name="textPaddingHorizontal">@dimen/lab_size_2</item>
+        <item name="materialThemeOverlay">@style/ThemeOverlay.LabComponents.TextInputLayout</item>
+
+        <!-- Box attributes -->
+        <item name="boxBackgroundMode">filled</item>sd
+        <item name="boxCollapsedPaddingTop">@dimen/lab_size_12</item>
+        <item name="boxBackgroundColor">@android:color/transparent</item>
+
+        <item name="shapeAppearance">?attr/shapeAppearance</item>
+        <item name="shapeAppearanceOverlay">?attr/shapeAppearanceOverlay</item>
+    </style>
+
+    <style name="ThemeOverlay.LabComponents.TextInputLayout" parent="">
+        <item name="editTextStyle">@style/Widget.LabComponents.TextFieldEditText</item>
+        <!-- This overrides error icon color in disabled state -->
+        <item name="colorOnError">?attr/colorError</item>
+        <item name="textAppearanceSubtitle1">?attr/textAppearanceBodyLarge</item>
+    </style>
+
+    <style name="Widget.LabComponents.TextFieldEditText" parent="Widget.MaterialComponents.TextInputEditText.FilledBox">
         <item name="android:background">@drawable/lab_default_textfield_background</item>
         <item name="android:paddingLeft">@dimen/lab_size_16</item>
         <item name="android:paddingRight">@dimen/lab_size_16</item>
         <item name="android:paddingTop">@dimen/lab_size_8</item>
         <item name="android:paddingBottom">@dimen/lab_size_8</item>
-        <item name="android:gravity">top</item>
-    </style>
+    </style>sda
+
 </resources>

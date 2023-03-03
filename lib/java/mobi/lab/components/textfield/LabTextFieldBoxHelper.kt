@@ -33,7 +33,7 @@ internal class LabTextFieldBoxHelper(
     init {
         val context = textField.context
 
-        shapeAppearanceModel = ShapeAppearanceModel.builder(context, attrs, defStyleAttr, R.style.Lab_Widget_TextField).build()
+        shapeAppearanceModel = ShapeAppearanceModel.builder(context, attrs, defStyleAttr, R.style.Widget_Lab_TextField).build()
         boxBackground = MaterialShapeDrawable(shapeAppearanceModel)
 
         attrs?.let {

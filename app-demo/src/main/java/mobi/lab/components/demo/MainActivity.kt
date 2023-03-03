@@ -39,9 +39,11 @@ class MainActivity : BaseActivity() {
             setSupportActionBar(toolbar)
             textField.hint = "This is a hint"
             textField2.hint = "This is a hint"
+            textField3.hint = "This is a hint"
             checkTextFieldEnabled.setOnCheckedChangeListener { _, isChecked ->
                 textField.isEnabled = isChecked
                 textField2.isEnabled = isChecked
+                textField3.isEnabled = isChecked
             }
             checkTextFieldError.setOnCheckedChangeListener { _, isChecked ->
                 var errorText = ""
@@ -53,6 +55,7 @@ class MainActivity : BaseActivity() {
                 }
                 textField.error = errorText
                 textField2.error = errorText
+                textField3.error = errorText
             }
         }
     }

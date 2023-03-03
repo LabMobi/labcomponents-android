@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Lab.ShapeAppearance" parent="ShapeAppearance.Material3.MediumComponent">
+    <style name="ShapeAppearance.Lab.Default" parent="ShapeAppearance.Material3.MediumComponent">
         <item name="cornerSize">?attr/labShapeCornerSize</item>
         <item name="cornerSizeTopLeft">?attr/labShapeCornerSizeTopLeft</item>
         <item name="cornerSizeTopRight">?attr/labShapeCornerSizeTopRight</item>
@@ -8,7 +8,7 @@
         <item name="cornerSizeBottomRight">?attr/labShapeCornerSizeBottomRight</item>
     </style>
 
-    <style name="Lab.ShapeAppearanceOverlay" parent="">
+    <style name="ShapeAppearanceOverlay.Lab.Default" parent="">
         <!-- No overlays -->
     </style>
 </resources>

@@ -37,8 +37,29 @@
                 android:text="Text inputs" />
 
             <mobi.lab.components.textfield.LabTextField
+                android:id="@+id/text_field_3"
+                style="@style/Widget.LabComponents.TextField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin"
+                android:layout_marginStart="@dimen/margin"
+                android:layout_marginEnd="@dimen/margin"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:endIconDrawable="@drawable/icon_clear"
+                app:endIconMode="clear_text"
+                app:startIconDrawable="@drawable/icon_clear"
+                app:placeholderText="This is a placeholder"
+                app:helperText="This is a helper text"
+                app:suffixText="Suffix"
+                app:prefixText="Prefix"
+                app:counterEnabled="true"
+                app:counterMaxLength="9"
+                />
+
+            <mobi.lab.components.textfield.LabTextField
                 android:id="@+id/text_field"
-                style="@style/Lab.Widget.TextField"
+                style="@style/Widget.Lab.TextField"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/margin"
@@ -64,7 +85,7 @@
 
                 <mobi.lab.components.textfield.LabTextField
                     android:id="@+id/text_field_2"
-                    style="@style/Lab.Widget.TextField"
+                    style="@style/Widget.Lab.TextField"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -106,78 +127,78 @@
 
             <TextView
                 style="@style/Text.TextStyle"
-                android:textAppearance="@style/Lab.TextAppearance.HeadlineLarge"
-                android:text="Lab.TextAppearance.HeadlineLarge" />
+                android:textAppearance="@style/TextAppearance.Lab.HeadlineLarge"
+                android:text="TextAppearance.Lab.HeadlineLarge" />
 
             <TextView
                 style="@style/Text.TextStyle"
-                android:textAppearance="@style/Lab.TextAppearance.HeadlineMedium"
-                android:text="Lab.TextAppearance.HeadlineMedium" />
+                android:textAppearance="@style/TextAppearance.Lab.HeadlineMedium"
+                android:text="TextAppearance.Lab.HeadlineMedium" />
 
             <TextView
                 style="@style/Text.TextStyle"
-                android:textAppearance="@style/Lab.TextAppearance.HeadlineSmall"
-                android:text="Lab.TextAppearance.HeadlineSmall" />
+                android:textAppearance="@style/TextAppearance.Lab.HeadlineSmall"
+                android:text="TextAppearance.Lab.HeadlineSmall" />
 
             <TextView
                 style="@style/Text.TextStyle"
-                android:textAppearance="@style/Lab.TextAppearance.TitleLarge"
-                android:text="Lab.TextAppearance.TitleLarge" />
+                android:textAppearance="@style/TextAppearance.Lab.TitleLarge"
+                android:text="TextAppearance.Lab.TitleLarge" />
 
             <TextView
                 style="@style/Text.TextStyle"
-                android:textAppearance="@style/Lab.TextAppearance.TitleMedium"
-                android:text="Lab.TextAppearance.TitleMedium" />
+                android:textAppearance="@style/TextAppearance.Lab.TitleMedium"
+                android:text="TextAppearance.Lab.TitleMedium" />
 
             <TextView
                 style="@style/Text.TextStyle"
-                android:textAppearance="@style/Lab.TextAppearance.TitleSmall"
-                android:text="Lab.TextAppearance.TitleSmall" />
+                android:textAppearance="@style/TextAppearance.Lab.TitleSmall"
+                android:text="TextAppearance.Lab.TitleSmall" />
 
             <TextView
                 style="@style/Text.TextStyle"
-                android:textAppearance="@style/Lab.TextAppearance.BodyLarge"
-                android:text="Lab.TextAppearance.BodyLarge" />
+                android:textAppearance="@style/TextAppearance.Lab.BodyLarge"
+                android:text="TextAppearance.Lab.BodyLarge" />
 
             <TextView
                 style="@style/Text.TextStyle"
-                android:textAppearance="@style/Lab.TextAppearance.BodyLarge.Emphasis"
-                android:text="Lab.TextAppearance.BodyLarge.Emphasis" />
+                android:textAppearance="@style/TextAppearance.Lab.BodyLarge.Emphasis"
+                android:text="TextAppearance.Lab.BodyLarge.Emphasis" />
 
             <TextView
                 style="@style/Text.TextStyle"
-                android:textAppearance="@style/Lab.TextAppearance.BodyMedium"
-                android:text="Lab.TextAppearance.BodyMedium" />
+                android:textAppearance="@style/TextAppearance.Lab.BodyMedium"
+                android:text="TextAppearance.Lab.BodyMedium" />
 
             <TextView
                 style="@style/Text.TextStyle"
-                android:textAppearance="@style/Lab.TextAppearance.BodyMedium.Emphasis"
-                android:text="Lab.TextAppearance.BodyMedium.Emphasis" />
+                android:textAppearance="@style/TextAppearance.Lab.BodyMedium.Emphasis"
+                android:text="TextAppearance.Lab.BodyMedium.Emphasis" />
 
             <TextView
                 style="@style/Text.TextStyle"
-                android:textAppearance="@style/Lab.TextAppearance.BodySmall"
-                android:text="Lab.TextAppearance.BodySmall" />
+                android:textAppearance="@style/TextAppearance.Lab.BodySmall"
+                android:text="TextAppearance.Lab.BodySmall" />
 
             <TextView
                 style="@style/Text.TextStyle"
-                android:textAppearance="@style/Lab.TextAppearance.BodySmall.Emphasis"
-                android:text="Lab.TextAppearance.BodySmall.Emphasis" />
+                android:textAppearance="@style/TextAppearance.Lab.BodySmall.Emphasis"
+                android:text="TextAppearance.Lab.BodySmall.Emphasis" />
 
             <TextView
                 style="@style/Text.TextStyle"
-                android:textAppearance="@style/Lab.TextAppearance.LabelLarge"
-                android:text="Lab.TextAppearance.LabelLarge" />
+                android:textAppearance="@style/TextAppearance.Lab.LabelLarge"
+                android:text="TextAppearance.Lab.LabelLarge" />
 
             <TextView
                 style="@style/Text.TextStyle"
-                android:textAppearance="@style/Lab.TextAppearance.LabelMedium"
-                android:text="Lab.TextAppearance.LabelMedium" />
+                android:textAppearance="@style/TextAppearance.Lab.LabelMedium"
+                android:text="TextAppearance.Lab.LabelMedium" />
 
             <TextView
                 style="@style/Text.TextStyle"
-                android:textAppearance="@style/Lab.TextAppearance.LabelSmall"
-                android:text="Lab.TextAppearance.LabelSmall" />
+                android:textAppearance="@style/TextAppearance.Lab.LabelSmall"
+                android:text="TextAppearance.Lab.LabelSmall" />
 
             <TextView
                 style="@style/Text.SectionHeadline"

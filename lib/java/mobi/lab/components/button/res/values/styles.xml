@@ -47,8 +47,5 @@
         <item name="android:textSize">@dimen/lab_text_16</item>
         <item name="android:lineHeight" tools:targetApi="p">@dimen/lab_text_24</item>
         <item name="lineHeight">@dimen/lab_text_24</item>
-<!--        TODO restore-->
-<!--        <item name="android:fontFamily">@font/bold</item>-->
-<!--        <item name="fontFamily">@font/bold</item>-->
     </style>
 </resources>
