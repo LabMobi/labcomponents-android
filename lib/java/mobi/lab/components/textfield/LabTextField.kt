@@ -6,6 +6,7 @@ import android.os.Parcelable
 import android.text.TextUtils
 import android.util.AttributeSet
 import android.view.KeyEvent
+import android.view.inputmethod.EditorInfo
 import androidx.annotation.Dimension
 import androidx.core.view.updatePadding
 import com.google.android.material.textfield.TextInputLayout
@@ -52,6 +53,13 @@ class LabTextField @JvmOverloads constructor(
                 )
                 setTextPaddingHorizontal(attributes.getDimensionPixelSize(R.styleable.LabTextField_textPaddingHorizontal, NO_VALUE_INT))
                 clearErrorOnFocus = attributes.getBoolean(R.styleable.LabTextField_clearErrorOnFocus, clearErrorOnFocus)
+
+                if (attributes.hasValue(R.styleable.LabTextField_android_inputType)) {
+                    editText.inputType = attributes.getInt(R.styleable.LabTextField_android_inputType, EditorInfo.TYPE_CLASS_TEXT)
+                }
+                if (attributes.hasValue(R.styleable.LabTextField_android_imeOptions)) {
+                    editText.imeOptions = attributes.getInt(R.styleable.LabTextField_android_imeOptions, EditorInfo.IME_ACTION_NONE)
+                }
             } finally {
                 attributes.recycle()
             }

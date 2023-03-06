@@ -8,7 +8,7 @@
     tools:ignore="HardcodedText">
 
     <TextView
-        style="@style/Text.SectionHeadline"
+        style="@style/Text.HeadlineLarge"
         android:text="Text styles" />
 
     <TextView

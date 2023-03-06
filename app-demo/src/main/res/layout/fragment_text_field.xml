@@ -9,7 +9,7 @@
     tools:ignore="HardcodedText">
 
     <TextView
-        style="@style/Text.SectionHeadline"
+        style="@style/Text.HeadlineLarge"
         android:text="TextFields" />
 
     <LinearLayout
@@ -86,6 +86,93 @@
             android:layout_gravity="center_horizontal"
             android:text="Show error"
             android:checked="false" />
+
+        <TextView
+            style="@style/Text.HeadlineSmall"
+            android:text="Customise TextFields" />
+
+        <mobi.lab.components.textfield.LabTextField
+            android:id="@+id/input_helper"
+            style="@style/Widget.Lab.TextField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginEnd="@dimen/margin"
+            android:layout_marginBottom="@dimen/margin"
+            android:hint="Change helper text" />
+
+        <mobi.lab.components.textfield.LabTextField
+            android:id="@+id/input_error"
+            style="@style/Widget.Lab.TextField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginEnd="@dimen/margin"
+            android:layout_marginBottom="@dimen/margin"
+            android:hint="Change error text" />
+
+        <mobi.lab.components.textfield.LabTextField
+            android:id="@+id/input_label"
+            style="@style/Widget.Lab.TextField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginEnd="@dimen/margin"
+            android:layout_marginBottom="@dimen/margin"
+            android:hint="Change label text" />
+
+        <mobi.lab.components.textfield.LabTextField
+            android:id="@+id/input_placeholder"
+            style="@style/Widget.Lab.TextField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginEnd="@dimen/margin"
+            android:layout_marginBottom="@dimen/margin"
+            android:hint="Change placeholder text" />
+
+        <mobi.lab.components.textfield.LabTextField
+            android:id="@+id/input_prefix"
+            style="@style/Widget.Lab.TextField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginEnd="@dimen/margin"
+            android:layout_marginBottom="@dimen/margin"
+            android:hint="Change prefix text" />
+
+        <mobi.lab.components.textfield.LabTextField
+            android:id="@+id/input_suffix"
+            style="@style/Widget.Lab.TextField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginEnd="@dimen/margin"
+            android:layout_marginBottom="@dimen/margin"
+            android:hint="Change suffix text" />
+
+        <mobi.lab.components.textfield.LabTextField
+            android:id="@+id/input_counter_max"
+            style="@style/Widget.Lab.TextField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginEnd="@dimen/margin"
+            android:layout_marginBottom="32dp"
+            android:hint="Change counter maximum"
+            android:inputType="numberSigned"
+            android:imeOptions="actionSearch" />
+
+        <mobi.lab.components.button.LabButton
+            android:id="@+id/button_update"
+            style="@style/Widget.Lab.ButtonPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginEnd="@dimen/margin"
+            android:layout_marginBottom="72dp"
+            android:layout_gravity="center_horizontal"
+            android:text="Update" />
 
     </LinearLayout>
 </LinearLayout>

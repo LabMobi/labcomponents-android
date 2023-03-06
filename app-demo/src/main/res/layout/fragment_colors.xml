@@ -8,6 +8,6 @@
 
     <TextView
         android:id="@+id/item_text_field"
-        style="@style/Text.SectionHeadline"
+        style="@style/Text.HeadlineLarge"
         android:text="Colors (in progress)" />
 </LinearLayout>
