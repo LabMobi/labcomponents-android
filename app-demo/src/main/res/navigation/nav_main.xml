@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/componentListFragment">
+
+    <fragment
+        android:id="@+id/componentListFragment"
+        android:name="mobi.lab.components.demo.presentation.ComponentListFragment"
+        android:label="Mobi Lab Components"
+        tools:layout="@layout/fragment_component_list" >
+        <action
+            android:id="@+id/action_componentListFragment_to_colorsFragment"
+            app:destination="@id/colorsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
+        <action
+            android:id="@+id/action_componentListFragment_to_typographyFragment"
+            app:destination="@id/typographyFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
+        <action
+            android:id="@+id/action_componentListFragment_to_textFieldFragment"
+            app:destination="@id/textFieldFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/colorsFragment"
+        android:name="mobi.lab.components.demo.presentation.ColorsFragment"
+        android:label="Colors"
+        tools:layout="@layout/fragment_colors" />
+
+    <fragment
+        android:id="@+id/typographyFragment"
+        android:name="mobi.lab.components.demo.presentation.TypographyFragment"
+        android:label="Typography"
+        tools:layout="@layout/fragment_typography" />
+
+    <fragment
+        android:id="@+id/textFieldFragment"
+        android:name="mobi.lab.components.demo.presentation.TextFieldFragment"
+        android:label="TextField"
+        tools:layout="@layout/fragment_text_field" />
+</navigation>

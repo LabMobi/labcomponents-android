@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:ignore="HardcodedText">
+
+    <TextView
+        android:id="@+id/item_colors"
+        style="@style/Text.ListItem"
+        android:text="Colors" />
+
+    <View style="@style/Divider" />
+
+    <TextView
+        android:id="@+id/item_text_field"
+        style="@style/Text.ListItem"
+        android:text="TextField" />
+
+    <View style="@style/Divider" />
+
+    <TextView
+        android:id="@+id/item_typography"
+        style="@style/Text.ListItem"
+        android:text="Typography" />
+
+    <View style="@style/Divider" />
+</LinearLayout>

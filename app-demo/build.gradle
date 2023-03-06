@@ -114,6 +114,8 @@ dependencies {
     implementation project(":lib")
 
     implementation libs.kotlin
+    implementation libs.androidx.navigation.fragment
+    implementation libs.androidx.navigation.ui
 
     // Util
     implementation libs.timber

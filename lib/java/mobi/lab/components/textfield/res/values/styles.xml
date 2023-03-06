@@ -60,7 +60,7 @@
 
         <!-- Box attributes -->
         <item name="boxBackgroundMode">filled</item>sd
-        <item name="boxCollapsedPaddingTop">@dimen/lab_size_12</item>
+        <item name="boxCollapsedPaddingTop">@dimen/lab_size_10</item>
         <item name="boxBackgroundColor">@android:color/transparent</item>
 
         <item name="shapeAppearance">?attr/shapeAppearance</item>

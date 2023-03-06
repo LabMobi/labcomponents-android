@@ -1,25 +1,36 @@
-package mobi.lab.components.demo
+package mobi.lab.components.demo.presentation
 
 import android.content.res.Configuration
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
-import androidx.appcompat.widget.Toolbar
+import androidx.navigation.NavController
+import androidx.navigation.findNavController
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.NavigationUI.setupActionBarWithNavController
+import mobi.lab.components.demo.R
+import mobi.lab.components.demo.databinding.ActivityMainBinding
 
-abstract class BaseComponentActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
 
-    abstract fun getToolbar(): Toolbar?
+    private lateinit var binding: ActivityMainBinding
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = ActivityMainBinding.inflate(LayoutInflater.from(this))
+        setContentView(binding.root)
+
+        setSupportActionBar(binding.toolbar)
+    }
 
     override fun onPostCreate(savedInstanceState: Bundle?) {
         super.onPostCreate(savedInstanceState)
-        val toolbar = getToolbar()
-        if (toolbar != null) {
-            toolbar.setNavigationOnClickListener { finish() }
-        }
-        setSupportActionBar(toolbar)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        val navController = findNavController()
+        val appBarConfiguration = AppBarConfiguration(navController.graph)
+        setupActionBarWithNavController(this, navController, appBarConfiguration)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -33,12 +44,13 @@ abstract class BaseComponentActivity : AppCompatActivity() {
                 toggleUiMode()
                 true
             }
-            android.R.id.home -> {
-                finish()
-                true
-            }
             else -> super.onOptionsItemSelected(item)
         }
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        val navController = findNavController()
+        return navController.navigateUp() || super.onSupportNavigateUp()
     }
 
     private fun toggleUiMode() {
@@ -53,6 +65,10 @@ abstract class BaseComponentActivity : AppCompatActivity() {
     private fun isNightModeEnabled(): Boolean {
         val uiMode: Int = resources?.configuration?.uiMode ?: return false
         return uiMode.and(Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_YES
+    }
+
+    private fun findNavController(): NavController {
+        return findNavController(R.id.nav_host_fragment)
     }
 
     companion object {

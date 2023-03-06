@@ -1,4 +1,4 @@
-rootProject.name = "LabComponents"
+rootProject.name = "components-android"
 include ":app-demo",
         ":lib"
 
