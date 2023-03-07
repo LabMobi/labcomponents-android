@@ -3,12 +3,12 @@
 definitions:
   artifacts: &androidArtifacts # Section def
     - emulator.log
-    - app/build/reports
-    - app/build/outputs/androidTest-results
-    - app/build/outputs/logs
-    - app/build/outputs/**/*.apk
-    - app/build/outputs/**/*.aab
-    - app/build/outputs/**/mapping.txt
+    - app-demo/build/reports
+    - app-demo/build/outputs/androidTest-results
+    - app-demo/build/outputs/logs
+    - app-demo/build/outputs/**/*.apk
+    - app-demo/build/outputs/**/*.aab
+    - app-demo/build/outputs/**/mapping.txt
     - lib/build/reports
     - lib/build/outputs/androidTest-results
     - lib/build/outputs/logs
