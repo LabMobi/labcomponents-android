@@ -70,3 +70,14 @@ dependencies {
     implementation libs.constraintlayout
     implementation libs.material
 }
+
+
+def GROUP_CI_BUILD_TASKS = "Build"
+
+task buildLibDebug(dependsOn: ["build"])
+buildLibDebug.group = GROUP_CI_BUILD_TASKS
+buildLibDebug.description = "Build the debug version of components lib"
+
+task buildLibRelease(dependsOn: ["buildLibDebug"])
+buildLibRelease.group = GROUP_CI_BUILD_TASKS
+buildLibRelease.description = "Build the release version of components lib"
