@@ -12,11 +12,11 @@ import mobi.lab.components.shared.ParcelCompat
 import mobi.lab.components.R
 
 @Suppress("ClickableViewAccessibility")
-class LabTextInputEditText : TextInputEditText {
+public open class LabTextInputEditText : TextInputEditText {
 
-    constructor(context: Context) : super(context)
-    constructor(context: Context, attrs: AttributeSet?) : super(context, attrs)
-    constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr)
+    public constructor(context: Context) : super(context)
+    public constructor(context: Context, attrs: AttributeSet?) : super(context, attrs)
+    public constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr)
 
     // Workaround to let text change watchers know of programmatic changes
     private var restoreStateInProgress = false
@@ -93,7 +93,7 @@ class LabTextInputEditText : TextInputEditText {
         setOnTouchListener(null)
     }
 
-    companion object {
+    internal companion object {
         private const val STATE_PARENT = "LabTextInputEditText.STATE_PARENT"
     }
 }

@@ -4,7 +4,7 @@ import android.os.Build
 import android.os.Bundle
 import android.os.Parcelable
 
-object ParcelCompat {
+internal object ParcelCompat {
 
     inline fun <reified T : Parcelable> getParcelable(bundle: Bundle, key: String): T? {
         return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {

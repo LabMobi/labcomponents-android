@@ -13,26 +13,26 @@ import com.google.android.material.textfield.TextInputLayout
 import mobi.lab.components.R
 import mobi.lab.components.shared.ParcelCompat
 
-class LabTextField @JvmOverloads constructor(
+public class LabTextField @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
 ) : TextInputLayout(context, attrs, defStyleAttr) {
 
-    interface Listener {
-        fun onTextChanged(text: String?)
-        fun onFocusChanged(hasFocus: Boolean)
-        fun onErrorCleared()
+    public interface Listener {
+        public fun onTextChanged(text: String?)
+        public fun onFocusChanged(hasFocus: Boolean)
+        public fun onErrorCleared()
     }
 
     // TODO: comment
-    var listener: Listener? = null
+    public var listener: Listener? = null
 
     // TODO: comment
-    var clearErrorOnFocus: Boolean = true
+    public var clearErrorOnFocus: Boolean = true
 
     // TODO: comment
-    val editText: LabTextInputEditText
+    public val editText: LabTextInputEditText
 
     private var boxHelper: LabTextFieldBoxHelper? = null
     private var errorState = false
@@ -129,15 +129,15 @@ class LabTextField @JvmOverloads constructor(
         editText.onFocusChangeListener = null
     }
 
-    fun getText(): String {
+    public fun getText(): String {
         return editText.text.toString()
     }
 
-    fun setText(text: CharSequence?) {
+    public fun setText(text: CharSequence?) {
         editText.setText(text)
     }
 
-    fun setTextAndSelection(text: CharSequence?) {
+    public fun setTextAndSelection(text: CharSequence?) {
         setText(text)
         editText.apply {
             val value = getText()?.toString() ?: ""
@@ -145,19 +145,19 @@ class LabTextField @JvmOverloads constructor(
         }
     }
 
-    fun setTextPaddingVertical(@Dimension(unit = Dimension.PX) topPx: Int, @Dimension(unit = Dimension.PX) bottomPx: Int) {
+    public fun setTextPaddingVertical(@Dimension(unit = Dimension.PX) topPx: Int, @Dimension(unit = Dimension.PX) bottomPx: Int) {
         val top = if (topPx != NO_VALUE_INT) topPx else editText.paddingTop
         val bottom = if (bottomPx != NO_VALUE_INT) bottomPx else editText.paddingBottom
         editText.updatePadding(top = top, bottom = bottom)
     }
 
-    fun setTextPaddingHorizontal(@Dimension(unit = Dimension.PX) paddingPx: Int) {
+    public fun setTextPaddingHorizontal(@Dimension(unit = Dimension.PX) paddingPx: Int) {
         if (paddingPx != NO_VALUE_INT) {
             editText.compoundDrawablePadding = paddingPx
         }
     }
 
-    fun setImeActionHandler(imeAction: Int, onImeAction: (keyEvent: KeyEvent) -> Unit) {
+    public fun setImeActionHandler(imeAction: Int, onImeAction: (keyEvent: KeyEvent) -> Unit) {
         editText.apply {
             if (imeOptions != imeAction) {
                 imeOptions = imeAction
@@ -172,7 +172,7 @@ class LabTextField @JvmOverloads constructor(
         }
     }
 
-    fun setInputType(inputType: Int) {
+    public fun setInputType(inputType: Int) {
         if (editText.inputType != inputType) {
             // Some input types change the typeface. Let's reuse the old typeface
             val typeface = editText.typeface
@@ -182,7 +182,7 @@ class LabTextField @JvmOverloads constructor(
     }
 
     // TODO do we actually need this? I don't think so...
-    fun clearError() {
+    public fun clearError() {
         error = null
         listener?.onErrorCleared()
     }
@@ -223,7 +223,7 @@ class LabTextField @JvmOverloads constructor(
         refreshDrawableState()
     }
 
-    companion object {
+    internal companion object {
         private const val STATE_ERROR = "LabTextField.STATE_ERROR"
         private const val STATE_PARENT = "LabTextField.STATE_PARENT"
 

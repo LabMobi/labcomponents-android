@@ -16,21 +16,6 @@ project.archivesBaseName = "labcomponents"
 android {
     namespace "mobi.lab.components"
 
-    buildFeatures {
-        viewBinding = true
-    }
-
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
-
-    defaultConfig {
-        compileSdkVersion libs.versions.android.sdk.compile.get()
-        targetSdkVersion libs.versions.android.sdk.target.get()
-        minSdkVersion libs.versions.android.sdk.min.get()
-    }
-
     // A trick taken from material-components-android to keep everything in a single R namespace
     // and still keep the sources separate for maintainability.
     sourceSets {
@@ -43,6 +28,25 @@ android {
             main.res.srcDirs += 'java/' + it + '/res'
             main.res.srcDirs += 'java/' + it + '/res-public'
         }
+    }
+
+    buildFeatures {
+        viewBinding = true
+    }
+
+    kotlinOptions {
+        freeCompilerArgs += '-Xexplicit-api=strict'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        compileSdkVersion libs.versions.android.sdk.compile.get()
+        targetSdkVersion libs.versions.android.sdk.target.get()
+        minSdkVersion libs.versions.android.sdk.min.get()
     }
 
     buildTypes.all {

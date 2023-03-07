@@ -6,7 +6,7 @@ import android.content.res.TypedArray
 import androidx.annotation.StyleableRes
 import androidx.appcompat.content.res.AppCompatResources
 
-object ResourceUtil {
+internal object ResourceUtil {
 
     /**
      * Returns the [ColorStateList] from the given [TypedArray] attributes. The resource

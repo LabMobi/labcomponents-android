@@ -5,7 +5,7 @@ import android.util.TypedValue
 import androidx.annotation.Dimension
 import kotlin.math.roundToInt
 
-fun dpToPx(context: Context?, @Dimension(unit = Dimension.DP) dp: Int): Int {
+internal fun dpToPx(context: Context?, @Dimension(unit = Dimension.DP) dp: Int): Int {
     if (context == null) {
         return dp
     }

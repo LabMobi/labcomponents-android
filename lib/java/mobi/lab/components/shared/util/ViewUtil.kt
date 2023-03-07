@@ -3,7 +3,7 @@ package mobi.lab.components.shared.util
 import android.graphics.Point
 import android.view.View
 
-object ViewUtil {
+internal object ViewUtil {
 
     fun getLocationOnScreen(view: View): Point {
         val input = IntArray(2)

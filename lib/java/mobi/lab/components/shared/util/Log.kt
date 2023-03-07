@@ -8,7 +8,7 @@ import kotlin.reflect.KClass
 /**
  * A simple logging interface to avoid adding an unnecessary dependency to a library.
  */
-class Log private constructor(
+internal class Log private constructor(
     private val tag: String,
     private var impl: LogImplementation
 ) {
