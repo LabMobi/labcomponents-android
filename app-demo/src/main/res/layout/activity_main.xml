@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:ignore="HardcodedText">
 
-    <androidx.appcompat.widget.Toolbar
+    <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbar"
         style="@style/Toolbar"
         android:layout_width="0dp"

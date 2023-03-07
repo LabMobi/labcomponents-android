@@ -2,14 +2,18 @@ package mobi.lab.components.demo.presentation
 
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.MenuHost
+import androidx.core.view.MenuProvider
 import androidx.fragment.app.Fragment
 import mobi.lab.components.demo.databinding.FragmentTextFieldBinding
 import mobi.lab.components.demo.util.FragmentBindingHolder
 import mobi.lab.components.demo.util.ViewBindingHolder
 import mobi.lab.components.textfield.LabTextField
-import timber.log.Timber
 
 class TextFieldFragment : Fragment(), ViewBindingHolder<FragmentTextFieldBinding> by FragmentBindingHolder() {
 
@@ -22,7 +26,6 @@ class TextFieldFragment : Fragment(), ViewBindingHolder<FragmentTextFieldBinding
                 var errorText = ""
                 if (isChecked) {
                     errorText = inputError.getText()
-                    Timber.e("Error text=$errorText")
                     if (errorText.isEmpty()) {
                         errorText = "This is an error!"
                     }
@@ -31,6 +34,28 @@ class TextFieldFragment : Fragment(), ViewBindingHolder<FragmentTextFieldBinding
             }
 
             buttonUpdate.setOnClickListener { updateTextFields() }
+        }
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val host = activity
+        if (host is MenuHost) {
+            val menuProvider = object : MenuProvider {
+                override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {
+                    val item = menu.add(0, MENU_ID_UPDATE, 0, "Update")
+                    item.setShowAsActionFlags(MenuItem.SHOW_AS_ACTION_ALWAYS)
+                }
+
+                override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
+                    if (menuItem.itemId == MENU_ID_UPDATE) {
+                        binding?.updateTextFields()
+                        return true
+                    }
+                    return false
+                }
+            }
+            host.addMenuProvider(menuProvider, viewLifecycleOwner)
         }
     }
 
@@ -69,5 +94,9 @@ class TextFieldFragment : Fragment(), ViewBindingHolder<FragmentTextFieldBinding
             textFieldEndIcon,
             textFieldBothIcons
         ).map(action)
+    }
+
+    companion object {
+        private const val MENU_ID_UPDATE = 100
     }
 }

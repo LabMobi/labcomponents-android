@@ -60,7 +60,7 @@
         <item name="android:elevation">@dimen/lab_size_1</item>
         <item name="titleTextColor">@color/white</item>
         <item name="titleMarginStart">@dimen/lab_size_64</item>
-        <item name="android:theme">@style/Theme.Toolbar</item>
+        <item name="theme">@style/ThemeOverlay.Toolbar</item>
     </style>
 
     <style name="Switch" parent="Widget.Material3.CompoundButton.MaterialSwitch">
@@ -68,7 +68,8 @@
         <item name="android:textSize">14sp</item>
     </style>
 
-    <style name="Theme.Toolbar" parent="">
+    <style name="ThemeOverlay.Toolbar" parent="">
         <item name="android:textColorSecondary">@color/white</item>
+        <item name="actionMenuTextColor">@color/white</item>
     </style>
 </resources>
