@@ -20,6 +20,7 @@ android {
     // and still keep the sources separate for maintainability.
     sourceSets {
         main.java.srcDir 'java'
+        main.resources.srcDir 'java/resources'
         main.java.includes = srcDirs.collect { it + '/**/*.kt' }
         main.java.excludes = [
                 '**/build/**',
@@ -35,12 +36,20 @@ android {
     }
 
     kotlinOptions {
+        // For Kotlin API strict mode.
+        // In the future we should be able to do it easier.
+        // When https://youtrack.jetbrains.com/issue/KT-37652 is fixed
+        // then we can use the module annotation to enable this instead of the compiler flag.
         freeCompilerArgs += '-Xexplicit-api=strict'
     }
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    packagingOptions{
+        merge '**/LICENSE.txt'
     }
 
     defaultConfig {
