@@ -128,10 +128,10 @@ dependencies {
 
 def GROUP_CI_BUILD_TASKS = "Build"
 
-task buildAllDebug(dependsOn: ["build"])
+task buildAllDebug(dependsOn: ["build", ":lib:buildLibDebug"])
 buildAllDebug.group = GROUP_CI_BUILD_TASKS
 buildAllDebug.description = "Build the debug version"
 
-task buildAllRelease(dependsOn: ["buildAllDebug", "bundleRelease"])
+task buildAllRelease(dependsOn: ["build", ":lib:buildLibRelease"])
 buildAllRelease.group = GROUP_CI_BUILD_TASKS
 buildAllRelease.description = "Build the release version"

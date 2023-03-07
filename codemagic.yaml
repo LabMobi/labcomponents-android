@@ -14,13 +14,6 @@ definitions:
     - lib/build/outputs/logs
     - lib/build/outputs/**/*.aar
     - lib/build/outputs/**/mapping.txt
-  lib-artifacts: &libArtifacts # Section def
-    - emulator.log
-    - lib/build/reports
-    - lib/build/outputs/androidTest-results
-    - lib/build/outputs/logs
-    - lib/build/outputs/**/*.aar
-    - lib/build/outputs/**/mapping.txt
   debug-emails: &debugEmails
     - lauris.kruusamae@lab.mobi
   release-emails: &releaseEmails
@@ -43,7 +36,7 @@ definitions:
     # Build RELEASE
     - &stepBuildRelease
       name: Build Library
-      script: ./gradlew clean buildLibRelease
+      script: ./gradlew clean buildAllRelease
 
 # Flows
 workflows:
@@ -59,7 +52,7 @@ workflows:
     publishing:
       email:
         recipients: *releaseEmails
-    artifacts: *libArtifacts
+    artifacts: *androidArtifacts
   develop-builds:
     name: Dev builds
     instance_type: linux_x2
