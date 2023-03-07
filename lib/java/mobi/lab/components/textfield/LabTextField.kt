@@ -25,11 +25,13 @@ class LabTextField @JvmOverloads constructor(
         fun onErrorCleared()
     }
 
-    // TODO comment
+    // TODO: comment
     var listener: Listener? = null
-    // TODO comment
+
+    // TODO: comment
     var clearErrorOnFocus: Boolean = true
-    // TODO comment
+
+    // TODO: comment
     val editText: LabTextInputEditText
 
     private var boxHelper: LabTextFieldBoxHelper? = null
@@ -49,7 +51,7 @@ class LabTextField @JvmOverloads constructor(
             try {
                 setTextPaddingVertical(
                     topPx = attributes.getDimensionPixelSize(R.styleable.LabTextField_textPaddingTop, NO_VALUE_INT),
-                    bottomPx = attributes.getDimensionPixelSize(R.styleable.LabTextField_textPaddingBottom, NO_VALUE_INT),
+                    bottomPx = attributes.getDimensionPixelSize(R.styleable.LabTextField_textPaddingBottom, NO_VALUE_INT)
                 )
                 setTextPaddingHorizontal(attributes.getDimensionPixelSize(R.styleable.LabTextField_textPaddingHorizontal, NO_VALUE_INT))
                 clearErrorOnFocus = attributes.getBoolean(R.styleable.LabTextField_clearErrorOnFocus, clearErrorOnFocus)

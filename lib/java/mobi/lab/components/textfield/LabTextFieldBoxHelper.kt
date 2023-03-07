@@ -2,17 +2,16 @@ package mobi.lab.components.textfield
 
 import android.content.Context
 import android.content.res.ColorStateList
-import android.graphics.Color
-import android.graphics.drawable.Drawable
-import android.graphics.drawable.LayerDrawable
-import android.graphics.drawable.RippleDrawable
 import android.util.AttributeSet
-import com.google.android.material.color.MaterialColors
 import com.google.android.material.shape.MaterialShapeDrawable
 import com.google.android.material.shape.ShapeAppearanceModel
 import mobi.lab.components.R
 import mobi.lab.components.shared.util.ResourceUtil
 
+/**
+ * Helper class to take care of updating and creating a Drawable to use as LabTextField's EditText background.
+ * The background is referred to as a 'box'.
+ */
 internal class LabTextFieldBoxHelper(
     private val textField: LabTextField,
     attrs: AttributeSet?,
@@ -66,7 +65,6 @@ internal class LabTextFieldBoxHelper(
                 }
                 shapeAppearanceModel = shapeBuilder.build()
 
-
                 // We've read the attributes ourselves. Now clear the Filled TextInputLayout background's stroke
                 textField.boxStrokeWidth = 0
                 textField.boxStrokeWidthFocused = 0
@@ -86,9 +84,9 @@ internal class LabTextFieldBoxHelper(
 
         // Update attribute values
         if (hasFocus && isEnabled) {
-            boxStrokeWidthPx = boxStrokeWidthFocusedPx;
+            boxStrokeWidthPx = boxStrokeWidthFocusedPx
         } else {
-            boxStrokeWidthPx = boxStrokeWidthDefaultPx;
+            boxStrokeWidthPx = boxStrokeWidthDefaultPx
         }
 
         // Apply attributes

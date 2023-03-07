@@ -7,6 +7,11 @@ allprojects {
     }
 }
 
+ext {
+    // Current version of the library
+    libraryVersion = '0.0.2'
+}
+
 buildscript {
     apply from: "$rootDir/dependencies.gradle"
     repositories {

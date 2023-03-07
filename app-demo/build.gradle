@@ -7,6 +7,8 @@ apply plugin: "kotlin-android"
 apply plugin: "kotlin-parcelize"
 apply plugin: "kotlin-kapt"
 
+project.archivesBaseName = "labcomponents-demo"
+
 android {
     namespace "mobi.lab.components.demo"
 
@@ -30,7 +32,7 @@ android {
         applicationId "mobi.lab.components.demo"
 
         versionCode 1
-        versionName "0.0.1"
+        versionName rootProject.ext.libraryVersion
 
         println "CONF: versionName is set to: " + versionName
         println "CONF: versionCode is set to: " + versionCode
@@ -102,7 +104,7 @@ android {
 
     android.applicationVariants.all { variant ->
         variant.outputs.all { output ->
-            output.outputFileName = "${rootProject.name}-${variant.name}-${variant.versionName}.apk"
+            output.outputFileName = "${archivesBaseName}-${variant.name}-${variant.versionName}.apk"
         }
     }
 }

@@ -11,6 +11,8 @@ def srcDirs = [
         'mobi/lab/components/typography',
 ]
 
+project.archivesBaseName = "labcomponents"
+
 android {
     namespace "mobi.lab.components"
 
@@ -21,6 +23,12 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        compileSdkVersion libs.versions.android.sdk.compile.get()
+        targetSdkVersion libs.versions.android.sdk.target.get()
+        minSdkVersion libs.versions.android.sdk.min.get()
     }
 
     // A trick taken from material-components-android to keep everything in a single R namespace
@@ -37,15 +45,8 @@ android {
         }
     }
 
-    defaultConfig {
-        compileSdkVersion libs.versions.android.sdk.compile.get()
-        targetSdkVersion libs.versions.android.sdk.target.get()
-        minSdkVersion libs.versions.android.sdk.min.get()
-    }
-
-    lintOptions {
-        // Workaround for a bug in Kotlin extension's Parcelize
-        warning "ParcelCreator"
+    buildTypes.all {
+        consumerProguardFiles 'proguard-rules.pro'
     }
 
     testOptions.unitTests.all {
@@ -57,17 +58,17 @@ android {
             showStandardStreams = true
         }
     }
+
+    libraryVariants.all { variant ->
+        variant.outputs.all { output ->
+            outputFileName = "${archivesBaseName}-${variant.name}-${rootProject.ext.libraryVersion}.aar"
+        }
+    }
 }
 
 dependencies {
     implementation libs.kotlin
-
-    // Util
-    implementation libs.timber
-
-    // UI
     implementation libs.androidx.appcompat
-    implementation libs.constraintlayout
     implementation libs.material
 }
 
