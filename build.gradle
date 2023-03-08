@@ -13,7 +13,6 @@ ext {
 }
 
 buildscript {
-    apply from: "$rootDir/dependencies.gradle"
     repositories {
         google()
         maven {

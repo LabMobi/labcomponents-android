@@ -67,20 +67,6 @@ android {
         }
     }
 
-    testOptions {
-        animationsDisabled = true
-
-        unitTests.all {
-            testLogging {
-                events "passed", "skipped", "failed", "standardOut", "standardError"
-                // Always show output even if the result has not changed
-                outputs.upToDateWhen { false }
-                // Show standard stream outputs if used
-                showStandardStreams = true
-            }
-        }
-    }
-
     lintOptions {
         // Workaround for a bug in Kotlin extension's Parcelize
         warning "ParcelCreator"
@@ -110,9 +96,6 @@ android {
 }
 
 dependencies {
-    libsHelper.addUnitTestDependencies(it)
-    libsHelper.addInstrumentationTestDependencies(it)
-
     implementation project(":lib")
 
     implementation libs.kotlin

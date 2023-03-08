@@ -1,6 +1,6 @@
-# ComponentsDemo release guide
+# Mobi Lab Components  
 
-Release guide for ComponentsDemo Android.
+Release guide for Lab Components Android.
 
 ## Purpose
 
