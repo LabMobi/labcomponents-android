@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- TODO create dark theme palette -->
     <color name="lab_ref_palette_primary_10">#051A33</color>
     <color name="lab_ref_palette_primary_30">#004C9E</color>
     <color name="lab_ref_palette_primary_40">#1B66B6</color>

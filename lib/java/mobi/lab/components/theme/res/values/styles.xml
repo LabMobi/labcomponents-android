@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- TODO (1) can I reuse color definitions by multiple themes somehow? -->
+    <!-- TODO (2) Add Light and Dark theme definitions -->
+    <!-- TODO (3) Add missing Material attribute overrides -->
+    <!-- TODO (4) define the default status bar color once we have implemented the Toolbar component-->
 
     <style name="Theme.Lab.DayNight" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <item name="android:statusBarColor">@color/lab_ref_palette_neutral_0</item>
         <item name="android:windowBackground">?attr/labColorBackground</item>
 
-        <!-- TODO can I share themes somehow? -->
-        <!-- Customize your theme here. -->
-
-        <!-- ColorPalette -->
-        <!-- TODO create stateful colors -->
+        <!-- Color scheme -->
         <item name="labColorPrimary">@color/lab_ref_palette_primary_50</item>
         <item name="labColorOnPrimary">@color/lab_ref_palette_primary_99</item>
         <item name="labColorSelectorPrimary">@color/lab_default_color_selector_primary</item>
@@ -109,13 +108,14 @@
         <item name="labShapeAppearance">@style/ShapeAppearance.Lab.Default</item>
         <item name="labShapeAppearanceOverlay">@style/ShapeAppearanceOverlay.Lab.Default</item>
 
-        <!-- Material 3 theme overrides START -->
-        <item name="elevationOverlayEnabled">true</item>
-        <item name="elevationOverlayColor">?attr/labColorSurface</item>
+        <!-- Material theme configuration override -->
+        <item name="elevationOverlayEnabled">false</item>
 
+        <!-- Material shape overrides -->
         <item name="shapeAppearance">?attr/labShapeAppearance</item>
         <item name="shapeAppearanceOverlay">?attr/labShapeAppearanceOverlay</item>
 
+        <!-- Material color overrides -->
         <item name="colorAccent">?attr/labColorPrimary</item>
         <item name="colorPrimary">?attr/labColorPrimary</item>
         <item name="colorOnPrimary">?attr/labColorOnPrimary</item>
@@ -129,15 +129,15 @@
         <item name="colorOnBackground">?attr/labColorOnBackground</item>
         <item name="colorError">?attr/labColorError</item>
 
-        <!-- Text colors -->
+        <!-- Material text color overrides -->
         <item name="android:textColorPrimary">?attr/labColorSelectorTextPrimaryRegular</item>
         <item name="android:textColorSecondary">?attr/labColorSelectorSecondary</item>
-
         <item name="android:textColorHighlight">?attr/labColorPrimary</item>
         <item name="android:textColorLink">?attr/labColorPrimary</item>
+    </style>
 
-        <!-- TODO go over these overrides -->
-        <!-- DEBUG VALUES START -->
+    <!-- Development theme that overrides Material colors with debug colors -->
+    <style name="Theme.Lab.DayNight.Develop" parent="Theme.Lab.DayNight">
         <item name="colorPrimaryInverse">@color/lab_todo</item>
         <item name="colorPrimaryContainer">@color/lab_todo</item>
         <item name="colorOnPrimaryContainer">@color/lab_todo</item>
@@ -155,7 +155,6 @@
         <item name="colorErrorContainer">@color/lab_todo</item>
         <item name="colorOnErrorContainer">@color/lab_todo</item>
 
-        <!-- TODO go over these overrides -->
         <item name="android:textColorPrimaryInverse">@color/lab_todo_2</item>
         <item name="android:textColorSecondaryInverse">@color/lab_todo_2</item>
         <item name="android:textColorTertiary">@color/lab_todo_2</item>
@@ -167,8 +166,5 @@
         <item name="android:textColorHighlightInverse">@color/lab_todo_2</item>
         <item name="android:textColorLinkInverse">@color/lab_todo_2</item>
         <item name="android:textColorAlertDialogListItem">@color/lab_todo_2</item>
-        <!-- DEBUG VALUES END -->
     </style>
-
-    <!-- TODO add light and dark themes -->
 </resources>

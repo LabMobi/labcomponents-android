@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- TODO (1) Create proper button styles based on Figma design -->
+    <!-- TODO (2) Remove unused color resources -->
+    <!-- TODO (3) Create LabComponents styles to bypass Theme.Lab -->
+
     <style name="Widget.Lab.ButtonPrimary" parent="Widget.Material3.Button">
         <item name="android:insetBottom">0dp</item>
         <item name="android:insetTop">0dp</item>
@@ -36,9 +40,7 @@
         <item name="strokeWidth">@dimen/lab_size_1</item>
     </style>
 
-    <style name="ShapeAppearance.Lab.Button" parent="">
-        <item name="cornerFamily">rounded</item>
-        <item name="cornerSize">@dimen/lab_button_corner_radius</item>
+    <style name="ShapeAppearance.Lab.Button" parent="ShapeAppearance.Lab.Default">
     </style>
 
     <style name="TextAppearance.Lab.Button" parent="TextAppearance.MaterialComponents.Button">

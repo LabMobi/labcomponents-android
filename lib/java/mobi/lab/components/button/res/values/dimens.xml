@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <!-- TODO get from theme-->
-    <dimen name="lab_size_12">12dp</dimen>
-    <dimen name="lab_button_corner_radius">4dp</dimen>
-</resources>

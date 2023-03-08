@@ -13,6 +13,9 @@ import com.google.android.material.textfield.TextInputLayout
 import mobi.lab.components.R
 import mobi.lab.components.shared.ParcelCompat
 
+/**
+ * A wrapper around TextInputLayout with a custom box background and an automatically added EditText child.
+ */
 public class LabTextField @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
@@ -25,13 +28,19 @@ public class LabTextField @JvmOverloads constructor(
         public fun onErrorCleared()
     }
 
-    // TODO: comment
+    /**
+     * TextField listener for text and focus changed events and error cleared events.
+     */
     public var listener: Listener? = null
 
-    // TODO: comment
+    /**
+     * If true, the error state is automatically cleared when the TextField is tapped.
+     */
     public var clearErrorOnFocus: Boolean = true
 
-    // TODO: comment
+    /**
+     * Inner [LabTextInputLayout] that is automatically added as a child.
+     */
     public val editText: LabTextInputEditText
 
     private var boxHelper: LabTextFieldBoxHelper? = null
@@ -129,14 +138,29 @@ public class LabTextField @JvmOverloads constructor(
         editText.onFocusChangeListener = null
     }
 
+    /**
+     * Get the text value.
+     *
+     * @return Text
+     */
     public fun getText(): String {
         return editText.text.toString()
     }
 
+    /**
+     * Set the text value.
+     *
+     * @param text Text value
+     */
     public fun setText(text: CharSequence?) {
         editText.setText(text)
     }
 
+    /**
+     * Set the text value and move caret position to the end of the text.
+     *
+     * @param text Text value
+     */
     public fun setTextAndSelection(text: CharSequence?) {
         setText(text)
         editText.apply {
@@ -145,18 +169,35 @@ public class LabTextField @JvmOverloads constructor(
         }
     }
 
+    /**
+     * Set inner EditText's vertical paddings. This controls where the EditText is positioned within the TextInputLayout container.
+     *
+     * @param topPx Top padding
+     * @param bottomPx Bottom padding
+     */
     public fun setTextPaddingVertical(@Dimension(unit = Dimension.PX) topPx: Int, @Dimension(unit = Dimension.PX) bottomPx: Int) {
         val top = if (topPx != NO_VALUE_INT) topPx else editText.paddingTop
         val bottom = if (bottomPx != NO_VALUE_INT) bottomPx else editText.paddingBottom
         editText.updatePadding(top = top, bottom = bottom)
     }
 
+    /**
+     * Set inner EditText's horizontal paddings. The space between the start and end icons and/or prefix/suffix texts.
+     *
+     * @param paddingPx Start and end padding.
+     */
     public fun setTextPaddingHorizontal(@Dimension(unit = Dimension.PX) paddingPx: Int) {
         if (paddingPx != NO_VALUE_INT) {
             editText.compoundDrawablePadding = paddingPx
         }
     }
 
+    /**
+     * Set IME action mode and handler callback.
+     *
+     * @param imeAction IME action. Example: [EditorInfo.IME_ACTION_NONE]
+     * @onImeAction callback invoked with the [KeyEvent] when the matching IME action is invoked.
+     */
     public fun setImeActionHandler(imeAction: Int, onImeAction: (keyEvent: KeyEvent) -> Unit) {
         editText.apply {
             if (imeOptions != imeAction) {
@@ -172,6 +213,11 @@ public class LabTextField @JvmOverloads constructor(
         }
     }
 
+    /**
+     * Set the inner [EditText]'s inputType.
+     *
+     * @param inputType [android.text.InputType]
+     */
     public fun setInputType(inputType: Int) {
         if (editText.inputType != inputType) {
             // Some input types change the typeface. Let's reuse the old typeface
@@ -181,13 +227,14 @@ public class LabTextField @JvmOverloads constructor(
         }
     }
 
-    // TODO do we actually need this? I don't think so...
+    /**
+     * Clear the error state.
+     */
     public fun clearError() {
         error = null
         listener?.onErrorCleared()
     }
 
-    // TODO verify with Elmo that automatic clear error on focus should be a part of the component
     private fun initEditText(editText: LabTextInputEditText) {
         editText.focusedListener = {
             if (clearErrorOnFocus) {
@@ -229,6 +276,6 @@ public class LabTextField @JvmOverloads constructor(
 
         private const val NO_VALUE_INT: Int = -1
 
-        const val ID_EDIT_TEXT = android.R.id.text1
+        private const val ID_EDIT_TEXT = android.R.id.text1
     }
 }
