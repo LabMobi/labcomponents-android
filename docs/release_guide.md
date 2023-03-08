@@ -1,5 +1,7 @@
 # Mobi Lab Components  
 
+TODO: Write a release guide. 
+
 Release guide for Lab Components Android.
 
 ## Purpose
@@ -29,24 +31,20 @@ It assumes:
 
 1.2) Verify the versions codes. Make sure the version numbers in the main module's `build.gradle` file are correct for the release. These can be changed by updating their respective constants:
 
+See the `build.gradle` in project root directory.
+
+The versions are in the format x.y.z
+x - Major version
+y - Minor version
+z - Patch version
+
 ```groovy
-/* Versioning information:
- * The versions are in the format x.y.z
- * x - Major version
- * y - Minor version
- * z - Patch version
- * w - Build version
- *
- * versionName will be x.y.z
- * versionCode will be a number in the format xxyyzzw.
- * This means that every version (except build version) has up to 2 digits until it starts affecting other numbers.
- * w (versionBuild) is for making a release with the same version name, but different version code.
- */
-versionMajor = 0 <-- UPDATE HERE
-versionMinor = 0 <-- UPDATE HERE
-versionPatch = 1 <-- UPDATE HERE
-versionBuild = 0 // Use this when builds with the same version are needed. Change to 0 once done
+ext {
+    // Current version of the library
+    libraryVersion = "x.y.z" <-- Update here
+}
 ```
+
 
 If you need to update the version codes then do not forget to commit and push the changes to the `develop` branch.
 
