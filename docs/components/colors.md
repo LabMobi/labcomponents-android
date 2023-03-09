@@ -1,7 +1,7 @@
 # Colors
 
-* [Theme.Lab attributes](https://git.lab.mobi/tools/android-tools/labcomponents-android/-/blob/master/lib/java/mobi/lab/components/color/res/values/attrs.xml)
-* [Default color selectors](https://git.lab.mobi/tools/android-tools/labcomponents-android/-/tree/master/lib/java/mobi/lab/components/color/res/color)
+* [Theme.Lab attributes](https://git.lab.mobi/tools/android-tools/labcomponents-android/-/blob/develop/lib/java/mobi/lab/components/color/res/values/attrs.xml)
+* [Default color selectors](https://git.lab.mobi/tools/android-tools/labcomponents-android/-/tree/develop/lib/java/mobi/lab/components/color/res/color)
 
 The color system is still in progress.
 

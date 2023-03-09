@@ -1,6 +1,6 @@
 # Theme
 
-* [Theme definitions](https://git.lab.mobi/tools/android-tools/labcomponents-android/-/blob/master/lib/java/mobi/lab/components/theme/res/values/styles.xml)
+* [Theme definitions](https://git.lab.mobi/tools/android-tools/labcomponents-android/-/blob/develop/lib/java/mobi/lab/components/theme/res/values/styles.xml)
 
 `Theme.Lab.X` themes provide wrappers for `MaterialComponents` themes. They provide default values for all the theme attributes our components use. 
 These are typically prefixed with `lab`. 
