@@ -33,6 +33,7 @@ androidx-navigation-ui = { module = 'androidx.navigation:navigation-ui-ktx', ver
 # Utilities
 timber = 'com.jakewharton.timber:timber:5.0.1'
 
+# TODO remove these dependencies
 # Testing
 test-junit = 'junit:junit:4.13.2'
 test-junit-kotlin = { module = 'org.jetbrains.kotlin:kotlin-test-junit', version.ref = 'kotlin' }

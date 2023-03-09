@@ -7,6 +7,7 @@
     <declare-styleable name="LabTextField">
         <attr name="android:inputType" />
         <attr name="android:imeOptions" />
+        <attr name="android:text" />
 
         <attr name="textPaddingTop" format="dimension"/>
         <attr name="textPaddingBottom" format="dimension"/>

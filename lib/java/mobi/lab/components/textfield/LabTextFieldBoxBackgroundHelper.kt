@@ -12,7 +12,7 @@ import mobi.lab.components.shared.util.ResourceUtil
  * Helper class to take care of updating and creating a Drawable to use as LabTextField's EditText background.
  * The background is referred to as a 'box'.
  */
-internal class LabTextFieldBoxHelper(
+internal class LabTextFieldBoxBackgroundHelper(
     private val textField: LabTextField,
     attrs: AttributeSet?,
     defStyleAttr: Int

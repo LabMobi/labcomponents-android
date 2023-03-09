@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="AppTheme" parent="Theme.Lab.DayNight">
+    <style name="AppTheme" parent="Theme.Lab.DayNight.Develop">
         <!-- Customize your theme here. -->
         <item name="android:statusBarColor">@color/black</item>
     </style>

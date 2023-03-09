@@ -59,7 +59,7 @@
         <item name="materialThemeOverlay">@style/ThemeOverlay.LabComponents.TextInputLayout</item>
 
         <!-- Box attributes -->
-        <item name="boxBackgroundMode">filled</item>sd
+        <item name="boxBackgroundMode">filled</item>
         <item name="boxCollapsedPaddingTop">@dimen/lab_size_10</item>
         <item name="boxBackgroundColor">@android:color/transparent</item>
 

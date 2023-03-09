@@ -22,6 +22,7 @@ public class LabTextField @JvmOverloads constructor(
     defStyleAttr: Int = 0
 ) : TextInputLayout(context, attrs, defStyleAttr) {
 
+    // TODO separate these listeners
     public interface Listener {
         public fun onTextChanged(text: String?)
         public fun onFocusChanged(hasFocus: Boolean)
@@ -43,7 +44,7 @@ public class LabTextField @JvmOverloads constructor(
      */
     public val editText: LabTextInputEditText
 
-    private var boxHelper: LabTextFieldBoxHelper? = null
+    private var boxHelper: LabTextFieldBoxBackgroundHelper? = null
     private var errorState = false
     private var inDrawableStateChanged = false
 
@@ -76,7 +77,7 @@ public class LabTextField @JvmOverloads constructor(
             }
         }
 
-        boxHelper = LabTextFieldBoxHelper(this, attrs, defStyleAttr)
+        boxHelper = LabTextFieldBoxBackgroundHelper(this, attrs, defStyleAttr)
     }
 
     override fun onCreateDrawableState(extraSpace: Int): IntArray {
