@@ -13,6 +13,14 @@
         <attr name="textPaddingBottom" format="dimension"/>
         <attr name="textPaddingHorizontal" format="dimension"/>
         <attr name="clearErrorOnFocus" format="boolean"/>
+        <attr name="autoClearErrorMode" format="enum">
+            <!-- Do not clear the error state automatically -->
+            <enum name="disabled" value="0"/>
+            <!-- Automatically clear the error state when TextField's text is changed -->
+            <enum name="onTextChanged" value="1"/>
+            <!-- Automatically clear the error state when the TextField is tapped -->
+            <enum name="onFocus" value="2" />
+        </attr>
 
         <!-- Box attrs -->
         <attr name="boxCornerRadiusTopStart" format="dimension"/>

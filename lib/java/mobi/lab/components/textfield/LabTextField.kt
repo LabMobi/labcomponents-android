@@ -35,12 +35,13 @@ public class LabTextField @JvmOverloads constructor(
     public var listener: Listener? = null
 
     /**
-     * If true, the error state is automatically cleared when the TextField is tapped.
+     * Mode for automatically clearing TextField's error state.
+     * @see [AutoClearErrorMode]
      */
-    public var clearErrorOnFocus: Boolean = true
+    public var autoClearErrorMode: AutoClearErrorMode = AutoClearErrorMode.ON_FOCUS
 
     /**
-     * Inner [LabTextInputLayout] that is automatically added as a child.
+     * Inner [LabTextInputEditText] that is automatically added as a child.
      */
     public val editText: LabTextInputEditText
 
@@ -64,7 +65,9 @@ public class LabTextField @JvmOverloads constructor(
                     bottomPx = attributes.getDimensionPixelSize(R.styleable.LabTextField_textPaddingBottom, NO_VALUE_INT)
                 )
                 setTextPaddingHorizontal(attributes.getDimensionPixelSize(R.styleable.LabTextField_textPaddingHorizontal, NO_VALUE_INT))
-                clearErrorOnFocus = attributes.getBoolean(R.styleable.LabTextField_clearErrorOnFocus, clearErrorOnFocus)
+
+                val rawClearErrorMode = attributes.getInt(R.styleable.LabTextField_autoClearErrorMode, autoClearErrorMode.value())
+                autoClearErrorMode = AutoClearErrorMode.parse(rawClearErrorMode)
 
                 if (attributes.hasValue(R.styleable.LabTextField_android_inputType)) {
                     editText.inputType = attributes.getInt(R.styleable.LabTextField_android_inputType, EditorInfo.TYPE_CLASS_TEXT)
@@ -215,7 +218,7 @@ public class LabTextField @JvmOverloads constructor(
     }
 
     /**
-     * Set the inner [EditText]'s inputType.
+     * Set the inner EditText's inputType.
      *
      * @param inputType [android.text.InputType]
      */
@@ -238,7 +241,7 @@ public class LabTextField @JvmOverloads constructor(
 
     private fun initEditText(editText: LabTextInputEditText) {
         editText.focusedListener = {
-            if (clearErrorOnFocus) {
+            if (autoClearErrorMode.value() >= AutoClearErrorMode.ON_FOCUS.value()) {
                 clearError()
             }
         }
@@ -247,8 +250,10 @@ public class LabTextField @JvmOverloads constructor(
 
             if (!stateRestore) {
                 listener?.onTextChanged(text.toString())
-                // Only reset errors when the user enters text
-                clearError()
+
+                if (autoClearErrorMode.value() >= AutoClearErrorMode.ON_TEXT_CHANGED.value()) {
+                    clearError()
+                }
             }
         }
     }
