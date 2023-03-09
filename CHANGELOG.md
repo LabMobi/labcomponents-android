@@ -1,4 +1,4 @@
-# Changelog for SplitKey TSE Android project
+# Changelog for Mobi Lab Components
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/). This project does not use semantic versioning.
 
