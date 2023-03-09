@@ -58,7 +58,6 @@ public class LabTextField @JvmOverloads constructor(
 
     init {
         editText = LabTextInputEditText(context, attrs)
-        editText.id = ID_EDIT_TEXT
         editText.hint = null
         editText.layoutParams = LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT)
         initEditText(editText)
@@ -288,7 +287,5 @@ public class LabTextField @JvmOverloads constructor(
         private const val STATE_PARENT = "LabTextField.STATE_PARENT"
 
         private const val NO_VALUE_INT: Int = -1
-
-        private const val ID_EDIT_TEXT = android.R.id.text1
     }
 }
