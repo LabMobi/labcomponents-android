@@ -3,6 +3,7 @@ Mobi Lab Components
 # Mobi Lab Components README
 
 Mobi Lab Components (LabComponents) help developers execute our internal design system's components.
+
 These components are based on [Material Components for Android](https://github.com/material-components/material-components-android).
 
 The components provide implementations for [Mobi Lab's design system](https://www.figma.com/file/gxt4iyWGyliILJSOCLXonl/P42-design-system-template-(Duplicate-this!)).
@@ -19,6 +20,7 @@ Dependency version are defined in `gradle/libs.versions.toml` and helper functio
 ## Links
 
 - [Component Documentation](docs/main.md)
+- [Directory Structure](docs/directory_structure.md)
 - [Resource Visibility](docs/resource_visibility.md)
 - [Contributing](docs/contributing.md)
 - [Release Guide](docs/release_guide.md)
