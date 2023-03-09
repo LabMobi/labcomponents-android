@@ -22,17 +22,24 @@ public class LabTextField @JvmOverloads constructor(
     defStyleAttr: Int = 0
 ) : TextInputLayout(context, attrs, defStyleAttr) {
 
-    // TODO separate these listeners
-    public interface Listener {
+    public fun interface TextChangedListener {
         public fun onTextChanged(text: String?)
+    }
+
+    public interface StateChangedListener {
         public fun onFocusChanged(hasFocus: Boolean)
         public fun onErrorCleared()
     }
 
     /**
-     * TextField listener for text and focus changed events and error cleared events.
+     * TextField listener for text changed events.
      */
-    public var listener: Listener? = null
+    public var textChangedListener: TextChangedListener? = null
+
+    /**
+     * TextField listener for focus changed events and error cleared events.
+     */
+    public var stateChangedListener: StateChangedListener? = null
 
     /**
      * Mode for automatically clearing TextField's error state.
@@ -133,7 +140,7 @@ public class LabTextField @JvmOverloads constructor(
     override fun onAttachedToWindow() {
         super.onAttachedToWindow()
         editText.setOnFocusChangeListener { _, hasFocus ->
-            listener?.onFocusChanged(hasFocus)
+            stateChangedListener?.onFocusChanged(hasFocus)
         }
     }
 
@@ -236,7 +243,7 @@ public class LabTextField @JvmOverloads constructor(
      */
     public fun clearError() {
         error = null
-        listener?.onErrorCleared()
+        stateChangedListener?.onErrorCleared()
     }
 
     private fun initEditText(editText: LabTextInputEditText) {
@@ -249,7 +256,7 @@ public class LabTextField @JvmOverloads constructor(
             setErrorStateInternal(counterError = isCounterError(text))
 
             if (!stateRestore) {
-                listener?.onTextChanged(text.toString())
+                textChangedListener?.onTextChanged(text.toString())
 
                 if (autoClearErrorMode.value() >= AutoClearErrorMode.ON_TEXT_CHANGED.value()) {
                     clearError()
