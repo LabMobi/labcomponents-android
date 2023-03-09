@@ -59,6 +59,8 @@
         <item name="textPaddingBottom">8dp</item>
         <!-- Additional padding before and after the input text -->
         <item name="textPaddingHorizontal">2dp</item>
+
+        <!-- ThemeOverlay to modify the inner EditText's style and color overrides just for TextField -->
         <item name="materialThemeOverlay">@style/ThemeOverlay.LabComponents.TextInputLayout</item>
 
         <!-- Box attributes -->
@@ -72,6 +74,7 @@
     </style>
 
     <style name="ThemeOverlay.LabComponents.TextInputLayout" parent="">
+        <!-- Inner EditText style. Added automatically to the EditText that's added to TextInputLayout -->
         <item name="editTextStyle">@style/Widget.LabComponents.TextFieldEditText</item>
         <!-- This overrides error icon color in disabled state -->
         <item name="colorOnError">?attr/colorError</item>
@@ -79,12 +82,14 @@
     </style>
 
     <style name="Widget.LabComponents.TextFieldEditText" parent="Widget.MaterialComponents.TextInputEditText.FilledBox">
-        <item name="android:minHeight">@dimen/lab_internal_textfield_box_min_size</item>
+        <!-- A temporary default background. This signals TextInputLayout to avoid setting their own background. -->
+        <!-- After inflation we will override this temporary background with a properly styled box background. -->
         <item name="android:background">@drawable/lab_internal_textfield_temp_background</item>
         <item name="android:paddingLeft">16dp</item>
         <item name="android:paddingRight">16dp</item>
         <item name="android:paddingTop">8dp</item>
         <item name="android:paddingBottom">8dp</item>
+        <item name="android:minHeight">@dimen/lab_internal_textfield_box_min_size</item>
     </style>sda
 
 </resources>
