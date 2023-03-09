@@ -5,6 +5,7 @@
     <dimen name="mtrl_textinput_start_icon_margin_end" tools:override="true">0dp</dimen>
     <dimen name="material_input_text_to_prefix_suffix_padding" tools:override="true">0dp</dimen>
 
-    <dimen name="lab_internal_textfield_box_stroke_width">@dimen/lab_internal_size_1</dimen>
-    <dimen name="lab_internal_textfield_box_stroke_width_focused">@dimen/lab_internal_size_2</dimen>
+    <dimen name="lab_internal_textfield_box_stroke_width">1dp</dimen>
+    <dimen name="lab_internal_textfield_box_stroke_width_focused">2dp</dimen>
+    <dimen name="lab_internal_textfield_box_min_size">56dp</dimen>
 </resources>

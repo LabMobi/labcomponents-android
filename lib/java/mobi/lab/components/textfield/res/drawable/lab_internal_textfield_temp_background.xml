@@ -2,13 +2,5 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="rectangle">
 
-    <stroke
-        android:color="?attr/labColorSelectorOutline"
-        android:width="@dimen/lab_internal_size_1" />
-
-    <corners
-        android:bottomLeftRadius="?attr/labShapeCornerSizeBottomLeft"
-        android:bottomRightRadius="?attr/labShapeCornerSizeBottomRight"
-        android:topLeftRadius="?attr/labShapeCornerSizeTopLeft"
-        android:topRightRadius="?attr/labShapeCornerSizeTopRight" />
+    <solid android:color="@android:color/transparent" />
 </shape>

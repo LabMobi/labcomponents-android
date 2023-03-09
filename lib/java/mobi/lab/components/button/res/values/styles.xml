@@ -7,14 +7,14 @@
     <style name="Widget.Lab.ButtonPrimary" parent="Widget.Material3.Button">
         <item name="android:insetBottom">0dp</item>
         <item name="android:insetTop">0dp</item>
-        <item name="android:paddingStart">@dimen/lab_internal_size_12</item>
-        <item name="android:paddingEnd">@dimen/lab_internal_size_12</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">12dp</item>
         <item name="android:stateListAnimator">@null</item>
         <item name="android:textAppearance">@style/TextAppearance.Lab.Button</item>
         <item name="android:elevation">0dp</item>
         <item name="elevation">0dp</item>
         <item name="shapeAppearance">@style/ShapeAppearance.Lab.Button</item>
-        <item name="android:minHeight">@dimen/lab_internal_size_48</item>
+        <item name="android:minHeight">48dp</item>
 
         <item name="android:textColor">?attr/labColorSelectorOnPrimary</item>
         <item name="backgroundTint">?attr/labColorPrimary</item>
@@ -24,20 +24,20 @@
     <style name="Widget.Lab.ButtonSecondary" parent="Widget.Material3.Button">
         <item name="android:insetBottom">0dp</item>
         <item name="android:insetTop">0dp</item>
-        <item name="android:paddingStart">@dimen/lab_internal_size_12</item>
-        <item name="android:paddingEnd">@dimen/lab_internal_size_12</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">12dp</item>
         <item name="android:stateListAnimator">@null</item>
         <item name="android:textAppearance">@style/TextAppearance.Lab.Button</item>
         <item name="android:elevation">0dp</item>
         <item name="elevation">0dp</item>
         <item name="shapeAppearance">@style/ShapeAppearance.Lab.Button</item>
-        <item name="android:minHeight">@dimen/lab_internal_size_48</item>
+        <item name="android:minHeight">48dp</item>
 
         <item name="android:textColor">@color/lab_internal_button_secondary_text</item>
         <item name="backgroundTint">@color/lab_internal_button_secondary_tint</item>
         <item name="rippleColor">@color/lab_internal_button_secondary_ripple</item>
         <item name="strokeColor">@color/lab_internal_button_secondary_stroke</item>
-        <item name="strokeWidth">@dimen/lab_internal_size_1</item>
+        <item name="strokeWidth">1dp</item>
     </style>
 
     <style name="ShapeAppearance.Lab.Button" parent="ShapeAppearance.Lab.Default">
@@ -46,8 +46,8 @@
     <style name="TextAppearance.Lab.Button" parent="TextAppearance.MaterialComponents.Button">
         <item name="android:letterSpacing">0.0</item>
         <item name="android:textAllCaps">false</item>
-        <item name="android:textSize">@dimen/lab_internal_text_16</item>
-        <item name="android:lineHeight" tools:targetApi="p">@dimen/lab_internal_text_24</item>
-        <item name="lineHeight">@dimen/lab_internal_text_24</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:lineHeight" tools:targetApi="p">24sp</item>
+        <item name="lineHeight">24sp</item>
     </style>
 </resources>

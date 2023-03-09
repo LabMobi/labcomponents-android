@@ -99,7 +99,7 @@
         <item name="labTextAppearanceLabelSmall">@style/TextAppearance.Lab.LabelSmall</item>
 
         <!-- Shape -->
-        <item name="labShapeCornerSize">@dimen/lab_internal_size_4</item>
+        <item name="labShapeCornerSize">4dp</item>
         <item name="labShapeCornerSizeTopLeft">?attr/labShapeCornerSize</item>
         <item name="labShapeCornerSizeTopRight">?attr/labShapeCornerSize</item>
         <item name="labShapeCornerSizeBottomLeft">?attr/labShapeCornerSize</item>

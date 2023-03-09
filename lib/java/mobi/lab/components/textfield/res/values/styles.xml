@@ -9,14 +9,14 @@
 
         <item name="boxStrokeColor">@color/lab_internal_textfield_stroke</item>
         <item name="boxBackgroundColor">@android:color/transparent</item>
-        <item name="boxStrokeWidth">@dimen/lab_internal_size_1</item>
-        <item name="boxStrokeWidthFocused">@dimen/lab_internal_size_2</item>
+        <item name="boxStrokeWidth">@dimen/lab_internal_textfield_box_stroke_width</item>
+        <item name="boxStrokeWidthFocused">@dimen/lab_internal_textfield_box_stroke_width_focused</item>
 
         <item name="shapeAppearance">?attr/labShapeAppearance</item>
         <item name="shapeAppearanceOverlay">?attr/labShapeAppearanceOverlay</item>
 
-        <item name="endIconMinSize">@dimen/lab_internal_size_48</item>
-        <item name="startIconMinSize">@dimen/lab_internal_size_48</item>
+        <item name="endIconMinSize">@dimen/lab_internal_textfield_box_min_size</item>
+        <item name="startIconMinSize">@dimen/lab_internal_textfield_box_min_size</item>
         <item name="endIconTint">?attr/labColorSelectorTextSecondary</item>
         <item name="startIconTint">?attr/labColorSelectorTextSecondary</item>
 
@@ -52,15 +52,19 @@
 
     <!-- TextField start -->
     <style name="Widget.LabComponents.TextField" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
-        <item name="textPaddingTop">@dimen/lab_internal_size_24</item>
-        <item name="textPaddingBottom">@dimen/lab_internal_size_8</item>
+        <!-- Space between the box background's top edge and text input's top edge -->
+        <!-- Label and input text positions can be controlled by modifying this padding and boxCollapsedPaddingTop values. -->
+        <item name="textPaddingTop">24dp</item>
+        <!-- EditText bottom padding. Space between entered text and box background's edge -->
+        <item name="textPaddingBottom">8dp</item>
         <!-- Additional padding before and after the input text -->
-        <item name="textPaddingHorizontal">@dimen/lab_internal_size_2</item>
+        <item name="textPaddingHorizontal">2dp</item>
         <item name="materialThemeOverlay">@style/ThemeOverlay.LabComponents.TextInputLayout</item>
 
         <!-- Box attributes -->
         <item name="boxBackgroundMode">filled</item>
-        <item name="boxCollapsedPaddingTop">@dimen/lab_internal_size_10</item>
+        <!-- Controls the padding between top edge and the animated label -->
+        <item name="boxCollapsedPaddingTop">10dp</item>
         <item name="boxBackgroundColor">@android:color/transparent</item>
 
         <item name="shapeAppearance">?attr/shapeAppearance</item>
@@ -75,11 +79,12 @@
     </style>
 
     <style name="Widget.LabComponents.TextFieldEditText" parent="Widget.MaterialComponents.TextInputEditText.FilledBox">
+        <item name="android:minHeight">@dimen/lab_internal_textfield_box_min_size</item>
         <item name="android:background">@drawable/lab_internal_textfield_temp_background</item>
-        <item name="android:paddingLeft">@dimen/lab_internal_size_16</item>
-        <item name="android:paddingRight">@dimen/lab_internal_size_16</item>
-        <item name="android:paddingTop">@dimen/lab_internal_size_8</item>
-        <item name="android:paddingBottom">@dimen/lab_internal_size_8</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
     </style>sda
 
 </resources>
