@@ -1,45 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- TODO create dark theme palette -->
-    <color name="lab_ref_palette_primary_10">#051A33</color>
-    <color name="lab_ref_palette_primary_30">#004C9E</color>
-    <color name="lab_ref_palette_primary_40">#1B66B6</color>
-    <color name="lab_ref_palette_primary_50">#0F82FF</color>
-    <color name="lab_ref_palette_primary_60">#4298F5</color>
-    <color name="lab_ref_palette_primary_70">#66AFFF</color>
-    <color name="lab_ref_palette_primary_80">#99CEFF</color>
-    <color name="lab_ref_palette_primary_99">#F5FAFF</color>
+    <color name="lab_internal_ref_palette_primary_10">#051A33</color>
+    <color name="lab_internal_ref_palette_primary_30">#004C9E</color>
+    <color name="lab_internal_ref_palette_primary_40">#1B66B6</color>
+    <color name="lab_internal_ref_palette_primary_50">#0F82FF</color>
+    <color name="lab_internal_ref_palette_primary_60">#4298F5</color>
+    <color name="lab_internal_ref_palette_primary_70">#66AFFF</color>
+    <color name="lab_internal_ref_palette_primary_80">#99CEFF</color>
+    <color name="lab_internal_ref_palette_primary_99">#F5FAFF</color>
 
-    <color name="lab_ref_palette_secondary_10">#17191C</color>
-    <color name="lab_ref_palette_secondary_40">#495B6E</color>
-    <color name="lab_ref_palette_secondary_50">#56718F</color>
-    <color name="lab_ref_palette_secondary_60">#628DBC</color>
-    <color name="lab_ref_palette_secondary_70">#7CABDE</color>
-    <color name="lab_ref_palette_secondary_80">#A4C8EF</color>
-    <color name="lab_ref_palette_secondary_90">#CCE2F9</color>
-    <color name="lab_ref_palette_secondary_99">#F5FAFF</color>
+    <color name="lab_internal_ref_palette_secondary_10">#17191C</color>
+    <color name="lab_internal_ref_palette_secondary_40">#495B6E</color>
+    <color name="lab_internal_ref_palette_secondary_50">#56718F</color>
+    <color name="lab_internal_ref_palette_secondary_60">#628DBC</color>
+    <color name="lab_internal_ref_palette_secondary_70">#7CABDE</color>
+    <color name="lab_internal_ref_palette_secondary_80">#A4C8EF</color>
+    <color name="lab_internal_ref_palette_secondary_90">#CCE2F9</color>
+    <color name="lab_internal_ref_palette_secondary_99">#F5FAFF</color>
 
-    <color name="lab_ref_palette_neutral_0">#000000</color>
-    <color name="lab_ref_palette_neutral_10">#191C21</color>
-    <color name="lab_ref_palette_neutral_20">#2E3037</color>
-    <color name="lab_ref_palette_neutral_30">#45474D</color>
-    <color name="lab_ref_palette_neutral_50">#75777E</color>
-    <color name="lab_ref_palette_neutral_70">#A9ABB3</color>
-    <color name="lab_ref_palette_neutral_80">#C4C6CF</color>
-    <color name="lab_ref_palette_neutral_90">#E0E2EB</color>
-    <color name="lab_ref_palette_neutral_95">#EFF0F9</color>
-    <color name="lab_ref_palette_neutral_99">#FDFBFF</color>
-    <color name="lab_ref_palette_neutral_100">#FFFFFF</color>
+    <color name="lab_internal_ref_palette_neutral_0">#000000</color>
+    <color name="lab_internal_ref_palette_neutral_10">#191C21</color>
+    <color name="lab_internal_ref_palette_neutral_20">#2E3037</color>
+    <color name="lab_internal_ref_palette_neutral_30">#45474D</color>
+    <color name="lab_internal_ref_palette_neutral_50">#75777E</color>
+    <color name="lab_internal_ref_palette_neutral_70">#A9ABB3</color>
+    <color name="lab_internal_ref_palette_neutral_80">#C4C6CF</color>
+    <color name="lab_internal_ref_palette_neutral_90">#E0E2EB</color>
+    <color name="lab_internal_ref_palette_neutral_95">#EFF0F9</color>
+    <color name="lab_internal_ref_palette_neutral_99">#FDFBFF</color>
+    <color name="lab_internal_ref_palette_neutral_100">#FFFFFF</color>
 
-    <color name="lab_ref_palette_error_30">#861915</color>
-    <color name="lab_ref_palette_error_80">#F4B7AD</color>
-    <color name="lab_ref_palette_error_95">#FCEEEA</color>
+    <color name="lab_internal_ref_palette_error_30">#861915</color>
+    <color name="lab_internal_ref_palette_error_80">#F4B7AD</color>
+    <color name="lab_internal_ref_palette_error_95">#FCEEEA</color>
 
-    <color name="lab_ref_palette_caution_30">#524712</color>
-    <color name="lab_ref_palette_caution_80">#EECF44</color>
-    <color name="lab_ref_palette_caution_95">#FFF5D1</color>
+    <color name="lab_internal_ref_palette_caution_30">#524712</color>
+    <color name="lab_internal_ref_palette_caution_80">#EECF44</color>
+    <color name="lab_internal_ref_palette_caution_95">#FFF5D1</color>
 
-    <color name="lab_ref_palette_success_30">#315818</color>
-    <color name="lab_ref_palette_success_80">#B3D996</color>
-    <color name="lab_ref_palette_success_95">#E7FED2</color>
+    <color name="lab_internal_ref_palette_success_30">#315818</color>
+    <color name="lab_internal_ref_palette_success_80">#B3D996</color>
+    <color name="lab_internal_ref_palette_success_95">#E7FED2</color>
 </resources>

@@ -1,73 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="NewApi">
-    <!-- TODO verify if this is correct. Letter spacing calculated by Figma size / text size -->
-
     <style name="TextAppearance.Lab" parent="TextAppearance.Material3.BodyLarge">
         <!-- Add base styles here -->
-        <item name="android:textColor">@color/lab_default_color_selector_text_primary</item>
+        <item name="android:textColor">@color/lab_internal_color_selector_text_primary</item>
         <item name="android:textStyle">normal</item>
     </style>
 
     <style name="TextAppearance.Lab.HeadlineLarge">
         <item name="fontFamily">?attr/labFontFamilyRegular</item>
         <item name="android:fontFamily">?attr/labFontFamilyRegular</item>
-        <item name="android:textSize">@dimen/lab_text_32</item>
-        <item name="lineHeight">@dimen/lab_text_40</item>
-        <item name="android:lineHeight">@dimen/lab_text_40</item>
+        <item name="android:textSize">@dimen/lab_internal_text_32</item>
+        <item name="lineHeight">@dimen/lab_internal_text_40</item>
+        <item name="android:lineHeight">@dimen/lab_internal_text_40</item>
         <item name="android:letterSpacing">0</item>
     </style>
 
     <style name="TextAppearance.Lab.HeadlineMedium">
         <item name="fontFamily">?attr/labFontFamilyRegular</item>
         <item name="android:fontFamily">?attr/labFontFamilyRegular</item>
-        <item name="android:textSize">@dimen/lab_text_28</item>
-        <item name="lineHeight">@dimen/lab_text_36</item>
-        <item name="android:lineHeight">@dimen/lab_text_36</item>
+        <item name="android:textSize">@dimen/lab_internal_text_28</item>
+        <item name="lineHeight">@dimen/lab_internal_text_36</item>
+        <item name="android:lineHeight">@dimen/lab_internal_text_36</item>
         <item name="android:letterSpacing">0</item>
     </style>
 
     <style name="TextAppearance.Lab.HeadlineSmall">
         <item name="fontFamily">?attr/labFontFamilyRegular</item>
         <item name="android:fontFamily">?attr/labFontFamilyRegular</item>
-        <item name="android:textSize">@dimen/lab_text_24</item>
-        <item name="lineHeight">@dimen/lab_text_32</item>
-        <item name="android:lineHeight">@dimen/lab_text_32</item>
+        <item name="android:textSize">@dimen/lab_internal_text_24</item>
+        <item name="lineHeight">@dimen/lab_internal_text_32</item>
+        <item name="android:lineHeight">@dimen/lab_internal_text_32</item>
         <item name="android:letterSpacing">0</item>
     </style>
 
     <style name="TextAppearance.Lab.TitleLarge">
         <item name="fontFamily">?attr/labFontFamilyRegular</item>
         <item name="android:fontFamily">?attr/labFontFamilyRegular</item>
-        <item name="android:textSize">@dimen/lab_text_22</item>
-        <item name="lineHeight">@dimen/lab_text_28</item>
-        <item name="android:lineHeight">@dimen/lab_text_28</item>
+        <item name="android:textSize">@dimen/lab_internal_text_22</item>
+        <item name="lineHeight">@dimen/lab_internal_text_28</item>
+        <item name="android:lineHeight">@dimen/lab_internal_text_28</item>
         <item name="android:letterSpacing">0</item>
     </style>
 
     <style name="TextAppearance.Lab.TitleMedium">
         <item name="fontFamily">?attr/labFontFamilyMedium</item>
         <item name="android:fontFamily">?attr/labFontFamilyMedium</item>
-        <item name="android:textSize">@dimen/lab_text_16</item>
-        <item name="lineHeight">@dimen/lab_text_24</item>
-        <item name="android:lineHeight">@dimen/lab_text_24</item>
+        <item name="android:textSize">@dimen/lab_internal_text_16</item>
+        <item name="lineHeight">@dimen/lab_internal_text_24</item>
+        <item name="android:lineHeight">@dimen/lab_internal_text_24</item>
         <item name="android:letterSpacing">0.0094</item>
     </style>
 
     <style name="TextAppearance.Lab.TitleSmall">
         <item name="fontFamily">?attr/labFontFamilyMedium</item>
         <item name="android:fontFamily">?attr/labFontFamilyMedium</item>
-        <item name="android:textSize">@dimen/lab_text_14</item>
-        <item name="lineHeight">@dimen/lab_text_20</item>
-        <item name="android:lineHeight">@dimen/lab_text_20</item>
+        <item name="android:textSize">@dimen/lab_internal_text_14</item>
+        <item name="lineHeight">@dimen/lab_internal_text_20</item>
+        <item name="android:lineHeight">@dimen/lab_internal_text_20</item>
         <item name="android:letterSpacing">0.0071</item>
     </style>
 
     <style name="TextAppearance.Lab.BodyLarge">
         <item name="fontFamily">?attr/labFontFamilyMedium</item>
         <item name="android:fontFamily">?attr/labFontFamilyMedium</item>
-        <item name="android:textSize">@dimen/lab_text_16</item>
-        <item name="lineHeight">@dimen/lab_text_24</item>
-        <item name="android:lineHeight">@dimen/lab_text_24</item>
+        <item name="android:textSize">@dimen/lab_internal_text_16</item>
+        <item name="lineHeight">@dimen/lab_internal_text_24</item>
+        <item name="android:lineHeight">@dimen/lab_internal_text_24</item>
         <item name="android:letterSpacing">0.0156</item>
     </style>
 
@@ -79,9 +77,9 @@
     <style name="TextAppearance.Lab.BodyMedium">
         <item name="fontFamily">?attr/labFontFamilyMedium</item>
         <item name="android:fontFamily">?attr/labFontFamilyMedium</item>
-        <item name="android:textSize">@dimen/lab_text_14</item>
-        <item name="lineHeight">@dimen/lab_text_20</item>
-        <item name="android:lineHeight">@dimen/lab_text_20</item>
+        <item name="android:textSize">@dimen/lab_internal_text_14</item>
+        <item name="lineHeight">@dimen/lab_internal_text_20</item>
+        <item name="android:lineHeight">@dimen/lab_internal_text_20</item>
         <item name="android:letterSpacing">0.0179</item>
     </style>
 
@@ -93,9 +91,9 @@
     <style name="TextAppearance.Lab.BodySmall">
         <item name="fontFamily">?attr/labFontFamilyMedium</item>
         <item name="android:fontFamily">?attr/labFontFamilyMedium</item>
-        <item name="android:textSize">@dimen/lab_text_12</item>
-        <item name="lineHeight">@dimen/lab_text_16</item>
-        <item name="android:lineHeight">@dimen/lab_text_16</item>
+        <item name="android:textSize">@dimen/lab_internal_text_12</item>
+        <item name="lineHeight">@dimen/lab_internal_text_16</item>
+        <item name="android:lineHeight">@dimen/lab_internal_text_16</item>
         <item name="android:letterSpacing">0.0333</item>
     </style>
 
@@ -107,27 +105,27 @@
     <style name="TextAppearance.Lab.LabelLarge">
         <item name="fontFamily">?attr/labFontFamilyMedium</item>
         <item name="android:fontFamily">?attr/labFontFamilyMedium</item>
-        <item name="android:textSize">@dimen/lab_text_14</item>
-        <item name="lineHeight">@dimen/lab_text_20</item>
-        <item name="android:lineHeight">@dimen/lab_text_20</item>
+        <item name="android:textSize">@dimen/lab_internal_text_14</item>
+        <item name="lineHeight">@dimen/lab_internal_text_20</item>
+        <item name="android:lineHeight">@dimen/lab_internal_text_20</item>
         <item name="android:letterSpacing">0.0071</item>
     </style>
 
     <style name="TextAppearance.Lab.LabelMedium">
         <item name="fontFamily">?attr/labFontFamilyMedium</item>
         <item name="android:fontFamily">?attr/labFontFamilyMedium</item>
-        <item name="android:textSize">@dimen/lab_text_12</item>
-        <item name="lineHeight">@dimen/lab_text_16</item>
-        <item name="android:lineHeight">@dimen/lab_text_16</item>
+        <item name="android:textSize">@dimen/lab_internal_text_12</item>
+        <item name="lineHeight">@dimen/lab_internal_text_16</item>
+        <item name="android:lineHeight">@dimen/lab_internal_text_16</item>
         <item name="android:letterSpacing">0.0208</item>
     </style>
 
     <style name="TextAppearance.Lab.LabelSmall">
         <item name="fontFamily">?attr/labFontFamilyMedium</item>
         <item name="android:fontFamily">?attr/labFontFamilyMedium</item>
-        <item name="android:textSize">@dimen/lab_text_11</item>
-        <item name="lineHeight">@dimen/lab_text_16</item>
-        <item name="android:lineHeight">@dimen/lab_text_16</item>
+        <item name="android:textSize">@dimen/lab_internal_text_11</item>
+        <item name="lineHeight">@dimen/lab_internal_text_16</item>
+        <item name="android:lineHeight">@dimen/lab_internal_text_16</item>
         <item name="android:letterSpacing">0.0455</item>
     </style>
 </resources>

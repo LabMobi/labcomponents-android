@@ -4,7 +4,7 @@
 
     <stroke
         android:color="?attr/labColorSelectorOutline"
-        android:width="@dimen/lab_size_1" />
+        android:width="@dimen/lab_internal_size_1" />
 
     <corners
         android:bottomLeftRadius="?attr/labShapeCornerSizeBottomLeft"

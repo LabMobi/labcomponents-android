@@ -34,7 +34,6 @@
         <item name="android:textAllCaps">true</item>
     </style>
 
-
     <style name="Text.HeadlineSmall" parent="TextAppearance.Lab.HeadlineSmall">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
@@ -57,9 +56,9 @@
 
     <style name="Toolbar" parent="Widget.MaterialComponents.Toolbar">
         <item name="android:background">@color/black</item>
-        <item name="android:elevation">@dimen/lab_size_1</item>
+        <item name="android:elevation">1dp</item>
         <item name="titleTextColor">@color/white</item>
-        <item name="titleMarginStart">@dimen/lab_size_64</item>
+        <item name="titleMarginStart">64dp</item>
         <item name="theme">@style/ThemeOverlay.Toolbar</item>
     </style>
 

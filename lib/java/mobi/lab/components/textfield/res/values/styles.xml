@@ -7,16 +7,16 @@
         <item name="boxCornerRadiusBottomStart">?attr/labShapeCornerSizeBottomLeft</item>
         <item name="boxCornerRadiusBottomEnd">?attr/labShapeCornerSizeBottomRight</item>
 
-        <item name="boxStrokeColor">@color/lab_default_textfield_stroke</item>
+        <item name="boxStrokeColor">@color/lab_internal_textfield_stroke</item>
         <item name="boxBackgroundColor">@android:color/transparent</item>
-        <item name="boxStrokeWidth">@dimen/lab_size_1</item>
-        <item name="boxStrokeWidthFocused">@dimen/lab_size_2</item>
+        <item name="boxStrokeWidth">@dimen/lab_internal_size_1</item>
+        <item name="boxStrokeWidthFocused">@dimen/lab_internal_size_2</item>
 
         <item name="shapeAppearance">?attr/labShapeAppearance</item>
         <item name="shapeAppearanceOverlay">?attr/labShapeAppearanceOverlay</item>
 
-        <item name="endIconMinSize">@dimen/lab_size_48</item>
-        <item name="startIconMinSize">@dimen/lab_size_48</item>
+        <item name="endIconMinSize">@dimen/lab_internal_size_48</item>
+        <item name="startIconMinSize">@dimen/lab_internal_size_48</item>
         <item name="endIconTint">?attr/labColorSelectorTextSecondary</item>
         <item name="startIconTint">?attr/labColorSelectorTextSecondary</item>
 
@@ -39,7 +39,7 @@
         <item name="placeholderTextColor">?attr/labColorSelectorTextSecondary</item>
         <item name="prefixTextColor">?attr/labColorSelectorTextSecondary</item>
         <item name="suffixTextColor">?attr/labColorSelectorTextSecondary</item>
-        <item name="android:textColor">@color/lab_default_textfield_text</item>
+        <item name="android:textColor">@color/lab_internal_textfield_text</item>
     </style>
 
     <style name="ThemeOverlay.Lab.TextInputLayout" parent="ThemeOverlay.LabComponents.TextInputLayout">
@@ -52,15 +52,15 @@
 
     <!-- TextField start -->
     <style name="Widget.LabComponents.TextField" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
-        <item name="textPaddingTop">@dimen/lab_size_24</item>
-        <item name="textPaddingBottom">@dimen/lab_size_8</item>
+        <item name="textPaddingTop">@dimen/lab_internal_size_24</item>
+        <item name="textPaddingBottom">@dimen/lab_internal_size_8</item>
         <!-- Additional padding before and after the input text -->
-        <item name="textPaddingHorizontal">@dimen/lab_size_2</item>
+        <item name="textPaddingHorizontal">@dimen/lab_internal_size_2</item>
         <item name="materialThemeOverlay">@style/ThemeOverlay.LabComponents.TextInputLayout</item>
 
         <!-- Box attributes -->
         <item name="boxBackgroundMode">filled</item>
-        <item name="boxCollapsedPaddingTop">@dimen/lab_size_10</item>
+        <item name="boxCollapsedPaddingTop">@dimen/lab_internal_size_10</item>
         <item name="boxBackgroundColor">@android:color/transparent</item>
 
         <item name="shapeAppearance">?attr/shapeAppearance</item>
@@ -75,11 +75,11 @@
     </style>
 
     <style name="Widget.LabComponents.TextFieldEditText" parent="Widget.MaterialComponents.TextInputEditText.FilledBox">
-        <item name="android:background">@drawable/lab_default_textfield_background</item>
-        <item name="android:paddingLeft">@dimen/lab_size_16</item>
-        <item name="android:paddingRight">@dimen/lab_size_16</item>
-        <item name="android:paddingTop">@dimen/lab_size_8</item>
-        <item name="android:paddingBottom">@dimen/lab_size_8</item>
+        <item name="android:background">@drawable/lab_internal_textfield_temp_background</item>
+        <item name="android:paddingLeft">@dimen/lab_internal_size_16</item>
+        <item name="android:paddingRight">@dimen/lab_internal_size_16</item>
+        <item name="android:paddingTop">@dimen/lab_internal_size_8</item>
+        <item name="android:paddingBottom">@dimen/lab_internal_size_8</item>
     </style>sda
 
 </resources>

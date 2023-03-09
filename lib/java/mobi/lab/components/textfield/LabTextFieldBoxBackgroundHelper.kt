@@ -23,8 +23,8 @@ internal class LabTextFieldBoxBackgroundHelper(
 
     private var shapeAppearanceModel: ShapeAppearanceModel
     private var boxBackground: MaterialShapeDrawable
-    private var boxStrokeWidthDefaultPx: Int = context.resources.getDimensionPixelSize(R.dimen.lab_default_textfield_box_stroke_width)
-    private var boxStrokeWidthFocusedPx: Int = context.resources.getDimensionPixelSize(R.dimen.lab_default_textfield_box_stroke_width_focused)
+    private var boxStrokeWidthDefaultPx: Int = context.resources.getDimensionPixelSize(R.dimen.lab_internal_textfield_box_stroke_width)
+    private var boxStrokeWidthFocusedPx: Int = context.resources.getDimensionPixelSize(R.dimen.lab_internal_textfield_box_stroke_width_focused)
     private var boxStrokeWidthPx: Int = boxStrokeWidthDefaultPx
     private var boxStrokeColor: ColorStateList? = null
     private var boxBackgroundColor: ColorStateList? = null

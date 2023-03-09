@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="lab_size_4">4dp</dimen>
-    <dimen name="lab_size_8">8dp</dimen>
-    <dimen name="lab_size_16">16dp</dimen>
-    <dimen name="lab_size_24">24dp</dimen>
-    <dimen name="lab_size_32">32dp</dimen>
-    <dimen name="lab_size_40">40dp</dimen>
-    <dimen name="lab_size_48">48dp</dimen>
-    <dimen name="lab_size_56">56dp</dimen>
-    <dimen name="lab_size_64">64dp</dimen>
+    <dimen name="lab_internal_size_4">4dp</dimen>
+    <dimen name="lab_internal_size_8">8dp</dimen>
+    <dimen name="lab_internal_size_16">16dp</dimen>
+    <dimen name="lab_internal_size_24">24dp</dimen>
+    <dimen name="lab_internal_size_48">48dp</dimen>
 
     <!-- Off grid sizes -->
-    <dimen name="lab_size_1">1dp</dimen>
-    <dimen name="lab_size_2">1dp</dimen>
-    <dimen name="lab_size_10">10dp</dimen>
-    <dimen name="lab_size_12">12dp</dimen>
-    <dimen name="lab_size_18">18dp</dimen>
+    <dimen name="lab_internal_size_1">1dp</dimen>
+    <dimen name="lab_internal_size_2">2dp</dimen>
+    <dimen name="lab_internal_size_10">10dp</dimen>
+    <dimen name="lab_internal_size_12">12dp</dimen>
 </resources>
