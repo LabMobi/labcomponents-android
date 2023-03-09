@@ -6,7 +6,7 @@ import android.util.AttributeSet
 import com.google.android.material.shape.MaterialShapeDrawable
 import com.google.android.material.shape.ShapeAppearanceModel
 import mobi.lab.components.R
-import mobi.lab.components.shared.util.ResourceUtil
+import mobi.lab.components.shared.ResourceUtil
 
 /**
  * Helper class to take care of updating and creating a Drawable to use as LabTextField's EditText background.

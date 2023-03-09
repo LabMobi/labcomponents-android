@@ -1,8 +1,8 @@
-package mobi.lab.components.shared.util
+package mobi.lab.components.shared
 
 import android.annotation.SuppressLint
 import mobi.lab.components.BuildConfig
-import mobi.lab.components.shared.util.Log.LogImplementation
+import mobi.lab.components.shared.Log.LogImplementation
 import kotlin.reflect.KClass
 
 /**

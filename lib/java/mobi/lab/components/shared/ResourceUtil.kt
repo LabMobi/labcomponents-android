@@ -1,4 +1,4 @@
-package mobi.lab.components.shared.util
+package mobi.lab.components.shared
 
 import android.content.Context
 import android.content.res.ColorStateList
