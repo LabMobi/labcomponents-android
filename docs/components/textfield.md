@@ -1,6 +1,6 @@
 # TextField
 
-* [TextField styles](https://git.lab.mobi/tools/android-tools/labcomponents-android/-/blob/feature/develop/lib/java/mobi/lab/components/textfield/res/values/styles.xml)
+* [TextField styles](https://git.lab.mobi/tools/android-tools/labcomponents-android/-/blob/master/lib/java/mobi/lab/components/textfield/res/values/styles.xml)
 
 TextField extends `TextInputLayout` from Material components. 
 There are 2 main differences from the original component:
