@@ -19,8 +19,8 @@ Details how to contribute to the project.
 5. Document the changes in the changed components documentation page in `docs` dir.
    1. Add a new page to `docs/components` if a new component was added.
    2. Add a link to the component doc in `docs/main.md`.
-6. Make sure the build succeeds in `Codemagic`. Project name is `labcomponents-android`.
-7. Create a merge request targeting `develop` branch.
+6. Make sure the build succeeds in `Codemagic`. The project name is `labcomponents-android`.
+7. Create a merge request targeting the `develop` branch.
    1. A code review and approval from at least one other person from the Android community.
 8. If the review is approved, then merge the merge request to `develop`.
 9. Contact the Android community in Slack `#community-android` about releasing a new version of the project. 
