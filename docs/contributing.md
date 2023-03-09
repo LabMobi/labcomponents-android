@@ -1,6 +1,6 @@
 # Contributing
 
-Details how to contribute to the project.
+Details on how to contribute to the project.
 
 ## Links
 
@@ -15,7 +15,7 @@ Details how to contribute to the project.
 2. Create a new branch using the branching strategy from the guide under links
 3. Make changes to the project
    1. Don't forget to update the `Demo` application with new components or updated component behaviour.
-4. Document the changes in `CHANGELOG.md` in project's root directory
+4. Document the changes in `CHANGELOG.md` in the project's root directory
 5. Document the changes in the changed components documentation page in `docs` dir.
    1. Add a new page to `docs/components` if a new component was added.
    2. Add a link to the component doc in `docs/main.md`.
