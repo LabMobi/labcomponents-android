@@ -19,6 +19,7 @@ Dependency version are defined in `gradle/libs.versions.toml` and helper functio
 ## Links
 
 - [Component Documentation](docs/main.md)
+- [Resource Visibility](docs/resource_visibility.md)
 - [Contributing](docs/contributing.md)
 - [Release Guide](docs/release_guide.md)
 - [Material Components for Android](https://github.com/material-components/material-components-android) (external)
