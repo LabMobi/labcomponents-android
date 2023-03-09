@@ -18,5 +18,7 @@ The `lib` module has custom source sets defined in `lib/build.gradle`. Custom so
 component sources and resources into different folders while using a single namespace for resources. This would also work
 with a transitive R class, but this might not be supported in the future.
 
+**When adding a new source directory (most likely a new component), the new path must be added to the `srcDirs` list in `lib/build.gradle`.**
+
 The result is that all Kotlin/Java classes will have package names based on the folder structure, but all resources will be available
 in the same R class.
