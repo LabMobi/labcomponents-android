@@ -1,6 +1,6 @@
-Mobi Lab Components
+![Mobi Lab](docs/assets/mobilab-header-logo.png)
 
-# Mobi Lab Components README
+# Mobi Lab Components
 
 Mobi Lab Components (LabComponents) help developers execute our internal design system's components.
 
