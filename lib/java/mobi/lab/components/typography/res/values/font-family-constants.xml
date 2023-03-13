@@ -3,8 +3,8 @@
     <!-- Platform only supports bold fonts with the extra textStyle attribute but -->
     <!-- we don't want to create an additional attribute that changes font behaviour. -->
     <!-- So we'll use 'regular' weight for the design's 'regular' and 'medium' weights -->
-    <string name="lab_internal_ref_font_family_regular">sans-serif</string>
-    <string name="lab_internal_ref_font_family_medium">sans-serif</string>
-    <string name="lab_internal_ref_font_family_semibold">sans-serif-medium</string>
-    <string name="lab_internal_ref_font_family_bold">sans-serif-black</string>
+    <string name="lab_internal_sys_font_family_regular">sans-serif</string>
+    <string name="lab_internal_sys_font_family_medium">sans-serif</string>
+    <string name="lab_internal_sys_font_family_semibold">sans-serif-medium</string>
+    <string name="lab_internal_sys_font_family_bold">sans-serif-black</string>
 </resources>
