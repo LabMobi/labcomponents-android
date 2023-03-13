@@ -12,16 +12,17 @@ The components provide implementations for [Mobi Lab's design system](https://ww
 
 The project consists of the component library in `lib` module and components demo application in `app-demo` module.
 
-## Dependency versioning
-
-Dependency versioning is using Gradle Version Catalogs feature. See https://docs.gradle.org/current/userguide/platforms.html#sec:version-catalog-plugin
-Dependency version are defined in `gradle/libs.versions.toml` and helper functions defined in `dependencies.gradle` file which can be used to add a set of reusable dependencies. For example testing dependencies come in a package that can be reused where needed.
-
 ## Links
 
-- [Component Documentation](docs/main.md)
 - [Directory Structure](docs/directory_structure.md)
 - [Resource Visibility](docs/resource_visibility.md)
 - [Contributing](docs/contributing.md)
 - [Release Guide](docs/release_guide.md)
 - [Material Components for Android](https://github.com/material-components/material-components-android) (external)
+
+## List of components
+
+-   [Colors](docs/components/colors.md)
+-   [TextField](docs/components/textfield.md)
+-   [Theme](docs/components/theme.md)
+-   [Typography](docs/components/typography.md)

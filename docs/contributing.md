@@ -25,3 +25,8 @@ Details on how to contribute to the project.
 8. If the review is approved, then merge the merge request to `develop`.
 9. Contact the Android community in Slack `#community-android` about releasing a new version of the project. 
    1. TODO: Write a proper release guide and possible automation 
+
+## Dependency versioning
+
+Dependency versioning is using Gradle Version Catalogs feature. See https://docs.gradle.org/current/userguide/platforms.html#sec:version-catalog-plugin
+Dependency version are defined in `gradle/libs.versions.toml` and helper functions defined in `dependencies.gradle` file which can be used to add a set of reusable dependencies. For example testing dependencies come in a package that can be reused where needed.
