@@ -29,4 +29,4 @@ Details on how to contribute to the project.
 ## Dependency versioning
 
 Dependency versioning is using Gradle Version Catalogs feature. See https://docs.gradle.org/current/userguide/platforms.html#sec:version-catalog-plugin
-Dependency version are defined in `gradle/libs.versions.toml` and helper functions defined in `dependencies.gradle` file which can be used to add a set of reusable dependencies. For example testing dependencies come in a package that can be reused where needed.
+Dependency versions are defined in `gradle/libs.versions.toml`, and helper functions are defined in `dependencies.gradle` file, which can be used to add a set of reusable dependencies. For example, testing dependencies come in a package that can be reused where needed.
