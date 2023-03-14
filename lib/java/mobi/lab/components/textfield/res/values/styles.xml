@@ -68,6 +68,8 @@
         <!-- Controls the padding between top edge and the animated label -->
         <item name="boxCollapsedPaddingTop">10dp</item>
         <item name="boxBackgroundColor">@android:color/transparent</item>
+        <!-- Bridge color to add error state to our TextField -->
+        <item name="boxStrokeColor">@color/lab_internal_textfield_material_bridge_stroke</item>
 
         <item name="shapeAppearance">?attr/shapeAppearance</item>
         <item name="shapeAppearanceOverlay">?attr/shapeAppearanceOverlay</item>
