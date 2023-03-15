@@ -6,17 +6,22 @@ import android.os.Parcelable
 import android.text.TextUtils
 import android.util.AttributeSet
 import android.view.KeyEvent
+import android.view.MotionEvent
+import android.view.View
+import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
 import androidx.annotation.Dimension
 import androidx.core.view.updatePadding
 import com.google.android.material.textfield.TextInputLayout
 import mobi.lab.components.R
+import mobi.lab.components.shared.Log
 import mobi.lab.components.shared.ParcelCompat
 
 /**
  * A wrapper around TextInputLayout with a custom box background and an automatically added EditText child.
  */
-public class LabTextField @JvmOverloads constructor(
+@Suppress("FoldInitializerAndIfToElvis")
+public open class LabTextField @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
@@ -27,7 +32,6 @@ public class LabTextField @JvmOverloads constructor(
     }
 
     public interface StateChangedListener {
-        public fun onFocusChanged(hasFocus: Boolean)
         public fun onErrorCleared()
     }
 
@@ -45,48 +49,44 @@ public class LabTextField @JvmOverloads constructor(
      * Mode for automatically clearing TextField's error state.
      * @see [AutoClearErrorMode]
      */
-    public var autoClearErrorMode: AutoClearErrorMode = AutoClearErrorMode.ON_FOCUS
+    public var autoClearErrorMode: AutoClearErrorMode = AutoClearErrorMode.ON_TEXT_CHANGED
 
     /**
-     * Inner [LabTextInputEditText] that is automatically added as a child.
+     * Inner [LabTextFieldEditText] that is automatically added as a child.
      */
-    public val editText: LabTextInputEditText
+    public var editText: LabTextFieldEditText? = null
 
     private var boxHelper: LabTextFieldBoxBackgroundHelper? = null
     private var errorState = false
     private var inDrawableStateChanged = false
+    private var textPaddingTop: Int = NO_VALUE_INT
+    private var textPaddingBottom: Int = NO_VALUE_INT
+    private var textPaddingHorizontal: Int = NO_VALUE_INT
 
     init {
-        editText = LabTextInputEditText(context, attrs)
-        editText.hint = null
-        editText.layoutParams = LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT)
-        initEditText(editText)
-        addView(editText)
-
         attrs?.let {
             val attributes = context.obtainStyledAttributes(attrs, R.styleable.LabTextField, 0, defStyleAttr)
             try {
-                setTextPaddingVertical(
-                    topPx = attributes.getDimensionPixelSize(R.styleable.LabTextField_textPaddingTop, NO_VALUE_INT),
-                    bottomPx = attributes.getDimensionPixelSize(R.styleable.LabTextField_textPaddingBottom, NO_VALUE_INT)
-                )
-                setTextPaddingHorizontal(attributes.getDimensionPixelSize(R.styleable.LabTextField_textPaddingHorizontal, NO_VALUE_INT))
+                // Cached and set later
+                textPaddingTop = attributes.getDimensionPixelSize(R.styleable.LabTextField_textPaddingTop, NO_VALUE_INT)
+                textPaddingBottom = attributes.getDimensionPixelSize(R.styleable.LabTextField_textPaddingBottom, NO_VALUE_INT)
+                textPaddingHorizontal = attributes.getDimensionPixelSize(R.styleable.LabTextField_textPaddingHorizontal, NO_VALUE_INT)
 
                 val rawClearErrorMode = attributes.getInt(R.styleable.LabTextField_autoClearErrorMode, autoClearErrorMode.value())
                 autoClearErrorMode = AutoClearErrorMode.parse(rawClearErrorMode)
-
-                if (attributes.hasValue(R.styleable.LabTextField_android_inputType)) {
-                    editText.inputType = attributes.getInt(R.styleable.LabTextField_android_inputType, EditorInfo.TYPE_CLASS_TEXT)
-                }
-                if (attributes.hasValue(R.styleable.LabTextField_android_imeOptions)) {
-                    editText.imeOptions = attributes.getInt(R.styleable.LabTextField_android_imeOptions, EditorInfo.IME_ACTION_NONE)
-                }
             } finally {
                 attributes.recycle()
             }
         }
 
         boxHelper = LabTextFieldBoxBackgroundHelper(this, attrs, defStyleAttr)
+    }
+
+    override fun addView(child: View, index: Int, params: ViewGroup.LayoutParams) {
+        if (child is LabTextFieldEditText) {
+            saveEditTextInternal(child)
+        }
+        super.addView(child, index, params)
     }
 
     override fun onCreateDrawableState(extraSpace: Int): IntArray {
@@ -136,25 +136,16 @@ public class LabTextField @JvmOverloads constructor(
         super.onRestoreInstanceState(ParcelCompat.getParcelable(state, STATE_PARENT))
     }
 
-    override fun onAttachedToWindow() {
-        super.onAttachedToWindow()
-        editText.setOnFocusChangeListener { _, hasFocus ->
-            stateChangedListener?.onFocusChanged(hasFocus)
-        }
-    }
-
-    override fun onDetachedFromWindow() {
-        super.onDetachedFromWindow()
-        editText.onFocusChangeListener = null
-    }
-
     /**
      * Get the text value.
      *
      * @return Text
      */
     public fun getText(): String {
-        return editText.text.toString()
+        useEditText {
+            // Just to make sure the editText is available
+        }
+        return editText?.text?.toString() ?: ""
     }
 
     /**
@@ -163,7 +154,7 @@ public class LabTextField @JvmOverloads constructor(
      * @param text Text value
      */
     public fun setText(text: CharSequence?) {
-        editText.setText(text)
+        useEditText { it.setText(text) }
     }
 
     /**
@@ -173,9 +164,9 @@ public class LabTextField @JvmOverloads constructor(
      */
     public fun setTextAndSelection(text: CharSequence?) {
         setText(text)
-        editText.apply {
-            val value = getText()?.toString() ?: ""
-            setSelection(value.length)
+        useEditText { editText ->
+            val value = editText.text?.toString() ?: ""
+            editText.setSelection(value.length)
         }
     }
 
@@ -186,9 +177,15 @@ public class LabTextField @JvmOverloads constructor(
      * @param bottomPx Bottom padding
      */
     public fun setTextPaddingVertical(@Dimension(unit = Dimension.PX) topPx: Int, @Dimension(unit = Dimension.PX) bottomPx: Int) {
-        val top = if (topPx != NO_VALUE_INT) topPx else editText.paddingTop
-        val bottom = if (bottomPx != NO_VALUE_INT) bottomPx else editText.paddingBottom
-        editText.updatePadding(top = top, bottom = bottom)
+        // Save paddings. Will be used when the EditText becomes available
+        textPaddingTop = topPx
+        textPaddingBottom = bottomPx
+
+        useEditText { editText ->
+            val top = if (topPx != NO_VALUE_INT) topPx else editText.paddingTop
+            val bottom = if (bottomPx != NO_VALUE_INT) bottomPx else editText.paddingBottom
+            editText.updatePadding(top = top, bottom = bottom)
+        }
     }
 
     /**
@@ -197,8 +194,13 @@ public class LabTextField @JvmOverloads constructor(
      * @param paddingPx Start and end padding.
      */
     public fun setTextPaddingHorizontal(@Dimension(unit = Dimension.PX) paddingPx: Int) {
-        if (paddingPx != NO_VALUE_INT) {
-            editText.compoundDrawablePadding = paddingPx
+        // Save paddings. Will be used when the EditText becomes available
+        textPaddingHorizontal = paddingPx
+
+        useEditText { editText ->
+            if (paddingPx != NO_VALUE_INT) {
+                editText.compoundDrawablePadding = paddingPx
+            }
         }
     }
 
@@ -209,11 +211,11 @@ public class LabTextField @JvmOverloads constructor(
      * @onImeAction callback invoked with the [KeyEvent] when the matching IME action is invoked.
      */
     public fun setImeActionHandler(imeAction: Int, onImeAction: (keyEvent: KeyEvent) -> Unit) {
-        editText.apply {
-            if (imeOptions != imeAction) {
-                imeOptions = imeAction
+        useEditText { editText ->
+            if (editText.imeOptions != imeAction) {
+                editText.imeOptions = imeAction
             }
-            setOnEditorActionListener { _, actionId, keyEvent ->
+            editText.setOnEditorActionListener { _, actionId, keyEvent ->
                 if (actionId == imeAction) {
                     onImeAction(keyEvent)
                     return@setOnEditorActionListener true
@@ -229,11 +231,13 @@ public class LabTextField @JvmOverloads constructor(
      * @param inputType [android.text.InputType]
      */
     public fun setInputType(inputType: Int) {
-        if (editText.inputType != inputType) {
-            // Some input types change the typeface. Let's reuse the old typeface
-            val typeface = editText.typeface
-            editText.inputType = inputType
-            editText.typeface = typeface
+        useEditText { editText ->
+            if (editText.inputType != inputType) {
+                // Some input types change the typeface. Let's reuse the old typeface
+                val typeface = editText.typeface
+                editText.inputType = inputType
+                editText.typeface = typeface
+            }
         }
     }
 
@@ -245,12 +249,26 @@ public class LabTextField @JvmOverloads constructor(
         stateChangedListener?.onErrorCleared()
     }
 
-    private fun initEditText(editText: LabTextInputEditText) {
-        editText.focusedListener = {
-            if (autoClearErrorMode.value() >= AutoClearErrorMode.ON_FOCUS.value()) {
-                clearError()
-            }
+    @Suppress("ClickableViewAccessibility")
+    protected fun saveEditTextInternal(editText: LabTextFieldEditText) {
+        this.editText = editText
+        // Update states that might have been cached
+        setTextPaddingVertical(topPx = textPaddingTop, bottomPx = textPaddingBottom)
+        setTextPaddingHorizontal(textPaddingHorizontal)
+
+        if (editText.errorState != errorState) {
+            editText.errorState = errorState
         }
+
+        editText.setOnTouchListener { _, event ->
+            if (MotionEvent.ACTION_UP == event.action) {
+                if (autoClearErrorMode.value() >= AutoClearErrorMode.ON_TOUCH.value()) {
+                    clearError()
+                }
+            }
+            return@setOnTouchListener false
+        }
+
         editText.textChangedListener = { text, stateRestore ->
             setErrorStateInternal(counterError = isCounterError(text))
 
@@ -262,6 +280,8 @@ public class LabTextField @JvmOverloads constructor(
                 }
             }
         }
+
+        boxHelper?.updateBoxState()
     }
 
     private fun isCounterError(text: CharSequence?): Boolean {
@@ -278,8 +298,17 @@ public class LabTextField @JvmOverloads constructor(
             return
         }
         errorState = newErrorState
-        editText.errorState = newErrorState
+        editText?.errorState = newErrorState
         refreshDrawableState()
+    }
+
+    private fun useEditText(action: (LabTextFieldEditText) -> Unit) {
+        val editText = editText
+        if (editText == null) {
+            Log.getInstance(this).e(Throwable(), "Inner EditText is null but accessed")
+        } else {
+            action(editText)
+        }
     }
 
     internal companion object {

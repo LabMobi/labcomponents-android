@@ -3,7 +3,6 @@ package mobi.lab.components.shared
 import android.annotation.SuppressLint
 import mobi.lab.components.BuildConfig
 import mobi.lab.components.shared.Log.LogImplementation
-import kotlin.reflect.KClass
 
 /**
  * A simple logging interface to avoid adding an unnecessary dependency to a library.
@@ -50,19 +49,15 @@ internal class Log private constructor(
     }
 
     companion object {
-        fun newInstance(): Log {
-            return newInstance("components-lib")
+        fun getInstance(): Log {
+            return getInstance("components-lib")
         }
 
-        fun newInstance(cls: KClass<*>): Log {
-            return newInstance(cls)
+        fun getInstance(any: Any): Log {
+            return getInstance(any::class.java.simpleName)
         }
 
-        fun newInstance(cls: Class<*>): Log {
-            return newInstance(cls.simpleName)
-        }
-
-        fun newInstance(tag: String): Log {
+        fun getInstance(tag: String): Log {
             return Log(tag, defaultLogImpl())
         }
 

@@ -28,7 +28,13 @@
             android:layout_marginEnd="@dimen/margin"
             android:layout_marginBottom="@dimen/margin"
             android:hint="Label"
-            app:errorEnabled="true" />
+            app:errorEnabled="true">
+
+            <mobi.lab.components.textfield.LabTextFieldEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </mobi.lab.components.textfield.LabTextField>
 
         <mobi.lab.components.textfield.LabTextField
             android:id="@+id/text_field_start_icon"
@@ -40,7 +46,12 @@
             android:layout_marginBottom="@dimen/margin"
             android:hint="Label"
             app:errorEnabled="true"
-            app:startIconDrawable="@drawable/icon_clear" />
+            app:startIconDrawable="@drawable/icon_clear">
+
+            <mobi.lab.components.textfield.LabTextFieldEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </mobi.lab.components.textfield.LabTextField>
 
 
         <mobi.lab.components.textfield.LabTextField
@@ -53,7 +64,13 @@
             android:layout_marginBottom="@dimen/margin"
             android:hint="Label"
             app:errorEnabled="true"
-            app:endIconMode="clear_text" />
+            app:endIconMode="clear_text">
+
+            <mobi.lab.components.textfield.LabTextFieldEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </mobi.lab.components.textfield.LabTextField>
 
         <mobi.lab.components.textfield.LabTextField
             android:id="@+id/text_field_both_icons"
@@ -67,7 +84,13 @@
             app:errorEnabled="true"
             app:endIconMode="custom"
             app:endIconDrawable="@drawable/icon_clear"
-            app:startIconDrawable="@drawable/icon_clear" />
+            app:startIconDrawable="@drawable/icon_clear">
+
+            <mobi.lab.components.textfield.LabTextFieldEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </mobi.lab.components.textfield.LabTextField>
 
         <com.google.android.material.materialswitch.MaterialSwitch
             android:id="@+id/switch_enabled"
@@ -99,7 +122,12 @@
             android:layout_marginStart="@dimen/margin"
             android:layout_marginEnd="@dimen/margin"
             android:layout_marginBottom="@dimen/margin"
-            android:hint="Change helper text" />
+            android:hint="Change helper text">
+
+            <mobi.lab.components.textfield.LabTextFieldEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </mobi.lab.components.textfield.LabTextField>
 
         <mobi.lab.components.textfield.LabTextField
             android:id="@+id/input_error"
@@ -109,7 +137,12 @@
             android:layout_marginStart="@dimen/margin"
             android:layout_marginEnd="@dimen/margin"
             android:layout_marginBottom="@dimen/margin"
-            android:hint="Change error text" />
+            android:hint="Change error text">
+
+            <mobi.lab.components.textfield.LabTextFieldEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </mobi.lab.components.textfield.LabTextField>
 
         <mobi.lab.components.textfield.LabTextField
             android:id="@+id/input_label"
@@ -120,7 +153,12 @@
             android:layout_marginEnd="@dimen/margin"
             android:layout_marginBottom="@dimen/margin"
             android:hint="Change label text"
-            android:text="Label" />
+            android:text="Label">
+
+            <mobi.lab.components.textfield.LabTextFieldEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </mobi.lab.components.textfield.LabTextField>
 
         <mobi.lab.components.textfield.LabTextField
             android:id="@+id/input_placeholder"
@@ -130,7 +168,12 @@
             android:layout_marginStart="@dimen/margin"
             android:layout_marginEnd="@dimen/margin"
             android:layout_marginBottom="@dimen/margin"
-            android:hint="Change placeholder text" />
+            android:hint="Change placeholder text">
+
+            <mobi.lab.components.textfield.LabTextFieldEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </mobi.lab.components.textfield.LabTextField>
 
         <mobi.lab.components.textfield.LabTextField
             android:id="@+id/input_prefix"
@@ -140,7 +183,12 @@
             android:layout_marginStart="@dimen/margin"
             android:layout_marginEnd="@dimen/margin"
             android:layout_marginBottom="@dimen/margin"
-            android:hint="Change prefix text" />
+            android:hint="Change prefix text">
+
+            <mobi.lab.components.textfield.LabTextFieldEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </mobi.lab.components.textfield.LabTextField>
 
         <mobi.lab.components.textfield.LabTextField
             android:id="@+id/input_suffix"
@@ -150,7 +198,12 @@
             android:layout_marginStart="@dimen/margin"
             android:layout_marginEnd="@dimen/margin"
             android:layout_marginBottom="@dimen/margin"
-            android:hint="Change suffix text" />
+            android:hint="Change suffix text">
+
+            <mobi.lab.components.textfield.LabTextFieldEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </mobi.lab.components.textfield.LabTextField>
 
         <mobi.lab.components.textfield.LabTextField
             android:id="@+id/input_counter_max"
@@ -160,9 +213,14 @@
             android:layout_marginStart="@dimen/margin"
             android:layout_marginEnd="@dimen/margin"
             android:layout_marginBottom="32dp"
-            android:hint="Change counter maximum"
-            android:inputType="numberSigned"
-            android:imeOptions="actionSearch" />
+            android:hint="Change counter maximum">
+
+            <mobi.lab.components.textfield.LabTextFieldEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberSigned"
+                android:imeOptions="actionDone" />
+        </mobi.lab.components.textfield.LabTextField>
 
         <mobi.lab.components.button.LabButton
             android:id="@+id/button_update"

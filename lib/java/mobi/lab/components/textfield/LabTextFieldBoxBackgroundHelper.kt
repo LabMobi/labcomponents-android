@@ -72,12 +72,14 @@ internal class LabTextFieldBoxBackgroundHelper(
                 attributes.recycle()
             }
         }
-
-        textField.editText.background = boxBackground
     }
 
+    @Suppress("FoldInitializerAndIfToElvis")
     fun updateBoxState() {
         val editText = textField.editText
+        if (editText == null) {
+            return
+        }
 
         val hasFocus = textField.isFocused || editText.hasFocus()
         val isEnabled = textField.isEnabled
@@ -95,5 +97,7 @@ internal class LabTextFieldBoxBackgroundHelper(
         }
         boxBackground.setStroke(boxStrokeWidthPx.toFloat(), boxStrokeColor)
         boxBackground.fillColor = boxBackgroundColor
+
+        editText.background = boxBackground
     }
 }

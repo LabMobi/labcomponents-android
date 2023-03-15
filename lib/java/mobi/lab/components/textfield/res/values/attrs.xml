@@ -5,10 +5,6 @@
     </declare-styleable>
 
     <declare-styleable name="LabTextField">
-        <attr name="android:inputType" />
-        <attr name="android:imeOptions" />
-        <attr name="android:text" />
-
         <attr name="textPaddingTop" format="dimension"/>
         <attr name="textPaddingBottom" format="dimension"/>
         <attr name="textPaddingHorizontal" format="dimension"/>
@@ -18,7 +14,7 @@
             <!-- Automatically clear the error state when TextField's text is changed -->
             <enum name="onTextChanged" value="1"/>
             <!-- Automatically clear the error state when the TextField is tapped -->
-            <enum name="onFocus" value="2" />
+            <enum name="onTouch" value="2" />
         </attr>
 
         <!-- Box attrs -->

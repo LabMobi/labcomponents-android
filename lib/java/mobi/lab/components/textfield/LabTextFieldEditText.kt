@@ -6,16 +6,15 @@ import android.os.Parcelable
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.AttributeSet
-import android.view.MotionEvent
 import com.google.android.material.textfield.TextInputEditText
 import mobi.lab.components.shared.ParcelCompat
 import mobi.lab.components.R
 
 @Suppress("ClickableViewAccessibility")
-public open class LabTextInputEditText : TextInputEditText {
+public open class LabTextFieldEditText : TextInputEditText {
 
     public constructor(context: Context) : super(context)
-    public constructor(context: Context, attrs: AttributeSet?) : super(context, attrs)
+    public constructor(context: Context, attrs: AttributeSet?) : super(context, attrs, com.google.android.material.R.attr.editTextStyle)
     public constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr)
 
     // Workaround to let text change watchers know of programmatic changes
@@ -46,9 +45,6 @@ public open class LabTextInputEditText : TextInputEditText {
     // Custom text changed listener that is not called when state is restored
     internal var textChangedListener: ((CharSequence, Boolean) -> Unit)? = null
 
-    // Custom focused listener that is called when the view is touched
-    internal var focusedListener: (() -> Unit)? = null
-
     override fun onCreateDrawableState(extraSpace: Int): IntArray {
         val parentState = super.onCreateDrawableState(extraSpace + 1)
         if (errorState) {
@@ -78,19 +74,12 @@ public open class LabTextInputEditText : TextInputEditText {
 
     override fun onAttachedToWindow() {
         super.onAttachedToWindow()
-        setOnTouchListener { _, event ->
-            if (MotionEvent.ACTION_UP == event.action) {
-                focusedListener?.invoke()
-            }
-            return@setOnTouchListener false
-        }
         addTextChangedListener(textWatcher)
     }
 
     override fun onDetachedFromWindow() {
         super.onDetachedFromWindow()
         removeTextChangedListener(textWatcher)
-        setOnTouchListener(null)
     }
 
     internal companion object {
