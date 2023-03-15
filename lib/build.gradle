@@ -74,7 +74,12 @@ android {
 
     libraryVariants.all { variant ->
         variant.outputs.all { output ->
-            outputFileName = "${archivesBaseName}-${variant.name}-${rootProject.ext.libraryVersion}.aar"
+            if (variant.buildType.getName().contains("release")) {
+                // Don't add the variant name to release artefacts
+                outputFileName = "${archivesBaseName}-${rootProject.ext.libraryVersion}.aar"
+            } else {
+                outputFileName = "${archivesBaseName}-${variant.name}-${rootProject.ext.libraryVersion}.aar"
+            }
         }
     }
 }
