@@ -4,9 +4,15 @@
 
 Mobi Lab Components (LabComponents) help developers execute our internal design system's components.
 
+The components provide implementations for [Mobi Lab's design system](https://www.figma.com/file/gxt4iyWGyliILJSOCLXonl/P42-design-system-template-(Duplicate-this!)).
+
 These components are based on [Material Components for Android](https://github.com/material-components/material-components-android).
 
-The components provide implementations for [Mobi Lab's design system](https://www.figma.com/file/gxt4iyWGyliILJSOCLXonl/P42-design-system-template-(Duplicate-this!)).
+**Compatible versions:**
+
+| Lab Components | Material Components |
+|----------------|:--------------------|
+| 0.0.3          | 1.8.0               |
 
 ## Description
 
