@@ -20,6 +20,7 @@ The project consists of the component library in `lib` module and components dem
 
 ## Links
 
+- [Next tasks](docs/next_tasks.md)
 - [Directory Structure](docs/directory_structure.md)
 - [Resource Visibility](docs/resource_visibility.md)
 - [Contributing](docs/contributing.md)
@@ -32,3 +33,8 @@ The project consists of the component library in `lib` module and components dem
 -   [TextField](docs/components/textfield.md)
 -   [Theme](docs/components/theme.md)
 -   [Typography](docs/components/typography.md)
+
+
+# Next tasks
+
+See [Next tasks](docs/next_tasks.md)
