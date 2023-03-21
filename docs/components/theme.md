@@ -18,9 +18,9 @@ The base theme has support for `light` and `dark` modes. There are 3 types of th
 
 # Component styles
 
-Components can also define an additional `LabComponents` style that directly depends on `MaterialComponents` theme and bypasses the entire `Lab` theme. 
+Components can also define an additional `LabComponents` style that directly depends on `MaterialComponents` theme and bypasses the entire `Lab` theme. The main goal of these themes is to make the components work within `MaterialComponents` themes.
+
 This is especially useful in 2 scenarios:
 
 - While the entire component library and design system are still in progress and not fully usable.
 - When including only a subset of the components in projects that don't want to implement the entire design system.
-
