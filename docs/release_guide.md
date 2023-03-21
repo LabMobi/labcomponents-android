@@ -48,9 +48,9 @@ ext {
 
 If you need to update the version codes then do not forget to commit and push the changes to the `develop` branch.
 
-1.3) Merge the verified `develop` branch state to `master` branch. 
+1.3) Merge the verified `develop` branch state to `main` branch. 
 
-### 2. Create a release from `master` branch in the CI
+### 2. Create a release from `main` branch in the CI
 
 Please note that APKs should be used for testing.
 For the Play Store App Bundles(aab) should be used.
@@ -105,7 +105,7 @@ versionBuild = 0 // Use this when builds with the same version are needed. Chang
 For example, for release `1.0.0` a Git tag "release-1.0.0" should be created. This can be done as shown below:
 
 ```bash
-git checkout master
+git checkout main
 git pull
 git tag release-X.Y.Z # <- Substitute the current version here
 git push origin release-X.Y.Z # <- Substitute the current version here

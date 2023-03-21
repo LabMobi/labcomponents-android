@@ -1,5 +1,5 @@
 # Has a separate flows for develop branch (automatic builds),
-# Merge Request (automatic builds) and master branch Release builds (manual builds).
+# Merge Request (automatic builds) and main branch Release builds (manual builds).
 definitions:
   artifacts: &androidArtifacts # Section def
     - emulator.log
@@ -44,8 +44,8 @@ workflows:
     name: Play Store Release builds
     instance_type: linux_x2
     scripts:
-      - name: Check 'master' branch
-        script: if [ "$FCI_BRANCH" != "master" ]; then exit 1; fi
+      - name: Check 'main' branch
+        script: if [ "$FCI_BRANCH" != "main" ]; then exit 1; fi
       - *stepLocalSetup
       - *stepCheckCode
       - *stepBuildRelease
