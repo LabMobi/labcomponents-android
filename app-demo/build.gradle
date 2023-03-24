@@ -67,7 +67,7 @@ android {
         }
     }
 
-    lintOptions {
+    lint {
         // Workaround for a bug in Kotlin extension's Parcelize
         warning "ParcelCreator"
 
@@ -86,6 +86,7 @@ android {
         warning "ImpliedQuantity"
         // Retrofit uses Okio and that generates this warning
         warning "InvalidPackage"
+        fatal "StopShip"
     }
 
     android.applicationVariants.all { variant ->
