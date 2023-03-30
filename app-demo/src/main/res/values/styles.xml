@@ -4,6 +4,11 @@
     <style name="AppTheme" parent="Theme.Lab.DayNight.Develop">
         <!-- Customize your theme here. -->
         <item name="android:statusBarColor">@color/black</item>
+        <!-- Use the fonts from platform design. These are not part of the actual components lib but a part of the demo app -->
+        <item name="labFontFamilyRegular">@font/font_regular</item>
+        <item name="labFontFamilyMedium">@font/font_medium</item>
+        <item name="labFontFamilySemibold">@font/font_semibold</item>
+        <item name="labFontFamilyBold">@font/font_bold</item>
     </style>
 
     <style name="Divider" parent="">
