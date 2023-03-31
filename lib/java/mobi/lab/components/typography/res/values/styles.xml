@@ -6,6 +6,33 @@
         <item name="android:textStyle">normal</item>
     </style>
 
+    <style name="TextAppearance.Lab.DisplayLarge">
+        <item name="fontFamily">?attr/labFontFamilyRegular</item>
+        <item name="android:fontFamily">?attr/labFontFamilyRegular</item>
+        <item name="android:textSize">56sp</item>
+        <item name="lineHeight">64sp</item>
+        <item name="android:lineHeight">64sp</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="TextAppearance.Lab.DisplayMedium">
+        <item name="fontFamily">?attr/labFontFamilyRegular</item>
+        <item name="android:fontFamily">?attr/labFontFamilyRegular</item>
+        <item name="android:textSize">45sp</item>
+        <item name="lineHeight">52sp</item>
+        <item name="android:lineHeight">52sp</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="TextAppearance.Lab.DisplaySmall">
+        <item name="fontFamily">?attr/labFontFamilyRegular</item>
+        <item name="android:fontFamily">?attr/labFontFamilyRegular</item>
+        <item name="android:textSize">36sp</item>
+        <item name="lineHeight">44sp</item>
+        <item name="android:lineHeight">44sp</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
     <style name="TextAppearance.Lab.HeadlineLarge">
         <item name="fontFamily">?attr/labFontFamilyRegular</item>
         <item name="android:fontFamily">?attr/labFontFamilyRegular</item>

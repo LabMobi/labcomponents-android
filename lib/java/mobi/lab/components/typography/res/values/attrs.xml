@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <attr name="labTextAppearanceDisplayLarge" format="reference" />
+    <attr name="labTextAppearanceDisplayMedium" format="reference" />
+    <attr name="labTextAppearanceDisplaySmall" format="reference" />
     <attr name="labTextAppearanceHeadlineLarge" format="reference" />
     <attr name="labTextAppearanceHeadlineMedium" format="reference" />
     <attr name="labTextAppearanceHeadlineSmall" format="reference" />

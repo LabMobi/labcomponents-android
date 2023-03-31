@@ -13,6 +13,21 @@
 
     <TextView
         style="@style/Text.TextStyle"
+        android:textAppearance="@style/TextAppearance.Lab.DisplayLarge"
+        android:text="TextAppearance.Lab.DisplayLarge" />
+
+    <TextView
+        style="@style/Text.TextStyle"
+        android:textAppearance="@style/TextAppearance.Lab.DisplayMedium"
+        android:text="TextAppearance.Lab.DisplayMedium" />
+
+    <TextView
+        style="@style/Text.TextStyle"
+        android:textAppearance="@style/TextAppearance.Lab.DisplaySmall"
+        android:text="TextAppearance.Lab.DisplaySmall" />
+
+    <TextView
+        style="@style/Text.TextStyle"
         android:textAppearance="@style/TextAppearance.Lab.HeadlineLarge"
         android:text="TextAppearance.Lab.HeadlineLarge" />
 

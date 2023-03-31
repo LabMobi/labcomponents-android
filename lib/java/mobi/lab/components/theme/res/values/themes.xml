@@ -84,6 +84,9 @@
         <item name="labFontFamilySemibold">@string/lab_internal_sys_font_family_semibold</item>
         <item name="labFontFamilyBold">@string/lab_internal_sys_font_family_bold</item>
 
+        <item name="labTextAppearanceDisplayLarge">@style/TextAppearance.Lab.DisplayLarge</item>
+        <item name="labTextAppearanceDisplayMedium">@style/TextAppearance.Lab.DisplayMedium</item>
+        <item name="labTextAppearanceDisplaySmall">@style/TextAppearance.Lab.DisplaySmall</item>
         <item name="labTextAppearanceHeadlineLarge">@style/TextAppearance.Lab.HeadlineLarge</item>
         <item name="labTextAppearanceHeadlineMedium">@style/TextAppearance.Lab.HeadlineMedium</item>
         <item name="labTextAppearanceHeadlineSmall">@style/TextAppearance.Lab.HeadlineSmall</item>
@@ -209,6 +212,9 @@
         <item name="labFontFamilySemibold">@string/lab_internal_sys_font_family_semibold</item>
         <item name="labFontFamilyBold">@string/lab_internal_sys_font_family_bold</item>
 
+        <item name="labTextAppearanceDisplayLarge">@style/TextAppearance.Lab.DisplayLarge</item>
+        <item name="labTextAppearanceDisplayMedium">@style/TextAppearance.Lab.DisplayMedium</item>
+        <item name="labTextAppearanceDisplaySmall">@style/TextAppearance.Lab.DisplaySmall</item>
         <item name="labTextAppearanceHeadlineLarge">@style/TextAppearance.Lab.HeadlineLarge</item>
         <item name="labTextAppearanceHeadlineMedium">@style/TextAppearance.Lab.HeadlineMedium</item>
         <item name="labTextAppearanceHeadlineSmall">@style/TextAppearance.Lab.HeadlineSmall</item>
