@@ -73,6 +73,8 @@
 
         <item name="shapeAppearance">?attr/shapeAppearance</item>
         <item name="shapeAppearanceOverlay">?attr/shapeAppearanceOverlay</item>
+
+        <item name="autoClearErrorMode">onTouch</item>
     </style>
 
     <style name="ThemeOverlay.LabComponents.TextInputLayout" parent="">

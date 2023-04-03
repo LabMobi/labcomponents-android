@@ -49,7 +49,7 @@ public open class LabTextField @JvmOverloads constructor(
      * Mode for automatically clearing TextField's error state.
      * @see [AutoClearErrorMode]
      */
-    public var autoClearErrorMode: AutoClearErrorMode = AutoClearErrorMode.ON_TEXT_CHANGED
+    public var autoClearErrorMode: AutoClearErrorMode = AutoClearErrorMode.ON_TOUCH
 
     /**
      * Inner [LabTextFieldEditText] that is automatically added as a child.
