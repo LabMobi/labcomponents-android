@@ -2,7 +2,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="NewApi">
     <style name="TextAppearance.Lab" parent="TextAppearance.Material3.BodyLarge">
         <!-- Add base styles here -->
-        <item name="android:textColor">@color/lab_internal_sys_color_selector_text_primary</item>
+        <item name="android:textColor">@color/lab_internal_sys_color_selector_on_surface</item>
         <item name="android:textStyle">normal</item>
     </style>
 

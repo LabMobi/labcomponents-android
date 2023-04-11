@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item android:state_enabled="false" android:color="?attr/labColorSelectorOutlineDisabled"/>
+    <!-- TODO update -->
+<!--    <item android:state_enabled="false" android:color="?attr/labColorSelectorOutlineDisabled"/>-->
     <item app:state_error="true" android:color="?attr/labColorError"/>
     <item android:state_hovered="true" android:color="?attr/labColorPrimary"/>
     <item android:state_focused="true" android:color="?attr/labColorPrimary"/>
     <item android:state_pressed="true" android:color="?attr/labColorPrimary"/>
-    <item android:color="?attr/labColorSelectorOutlineRegular"/>
+    <!-- TODO update -->
+<!--    <item android:color="?attr/labColorSelectorOutlineRegular"/>-->
 </selector>

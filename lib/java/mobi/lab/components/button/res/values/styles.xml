@@ -16,7 +16,7 @@
         <item name="shapeAppearance">@style/ShapeAppearance.Lab.Button</item>
         <item name="android:minHeight">48dp</item>
 
-        <item name="android:textColor">?attr/labColorSelectorOnPrimary</item>
+        <item name="android:textColor">?attr/labColorOnPrimarySelector</item>
         <item name="backgroundTint">?attr/labColorPrimary</item>
         <item name="rippleColor">@color/lab_internal_button_primary_ripple</item>
     </style>

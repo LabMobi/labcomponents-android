@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- TODO (1) can I reuse color definitions by multiple themes somehow? -->
-    <!-- TODO (2) Add Light and Dark theme definitions -->
     <!-- TODO (3) Add missing Material attribute overrides -->
     <!-- TODO (4) define the default status bar color once we have implemented the Toolbar component-->
-    <!-- TODO (5) add error, success, caution attributes ?-->
     <!-- TODO (6) define emphasis text styles? -->
 
     <!-- We have a set of Light and Dark themes defined in this file. Both themes need to define -->
@@ -15,67 +13,154 @@
     <!-- duplicate either color and other theme values between the Dark and Light theme variants. -->
     <style name="Theme.Lab.Light" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Color scheme START -->
+        <!-- Primary -->
         <item name="labColorPrimary">@color/lab_internal_sys_color_light_primary</item>
+        <item name="labColorPrimarySelector">@color/lab_internal_sys_color_selector_primary</item>
+        <item name="labColorPrimarySelectorFocused">@color/lab_internal_sys_color_light_primary_focused</item>
+        <item name="labColorPrimarySelectorPressed">@color/lab_internal_sys_color_light_primary_pressed</item>
+        <item name="labColorPrimarySelectorDisabled">@color/lab_internal_sys_color_light_primary_disabled</item>
+
         <item name="labColorOnPrimary">@color/lab_internal_sys_color_light_on_primary</item>
+        <item name="labColorOnPrimarySelector">@color/lab_internal_sys_color_selector_on_primary</item>
+        <item name="labColorOnPrimarySelectorDisabled">@color/lab_internal_sys_color_light_primary_disabled</item>
+
+        <item name="labColorPrimarySurface">@color/lab_internal_sys_color_light_primary_surface</item>
+        <item name="labColorPrimarySurfaceSelector">@color/lab_internal_sys_color_selector_primary_surface</item>
+        <item name="labColorPrimarySurfaceSelectorFocused">@color/lab_internal_sys_color_light_primary_surface_focused</item>
+        <item name="labColorPrimarySurfaceSelectorPressed">@color/lab_internal_sys_color_light_primary_surface_pressed</item>
+        <item name="labColorPrimarySurfaceSelectorDisabled">@color/lab_internal_sys_color_light_primary_surface_disabled</item>
+
+        <item name="labColorOnPrimarySurface">@color/lab_internal_sys_color_light_on_primary_surface</item>
+        <item name="labColorOnPrimarySurfaceSelector">@color/lab_internal_sys_color_selector_on_primary_surface</item>
+        <item name="labColorOnPrimarySurfaceSelectorDisabled">@color/lab_internal_sys_color_light_on_primary_surface_disabled</item>
+
+        <!-- Secondary -->
         <item name="labColorSecondary">@color/lab_internal_sys_color_light_secondary</item>
+        <item name="labColorSecondarySelector">@color/lab_internal_sys_color_selector_secondary</item>
+        <item name="labColorSecondarySelectorFocused">@color/lab_internal_sys_color_light_secondary_focused</item>
+        <item name="labColorSecondarySelectorPressed">@color/lab_internal_sys_color_light_secondary_pressed</item>
+        <item name="labColorSecondarySelectorDisabled">@color/lab_internal_sys_color_light_secondary_disabled</item>
+
         <item name="labColorOnSecondary">@color/lab_internal_sys_color_light_on_secondary</item>
-        <item name="labColorSurface">@color/lab_internal_sys_color_light_surface</item>
-        <item name="labColorOnSurface">@color/lab_internal_sys_color_light_on_surface</item>h
-        <item name="labColorBackground">@color/lab_internal_sys_color_light_background</item>
-        <item name="labColorOnBackground">@color/lab_internal_sys_color_light_on_background</item>
+        <item name="labColorOnSecondarySelector">@color/lab_internal_sys_color_selector_on_secondary</item>
+        <item name="labColorOnSecondarySelectorDisabled">@color/lab_internal_sys_color_light_on_secondary_disabled</item>
+
+        <item name="labColorSecondarySurface">@color/lab_internal_sys_color_light_secondary_surface</item>
+        <item name="labColorSecondarySurfaceSelector">@color/lab_internal_sys_color_selector_secondary_surface</item>
+        <item name="labColorSecondarySurfaceSelectorFocused">@color/lab_internal_sys_color_light_secondary_surface_focused</item>
+        <item name="labColorSecondarySurfaceSelectorPressed">@color/lab_internal_sys_color_light_secondary_surface_pressed</item>
+        <item name="labColorSecondarySurfaceSelectorDisabled">@color/lab_internal_sys_color_light_secondary_surface_disabled</item>
+
+        <item name="labColorOnSecondarySurface">@color/lab_internal_sys_color_light_on_secondary_surface</item>
+        <item name="labColorOnSecondarySurfaceSelector">@color/lab_internal_sys_color_selector_on_secondary_surface</item>
+        <item name="labColorOnSecondarySurfaceSelectorDisabled">@color/lab_internal_sys_color_light_on_secondary_surface_disabled</item>
+
+        <!-- Error -->
         <item name="labColorError">@color/lab_internal_sys_color_light_error</item>
-        <item name="labColorTextPrimary">@color/lab_internal_sys_color_light_text_primary</item>
-        <item name="labColorTextSecondary">@color/lab_internal_sys_color_light_text_secondary</item>
+        <item name="labColorErrorSelector">@color/lab_internal_sys_color_selector_error</item>
+        <item name="labColorErrorSelectorFocused">@color/lab_internal_sys_color_light_error_focused</item>
+        <item name="labColorErrorSelectorPressed">@color/lab_internal_sys_color_light_error_pressed</item>
+        <item name="labColorErrorSelectorDisabled">@color/lab_internal_sys_color_light_error_disabled</item>
 
-        <!-- Individual color state overrides. These are used by top level colors by default. -->
-        <item name="labColorSelectorPrimary">@color/lab_internal_sys_color_selector_primary</item>
-        <item name="labColorSelectorPrimaryRegular">@color/lab_internal_sys_color_light_primary</item>
-        <item name="labColorSelectorPrimaryHover">@color/lab_internal_sys_color_light_primary_hover</item>
-        <item name="labColorSelectorPrimaryFocused">@color/lab_internal_sys_color_light_primary_focused</item>
-        <item name="labColorSelectorPrimaryPressed">@color/lab_internal_sys_color_light_primary_pressed</item>
-        <item name="labColorSelectorPrimaryDisabled">@color/lab_internal_sys_color_light_primary_disabled</item>
+        <item name="labColorOnError">@color/lab_internal_sys_color_light_on_error</item>
+        <item name="labColorOnErrorSelector">@color/lab_internal_sys_color_selector_on_error</item>
+        <item name="labColorOnErrorSelectorDisabled">@color/lab_internal_sys_color_light_on_error_disabled</item>
 
-        <item name="labColorSelectorOnPrimary">@color/lab_internal_sys_color_selector_on_primary</item>
-        <item name="labColorSelectorOnPrimaryRegular">@color/lab_internal_sys_color_light_on_primary</item>
-        <item name="labColorSelectorOnPrimaryHover">@color/lab_internal_sys_color_light_on_primary_hover</item>
-        <item name="labColorSelectorOnPrimaryFocused">@color/lab_internal_sys_color_light_on_primary_focused</item>
-        <item name="labColorSelectorOnPrimaryPressed">@color/lab_internal_sys_color_light_on_primary_pressed</item>
-        <item name="labColorSelectorOnPrimaryDisabled">@color/lab_internal_sys_color_light_on_primary_disabled</item>
+        <item name="labColorErrorSurface">@color/lab_internal_sys_color_light_error_surface</item>
+        <item name="labColorErrorSurfaceSelector">@color/lab_internal_sys_color_selector_error_surface</item>
+        <item name="labColorErrorSurfaceSelectorFocused">@color/lab_internal_sys_color_light_error_surface_focused</item>
+        <item name="labColorErrorSurfaceSelectorPressed">@color/lab_internal_sys_color_light_error_surface_pressed</item>
+        <item name="labColorErrorSurfaceSelectorDisabled">@color/lab_internal_sys_color_light_error_surface_disabled</item>
 
-        <item name="labColorSelectorSecondary">@color/lab_internal_sys_color_selector_secondary</item>
-        <item name="labColorSelectorSecondaryRegular">@color/lab_internal_sys_color_light_secondary</item>
-        <item name="labColorSelectorSecondaryHover">@color/lab_internal_sys_color_light_secondary_hover</item>
-        <item name="labColorSelectorSecondaryFocused">@color/lab_internal_sys_color_light_secondary_focused</item>
-        <item name="labColorSelectorSecondaryPressed">@color/lab_internal_sys_color_light_secondary_pressed</item>
-        <item name="labColorSelectorSecondaryDisabled">@color/lab_internal_sys_color_light_secondary_disabled</item>
+        <item name="labColorOnErrorSurface">@color/lab_internal_sys_color_light_on_error_surface</item>
+        <item name="labColorOnErrorSurfaceSelector">@color/lab_internal_sys_color_selector_on_error_surface</item>
+        <item name="labColorOnErrorSurfaceSelectorDisabled">@color/lab_internal_sys_color_light_on_error_surface_disabled</item>
 
-        <item name="labColorSelectorOnSecondary">@color/lab_internal_sys_color_selector_on_secondary</item>
-        <item name="labColorSelectorOnSecondaryRegular">@color/lab_internal_sys_color_light_on_secondary</item>
-        <item name="labColorSelectorOnSecondaryHover">@color/lab_internal_sys_color_light_on_secondary_hover</item>
-        <item name="labColorSelectorOnSecondaryFocused">@color/lab_internal_sys_color_light_on_secondary_focused</item>
-        <item name="labColorSelectorOnSecondaryPressed">@color/lab_internal_sys_color_light_on_secondary_pressed</item>
-        <item name="labColorSelectorOnSecondaryDisabled">@color/lab_internal_sys_color_light_on_secondary_disabled</item>
+        <!-- Success -->
+        <item name="labColorSuccess">@color/lab_internal_sys_color_light_success</item>
+        <item name="labColorSuccessSelector">@color/lab_internal_sys_color_selector_success</item>
+        <item name="labColorSuccessSelectorFocused">@color/lab_internal_sys_color_light_success_focused</item>
+        <item name="labColorSuccessSelectorPressed">@color/lab_internal_sys_color_light_success_pressed</item>
+        <item name="labColorSuccessSelectorDisabled">@color/lab_internal_sys_color_light_success_disabled</item>
 
-        <item name="labColorSelectorTextPrimary">@color/lab_internal_sys_color_selector_text_primary</item>
-        <item name="labColorSelectorTextPrimaryRegular">@color/lab_internal_sys_color_light_text_primary</item>
-        <item name="labColorSelectorTextPrimaryHover">@color/lab_internal_sys_color_light_text_primary_hover</item>
-        <item name="labColorSelectorTextPrimaryFocused">@color/lab_internal_sys_color_light_text_primary_focused</item>
-        <item name="labColorSelectorTextPrimaryPressed">@color/lab_internal_sys_color_light_text_primary_pressed</item>
-        <item name="labColorSelectorTextPrimaryDisabled">@color/lab_internal_sys_color_light_text_primary_disabled</item>
+        <item name="labColorOnSuccess">@color/lab_internal_sys_color_light_on_success</item>
+        <item name="labColorOnSuccessSelector">@color/lab_internal_sys_color_selector_on_success</item>
+        <item name="labColorOnSuccessSelectorDisabled">@color/lab_internal_sys_color_light_on_success_disabled</item>
 
-        <item name="labColorSelectorTextSecondary">@color/lab_internal_sys_color_selector_text_secondary</item>
-        <item name="labColorSelectorTextSecondaryRegular">@color/lab_internal_sys_color_light_text_secondary</item>
-        <item name="labColorSelectorTextSecondaryHover">@color/lab_internal_sys_color_light_text_secondary_hover</item>
-        <item name="labColorSelectorTextSecondaryFocused">@color/lab_internal_sys_color_light_text_secondary_focused</item>
-        <item name="labColorSelectorTextSecondaryPressed">@color/lab_internal_sys_color_light_text_secondary_pressed</item>
-        <item name="labColorSelectorTextSecondaryDisabled">@color/lab_internal_sys_color_light_text_secondary_disabled</item>
+        <item name="labColorSuccessSurface">@color/lab_internal_sys_color_light_success_surface</item>
+        <item name="labColorSuccessSurfaceSelector">@color/lab_internal_sys_color_selector_success_surface</item>
+        <item name="labColorSuccessSurfaceSelectorFocused">@color/lab_internal_sys_color_light_success_surface_focused</item>
+        <item name="labColorSuccessSurfaceSelectorPressed">@color/lab_internal_sys_color_light_success_surface_pressed</item>
+        <item name="labColorSuccessSurfaceSelectorDisabled">@color/lab_internal_sys_color_light_success_surface_disabled</item>
 
-        <item name="labColorSelectorOutline">@color/lab_internal_sys_color_selector_outline</item>
-        <item name="labColorSelectorOutlineRegular">@color/lab_internal_sys_color_light_outline</item>
-        <item name="labColorSelectorOutlineHover">@color/lab_internal_sys_color_light_outline_hover</item>
-        <item name="labColorSelectorOutlineFocused">@color/lab_internal_sys_color_light_outline_focused</item>
-        <item name="labColorSelectorOutlinePressed">@color/lab_internal_sys_color_light_outline_pressed</item>
-        <item name="labColorSelectorOutlineDisabled">@color/lab_internal_sys_color_light_outline_disabled</item>
+        <item name="labColorOnSuccessSurface">@color/lab_internal_sys_color_light_on_success_surface</item>
+        <item name="labColorOnSuccessSurfaceSelector">@color/lab_internal_sys_color_selector_on_success_surface</item>
+        <item name="labColorOnSuccessSurfaceSelectorDisabled">@color/lab_internal_sys_color_light_on_success_surface_disabled</item>
+
+        <!-- Caution -->
+        <item name="labColorCaution">@color/lab_internal_sys_color_light_caution</item>
+        <item name="labColorCautionSelector">@color/lab_internal_sys_color_selector_caution</item>
+        <item name="labColorCautionSelectorFocused">@color/lab_internal_sys_color_light_caution_focused</item>
+        <item name="labColorCautionSelectorPressed">@color/lab_internal_sys_color_light_caution_pressed</item>
+        <item name="labColorCautionSelectorDisabled">@color/lab_internal_sys_color_light_caution_disabled</item>
+
+        <item name="labColorOnCaution">@color/lab_internal_sys_color_light_on_caution</item>
+        <item name="labColorOnCautionSelector">@color/lab_internal_sys_color_selector_on_caution</item>
+        <item name="labColorOnCautionSelectorDisabled">@color/lab_internal_sys_color_light_on_caution_disabled</item>
+
+        <item name="labColorCautionSurface">@color/lab_internal_sys_color_light_caution_surface</item>
+        <item name="labColorCautionSurfaceSelector">@color/lab_internal_sys_color_selector_caution_surface</item>
+        <item name="labColorCautionSurfaceSelectorFocused">@color/lab_internal_sys_color_light_caution_surface_focused</item>
+        <item name="labColorCautionSurfaceSelectorPressed">@color/lab_internal_sys_color_light_caution_surface_pressed</item>
+        <item name="labColorCautionSurfaceSelectorDisabled">@color/lab_internal_sys_color_light_caution_surface_disabled</item>
+
+        <item name="labColorOnCautionSurface">@color/lab_internal_sys_color_light_on_caution_surface</item>
+        <item name="labColorOnCautionSurfaceSelector">@color/lab_internal_sys_color_selector_on_caution_surface</item>
+        <item name="labColorOnCautionSurfaceSelectorDisabled">@color/lab_internal_sys_color_light_on_caution_surface_disabled</item>
+
+        <!-- Neutral -->
+        <item name="labColorBackground">@color/lab_internal_sys_color_light_background</item>
+
+        <item name="labColorOnBackground">@color/lab_internal_sys_color_light_on_background</item>
+        <item name="labColorOnBackgroundSelector">@color/lab_internal_sys_color_selector_on_background</item>
+        <item name="labColorOnBackgroundSelectorDisabled">@color/lab_internal_sys_color_light_on_background_disabled</item>
+
+        <item name="labColorSurface">@color/lab_internal_sys_color_light_surface</item>
+        <item name="labColorSurfaceSelector">@color/lab_internal_sys_color_selector_surface</item>
+        <item name="labColorSurfaceSelectorFocused">@color/lab_internal_sys_color_light_surface_focused</item>
+        <item name="labColorSurfaceSelectorPressed">@color/lab_internal_sys_color_light_surface_pressed</item>
+        <item name="labColorSurfaceSelectorDisabled">@color/lab_internal_sys_color_light_surface_disabled</item>
+
+        <item name="labColorOnSurface">@color/lab_internal_sys_color_light_on_surface</item>
+        <item name="labColorOnSurfaceSelector">@color/lab_internal_sys_color_selector_on_surface</item>
+        <item name="labColorOnSurfaceSelectorDisabled">@color/lab_internal_sys_color_light_on_surface_disabled</item>
+
+        <item name="labColorOutline">@color/lab_internal_sys_color_light_outline</item>
+        <item name="labColorOutlineSelector">@color/lab_internal_sys_color_selector_outline</item>
+        <item name="labColorOutlineSelectorDisabled">@color/lab_internal_sys_color_light_outline_disabled</item>
+
+        <item name="labColorDivider">@color/lab_internal_sys_color_light_divider</item>
+        <item name="labColorDividerSelector">@color/lab_internal_sys_color_selector_divider</item>
+        <item name="labColorDividerSelectorDisabled">@color/lab_internal_sys_color_light_divider_disabled</item>
+
+        <!-- Neutral variant -->
+        <item name="labColorSurfaceVariant">@color/lab_internal_sys_color_light_surface_variant</item>
+        <item name="labColorSurfaceVariantSelector">@color/lab_internal_sys_color_selector_surface_variant</item>
+        <item name="labColorSurfaceVariantSelectorFocused">@color/lab_internal_sys_color_light_surface_variant_focused</item>
+        <item name="labColorSurfaceVariantSelectorPressed">@color/lab_internal_sys_color_light_surface_variant_pressed</item>
+        <item name="labColorSurfaceVariantSelectorDisabled">@color/lab_internal_sys_color_light_surface_variant_disabled</item>
+
+        <item name="labColorOnSurfaceVariant">@color/lab_internal_sys_color_light_on_surface_variant</item>
+        <item name="labColorOnSurfaceVariantSelector">@color/lab_internal_sys_color_selector_on_surface_variant</item>
+        <item name="labColorOnSurfaceVariantSelectorDisabled">@color/lab_internal_sys_color_light_on_surface_variant_disabled</item>
+
+        <item name="labColorOutlineVariant">@color/lab_internal_sys_color_light_outline_variant</item>
+        <item name="labColorOutlineVariantSelector">@color/lab_internal_sys_color_selector_outline_variant</item>
+        <item name="labColorOutlineVariantSelectorDisabled">@color/lab_internal_sys_color_light_outline_variant_disabled</item>
+
+        <item name="labColorDividerVariant">@color/lab_internal_sys_color_light_divider_variant</item>
+        <item name="labColorDividerVariantSelector">@color/lab_internal_sys_color_selector_divider_variant</item>
+        <item name="labColorDividerVariantSelectorDisabled">@color/lab_internal_sys_color_light_divider_variant_disabled</item>
         <!-- Color scheme END -->
 
         <!-- Emphasis -->
@@ -133,82 +218,169 @@
         <item name="colorOnSecondary">?attr/labColorOnSecondary</item>
         <item name="colorSurface">?attr/labColorSurface</item>
         <item name="colorOnSurface">?attr/labColorOnSurface</item>
-        <item name="colorSurfaceVariant">?attr/labColorSurface</item>
-        <item name="colorOnSurfaceVariant">?attr/labColorOnSurface</item>
+        <item name="colorSurfaceVariant">?attr/labColorSurfaceVariant</item>
+        <item name="colorOnSurfaceVariant">?attr/labColorOnSurfaceVariant</item>
         <item name="android:colorBackground">?attr/labColorBackground</item>
         <item name="colorOnBackground">?attr/labColorOnBackground</item>
         <item name="colorError">?attr/labColorError</item>
 
         <!-- Material text color overrides -->
-        <item name="android:textColorPrimary">?attr/labColorSelectorTextPrimaryRegular</item>
-        <item name="android:textColorSecondary">?attr/labColorSelectorSecondary</item>
+        <item name="android:textColorPrimary">?attr/labColorOnSurface</item>
+        <item name="android:textColorSecondary">?attr/labColorOnSurfaceVariant</item>
         <item name="android:textColorHighlight">?attr/labColorPrimary</item>
         <item name="android:textColorLink">?attr/labColorPrimary</item>
     </style>
 
     <style name="Theme.Lab.Dark" parent="Theme.MaterialComponents.NoActionBar">
         <!-- Color scheme START -->
+        <!-- Primary -->
         <item name="labColorPrimary">@color/lab_internal_sys_color_dark_primary</item>
+        <item name="labColorPrimarySelector">@color/lab_internal_sys_color_selector_primary</item>
+        <item name="labColorPrimarySelectorFocused">@color/lab_internal_sys_color_dark_primary_focused</item>
+        <item name="labColorPrimarySelectorPressed">@color/lab_internal_sys_color_dark_primary_pressed</item>
+        <item name="labColorPrimarySelectorDisabled">@color/lab_internal_sys_color_dark_primary_disabled</item>
+
         <item name="labColorOnPrimary">@color/lab_internal_sys_color_dark_on_primary</item>
+        <item name="labColorOnPrimarySelector">@color/lab_internal_sys_color_selector_on_primary</item>
+        <item name="labColorOnPrimarySelectorDisabled">@color/lab_internal_sys_color_dark_primary_disabled</item>
+
+        <item name="labColorPrimarySurface">@color/lab_internal_sys_color_dark_primary_surface</item>
+        <item name="labColorPrimarySurfaceSelector">@color/lab_internal_sys_color_selector_primary_surface</item>
+        <item name="labColorPrimarySurfaceSelectorFocused">@color/lab_internal_sys_color_dark_primary_surface_focused</item>
+        <item name="labColorPrimarySurfaceSelectorPressed">@color/lab_internal_sys_color_dark_primary_surface_pressed</item>
+        <item name="labColorPrimarySurfaceSelectorDisabled">@color/lab_internal_sys_color_dark_primary_surface_disabled</item>
+
+        <item name="labColorOnPrimarySurface">@color/lab_internal_sys_color_dark_on_primary_surface</item>
+        <item name="labColorOnPrimarySurfaceSelector">@color/lab_internal_sys_color_selector_on_primary_surface</item>
+        <item name="labColorOnPrimarySurfaceSelectorDisabled">@color/lab_internal_sys_color_dark_on_primary_surface_disabled</item>
+
+        <!-- Secondary -->
         <item name="labColorSecondary">@color/lab_internal_sys_color_dark_secondary</item>
+        <item name="labColorSecondarySelector">@color/lab_internal_sys_color_selector_secondary</item>
+        <item name="labColorSecondarySelectorFocused">@color/lab_internal_sys_color_dark_secondary_focused</item>
+        <item name="labColorSecondarySelectorPressed">@color/lab_internal_sys_color_dark_secondary_pressed</item>
+        <item name="labColorSecondarySelectorDisabled">@color/lab_internal_sys_color_dark_secondary_disabled</item>
+
         <item name="labColorOnSecondary">@color/lab_internal_sys_color_dark_on_secondary</item>
-        <item name="labColorSurface">@color/lab_internal_sys_color_dark_surface</item>
-        <item name="labColorOnSurface">@color/lab_internal_sys_color_dark_on_surface</item>h
-        <item name="labColorBackground">@color/lab_internal_sys_color_dark_background</item>
-        <item name="labColorOnBackground">@color/lab_internal_sys_color_dark_on_background</item>
+        <item name="labColorOnSecondarySelector">@color/lab_internal_sys_color_selector_on_secondary</item>
+        <item name="labColorOnSecondarySelectorDisabled">@color/lab_internal_sys_color_dark_on_secondary_disabled</item>
+
+        <item name="labColorSecondarySurface">@color/lab_internal_sys_color_dark_secondary_surface</item>
+        <item name="labColorSecondarySurfaceSelector">@color/lab_internal_sys_color_selector_secondary_surface</item>
+        <item name="labColorSecondarySurfaceSelectorFocused">@color/lab_internal_sys_color_dark_secondary_surface_focused</item>
+        <item name="labColorSecondarySurfaceSelectorPressed">@color/lab_internal_sys_color_dark_secondary_surface_pressed</item>
+        <item name="labColorSecondarySurfaceSelectorDisabled">@color/lab_internal_sys_color_dark_secondary_surface_disabled</item>
+
+        <item name="labColorOnSecondarySurface">@color/lab_internal_sys_color_dark_on_secondary_surface</item>
+        <item name="labColorOnSecondarySurfaceSelector">@color/lab_internal_sys_color_selector_on_secondary_surface</item>
+        <item name="labColorOnSecondarySurfaceSelectorDisabled">@color/lab_internal_sys_color_dark_on_secondary_surface_disabled</item>
+
+        <!-- Error -->
         <item name="labColorError">@color/lab_internal_sys_color_dark_error</item>
-        <item name="labColorTextPrimary">@color/lab_internal_sys_color_dark_text_primary</item>
-        <item name="labColorTextSecondary">@color/lab_internal_sys_color_dark_text_secondary</item>
+        <item name="labColorErrorSelector">@color/lab_internal_sys_color_selector_error</item>
+        <item name="labColorErrorSelectorFocused">@color/lab_internal_sys_color_dark_error_focused</item>
+        <item name="labColorErrorSelectorPressed">@color/lab_internal_sys_color_dark_error_pressed</item>
+        <item name="labColorErrorSelectorDisabled">@color/lab_internal_sys_color_dark_error_disabled</item>
 
-        <!-- Individual color state overrides. These are used by top level colors by default. -->
-        <item name="labColorSelectorPrimary">@color/lab_internal_sys_color_selector_primary</item>
-        <item name="labColorSelectorPrimaryRegular">@color/lab_internal_sys_color_dark_primary</item>
-        <item name="labColorSelectorPrimaryHover">@color/lab_internal_sys_color_dark_primary_hover</item>
-        <item name="labColorSelectorPrimaryFocused">@color/lab_internal_sys_color_dark_primary_focused</item>
-        <item name="labColorSelectorPrimaryPressed">@color/lab_internal_sys_color_dark_primary_pressed</item>
-        <item name="labColorSelectorPrimaryDisabled">@color/lab_internal_sys_color_dark_primary_disabled</item>
+        <item name="labColorOnError">@color/lab_internal_sys_color_dark_on_error</item>
+        <item name="labColorOnErrorSelector">@color/lab_internal_sys_color_selector_on_error</item>
+        <item name="labColorOnErrorSelectorDisabled">@color/lab_internal_sys_color_dark_on_error_disabled</item>
 
-        <item name="labColorSelectorOnPrimary">@color/lab_internal_sys_color_selector_on_primary</item>
-        <item name="labColorSelectorOnPrimaryRegular">@color/lab_internal_sys_color_dark_on_primary</item>
-        <item name="labColorSelectorOnPrimaryHover">@color/lab_internal_sys_color_dark_on_primary_hover</item>
-        <item name="labColorSelectorOnPrimaryFocused">@color/lab_internal_sys_color_dark_on_primary_focused</item>
-        <item name="labColorSelectorOnPrimaryPressed">@color/lab_internal_sys_color_dark_on_primary_pressed</item>
-        <item name="labColorSelectorOnPrimaryDisabled">@color/lab_internal_sys_color_dark_on_primary_disabled</item>
+        <item name="labColorErrorSurface">@color/lab_internal_sys_color_dark_error_surface</item>
+        <item name="labColorErrorSurfaceSelector">@color/lab_internal_sys_color_selector_error_surface</item>
+        <item name="labColorErrorSurfaceSelectorFocused">@color/lab_internal_sys_color_dark_error_surface_focused</item>
+        <item name="labColorErrorSurfaceSelectorPressed">@color/lab_internal_sys_color_dark_error_surface_pressed</item>
+        <item name="labColorErrorSurfaceSelectorDisabled">@color/lab_internal_sys_color_dark_error_surface_disabled</item>
 
-        <item name="labColorSelectorSecondary">@color/lab_internal_sys_color_selector_secondary</item>
-        <item name="labColorSelectorSecondaryRegular">@color/lab_internal_sys_color_dark_secondary</item>
-        <item name="labColorSelectorSecondaryHover">@color/lab_internal_sys_color_dark_secondary_hover</item>
-        <item name="labColorSelectorSecondaryFocused">@color/lab_internal_sys_color_dark_secondary_focused</item>
-        <item name="labColorSelectorSecondaryPressed">@color/lab_internal_sys_color_dark_secondary_pressed</item>
-        <item name="labColorSelectorSecondaryDisabled">@color/lab_internal_sys_color_dark_secondary_disabled</item>
+        <item name="labColorOnErrorSurface">@color/lab_internal_sys_color_dark_on_error_surface</item>
+        <item name="labColorOnErrorSurfaceSelector">@color/lab_internal_sys_color_selector_on_error_surface</item>
+        <item name="labColorOnErrorSurfaceSelectorDisabled">@color/lab_internal_sys_color_dark_on_error_surface_disabled</item>
 
-        <item name="labColorSelectorOnSecondary">@color/lab_internal_sys_color_selector_on_secondary</item>
-        <item name="labColorSelectorOnSecondaryRegular">@color/lab_internal_sys_color_dark_on_secondary</item>
-        <item name="labColorSelectorOnSecondaryHover">@color/lab_internal_sys_color_dark_on_secondary_hover</item>
-        <item name="labColorSelectorOnSecondaryFocused">@color/lab_internal_sys_color_dark_on_secondary_focused</item>
-        <item name="labColorSelectorOnSecondaryPressed">@color/lab_internal_sys_color_dark_on_secondary_pressed</item>
-        <item name="labColorSelectorOnSecondaryDisabled">@color/lab_internal_sys_color_dark_on_secondary_disabled</item>
+        <!-- Success -->
+        <item name="labColorSuccess">@color/lab_internal_sys_color_dark_success</item>
+        <item name="labColorSuccessSelector">@color/lab_internal_sys_color_selector_success</item>
+        <item name="labColorSuccessSelectorFocused">@color/lab_internal_sys_color_dark_success_focused</item>
+        <item name="labColorSuccessSelectorPressed">@color/lab_internal_sys_color_dark_success_pressed</item>
+        <item name="labColorSuccessSelectorDisabled">@color/lab_internal_sys_color_dark_success_disabled</item>
 
-        <item name="labColorSelectorTextPrimary">@color/lab_internal_sys_color_selector_text_primary</item>
-        <item name="labColorSelectorTextPrimaryRegular">@color/lab_internal_sys_color_dark_text_primary</item>
-        <item name="labColorSelectorTextPrimaryHover">@color/lab_internal_sys_color_dark_text_primary_hover</item>
-        <item name="labColorSelectorTextPrimaryFocused">@color/lab_internal_sys_color_dark_text_primary_focused</item>
-        <item name="labColorSelectorTextPrimaryPressed">@color/lab_internal_sys_color_dark_text_primary_pressed</item>
-        <item name="labColorSelectorTextPrimaryDisabled">@color/lab_internal_sys_color_dark_text_primary_disabled</item>
+        <item name="labColorOnSuccess">@color/lab_internal_sys_color_dark_on_success</item>
+        <item name="labColorOnSuccessSelector">@color/lab_internal_sys_color_selector_on_success</item>
+        <item name="labColorOnSuccessSelectorDisabled">@color/lab_internal_sys_color_dark_on_success_disabled</item>
 
-        <item name="labColorSelectorTextSecondary">@color/lab_internal_sys_color_selector_text_secondary</item>
-        <item name="labColorSelectorTextSecondaryRegular">@color/lab_internal_sys_color_dark_text_secondary</item>
-        <item name="labColorSelectorTextSecondaryHover">@color/lab_internal_sys_color_dark_text_secondary_hover</item>
-        <item name="labColorSelectorTextSecondaryFocused">@color/lab_internal_sys_color_dark_text_secondary_focused</item>
-        <item name="labColorSelectorTextSecondaryPressed">@color/lab_internal_sys_color_dark_text_secondary_pressed</item>
-        <item name="labColorSelectorTextSecondaryDisabled">@color/lab_internal_sys_color_dark_text_secondary_disabled</item>
+        <item name="labColorSuccessSurface">@color/lab_internal_sys_color_dark_success_surface</item>
+        <item name="labColorSuccessSurfaceSelector">@color/lab_internal_sys_color_selector_success_surface</item>
+        <item name="labColorSuccessSurfaceSelectorFocused">@color/lab_internal_sys_color_dark_success_surface_focused</item>
+        <item name="labColorSuccessSurfaceSelectorPressed">@color/lab_internal_sys_color_dark_success_surface_pressed</item>
+        <item name="labColorSuccessSurfaceSelectorDisabled">@color/lab_internal_sys_color_dark_success_surface_disabled</item>
 
-        <item name="labColorSelectorOutline">@color/lab_internal_sys_color_selector_outline</item>
-        <item name="labColorSelectorOutlineRegular">@color/lab_internal_sys_color_dark_outline</item>
-        <item name="labColorSelectorOutlineHover">@color/lab_internal_sys_color_dark_outline_hover</item>
-        <item name="labColorSelectorOutlineFocused">@color/lab_internal_sys_color_dark_outline_focused</item>
-        <item name="labColorSelectorOutlinePressed">@color/lab_internal_sys_color_dark_outline_pressed</item>
-        <item name="labColorSelectorOutlineDisabled">@color/lab_internal_sys_color_dark_outline_disabled</item>
+        <item name="labColorOnSuccessSurface">@color/lab_internal_sys_color_dark_on_success_surface</item>
+        <item name="labColorOnSuccessSurfaceSelector">@color/lab_internal_sys_color_selector_on_success_surface</item>
+        <item name="labColorOnSuccessSurfaceSelectorDisabled">@color/lab_internal_sys_color_dark_on_success_surface_disabled</item>
+
+        <!-- Caution -->
+        <item name="labColorCaution">@color/lab_internal_sys_color_dark_caution</item>
+        <item name="labColorCautionSelector">@color/lab_internal_sys_color_selector_caution</item>
+        <item name="labColorCautionSelectorFocused">@color/lab_internal_sys_color_dark_caution_focused</item>
+        <item name="labColorCautionSelectorPressed">@color/lab_internal_sys_color_dark_caution_pressed</item>
+        <item name="labColorCautionSelectorDisabled">@color/lab_internal_sys_color_dark_caution_disabled</item>
+
+        <item name="labColorOnCaution">@color/lab_internal_sys_color_dark_on_caution</item>
+        <item name="labColorOnCautionSelector">@color/lab_internal_sys_color_selector_on_caution</item>
+        <item name="labColorOnCautionSelectorDisabled">@color/lab_internal_sys_color_dark_on_caution_disabled</item>
+
+        <item name="labColorCautionSurface">@color/lab_internal_sys_color_dark_caution_surface</item>
+        <item name="labColorCautionSurfaceSelector">@color/lab_internal_sys_color_selector_caution_surface</item>
+        <item name="labColorCautionSurfaceSelectorFocused">@color/lab_internal_sys_color_dark_caution_surface_focused</item>
+        <item name="labColorCautionSurfaceSelectorPressed">@color/lab_internal_sys_color_dark_caution_surface_pressed</item>
+        <item name="labColorCautionSurfaceSelectorDisabled">@color/lab_internal_sys_color_dark_caution_surface_disabled</item>
+
+        <item name="labColorOnCautionSurface">@color/lab_internal_sys_color_dark_on_caution_surface</item>
+        <item name="labColorOnCautionSurfaceSelector">@color/lab_internal_sys_color_selector_on_caution_surface</item>
+        <item name="labColorOnCautionSurfaceSelectorDisabled">@color/lab_internal_sys_color_dark_on_caution_surface_disabled</item>
+
+        <!-- Neutral -->
+        <item name="labColorBackground">@color/lab_internal_sys_color_dark_background</item>
+
+        <item name="labColorOnBackground">@color/lab_internal_sys_color_dark_on_background</item>
+        <item name="labColorOnBackgroundSelector">@color/lab_internal_sys_color_selector_on_background</item>
+        <item name="labColorOnBackgroundSelectorDisabled">@color/lab_internal_sys_color_dark_on_background_disabled</item>
+
+        <item name="labColorSurface">@color/lab_internal_sys_color_dark_surface</item>
+        <item name="labColorSurfaceSelector">@color/lab_internal_sys_color_selector_surface</item>
+        <item name="labColorSurfaceSelectorFocused">@color/lab_internal_sys_color_dark_surface_focused</item>
+        <item name="labColorSurfaceSelectorPressed">@color/lab_internal_sys_color_dark_surface_pressed</item>
+        <item name="labColorSurfaceSelectorDisabled">@color/lab_internal_sys_color_dark_surface_disabled</item>
+
+        <item name="labColorOnSurface">@color/lab_internal_sys_color_dark_on_surface</item>
+        <item name="labColorOnSurfaceSelector">@color/lab_internal_sys_color_selector_on_surface</item>
+        <item name="labColorOnSurfaceSelectorDisabled">@color/lab_internal_sys_color_dark_on_surface_disabled</item>
+
+        <item name="labColorOutline">@color/lab_internal_sys_color_dark_outline</item>
+        <item name="labColorOutlineSelector">@color/lab_internal_sys_color_selector_outline</item>
+        <item name="labColorOutlineSelectorDisabled">@color/lab_internal_sys_color_dark_outline_disabled</item>
+
+        <item name="labColorDivider">@color/lab_internal_sys_color_dark_divider</item>
+        <item name="labColorDividerSelector">@color/lab_internal_sys_color_selector_divider</item>
+        <item name="labColorDividerSelectorDisabled">@color/lab_internal_sys_color_dark_divider_disabled</item>
+
+        <!-- Neutral variant -->
+        <item name="labColorSurfaceVariant">@color/lab_internal_sys_color_dark_surface_variant</item>
+        <item name="labColorSurfaceVariantSelector">@color/lab_internal_sys_color_selector_surface_variant</item>
+        <item name="labColorSurfaceVariantSelectorFocused">@color/lab_internal_sys_color_dark_surface_variant_focused</item>
+        <item name="labColorSurfaceVariantSelectorPressed">@color/lab_internal_sys_color_dark_surface_variant_pressed</item>
+        <item name="labColorSurfaceVariantSelectorDisabled">@color/lab_internal_sys_color_dark_surface_variant_disabled</item>
+
+        <item name="labColorOnSurfaceVariant">@color/lab_internal_sys_color_dark_on_surface_variant</item>
+        <item name="labColorOnSurfaceVariantSelector">@color/lab_internal_sys_color_selector_on_surface_variant</item>
+        <item name="labColorOnSurfaceVariantSelectorDisabled">@color/lab_internal_sys_color_dark_on_surface_variant_disabled</item>
+
+        <item name="labColorOutlineVariant">@color/lab_internal_sys_color_dark_outline_variant</item>
+        <item name="labColorOutlineVariantSelector">@color/lab_internal_sys_color_selector_outline_variant</item>
+        <item name="labColorOutlineVariantSelectorDisabled">@color/lab_internal_sys_color_dark_outline_variant_disabled</item>
+
+        <item name="labColorDividerVariant">@color/lab_internal_sys_color_dark_divider_variant</item>
+        <item name="labColorDividerVariantSelector">@color/lab_internal_sys_color_selector_divider_variant</item>
+        <item name="labColorDividerVariantSelectorDisabled">@color/lab_internal_sys_color_dark_divider_variant_disabled</item>
         <!-- Color scheme END -->
 
         <!-- Emphasis -->
@@ -266,15 +438,15 @@
         <item name="colorOnSecondary">?attr/labColorOnSecondary</item>
         <item name="colorSurface">?attr/labColorSurface</item>
         <item name="colorOnSurface">?attr/labColorOnSurface</item>
-        <item name="colorSurfaceVariant">?attr/labColorSurface</item>
-        <item name="colorOnSurfaceVariant">?attr/labColorOnSurface</item>
+        <item name="colorSurfaceVariant">?attr/labColorSurfaceVariant</item>
+        <item name="colorOnSurfaceVariant">?attr/labColorOnSurfaceVariant</item>
         <item name="android:colorBackground">?attr/labColorBackground</item>
         <item name="colorOnBackground">?attr/labColorOnBackground</item>
         <item name="colorError">?attr/labColorError</item>
 
         <!-- Material text color overrides -->
-        <item name="android:textColorPrimary">?attr/labColorSelectorTextPrimaryRegular</item>
-        <item name="android:textColorSecondary">?attr/labColorSelectorSecondary</item>
+        <item name="android:textColorPrimary">?attr/labColorOnSurface</item>
+        <item name="android:textColorSecondary">?attr/labColorOnSurfaceVariant</item>
         <item name="android:textColorHighlight">?attr/labColorPrimary</item>
         <item name="android:textColorLink">?attr/labColorPrimary</item>
     </style>

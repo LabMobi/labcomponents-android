@@ -5,161 +5,152 @@
     <attr name="labEmphasisAlphaMedium" format="float"/>
     <attr name="labEmphasisAlphaDisabled" format="float"/>
 
-    <!-- Top level color overrides -->
-    <attr name="labColorPrimary" format="color"/>
-    <attr name="labColorOnPrimary" format="color"/>
-    <attr name="labColorPrimarySurface" format="color"/>
-    <attr name="labColorOnPrimarySurface" format="color"/>
-
-    <attr name="labColorSecondary" format="color"/>
-    <attr name="labColorOnSecondary" format="color"/>
-    <attr name="labColorSecondarySurface" format="color"/>
-    <attr name="labColorOnSecondarySurface" format="color"/>
-
-    <attr name="labColorError" format="color"/>
-    <attr name="labColorOnError" format="color"/>
-    <attr name="labColorErrorSurface" format="color"/>
-    <attr name="labColorOnErrorSurface" format="color"/>
-
-    <attr name="labColorSuccess" format="color"/>
-    <attr name="labColorOnSuccess" format="color"/>
-    <attr name="labColorSuccessSurface" format="color"/>
-    <attr name="labColorOnSuccessSurface" format="color"/>
-
-    <attr name="labColorCaution" format="color"/>
-    <attr name="labColorOnCaution" format="color"/>
-    <attr name="labColorCautionSurface" format="color"/>
-    <attr name="labColorOnCautionSurface" format="color"/>
-
-    <attr name="labColorBackground" format="color"/>
-    <attr name="labColorOnBackground" format="color"/>
-    <attr name="labColorSurface" format="color"/>
-    <attr name="labColorOnSurface" format="color"/>
-    <attr name="labColorOutline" format="color"/>
-    <attr name="labColorDivider" format="color"/>
-
-    <attr name="labColorSurfaceVariant" format="color"/>
-    <attr name="labColorOnSurfaceVariant" format="color"/>
-    <attr name="labColorOutlineVariant" format="color"/>
-    <attr name="labColorDividerVariant" format="color"/>
-
-    <!-- Individual color state overrides. These are used by top level colors by default. -->
     <!-- Primary -->
-    <attr name="labColorSelectorPrimary" format="color"/>
-    <attr name="labColorSelectorPrimaryFocused" format="color"/>
-    <attr name="labColorSelectorPrimaryPressed" format="color"/>
-    <attr name="labColorSelectorPrimaryDisabled" format="color"/>
+    <attr name="labColorPrimary" format="color"/>
+    <attr name="labColorPrimarySelector" format="color"/>
+    <attr name="labColorPrimarySelectorFocused" format="color"/>
+    <attr name="labColorPrimarySelectorPressed" format="color"/>
+    <attr name="labColorPrimarySelectorDisabled" format="color"/>
 
-    <attr name="labColorSelectorOnPrimary" format="color"/>
-    <attr name="labColorSelectorOnPrimaryDisabled" format="color"/>
+    <attr name="labColorOnPrimary" format="color"/>
+    <attr name="labColorOnPrimarySelector" format="color"/>
+    <attr name="labColorOnPrimarySelectorDisabled" format="color"/>
 
-    <attr name="labColorSelectorPrimarySurface" format="color"/>
-    <attr name="labColorSelectorPrimarySurfaceFocused" format="color"/>
-    <attr name="labColorSelectorPrimarySurfacePressed" format="color"/>
-    <attr name="labColorSelectorPrimarySurfaceDisabled" format="color"/>
+    <attr name="labColorPrimarySurface" format="color"/>
+    <attr name="labColorPrimarySurfaceSelector" format="color"/>
+    <attr name="labColorPrimarySurfaceSelectorFocused" format="color"/>
+    <attr name="labColorPrimarySurfaceSelectorPressed" format="color"/>
+    <attr name="labColorPrimarySurfaceSelectorDisabled" format="color"/>
 
-    <attr name="labColorSelectorOnPrimarySurface" format="color"/>
-    <attr name="labColorSelectorOnPrimarySurfaceDisabled" format="color"/>
+    <attr name="labColorOnPrimarySurface" format="color"/>
+    <attr name="labColorOnPrimarySurfaceSelector" format="color"/>
+    <attr name="labColorOnPrimarySurfaceSelectorDisabled" format="color"/>
 
     <!-- Secondary -->
-    <attr name="labColorSelectorSecondary" format="color"/>
-    <attr name="labColorSelectorSecondaryFocused" format="color"/>
-    <attr name="labColorSelectorSecondaryPressed" format="color"/>
-    <attr name="labColorSelectorSecondaryDisabled" format="color"/>
+    <attr name="labColorSecondary" format="color"/>
+    <attr name="labColorSecondarySelector" format="color"/>
+    <attr name="labColorSecondarySelectorFocused" format="color"/>
+    <attr name="labColorSecondarySelectorPressed" format="color"/>
+    <attr name="labColorSecondarySelectorDisabled" format="color"/>
 
-    <attr name="labColorSelectorOnSecondary" format="color"/>
-    <attr name="labColorSelectorOnSecondaryDisabled" format="color"/>
+    <attr name="labColorOnSecondary" format="color"/>
+    <attr name="labColorOnSecondarySelector" format="color"/>
+    <attr name="labColorOnSecondarySelectorDisabled" format="color"/>
 
-    <attr name="labColorSelectorSecondarySurface" format="color"/>
-    <attr name="labColorSelectorSecondarySurfaceFocused" format="color"/>
-    <attr name="labColorSelectorSecondarySurfacePressed" format="color"/>
-    <attr name="labColorSelectorSecondarySurfaceDisabled" format="color"/>
+    <attr name="labColorSecondarySurface" format="color"/>
+    <attr name="labColorSecondarySurfaceSelector" format="color"/>
+    <attr name="labColorSecondarySurfaceSelectorFocused" format="color"/>
+    <attr name="labColorSecondarySurfaceSelectorPressed" format="color"/>
+    <attr name="labColorSecondarySurfaceSelectorDisabled" format="color"/>
 
-    <attr name="labColorSelectorOnSecondarySurface" format="color"/>
-    <attr name="labColorSelectorOnSecondarySurfaceDisabled" format="color"/>
+    <attr name="labColorOnSecondarySurface" format="color"/>
+    <attr name="labColorOnSecondarySurfaceSelector" format="color"/>
+    <attr name="labColorOnSecondarySurfaceSelectorDisabled" format="color"/>
 
     <!-- Error -->
-    <attr name="labColorSelectorError" format="color"/>
-    <attr name="labColorSelectorErrorFocused" format="color"/>
-    <attr name="labColorSelectorErrorPressed" format="color"/>
-    <attr name="labColorSelectorErrorDisabled" format="color"/>
+    <attr name="labColorError" format="color"/>
+    <attr name="labColorErrorSelector" format="color"/>
+    <attr name="labColorErrorSelectorFocused" format="color"/>
+    <attr name="labColorErrorSelectorPressed" format="color"/>
+    <attr name="labColorErrorSelectorDisabled" format="color"/>
 
-    <attr name="labColorSelectorOnError" format="color"/>
-    <attr name="labColorSelectorOnErrorDisabled" format="color"/>
+    <attr name="labColorOnError" format="color"/>
+    <attr name="labColorOnErrorSelector" format="color"/>
+    <attr name="labColorOnErrorSelectorDisabled" format="color"/>
 
-    <attr name="labColorSelectorErrorSurface" format="color"/>
-    <attr name="labColorSelectorErrorSurfaceFocused" format="color"/>
-    <attr name="labColorSelectorErrorSurfacePressed" format="color"/>
-    <attr name="labColorSelectorErrorSurfaceDisabled" format="color"/>
+    <attr name="labColorErrorSurface" format="color"/>
+    <attr name="labColorErrorSurfaceSelector" format="color"/>
+    <attr name="labColorErrorSurfaceSelectorFocused" format="color"/>
+    <attr name="labColorErrorSurfaceSelectorPressed" format="color"/>
+    <attr name="labColorErrorSurfaceSelectorDisabled" format="color"/>
 
-    <attr name="labColorSelectorOnErrorSurface" format="color"/>
-    <attr name="labColorSelectorOnErrorSurfaceDisabled" format="color"/>
+    <attr name="labColorOnErrorSurface" format="color"/>
+    <attr name="labColorOnErrorSurfaceSelector" format="color"/>
+    <attr name="labColorOnErrorSurfaceSelectorDisabled" format="color"/>
 
     <!-- Success -->
-    <attr name="labColorSelectorSuccess" format="color"/>
-    <attr name="labColorSelectorSuccessFocused" format="color"/>
-    <attr name="labColorSelectorSuccessPressed" format="color"/>
-    <attr name="labColorSelectorSuccessDisabled" format="color"/>
+    <attr name="labColorSuccess" format="color"/>
+    <attr name="labColorSuccessSelector" format="color"/>
+    <attr name="labColorSuccessSelectorFocused" format="color"/>
+    <attr name="labColorSuccessSelectorPressed" format="color"/>
+    <attr name="labColorSuccessSelectorDisabled" format="color"/>
 
-    <attr name="labColorSelectorOnSuccess" format="color"/>
-    <attr name="labColorSelectorOnSuccessDisabled" format="color"/>
+    <attr name="labColorOnSuccess" format="color"/>
+    <attr name="labColorOnSuccessSelector" format="color"/>
+    <attr name="labColorOnSuccessSelectorDisabled" format="color"/>
 
-    <attr name="labColorSelectorSuccessSurface" format="color"/>
-    <attr name="labColorSelectorSuccessSurfaceFocused" format="color"/>
-    <attr name="labColorSelectorSuccessSurfacePressed" format="color"/>
-    <attr name="labColorSelectorSuccessSurfaceDisabled" format="color"/>
+    <attr name="labColorSuccessSurface" format="color"/>
+    <attr name="labColorSuccessSurfaceSelector" format="color"/>
+    <attr name="labColorSuccessSurfaceSelectorFocused" format="color"/>
+    <attr name="labColorSuccessSurfaceSelectorPressed" format="color"/>
+    <attr name="labColorSuccessSurfaceSelectorDisabled" format="color"/>
 
-    <attr name="labColorSelectorOnSuccessSurface" format="color"/>
-    <attr name="labColorSelectorOnSuccessSurfaceDisabled" format="color"/>
+    <attr name="labColorOnSuccessSurface" format="color"/>
+    <attr name="labColorOnSuccessSurfaceSelector" format="color"/>
+    <attr name="labColorOnSuccessSurfaceSelectorDisabled" format="color"/>
 
     <!-- Caution -->
-    <attr name="labColorSelectorCaution" format="color"/>
-    <attr name="labColorSelectorCautionFocused" format="color"/>
-    <attr name="labColorSelectorCautionPressed" format="color"/>
-    <attr name="labColorSelectorCautionDisabled" format="color"/>
+    <attr name="labColorCaution" format="color"/>
+    <attr name="labColorCautionSelector" format="color"/>
+    <attr name="labColorCautionSelectorFocused" format="color"/>
+    <attr name="labColorCautionSelectorPressed" format="color"/>
+    <attr name="labColorCautionSelectorDisabled" format="color"/>
 
-    <attr name="labColorSelectorOnCaution" format="color"/>
-    <attr name="labColorSelectorOnCautionDisabled" format="color"/>
+    <attr name="labColorOnCaution" format="color"/>
+    <attr name="labColorOnCautionSelector" format="color"/>
+    <attr name="labColorOnCautionSelectorDisabled" format="color"/>
 
-    <attr name="labColorSelectorCautionSurface" format="color"/>
-    <attr name="labColorSelectorCautionSurfaceFocused" format="color"/>
-    <attr name="labColorSelectorCautionSurfacePressed" format="color"/>
-    <attr name="labColorSelectorCautionSurfaceDisabled" format="color"/>
+    <attr name="labColorCautionSurface" format="color"/>
+    <attr name="labColorCautionSurfaceSelector" format="color"/>
+    <attr name="labColorCautionSurfaceSelectorFocused" format="color"/>
+    <attr name="labColorCautionSurfaceSelectorPressed" format="color"/>
+    <attr name="labColorCautionSurfaceSelectorDisabled" format="color"/>
 
-    <attr name="labColorSelectorOnCautionSurface" format="color"/>
-    <attr name="labColorSelectorOnCautionSurfaceDisabled" format="color"/>
+    <attr name="labColorOnCautionSurface" format="color"/>
+    <attr name="labColorOnCautionSurfaceSelector" format="color"/>
+    <attr name="labColorOnCautionSurfaceSelectorDisabled" format="color"/>
 
     <!-- Neutral -->
-    <attr name="labColorSelectorOnBackground" format="color"/>
-    <attr name="labColorSelectorOnBackgroundDisabled" format="color"/>
+    <attr name="labColorBackground" format="color"/>
 
-    <attr name="labColorSelectorSurface" format="color"/>
-    <attr name="labColorSelectorSurfaceFocused" format="color"/>
-    <attr name="labColorSelectorSurfacePressed" format="color"/>
-    <attr name="labColorSelectorSurfaceDisabled" format="color"/>
+    <attr name="labColorOnBackground" format="color"/>
+    <attr name="labColorOnBackgroundSelector" format="color"/>
+    <attr name="labColorOnBackgroundSelectorDisabled" format="color"/>
 
+    <attr name="labColorSurface" format="color"/>
+    <attr name="labColorSurfaceSelector" format="color"/>
+    <attr name="labColorSurfaceSelectorFocused" format="color"/>
+    <attr name="labColorSurfaceSelectorPressed" format="color"/>
+    <attr name="labColorSurfaceSelectorDisabled" format="color"/>
+
+    <attr name="labColorOnSurface" format="color"/>
     <attr name="labColorOnSurfaceSelector" format="color"/>
-    <attr name="labColorOnSurfaceDisabled" format="color"/>
+    <attr name="labColorOnSurfaceSelectorDisabled" format="color"/>
 
-    <attr name="labColorSelectorOutline" format="color"/>
-    <attr name="labColorSelectorOutlineDisabled" format="color"/>
+    <attr name="labColorOutline" format="color"/>
+    <attr name="labColorOutlineSelector" format="color"/>
+    <attr name="labColorOutlineSelectorDisabled" format="color"/>
 
-    <attr name="labColorSelectorDivider" format="color"/>
-    <attr name="labColorSelectorDividerDisabled" format="color"/>
+    <attr name="labColorDivider" format="color"/>
+    <attr name="labColorDividerSelector" format="color"/>
+    <attr name="labColorDividerSelectorDisabled" format="color"/>
 
     <!-- Neutral variant -->
+    <attr name="labColorSurfaceVariant" format="color"/>
+    <attr name="labColorSurfaceVariantSelector" format="color"/>
+    <attr name="labColorSurfaceVariantSelectorFocused" format="color"/>
+    <attr name="labColorSurfaceVariantSelectorPressed" format="color"/>
+    <attr name="labColorSurfaceVariantSelectorDisabled" format="color"/>
 
-    <attr name="labColorSelectorSurfaceVariant" format="color"/>
-    <attr name="labColorSelectorSurfaceVariantFocused" format="color"/>
-    <attr name="labColorSelectorSurfaceVariantPressed" format="color"/>
-    <attr name="labColorSelectorSurfaceVariantDisabled" format="color"/>
+    <attr name="labColorOnSurfaceVariant" format="color"/>
+    <attr name="labColorOnSurfaceVariantSelector" format="color"/>
+    <attr name="labColorOnSurfaceVariantSelectorDisabled" format="color"/>
 
-    <attr name="labColorSelectorOnSurfaceVariant" format="color"/>
-    <attr name="labColorSelectorOnSurfaceVariantDisabled" format="color"/>
+    <attr name="labColorOutlineVariant" format="color"/>
+    <attr name="labColorOutlineVariantSelector" format="color"/>
+    <attr name="labColorOutlineVariantSelectorDisabled" format="color"/>
 
-    <attr name="labColorSelectorOutlineVariant" format="color"/>
-    <attr name="labColorSelectorOutlineVariantDisabled" format="color"/>
-
-    <attr name="labColorSelectorDividerVariant" format="color"/>
-    <attr name="labColorSelectorDividerVariantDisabled" format="color"/>
+    <attr name="labColorDividerVariant" format="color"/>
+    <attr name="labColorDividerVariantSelector" format="color"/>
+    <attr name="labColorDividerVariantSelectorDisabled" format="color"/>
 </resources>
