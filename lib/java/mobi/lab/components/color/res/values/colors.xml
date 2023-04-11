@@ -2,156 +2,314 @@
 <resources>
     <!-- Design system colors that should be used outside of this file -->
     <!-- Light start -->
-    <color name="lab_internal_sys_color_light_primary">@color/lab_internal_ref_palette_primary_50</color>
-    <color name="lab_internal_sys_color_light_primary_hover">@color/lab_internal_ref_palette_primary_40</color>
-    <color name="lab_internal_sys_color_light_primary_focused">@color/lab_internal_ref_palette_primary_30</color>
-    <color name="lab_internal_sys_color_light_primary_pressed">@color/lab_internal_sys_color_light_primary_focused</color>
-    <color name="lab_internal_sys_color_light_primary_disabled">@color/lab_internal_ref_palette_neutral_95</color>
+    <!-- Primary -->
+    <color name="lab_internal_sys_color_light_primary">@color/lab_internal_ref_palette_primary50</color>
+    <color name="lab_internal_sys_color_light_primary_focused">@color/lab_internal_ref_palette_primary40</color>
+    <color name="lab_internal_sys_color_light_primary_pressed">@color/lab_internal_ref_palette_primary40</color>
+    <color name="lab_internal_sys_color_light_primary_disabled">@color/lab_internal_ref_palette_neutral10_emph_small</color>
 
-    <color name="lab_internal_sys_color_light_on_primary">@color/lab_internal_ref_palette_primary_99</color>
-    <color name="lab_internal_sys_color_light_on_primary_hover">@color/lab_internal_sys_color_light_on_primary</color>
-    <color name="lab_internal_sys_color_light_on_primary_focused">@color/lab_internal_sys_color_light_on_primary</color>
-    <color name="lab_internal_sys_color_light_on_primary_pressed">@color/lab_internal_sys_color_light_on_primary</color>
-    <color name="lab_internal_sys_color_light_on_primary_disabled">@color/lab_internal_ref_palette_neutral_70</color>
+    <color name="lab_internal_sys_color_light_on_primary">@color/lab_internal_ref_palette_neutral100</color>
+    <color name="lab_internal_sys_color_light_on_primary_disabled">@color/lab_internal_ref_palette_neutral10_emph_disabled</color>
 
-    <color name="lab_internal_sys_color_light_secondary">@color/lab_internal_ref_palette_secondary_90</color>
-    <color name="lab_internal_sys_color_light_secondary_hover">@color/lab_internal_ref_palette_secondary_80</color>
-    <color name="lab_internal_sys_color_light_secondary_focused">@color/lab_internal_ref_palette_secondary_70</color>
-    <color name="lab_internal_sys_color_light_secondary_pressed">@color/lab_internal_sys_color_light_secondary_focused</color>
-    <color name="lab_internal_sys_color_light_secondary_disabled">@color/lab_internal_ref_palette_neutral_95</color>
+    <color name="lab_internal_sys_color_light_primary_surface">@color/lab_internal_ref_palette_primary95</color>
+    <color name="lab_internal_sys_color_light_primary_surface_focused">@color/lab_internal_ref_palette_primary50_emph_medium</color>
+    <color name="lab_internal_sys_color_light_primary_surface_pressed">@color/lab_internal_ref_palette_primary50_emph_medium</color>
+    <color name="lab_internal_sys_color_light_primary_surface_disabled">@color/lab_internal_ref_palette_neutral10_emph_small</color>
 
-    <color name="lab_internal_sys_color_light_on_secondary">@color/lab_internal_ref_palette_secondary_10</color>
-    <color name="lab_internal_sys_color_light_on_secondary_hover">@color/lab_internal_sys_color_light_on_secondary</color>
-    <color name="lab_internal_sys_color_light_on_secondary_focused">@color/lab_internal_sys_color_light_on_secondary</color>
-    <color name="lab_internal_sys_color_light_on_secondary_pressed">@color/lab_internal_sys_color_light_on_secondary</color>
-    <color name="lab_internal_sys_color_light_on_secondary_disabled">@color/lab_internal_ref_palette_neutral_70</color>
+    <color name="lab_internal_sys_color_light_on_primary_surface">@color/lab_internal_ref_palette_primary10</color>
+    <color name="lab_internal_sys_color_light_on_primary_surface_disabled">@color/lab_internal_ref_palette_neutral10_emph_disabled</color>
 
-    <color name="lab_internal_sys_color_light_text_primary">@color/lab_internal_ref_palette_neutral_10</color>
-    <color name="lab_internal_sys_color_light_text_primary_hover">@color/lab_internal_sys_color_light_text_primary</color>
-    <color name="lab_internal_sys_color_light_text_primary_focused">@color/lab_internal_sys_color_light_text_primary</color>
-    <color name="lab_internal_sys_color_light_text_primary_pressed">@color/lab_internal_sys_color_light_text_primary</color>
-    <color name="lab_internal_sys_color_light_text_primary_disabled">@color/lab_internal_ref_palette_neutral_70</color>
+    <!-- Secondary -->
+    <color name="lab_internal_sys_color_light_secondary">@color/lab_internal_ref_palette_secondary50</color>
+    <color name="lab_internal_sys_color_light_secondary_focused">@color/lab_internal_ref_palette_secondary40</color>
+    <color name="lab_internal_sys_color_light_secondary_pressed">@color/lab_internal_ref_palette_secondary40</color>
+    <color name="lab_internal_sys_color_light_secondary_disabled">@color/lab_internal_ref_palette_neutral10_emph_small</color>
 
-    <color name="lab_internal_sys_color_light_text_secondary">@color/lab_internal_ref_palette_neutral_50</color>
-    <color name="lab_internal_sys_color_light_text_secondary_hover">@color/lab_internal_sys_color_light_text_secondary</color>
-    <color name="lab_internal_sys_color_light_text_secondary_focused">@color/lab_internal_sys_color_light_text_secondary</color>
-    <color name="lab_internal_sys_color_light_text_secondary_pressed">@color/lab_internal_sys_color_light_text_secondary</color>
-    <color name="lab_internal_sys_color_light_text_secondary_disabled">@color/lab_internal_ref_palette_neutral_80</color>
+    <color name="lab_internal_sys_color_light_on_secondary">@color/lab_internal_ref_palette_neutral100</color>
+    <color name="lab_internal_sys_color_light_on_secondary_disabled">@color/lab_internal_ref_palette_neutral10_emph_disabled</color>
 
-    <color name="lab_internal_sys_color_light_outline">@color/lab_internal_ref_palette_neutral_70</color>
-    <color name="lab_internal_sys_color_light_outline_hover">@color/lab_internal_sys_color_light_outline</color>
-    <color name="lab_internal_sys_color_light_outline_focused">@color/lab_internal_sys_color_light_outline</color>
-    <color name="lab_internal_sys_color_light_outline_pressed">@color/lab_internal_sys_color_light_outline</color>
-    <color name="lab_internal_sys_color_light_outline_disabled">@color/lab_internal_ref_palette_neutral_90</color>
+    <color name="lab_internal_sys_color_light_secondary_surface">@color/lab_internal_ref_palette_secondary95</color>
+    <color name="lab_internal_sys_color_light_secondary_surface_focused">@color/lab_internal_ref_palette_secondary85</color>
+    <color name="lab_internal_sys_color_light_secondary_surface_pressed">@color/lab_internal_ref_palette_secondary85</color>
+    <color name="lab_internal_sys_color_light_secondary_surface_disabled">@color/lab_internal_ref_palette_neutral10_emph_small</color>
 
-    <color name="lab_internal_sys_color_light_surface">@color/lab_internal_ref_palette_neutral_100</color>
-    <color name="lab_internal_sys_color_light_on_surface">@color/lab_internal_ref_palette_neutral_10</color>
-    <color name="lab_internal_sys_color_light_background">@color/lab_internal_ref_palette_neutral_100</color>
-    <color name="lab_internal_sys_color_light_on_background">@color/lab_internal_ref_palette_neutral_10</color>
-    <color name="lab_internal_sys_color_light_error">@color/lab_internal_ref_palette_error_30</color>
+    <color name="lab_internal_sys_color_light_on_secondary_surface">@color/lab_internal_ref_palette_secondary10</color>
+    <color name="lab_internal_sys_color_light_on_secondary_surface_disabled">@color/lab_internal_ref_palette_neutral10_emph_disabled</color>
+
+    <!-- Error -->
+    <color name="lab_internal_sys_color_light_error">@color/lab_internal_ref_palette_error40</color>
+    <color name="lab_internal_sys_color_light_error_focused">@color/lab_internal_ref_palette_error30</color>
+    <color name="lab_internal_sys_color_light_error_pressed">@color/lab_internal_ref_palette_error30</color>
+    <color name="lab_internal_sys_color_light_error_disabled">@color/lab_internal_ref_palette_neutral10_emph_small</color>
+
+    <color name="lab_internal_sys_color_light_on_error">@color/lab_internal_ref_palette_neutral100</color>
+    <color name="lab_internal_sys_color_light_on_error_disabled">@color/lab_internal_ref_palette_neutral10_emph_disabled</color>
+
+    <color name="lab_internal_sys_color_light_error_surface">@color/lab_internal_ref_palette_error90</color>
+    <color name="lab_internal_sys_color_light_error_surface_focused">@color/lab_internal_ref_palette_error50_emph_medium</color>
+    <color name="lab_internal_sys_color_light_error_surface_pressed">@color/lab_internal_ref_palette_error50_emph_medium</color>
+    <color name="lab_internal_sys_color_light_error_surface_disabled">@color/lab_internal_ref_palette_neutral10_emph_small</color>
+
+    <color name="lab_internal_sys_color_light_on_error_surface">@color/lab_internal_ref_palette_error10</color>
+    <color name="lab_internal_sys_color_light_on_error_surface_disabled">@color/lab_internal_ref_palette_neutral10_emph_disabled</color>
+
+    <!-- Success -->
+    <color name="lab_internal_sys_color_light_success">@color/lab_internal_ref_palette_success40</color>
+    <color name="lab_internal_sys_color_light_success_focused">@color/lab_internal_ref_palette_success30</color>
+    <color name="lab_internal_sys_color_light_success_pressed">@color/lab_internal_ref_palette_success30</color>
+    <color name="lab_internal_sys_color_light_success_disabled">@color/lab_internal_ref_palette_neutral10_emph_small</color>
+
+    <color name="lab_internal_sys_color_light_on_success">@color/lab_internal_ref_palette_neutral100</color>
+    <color name="lab_internal_sys_color_light_on_success_disabled">@color/lab_internal_ref_palette_neutral10_emph_disabled</color>
+
+    <color name="lab_internal_sys_color_light_success_surface">@color/lab_internal_ref_palette_success90</color>
+    <color name="lab_internal_sys_color_light_success_surface_focused">@color/lab_internal_ref_palette_success50_emph_medium</color>
+    <color name="lab_internal_sys_color_light_success_surface_pressed">@color/lab_internal_ref_palette_success50_emph_medium</color>
+    <color name="lab_internal_sys_color_light_success_surface_disabled">@color/lab_internal_ref_palette_neutral10_emph_small</color>
+
+    <color name="lab_internal_sys_color_light_on_success_surface">@color/lab_internal_ref_palette_success10</color>
+    <color name="lab_internal_sys_color_light_on_success_surface_disabled">@color/lab_internal_ref_palette_neutral10_emph_disabled</color>
+
+    <!-- Caution -->
+    <color name="lab_internal_sys_color_light_caution">@color/lab_internal_ref_palette_caution40</color>
+    <color name="lab_internal_sys_color_light_caution_focused">@color/lab_internal_ref_palette_caution30</color>
+    <color name="lab_internal_sys_color_light_caution_pressed">@color/lab_internal_ref_palette_caution30</color>
+    <color name="lab_internal_sys_color_light_caution_disabled">@color/lab_internal_ref_palette_neutral10_emph_small</color>
+
+    <color name="lab_internal_sys_color_light_on_caution">@color/lab_internal_ref_palette_neutral100</color>
+    <color name="lab_internal_sys_color_light_on_caution_disabled">@color/lab_internal_ref_palette_neutral10_emph_disabled</color>
+
+    <color name="lab_internal_sys_color_light_caution_surface">@color/lab_internal_ref_palette_caution90</color>
+    <color name="lab_internal_sys_color_light_caution_surface_focused">@color/lab_internal_ref_palette_caution50_emph_medium</color>
+    <color name="lab_internal_sys_color_light_caution_surface_pressed">@color/lab_internal_ref_palette_caution50_emph_medium</color>
+    <color name="lab_internal_sys_color_light_caution_surface_disabled">@color/lab_internal_ref_palette_neutral10_emph_small</color>
+
+    <color name="lab_internal_sys_color_light_on_caution_surface">@color/lab_internal_ref_palette_caution10</color>
+    <color name="lab_internal_sys_color_light_on_caution_surface_disabled">@color/lab_internal_ref_palette_neutral10_emph_disabled</color>
+
+    <!-- Neutral -->
+    <color name="lab_internal_sys_color_light_background">@color/lab_internal_ref_palette_neutral100</color>
+
+    <color name="lab_internal_sys_color_light_on_background">@color/lab_internal_ref_palette_neutral10</color>
+    <color name="lab_internal_sys_color_light_on_background_disabled">@color/lab_internal_ref_palette_neutral10_emph_disabled</color>
+
+    <color name="lab_internal_sys_color_light_surface">@color/lab_internal_ref_palette_neutral99</color>
+    <color name="lab_internal_sys_color_light_surface_focused">@color/lab_internal_ref_palette_neutral10_emph_medium</color>
+    <color name="lab_internal_sys_color_light_surface_pressed">@color/lab_internal_ref_palette_neutral10_emph_medium</color>
+    <color name="lab_internal_sys_color_light_surface_disabled">@color/lab_internal_ref_palette_neutral99</color>
+
+    <color name="lab_internal_sys_color_light_on_surface">@color/lab_internal_ref_palette_neutral10</color>
+    <color name="lab_internal_sys_color_light_on_surface_disabled">@color/lab_internal_ref_palette_neutral10_emph_disabled</color>
+
+    <color name="lab_internal_sys_color_light_outline">@color/lab_internal_ref_palette_neutral50</color>
+    <color name="lab_internal_sys_color_light_outline_disabled">@color/lab_internal_ref_palette_neutral50_emph_disabled</color>
+
+    <color name="lab_internal_sys_color_light_divider">@color/lab_internal_ref_palette_neutral80</color>
+    <color name="lab_internal_sys_color_light_divider_disabled">@color/lab_internal_ref_palette_neutral90</color>
+
+    <!-- Neutral variant -->
+    <color name="lab_internal_sys_color_light_surface_variant">@color/lab_internal_ref_palette_neutral_variant90</color>
+    <color name="lab_internal_sys_color_light_surface_variant_focused">@color/lab_internal_ref_palette_neutral_variant30_emph_medium</color>
+    <color name="lab_internal_sys_color_light_surface_variant_pressed">@color/lab_internal_ref_palette_neutral_variant30_emph_medium</color>
+    <color name="lab_internal_sys_color_light_surface_variant_disabled">@color/lab_internal_ref_palette_neutral10_emph_small</color>
+
+    <color name="lab_internal_sys_color_light_on_surface_variant">@color/lab_internal_ref_palette_neutral_variant30</color>
+    <color name="lab_internal_sys_color_light_on_surface_variant_disabled">@color/lab_internal_ref_palette_neutral10_emph_disabled</color>
+
+    <color name="lab_internal_sys_color_light_outline_variant">@color/lab_internal_ref_palette_neutral_variant50</color>
+    <color name="lab_internal_sys_color_light_outline_variant_disabled">@color/lab_internal_ref_palette_neutral_variant50_emph_disabled</color>
+
+    <color name="lab_internal_sys_color_light_divider_variant">@color/lab_internal_ref_palette_neutral_variant80</color>
+    <color name="lab_internal_sys_color_light_divider_variant_disabled">@color/lab_internal_ref_palette_neutral_variant90</color>
     <!-- Light end -->
 
     <!-- Dark start -->
-    <!-- TODO add proper values here once dark and light theme colors are fixed in the design system -->
-    <color name="lab_internal_sys_color_dark_primary">@color/lab_internal_ref_palette_primary_80</color>
-    <color name="lab_internal_sys_color_dark_primary_hover">@color/lab_internal_ref_palette_primary_70</color>
-    <color name="lab_internal_sys_color_dark_primary_focused">@color/lab_internal_ref_palette_primary_60</color>
-    <color name="lab_internal_sys_color_dark_primary_pressed">@color/lab_internal_sys_color_dark_primary_focused</color>
-    <color name="lab_internal_sys_color_dark_primary_disabled">@color/lab_internal_ref_palette_neutral_20</color>
+    <!-- Primary -->
+    <color name="lab_internal_sys_color_dark_primary">@color/lab_internal_ref_palette_primary80</color>
+    <color name="lab_internal_sys_color_dark_primary_focused">@color/lab_internal_ref_palette_primary90</color>
+    <color name="lab_internal_sys_color_dark_primary_pressed">@color/lab_internal_ref_palette_primary90</color>
+    <color name="lab_internal_sys_color_dark_primary_disabled">@color/lab_internal_ref_palette_neutral90_emph_small</color>
 
-    <color name="lab_internal_sys_color_dark_on_primary">@color/lab_internal_ref_palette_primary_10</color>
-    <color name="lab_internal_sys_color_dark_on_primary_hover">@color/lab_internal_sys_color_dark_on_primary</color>
-    <color name="lab_internal_sys_color_dark_on_primary_focused">@color/lab_internal_sys_color_dark_on_primary</color>
-    <color name="lab_internal_sys_color_dark_on_primary_pressed">@color/lab_internal_sys_color_dark_on_primary</color>
-    <color name="lab_internal_sys_color_dark_on_primary_disabled">@color/lab_internal_ref_palette_neutral_50</color>
+    <color name="lab_internal_sys_color_dark_on_primary">@color/lab_internal_ref_palette_primary20</color>
+    <color name="lab_internal_sys_color_dark_on_primary_disabled">@color/lab_internal_ref_palette_neutral90_emph_disabled</color>
 
-    <!-- TODO This is not correct based on the design colors -->
-    <color name="lab_internal_sys_color_dark_secondary">@color/lab_internal_ref_palette_secondary_60</color>
-    <color name="lab_internal_sys_color_dark_secondary_hover">@color/lab_internal_ref_palette_secondary_50</color>
-    <color name="lab_internal_sys_color_dark_secondary_focused">@color/lab_internal_ref_palette_secondary_40</color>
-    <color name="lab_internal_sys_color_dark_secondary_pressed">@color/lab_internal_sys_color_dark_secondary_focused</color>
-    <color name="lab_internal_sys_color_dark_secondary_disabled">@color/lab_internal_ref_palette_neutral_20</color>
+    <color name="lab_internal_sys_color_dark_primary_surface">@color/lab_internal_ref_palette_primary30</color>
+    <color name="lab_internal_sys_color_dark_primary_surface_focused">@color/lab_internal_ref_palette_primary80_emph_medium</color>
+    <color name="lab_internal_sys_color_dark_primary_surface_pressed">@color/lab_internal_ref_palette_primary80_emph_medium</color>
+    <color name="lab_internal_sys_color_dark_primary_surface_disabled">@color/lab_internal_ref_palette_neutral90_emph_small</color>
 
-    <!-- TODO This is not correct based on the design colors -->
-    <color name="lab_internal_sys_color_dark_on_secondary">@color/lab_internal_ref_palette_secondary_99</color>
-    <color name="lab_internal_sys_color_dark_on_secondary_hover">@color/lab_internal_sys_color_dark_on_secondary</color>
-    <color name="lab_internal_sys_color_dark_on_secondary_focused">@color/lab_internal_sys_color_dark_on_secondary</color>
-    <color name="lab_internal_sys_color_dark_on_secondary_pressed">@color/lab_internal_sys_color_dark_on_secondary</color>
-    <color name="lab_internal_sys_color_dark_on_secondary_disabled">@color/lab_internal_ref_palette_neutral_50</color>
+    <color name="lab_internal_sys_color_dark_on_primary_surface">@color/lab_internal_ref_palette_primary90</color>
+    <color name="lab_internal_sys_color_dark_on_primary_surface_disabled">@color/lab_internal_ref_palette_neutral90_emph_disabled</color>
 
-    <!-- TODO This is not correct based on the design colors -->
-    <color name="lab_internal_sys_color_dark_text_primary">@color/lab_internal_ref_palette_neutral_95</color>
-    <color name="lab_internal_sys_color_dark_text_primary_hover">@color/lab_internal_sys_color_dark_text_primary</color>
-    <color name="lab_internal_sys_color_dark_text_primary_focused">@color/lab_internal_sys_color_dark_text_primary</color>
-    <color name="lab_internal_sys_color_dark_text_primary_pressed">@color/lab_internal_sys_color_dark_text_primary</color>
-    <color name="lab_internal_sys_color_dark_text_primary_disabled">@color/lab_internal_ref_palette_neutral_50</color>
+    <!-- Secondary -->
+    <color name="lab_internal_sys_color_dark_secondary">@color/lab_internal_ref_palette_secondary80</color>
+    <color name="lab_internal_sys_color_dark_secondary_focused">@color/lab_internal_ref_palette_secondary90</color>
+    <color name="lab_internal_sys_color_dark_secondary_pressed">@color/lab_internal_ref_palette_secondary90</color>
+    <color name="lab_internal_sys_color_dark_secondary_disabled">@color/lab_internal_ref_palette_neutral90_emph_small</color>
 
-    <!-- TODO This is not correct based on the design colors -->
-    <color name="lab_internal_sys_color_dark_text_secondary">@color/lab_internal_ref_palette_neutral_95</color>
-    <color name="lab_internal_sys_color_dark_text_secondary_hover">@color/lab_internal_sys_color_dark_text_secondary</color>
-    <color name="lab_internal_sys_color_dark_text_secondary_focused">@color/lab_internal_sys_color_dark_text_secondary</color>
-    <color name="lab_internal_sys_color_dark_text_secondary_pressed">@color/lab_internal_sys_color_dark_text_secondary</color>
-    <color name="lab_internal_sys_color_dark_text_secondary_disabled">@color/lab_internal_ref_palette_neutral_50</color>
+    <color name="lab_internal_sys_color_dark_on_secondary">@color/lab_internal_ref_palette_secondary20</color>
+    <color name="lab_internal_sys_color_dark_on_secondary_disabled">@color/lab_internal_ref_palette_neutral90_emph_disabled</color>
 
-    <!-- TODO This is not correct based on the design colors -->
-    <color name="lab_internal_sys_color_dark_outline">@color/lab_internal_ref_palette_neutral_95</color>
-    <color name="lab_internal_sys_color_dark_outline_hover">@color/lab_internal_ref_palette_neutral_95</color>
-    <color name="lab_internal_sys_color_dark_outline_focused">@color/lab_internal_ref_palette_neutral_95</color>
-    <color name="lab_internal_sys_color_dark_outline_pressed">@color/lab_internal_ref_palette_neutral_95</color>
-    <color name="lab_internal_sys_color_dark_outline_disabled">@color/lab_internal_ref_palette_neutral_30</color>
+    <color name="lab_internal_sys_color_dark_secondary_surface">@color/lab_internal_ref_palette_secondary30</color>
+    <color name="lab_internal_sys_color_dark_secondary_surface_focused">@color/lab_internal_ref_palette_secondary40</color>
+    <color name="lab_internal_sys_color_dark_secondary_surface_pressed">@color/lab_internal_ref_palette_secondary40</color>
+    <color name="lab_internal_sys_color_dark_secondary_surface_disabled">@color/lab_internal_ref_palette_neutral90_emph_small</color>
 
-    <color name="lab_internal_sys_color_dark_surface">@color/lab_internal_ref_palette_neutral_10</color>
-    <color name="lab_internal_sys_color_dark_on_surface">@color/lab_internal_ref_palette_neutral_95</color>
-    <color name="lab_internal_sys_color_dark_background">@color/lab_internal_ref_palette_neutral_10</color>
-    <color name="lab_internal_sys_color_dark_on_background">@color/lab_internal_ref_palette_neutral_95</color>
-    <color name="lab_internal_sys_color_dark_error">@color/lab_internal_ref_palette_error_80</color>
+    <color name="lab_internal_sys_color_dark_on_secondary_surface">@color/lab_internal_ref_palette_secondary90</color>
+    <color name="lab_internal_sys_color_dark_on_secondary_surface_disabled">@color/lab_internal_ref_palette_neutral90_emph_disabled</color>
+
+    <!-- Error -->
+    <color name="lab_internal_sys_color_dark_error">@color/lab_internal_ref_palette_error80</color>
+    <color name="lab_internal_sys_color_dark_error_focused">@color/lab_internal_ref_palette_error90</color>
+    <color name="lab_internal_sys_color_dark_error_pressed">@color/lab_internal_ref_palette_error90</color>
+    <color name="lab_internal_sys_color_dark_error_disabled">@color/lab_internal_ref_palette_neutral90_emph_small</color>
+
+    <color name="lab_internal_sys_color_dark_on_error">@color/lab_internal_ref_palette_error20</color>
+    <color name="lab_internal_sys_color_dark_on_error_disabled">@color/lab_internal_ref_palette_neutral90_emph_disabled</color>
+
+    <color name="lab_internal_sys_color_dark_error_surface">@color/lab_internal_ref_palette_error30</color>
+    <color name="lab_internal_sys_color_dark_error_surface_focused">@color/lab_internal_ref_palette_error80_emph_medium</color>
+    <color name="lab_internal_sys_color_dark_error_surface_pressed">@color/lab_internal_ref_palette_error80_emph_medium</color>
+    <color name="lab_internal_sys_color_dark_error_surface_disabled">@color/lab_internal_ref_palette_neutral90_emph_small</color>
+
+    <color name="lab_internal_sys_color_dark_on_error_surface">@color/lab_internal_ref_palette_error90</color>
+    <color name="lab_internal_sys_color_dark_on_error_surface_disabled">@color/lab_internal_ref_palette_neutral90_emph_disabled</color>
+
+    <!-- Success -->
+    <color name="lab_internal_sys_color_dark_success">@color/lab_internal_ref_palette_success80</color>
+    <color name="lab_internal_sys_color_dark_success_focused">@color/lab_internal_ref_palette_success90</color>
+    <color name="lab_internal_sys_color_dark_success_pressed">@color/lab_internal_ref_palette_success90</color>
+    <color name="lab_internal_sys_color_dark_success_disabled">@color/lab_internal_ref_palette_neutral90_emph_small</color>
+
+    <color name="lab_internal_sys_color_dark_on_success">@color/lab_internal_ref_palette_success20</color>
+    <color name="lab_internal_sys_color_dark_on_success_disabled">@color/lab_internal_ref_palette_neutral90_emph_disabled</color>
+
+    <color name="lab_internal_sys_color_dark_success_surface">@color/lab_internal_ref_palette_success30</color>
+    <color name="lab_internal_sys_color_dark_success_surface_focused">@color/lab_internal_ref_palette_success80_emph_medium</color>
+    <color name="lab_internal_sys_color_dark_success_surface_pressed">@color/lab_internal_ref_palette_success80_emph_medium</color>
+    <color name="lab_internal_sys_color_dark_success_surface_disabled">@color/lab_internal_ref_palette_neutral90_emph_small</color>
+
+    <color name="lab_internal_sys_color_dark_on_success_surface">@color/lab_internal_ref_palette_success90</color>
+    <color name="lab_internal_sys_color_dark_on_success_surface_disabled">@color/lab_internal_ref_palette_neutral90_emph_disabled</color>
+
+    <!-- Caution -->
+    <color name="lab_internal_sys_color_dark_caution">@color/lab_internal_ref_palette_caution80</color>
+    <color name="lab_internal_sys_color_dark_caution_focused">@color/lab_internal_ref_palette_caution90</color>
+    <color name="lab_internal_sys_color_dark_caution_pressed">@color/lab_internal_ref_palette_caution90</color>
+    <color name="lab_internal_sys_color_dark_caution_disabled">@color/lab_internal_ref_palette_neutral90_emph_small</color>
+
+    <color name="lab_internal_sys_color_dark_on_caution">@color/lab_internal_ref_palette_caution20</color>
+    <color name="lab_internal_sys_color_dark_on_caution_disabled">@color/lab_internal_ref_palette_neutral90_emph_disabled</color>
+
+    <color name="lab_internal_sys_color_dark_caution_surface">@color/lab_internal_ref_palette_caution30</color>
+    <color name="lab_internal_sys_color_dark_caution_surface_focused">@color/lab_internal_ref_palette_caution80_emph_medium</color>
+    <color name="lab_internal_sys_color_dark_caution_surface_pressed">@color/lab_internal_ref_palette_caution80_emph_medium</color>
+    <color name="lab_internal_sys_color_dark_caution_surface_disabled">@color/lab_internal_ref_palette_neutral90_emph_small</color>
+
+    <color name="lab_internal_sys_color_dark_on_caution_surface">@color/lab_internal_ref_palette_caution90</color>
+    <color name="lab_internal_sys_color_dark_on_caution_surface_disabled">@color/lab_internal_ref_palette_neutral90_emph_disabled</color>
+
+    <!-- Neutral -->
+    <color name="lab_internal_sys_color_dark_background">@color/lab_internal_ref_palette_neutral0</color>
+
+    <color name="lab_internal_sys_color_dark_on_background">@color/lab_internal_ref_palette_neutral95</color>
+    <color name="lab_internal_sys_color_dark_on_background_disabled">@color/lab_internal_ref_palette_neutral95_emph_disabled</color>
+
+    <color name="lab_internal_sys_color_dark_surface">@color/lab_internal_ref_palette_neutral10</color>
+    <color name="lab_internal_sys_color_dark_surface_focused">@color/lab_internal_ref_palette_neutral95_emph_medium</color>
+    <color name="lab_internal_sys_color_dark_surface_pressed">@color/lab_internal_ref_palette_neutral95_emph_medium</color>
+    <color name="lab_internal_sys_color_dark_surface_disabled">@color/lab_internal_ref_palette_neutral10</color>
+
+    <color name="lab_internal_sys_color_dark_on_surface">@color/lab_internal_ref_palette_neutral95</color>
+    <color name="lab_internal_sys_color_dark_on_surface_disabled">@color/lab_internal_ref_palette_neutral95_emph_disabled</color>
+
+    <color name="lab_internal_sys_color_dark_outline">@color/lab_internal_ref_palette_neutral_variant60</color>
+    <color name="lab_internal_sys_color_dark_outline_disabled">@color/lab_internal_ref_palette_neutral_variant60_emph_disabled</color>
+
+    <color name="lab_internal_sys_color_dark_divider">@color/lab_internal_ref_palette_neutral30</color>
+    <color name="lab_internal_sys_color_dark_divider_disabled">@color/lab_internal_ref_palette_neutral20</color>
+
+    <!-- Neutral variant -->
+    <color name="lab_internal_sys_color_dark_surface_variant">@color/lab_internal_ref_palette_neutral_variant30</color>
+    <color name="lab_internal_sys_color_dark_surface_variant_focused">@color/lab_internal_ref_palette_neutral_variant80_emph_medium</color>
+    <color name="lab_internal_sys_color_dark_surface_variant_pressed">@color/lab_internal_ref_palette_neutral_variant80_emph_medium</color>
+    <color name="lab_internal_sys_color_dark_surface_variant_disabled">@color/lab_internal_ref_palette_neutral_variant30</color>
+
+    <color name="lab_internal_sys_color_dark_on_surface_variant">@color/lab_internal_ref_palette_neutral_variant80</color>
+    <color name="lab_internal_sys_color_dark_on_surface_variant_disabled">@color/lab_internal_ref_palette_neutral95</color>
+
+    <color name="lab_internal_sys_color_dark_outline_variant">@color/lab_internal_ref_palette_neutral_variant60</color>
+    <color name="lab_internal_sys_color_dark_outline_variant_disabled">@color/lab_internal_ref_palette_neutral_variant60_emph_disabled</color>
+
+    <color name="lab_internal_sys_color_dark_divider_variant">@color/lab_internal_ref_palette_neutral_variant30</color>
+    <color name="lab_internal_sys_color_dark_divider_variant_disabled">@color/lab_internal_ref_palette_neutral_variant20</color>
     <!-- Dark end -->
 
     <!-- Reference palette colors -->
-    <color name="lab_internal_ref_palette_primary_10">#051A33</color>
-    <color name="lab_internal_ref_palette_primary_30">#004C9E</color>
-    <color name="lab_internal_ref_palette_primary_40">#1B66B6</color>
-    <color name="lab_internal_ref_palette_primary_50">#0F82FF</color>
-    <color name="lab_internal_ref_palette_primary_60">#4298F5</color>
-    <color name="lab_internal_ref_palette_primary_70">#66AFFF</color>
-    <color name="lab_internal_ref_palette_primary_80">#99CEFF</color>
-    <color name="lab_internal_ref_palette_primary_99">#F5FAFF</color>
+    <color name="lab_internal_ref_palette_primary10">#051A33</color>
+    <color name="lab_internal_ref_palette_primary20">#103660</color>
+    <color name="lab_internal_ref_palette_primary30">#004C9E</color>
+    <color name="lab_internal_ref_palette_primary40">#1B66B6</color>
+    <color name="lab_internal_ref_palette_primary50">#0F82FF</color>
+    <color name="lab_internal_ref_palette_primary80">#99CEFF</color>
+    <color name="lab_internal_ref_palette_primary85">#B0D9FF</color>
+    <color name="lab_internal_ref_palette_primary90">#C7E5FF</color>
+    <color name="lab_internal_ref_palette_primary95">#DBEFFF</color>
 
-    <color name="lab_internal_ref_palette_secondary_10">#17191C</color>
-    <color name="lab_internal_ref_palette_secondary_40">#495B6E</color>
-    <color name="lab_internal_ref_palette_secondary_50">#56718F</color>
-    <color name="lab_internal_ref_palette_secondary_60">#628DBC</color>
-    <color name="lab_internal_ref_palette_secondary_70">#7CABDE</color>
-    <color name="lab_internal_ref_palette_secondary_80">#A4C8EF</color>
-    <color name="lab_internal_ref_palette_secondary_90">#CCE2F9</color>
-    <color name="lab_internal_ref_palette_secondary_99">#F5FAFF</color>
+    <color name="lab_internal_ref_palette_secondary10">#17191C</color>
+    <color name="lab_internal_ref_palette_secondary20">#292E32</color>
+    <color name="lab_internal_ref_palette_secondary30">#38424C</color>
+    <color name="lab_internal_ref_palette_secondary40">#495B6E</color>
+    <color name="lab_internal_ref_palette_secondary50">#56718F</color>
+    <color name="lab_internal_ref_palette_secondary80">#A4C8EF</color>
+    <color name="lab_internal_ref_palette_secondary85">#B8D5F4</color>
+    <color name="lab_internal_ref_palette_secondary90">#CCE2F9</color>
+    <color name="lab_internal_ref_palette_secondary95">#DBECFF</color>
 
-    <color name="lab_internal_ref_palette_neutral_0">#000000</color>
-    <color name="lab_internal_ref_palette_neutral_10">#191C21</color>
-    <color name="lab_internal_ref_palette_neutral_20">#2E3037</color>
-    <color name="lab_internal_ref_palette_neutral_30">#45474D</color>
-    <color name="lab_internal_ref_palette_neutral_50">#75777E</color>
-    <color name="lab_internal_ref_palette_neutral_70">#A9ABB3</color>
-    <color name="lab_internal_ref_palette_neutral_80">#C4C6CF</color>
-    <color name="lab_internal_ref_palette_neutral_90">#E0E2EB</color>
-    <color name="lab_internal_ref_palette_neutral_95">#EFF0F9</color>
-    <color name="lab_internal_ref_palette_neutral_99">#FDFBFF</color>
-    <color name="lab_internal_ref_palette_neutral_100">#FFFFFF</color>
+    <color name="lab_internal_ref_palette_error10">#3B0605</color>
+    <color name="lab_internal_ref_palette_error20">#600F0C</color>
+    <color name="lab_internal_ref_palette_error30">#861915</color>
+    <color name="lab_internal_ref_palette_error40">#AB2D25</color>
+    <color name="lab_internal_ref_palette_error50">#CC463A</color>
+    <color name="lab_internal_ref_palette_error80">#F4B7AD</color>
+    <color name="lab_internal_ref_palette_error90">#F9DBD7</color>
 
-    <color name="lab_internal_ref_palette_error_30">#861915</color>
-    <color name="lab_internal_ref_palette_error_80">#F4B7AD</color>
-    <color name="lab_internal_ref_palette_error_95">#FCEEEA</color>
+    <color name="lab_internal_ref_palette_success10">#0F2905</color>
+    <color name="lab_internal_ref_palette_success20">#1E410C</color>
+    <color name="lab_internal_ref_palette_success30">#315818</color>
+    <color name="lab_internal_ref_palette_success40">#49702E</color>
+    <color name="lab_internal_ref_palette_success50">#608943</color>
+    <color name="lab_internal_ref_palette_success80">#B3D996</color>
+    <color name="lab_internal_ref_palette_success90">#D2F4B8</color>
 
-    <color name="lab_internal_ref_palette_caution_30">#524712</color>
-    <color name="lab_internal_ref_palette_caution_80">#EECF44</color>
-    <color name="lab_internal_ref_palette_caution_95">#FFF5D1</color>
+    <color name="lab_internal_ref_palette_caution10">#211B04</color>
+    <color name="lab_internal_ref_palette_caution20">#383009</color>
+    <color name="lab_internal_ref_palette_caution30">#524712</color>
+    <color name="lab_internal_ref_palette_caution40">#6D5E1B</color>
+    <color name="lab_internal_ref_palette_caution50">#887624</color>
+    <color name="lab_internal_ref_palette_caution80">#EECF44</color>
+    <color name="lab_internal_ref_palette_caution90">#FFE680</color>
 
-    <color name="lab_internal_ref_palette_success_30">#315818</color>
-    <color name="lab_internal_ref_palette_success_80">#B3D996</color>
-    <color name="lab_internal_ref_palette_success_95">#E7FED2</color>
+    <color name="lab_internal_ref_palette_neutral0">#000000</color>
+    <color name="lab_internal_ref_palette_neutral10">#191C21</color>
+    <color name="lab_internal_ref_palette_neutral20">#2E3037</color>
+    <color name="lab_internal_ref_palette_neutral30">#45474D</color>
+    <color name="lab_internal_ref_palette_neutral50">#75777E</color>
+    <color name="lab_internal_ref_palette_neutral80">#C4C6CF</color>
+    <color name="lab_internal_ref_palette_neutral90">#E0E2EB</color>
+    <color name="lab_internal_ref_palette_neutral95">#EFF0F9</color>
+    <color name="lab_internal_ref_palette_neutral99">#FDFBFF</color>
+    <color name="lab_internal_ref_palette_neutral100">#FFFFFF</color>
+
+    <color name="lab_internal_ref_palette_neutral_variant20">#29313E</color>
+    <color name="lab_internal_ref_palette_neutral_variant30">#3E4957</color>
+    <color name="lab_internal_ref_palette_neutral_variant50">#6C798B</color>
+    <color name="lab_internal_ref_palette_neutral_variant60">#8E9098</color>
+    <color name="lab_internal_ref_palette_neutral_variant80">#C1C7D4</color>
+    <color name="lab_internal_ref_palette_neutral_variant90">#DEE2ED</color>
 
     <!-- Debug colors for development -->
     <color name="lab_internal_todo">#FF00FF</color>
-    <color name="lab_internal_todo_2">#00FFFF</color>
-    <color name="lab_internal_todo_3">#FFFF00</color>
+    <color name="lab_internal_todo2">#00FFFF</color>
+    <color name="lab_internal_todo3">#FFFF00</color>
 </resources>

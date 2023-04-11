@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_enabled="false" android:color="?attr/labColorSelectorSecondaryDisabled"/>
-    <item android:state_hovered="true" android:color="?attr/labColorSelectorSecondaryHover"/>
     <item android:state_focused="true" android:color="?attr/labColorSelectorSecondaryFocused"/>
     <item android:state_pressed="true" android:color="?attr/labColorSelectorSecondaryPressed"/>
-    <item android:color="?attr/labColorSelectorSecondaryRegular"/>
+    <item android:color="?attr/labColorSecondary"/>
 </selector>
