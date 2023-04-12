@@ -1,4 +1,4 @@
-package mobi.lab.components.demo.presentation
+package mobi.lab.components.demo.presentation.typography
 
 import android.os.Bundle
 import android.view.LayoutInflater

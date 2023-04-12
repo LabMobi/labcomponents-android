@@ -214,17 +214,24 @@
         <item name="colorAccent">?attr/labColorPrimary</item>
         <item name="colorPrimary">?attr/labColorPrimary</item>
         <item name="colorOnPrimary">?attr/labColorOnPrimary</item>
+        <item name="colorPrimaryContainer">?attr/labColorPrimarySurface</item>
+        <item name="colorOnPrimaryContainer">?attr/labColorOnPrimarySurface</item>
         <item name="colorSecondary">?attr/labColorSecondary</item>
         <item name="colorOnSecondary">?attr/labColorOnSecondary</item>
+        <item name="colorSecondaryContainer">?attr/labColorSecondarySurface</item>
+        <item name="colorOnSecondaryContainer">?attr/labColorOnSecondarySurface</item>
         <item name="colorSurface">?attr/labColorSurface</item>
         <item name="colorOnSurface">?attr/labColorOnSurface</item>
         <item name="colorSurfaceVariant">?attr/labColorSurfaceVariant</item>
         <item name="colorOnSurfaceVariant">?attr/labColorOnSurfaceVariant</item>
+        <item name="colorOutline">?attr/labColorOutline</item>
+        <item name="colorOutlineVariant">?attr/labColorOutlineVariant</item>
+        <item name="colorError">?attr/labColorError</item>
         <item name="android:colorBackground">?attr/labColorBackground</item>
         <item name="colorOnBackground">?attr/labColorOnBackground</item>
-        <item name="colorError">?attr/labColorError</item>
 
         <!-- Material text color overrides -->
+        <item name="android:textColor">?attr/labColorOnSurfaceSelector</item>
         <item name="android:textColorPrimary">?attr/labColorOnSurfaceSelector</item>
         <item name="android:textColorSecondary">?attr/labColorOnSurfaceVariantSelector</item>
         <item name="android:textColorHighlight">?attr/labColorPrimarySelector</item>
@@ -436,17 +443,24 @@
         <item name="colorAccent">?attr/labColorPrimary</item>
         <item name="colorPrimary">?attr/labColorPrimary</item>
         <item name="colorOnPrimary">?attr/labColorOnPrimary</item>
+        <item name="colorPrimaryContainer">?attr/labColorPrimarySurface</item>
+        <item name="colorOnPrimaryContainer">?attr/labColorOnPrimarySurface</item>
         <item name="colorSecondary">?attr/labColorSecondary</item>
         <item name="colorOnSecondary">?attr/labColorOnSecondary</item>
+        <item name="colorSecondaryContainer">?attr/labColorSecondarySurface</item>
+        <item name="colorOnSecondaryContainer">?attr/labColorOnSecondarySurface</item>
         <item name="colorSurface">?attr/labColorSurface</item>
         <item name="colorOnSurface">?attr/labColorOnSurface</item>
         <item name="colorSurfaceVariant">?attr/labColorSurfaceVariant</item>
         <item name="colorOnSurfaceVariant">?attr/labColorOnSurfaceVariant</item>
+        <item name="colorError">?attr/labColorError</item>
+        <item name="colorOutline">?attr/labColorOutline</item>
+        <item name="colorOutlineVariant">?attr/labColorOutlineVariant</item>
         <item name="android:colorBackground">?attr/labColorBackground</item>
         <item name="colorOnBackground">?attr/labColorOnBackground</item>
-        <item name="colorError">?attr/labColorError</item>
 
         <!-- Material text color overrides -->
+        <item name="android:textColor">?attr/labColorOnSurfaceSelector</item>
         <item name="android:textColorPrimary">?attr/labColorOnSurfaceSelector</item>
         <item name="android:textColorSecondary">?attr/labColorOnSurfaceVariantSelector</item>
         <item name="android:textColorHighlight">?attr/labColorPrimarySelector</item>
@@ -458,18 +472,12 @@
     <!-- Development theme that overrides Material colors with debug colors -->
     <style name="Theme.Lab.Light.Develop" parent="Theme.Lab.Light">
         <item name="colorPrimaryInverse">@color/lab_internal_todo</item>
-        <item name="colorPrimaryContainer">@color/lab_internal_todo</item>
-        <item name="colorOnPrimaryContainer">@color/lab_internal_todo</item>
-        <item name="colorSecondaryContainer">@color/lab_internal_todo</item>
-        <item name="colorOnSecondaryContainer">@color/lab_internal_todo</item>
         <item name="colorTertiary">@color/lab_internal_todo</item>
         <item name="colorOnTertiary">@color/lab_internal_todo</item>
         <item name="colorTertiaryContainer">@color/lab_internal_todo</item>
         <item name="colorOnTertiaryContainer">@color/lab_internal_todo</item>
         <item name="colorSurfaceInverse">@color/lab_internal_todo</item>
         <item name="colorOnSurfaceInverse">@color/lab_internal_todo</item>
-        <item name="colorOutline">@color/lab_internal_todo</item>
-        <item name="colorOutlineVariant">@color/lab_internal_todo</item>
         <item name="colorOnError">@color/lab_internal_todo</item>
         <item name="colorErrorContainer">@color/lab_internal_todo</item>
         <item name="colorOnErrorContainer">@color/lab_internal_todo</item>
@@ -488,18 +496,12 @@
     <!-- Development theme that overrides Material colors with debug colors -->
     <style name="Theme.Lab.Dark.Develop" parent="Theme.Lab.Dark">
         <item name="colorPrimaryInverse">@color/lab_internal_todo</item>
-        <item name="colorPrimaryContainer">@color/lab_internal_todo</item>
-        <item name="colorOnPrimaryContainer">@color/lab_internal_todo</item>
-        <item name="colorSecondaryContainer">@color/lab_internal_todo</item>
-        <item name="colorOnSecondaryContainer">@color/lab_internal_todo</item>
         <item name="colorTertiary">@color/lab_internal_todo</item>
         <item name="colorOnTertiary">@color/lab_internal_todo</item>
         <item name="colorTertiaryContainer">@color/lab_internal_todo</item>
         <item name="colorOnTertiaryContainer">@color/lab_internal_todo</item>
         <item name="colorSurfaceInverse">@color/lab_internal_todo</item>
         <item name="colorOnSurfaceInverse">@color/lab_internal_todo</item>
-        <item name="colorOutline">@color/lab_internal_todo</item>
-        <item name="colorOutlineVariant">@color/lab_internal_todo</item>
         <item name="colorOnError">@color/lab_internal_todo</item>
         <item name="colorErrorContainer">@color/lab_internal_todo</item>
         <item name="colorOnErrorContainer">@color/lab_internal_todo</item>

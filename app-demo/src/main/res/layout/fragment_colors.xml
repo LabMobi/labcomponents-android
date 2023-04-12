@@ -9,5 +9,21 @@
     <TextView
         android:id="@+id/item_text_field"
         style="@style/Text.HeadlineLarge"
-        android:text="Colors (in progress)" />
+        android:text="Colors" />
+
+    <com.google.android.material.materialswitch.MaterialSwitch
+        android:id="@+id/switch_enabled"
+        style="@style/Switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Enabled state"
+        android:checked="true" />
+
+    <LinearLayout
+        android:id="@+id/container_colors"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin"
+        android:orientation="vertical" />
 </LinearLayout>

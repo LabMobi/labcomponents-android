@@ -12,7 +12,10 @@ navigation = '2.5.3'
 # Gradle plugin
 gradle-plugin-android = 'com.android.tools.build:gradle:7.4.2'
 gradle-plugin-kotlin = { module = 'org.jetbrains.kotlin:kotlin-gradle-plugin', version.ref = 'kotlin' }
-gradle-plugin-ktlint = 'org.jlleitschuh.gradle:ktlint-gradle:11.2.0'
+# NB! Make sure to update the kltint version set in the root build.gradle file. subprojects / ktlint / version
+# NB! ktlint-gradle doesn't always depend on the latest ktlint version, but since it is a thin wrapper around ktlint
+# NB! it can be usefult to use a newer version of ktlint to get ruleset updates, etc.
+gradle-plugin-ktlint = 'org.jlleitschuh.gradle:ktlint-gradle:11.3.1'
 gradle-plugin-gradleversions = 'com.github.ben-manes:gradle-versions-plugin:0.46.0'
 gradle-plugin-detekt = 'io.gitlab.arturbosch.detekt:detekt-gradle-plugin:1.22.0'
 

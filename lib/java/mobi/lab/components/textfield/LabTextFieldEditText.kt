@@ -7,8 +7,8 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.util.AttributeSet
 import com.google.android.material.textfield.TextInputEditText
-import mobi.lab.components.shared.ParcelCompat
 import mobi.lab.components.R
+import mobi.lab.components.shared.ParcelCompat
 
 @Suppress("ClickableViewAccessibility")
 public open class LabTextFieldEditText : TextInputEditText {
