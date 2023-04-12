@@ -18,7 +18,7 @@ import mobi.lab.components.shared.Log
 import mobi.lab.components.shared.ParcelCompat
 
 /**
- * A wrapper around TextInputLayout with a custom box background and an automatically added EditText child.
+ * A wrapper around TextInputLayout with a custom box background to support Mobi Lab design components.
  */
 @Suppress("FoldInitializerAndIfToElvis")
 public open class LabTextField @JvmOverloads constructor(
