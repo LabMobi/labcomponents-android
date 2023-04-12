@@ -236,7 +236,7 @@
     <color name="lab_internal_sys_color_dark_surface_variant_disabled">@color/lab_internal_ref_palette_neutral_variant30</color>
 
     <color name="lab_internal_sys_color_dark_on_surface_variant">@color/lab_internal_ref_palette_neutral_variant80</color>
-    <color name="lab_internal_sys_color_dark_on_surface_variant_disabled">@color/lab_internal_ref_palette_neutral95</color>
+    <color name="lab_internal_sys_color_dark_on_surface_variant_disabled">@color/lab_internal_ref_palette_neutral95_emph_disabled</color>
 
     <color name="lab_internal_sys_color_dark_outline_variant">@color/lab_internal_ref_palette_neutral_variant60</color>
     <color name="lab_internal_sys_color_dark_outline_variant_disabled">@color/lab_internal_ref_palette_neutral_variant60_emph_disabled</color>

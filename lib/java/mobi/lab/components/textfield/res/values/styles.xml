@@ -40,7 +40,7 @@
         <item name="placeholderTextColor">?attr/labColorOnSurfaceVariantSelector</item>
         <item name="prefixTextColor">?attr/labColorOnSurfaceVariantSelector</item>
         <item name="suffixTextColor">?attr/labColorOnSurfaceVariantSelector</item>
-        <item name="android:textColor">@color/lab_internal_textfield_text</item>
+        <item name="android:textColor">?attr/labColorOnSurfaceSelector</item>
     </style>
 
     <style name="ThemeOverlay.Lab.TextInputLayout" parent="ThemeOverlay.LabComponents.TextInputLayout">

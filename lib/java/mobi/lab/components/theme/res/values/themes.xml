@@ -225,10 +225,10 @@
         <item name="colorError">?attr/labColorError</item>
 
         <!-- Material text color overrides -->
-        <item name="android:textColorPrimary">?attr/labColorOnSurface</item>
-        <item name="android:textColorSecondary">?attr/labColorOnSurfaceVariant</item>
-        <item name="android:textColorHighlight">?attr/labColorPrimary</item>
-        <item name="android:textColorLink">?attr/labColorPrimary</item>
+        <item name="android:textColorPrimary">?attr/labColorOnSurfaceSelector</item>
+        <item name="android:textColorSecondary">?attr/labColorOnSurfaceVariantSelector</item>
+        <item name="android:textColorHighlight">?attr/labColorPrimarySelector</item>
+        <item name="android:textColorLink">?attr/labColorPrimarySelector</item>
         <item name="android:textColorPrimaryDisableOnly">?attr/labColorOnSurfaceSelector</item>
         <item name="android:textColorHint">?attr/labColorOnSurfaceVariantSelector</item>
     </style>
@@ -447,10 +447,10 @@
         <item name="colorError">?attr/labColorError</item>
 
         <!-- Material text color overrides -->
-        <item name="android:textColorPrimary">?attr/labColorOnSurface</item>
-        <item name="android:textColorSecondary">?attr/labColorOnSurfaceVariant</item>
-        <item name="android:textColorHighlight">?attr/labColorPrimary</item>
-        <item name="android:textColorLink">?attr/labColorPrimary</item>
+        <item name="android:textColorPrimary">?attr/labColorOnSurfaceSelector</item>
+        <item name="android:textColorSecondary">?attr/labColorOnSurfaceVariantSelector</item>
+        <item name="android:textColorHighlight">?attr/labColorPrimarySelector</item>
+        <item name="android:textColorLink">?attr/labColorPrimarySelector</item>
         <item name="android:textColorPrimaryDisableOnly">?attr/labColorOnSurfaceSelector</item>
         <item name="android:textColorHint">?attr/labColorOnSurfaceVariantSelector</item>
     </style>
