@@ -164,9 +164,9 @@
         <!-- Color scheme END -->
 
         <!-- Emphasis -->
-        <item name="labEmphasisAlphaDisabled">@dimen/lab_internal_sys_emphasis_light_disabled</item>
-        <item name="labEmphasisAlphaSmall">@dimen/lab_internal_sys_emphasis_light_small</item>
-        <item name="labEmphasisAlphaMedium">@dimen/lab_internal_sys_emphasis_light_medium</item>
+        <item name="labEmphasisAlphaDisabled">@dimen/lab_internal_sys_emphasis_disabled</item>
+        <item name="labEmphasisAlphaSmall">@dimen/lab_internal_sys_emphasis_small</item>
+        <item name="labEmphasisAlphaMedium">@dimen/lab_internal_sys_emphasis_medium</item>
 
         <!-- Typography -->
         <item name="labFontFamilyRegular">@string/lab_internal_sys_font_family_regular</item>
@@ -229,6 +229,8 @@
         <item name="android:textColorSecondary">?attr/labColorOnSurfaceVariant</item>
         <item name="android:textColorHighlight">?attr/labColorPrimary</item>
         <item name="android:textColorLink">?attr/labColorPrimary</item>
+        <item name="android:textColorPrimaryDisableOnly">?attr/labColorOnSurfaceSelector</item>
+        <item name="android:textColorHint">?attr/labColorOnSurfaceVariantSelector</item>
     </style>
 
     <style name="Theme.Lab.Dark" parent="Theme.MaterialComponents.NoActionBar">
@@ -384,9 +386,9 @@
         <!-- Color scheme END -->
 
         <!-- Emphasis -->
-        <item name="labEmphasisAlphaDisabled">@dimen/lab_internal_sys_emphasis_dark_disabled</item>
-        <item name="labEmphasisAlphaSmall">@dimen/lab_internal_sys_emphasis_dark_small</item>
-        <item name="labEmphasisAlphaMedium">@dimen/lab_internal_sys_emphasis_dark_medium</item>
+        <item name="labEmphasisAlphaDisabled">@dimen/lab_internal_sys_emphasis_disabled</item>
+        <item name="labEmphasisAlphaSmall">@dimen/lab_internal_sys_emphasis_small</item>
+        <item name="labEmphasisAlphaMedium">@dimen/lab_internal_sys_emphasis_medium</item>
 
         <!-- Typography -->
         <item name="labFontFamilyRegular">@string/lab_internal_sys_font_family_regular</item>
@@ -449,6 +451,8 @@
         <item name="android:textColorSecondary">?attr/labColorOnSurfaceVariant</item>
         <item name="android:textColorHighlight">?attr/labColorPrimary</item>
         <item name="android:textColorLink">?attr/labColorPrimary</item>
+        <item name="android:textColorPrimaryDisableOnly">?attr/labColorOnSurfaceSelector</item>
+        <item name="android:textColorHint">?attr/labColorOnSurfaceVariantSelector</item>
     </style>
 
     <!-- Development theme that overrides Material colors with debug colors -->
@@ -474,9 +478,7 @@
         <item name="android:textColorSecondaryInverse">@color/lab_internal_todo2</item>
         <item name="android:textColorTertiary">@color/lab_internal_todo2</item>
         <item name="android:textColorTertiaryInverse">@color/lab_internal_todo2</item>
-        <item name="android:textColorPrimaryDisableOnly">@color/lab_internal_todo2</item>
         <item name="android:textColorPrimaryInverseDisableOnly">@color/lab_internal_todo2</item>
-        <item name="android:textColorHint">@color/lab_internal_todo2</item>
         <item name="android:textColorHintInverse">@color/lab_internal_todo2</item>
         <item name="android:textColorHighlightInverse">@color/lab_internal_todo2</item>
         <item name="android:textColorLinkInverse">@color/lab_internal_todo2</item>
@@ -506,9 +508,7 @@
         <item name="android:textColorSecondaryInverse">@color/lab_internal_todo2</item>
         <item name="android:textColorTertiary">@color/lab_internal_todo2</item>
         <item name="android:textColorTertiaryInverse">@color/lab_internal_todo2</item>
-        <item name="android:textColorPrimaryDisableOnly">@color/lab_internal_todo2</item>
         <item name="android:textColorPrimaryInverseDisableOnly">@color/lab_internal_todo2</item>
-        <item name="android:textColorHint">@color/lab_internal_todo2</item>
         <item name="android:textColorHintInverse">@color/lab_internal_todo2</item>
         <item name="android:textColorHighlightInverse">@color/lab_internal_todo2</item>
         <item name="android:textColorLinkInverse">@color/lab_internal_todo2</item>

@@ -17,11 +17,8 @@
 
         <item name="endIconMinSize">@dimen/lab_internal_textfield_box_min_size</item>
         <item name="startIconMinSize">@dimen/lab_internal_textfield_box_min_size</item>
-        <!-- TODO -->
-<!--        <item name="endIconTint">/labColorSelectorTextSecondary</item>-->
-<!--        <item name="startIconTint">?attr/labColorSelectorTextSecondary</item>-->
-        <item name="endIconTint">@color/lab_internal_todo</item>
-        <item name="startIconTint">@color/lab_internal_todo</item>
+        <item name="endIconTint">?attr/labColorOnSurfaceVariantSelector</item>
+        <item name="startIconTint">?attr/labColorOnSurfaceVariantSelector</item>
 
         <item name="counterTextAppearance">?attr/labTextAppearanceLabelMedium</item>
         <item name="counterOverflowTextAppearance">?attr/labTextAppearanceLabelMedium</item>
@@ -33,26 +30,16 @@
         <item name="suffixTextAppearance">?attr/labTextAppearanceBodyLarge</item>
         <item name="android:textAppearance">?attr/labTextAppearanceBodyLarge</item>
 
-        <!-- TODO -->
-<!--        <item name="counterTextColor">?attr/labColorSelectorTextSecondary</item>-->
-        <item name="counterTextColor">@color/lab_internal_todo2</item>
+        <item name="counterTextColor">?attr/labColorOnSurfaceVariantSelector</item>
         <item name="counterOverflowTextColor">?attr/labColorError</item>
         <item name="errorTextColor">?attr/labColorError</item>
-        <!-- TODO -->
-<!--        <item name="helperTextTextColor">?attr/labColorSelectorTextSecondary</item>-->
-        <item name="helperTextTextColor">@color/lab_internal_todo2</item>
+        <item name="helperTextTextColor">?attr/labColorOnSurfaceVariantSelector</item>
         <item name="hintTextColor">?attr/labColorPrimary</item>
 
-        <!-- TODO -->
-<!--        <item name="android:textColorHint">?attr/labColorSelectorTextSecondary</item>-->
-<!--        <item name="placeholderTextColor">?attr/labColorSelectorTextSecondary</item>-->
-<!--        <item name="prefixTextColor">?attr/labColorSelectorTextSecondary</item>-->
-<!--        <item name="suffixTextColor">?attr/labColorSelectorTextSecondary</item>-->
-        <item name="android:textColorHint">@color/lab_internal_todo2</item>
-        <item name="placeholderTextColor">@color/lab_internal_todo2</item>
-        <item name="prefixTextColor">@color/lab_internal_todo2</item>
-        <item name="suffixTextColor">@color/lab_internal_todo2</item>
-
+        <item name="android:textColorHint">?attr/labColorOnSurfaceVariantSelector</item>
+        <item name="placeholderTextColor">?attr/labColorOnSurfaceVariantSelector</item>
+        <item name="prefixTextColor">?attr/labColorOnSurfaceVariantSelector</item>
+        <item name="suffixTextColor">?attr/labColorOnSurfaceVariantSelector</item>
         <item name="android:textColor">@color/lab_internal_textfield_text</item>
     </style>
 
