@@ -12,7 +12,7 @@
     <!-- separated by "Color scheme START/END" comments that make it easier to copy paste and thus -->
     <!-- duplicate either color and other theme values between the Dark and Light theme variants. -->
     <style name="Theme.Lab.Light" parent="Theme.MaterialComponents.Light.NoActionBar">
-        <!-- Color scheme START -->
+        <!-- COLOR SCHEME START -->
         <!-- Primary -->
         <item name="labColorPrimary">@color/lab_internal_sys_color_light_primary</item>
         <item name="labColorPrimarySelector">@color/lab_internal_sys_color_selector_primary</item>
@@ -161,14 +161,15 @@
         <item name="labColorDividerVariant">@color/lab_internal_sys_color_light_divider_variant</item>
         <item name="labColorDividerVariantSelector">@color/lab_internal_sys_color_selector_divider_variant</item>
         <item name="labColorDividerVariantSelectorDisabled">@color/lab_internal_sys_color_light_divider_variant_disabled</item>
-        <!-- Color scheme END -->
+        <!-- COLOR SCHEME END -->
 
-        <!-- Emphasis -->
+        <!-- EMPHASIS START -->
         <item name="labEmphasisAlphaDisabled">@dimen/lab_internal_sys_emphasis_disabled</item>
         <item name="labEmphasisAlphaSmall">@dimen/lab_internal_sys_emphasis_small</item>
         <item name="labEmphasisAlphaMedium">@dimen/lab_internal_sys_emphasis_medium</item>
+        <!-- EMPHASIS END -->
 
-        <!-- Typography -->
+        <!-- TYPOGRAPHY START -->
         <item name="labFontFamilyRegular">@string/lab_internal_sys_font_family_regular</item>
         <item name="labFontFamilyMedium">@string/lab_internal_sys_font_family_medium</item>
         <item name="labFontFamilySemibold">@string/lab_internal_sys_font_family_semibold</item>
@@ -189,8 +190,9 @@
         <item name="labTextAppearanceLabelLarge">@style/TextAppearance.Lab.LabelLarge</item>
         <item name="labTextAppearanceLabelMedium">@style/TextAppearance.Lab.LabelMedium</item>
         <item name="labTextAppearanceLabelSmall">@style/TextAppearance.Lab.LabelSmall</item>
+        <!-- TYPOGRAPHY END -->
 
-        <!-- Shape -->
+        <!-- SHAPE START -->
         <item name="labShapeCornerSize">@dimen/lab_internal_sys_shape_corner_size</item>
         <item name="labShapeCornerSizeTopLeft">?attr/labShapeCornerSize</item>
         <item name="labShapeCornerSizeTopRight">?attr/labShapeCornerSize</item>
@@ -199,10 +201,9 @@
 
         <item name="labShapeAppearance">@style/ShapeAppearance.Lab.Default</item>
         <item name="labShapeAppearanceOverlay">@style/ShapeAppearanceOverlay.Lab.Default</item>
+        <!-- SHAPE END -->
 
-        <!-- Android theme overrides -->
-        <item name="android:windowBackground">?attr/labColorBackground</item>
-        
+        <!-- MATERIAL OVERRIDES START -->
         <!-- Material theme configuration override -->
         <item name="elevationOverlayEnabled">false</item>
 
@@ -224,24 +225,28 @@
         <item name="colorOnSurface">?attr/labColorOnSurface</item>
         <item name="colorSurfaceVariant">?attr/labColorSurfaceVariant</item>
         <item name="colorOnSurfaceVariant">?attr/labColorOnSurfaceVariant</item>
+        <item name="colorError">?attr/labColorError</item>
         <item name="colorOutline">?attr/labColorOutline</item>
         <item name="colorOutlineVariant">?attr/labColorOutlineVariant</item>
-        <item name="colorError">?attr/labColorError</item>
-        <item name="android:colorBackground">?attr/labColorBackground</item>
         <item name="colorOnBackground">?attr/labColorOnBackground</item>
 
+        <!-- Android theme overrides -->
+        <item name="android:colorBackground">?attr/labColorBackground</item>
+        <item name="android:windowBackground">?attr/labColorBackground</item>
+
         <!-- Material text color overrides -->
-        <item name="android:textColor">?attr/labColorOnSurfaceSelector</item>
-        <item name="android:textColorPrimary">?attr/labColorOnSurfaceSelector</item>
+        <item name="android:textColor">?attr/labColorOnBackgroundSelector</item>
+        <item name="android:textColorPrimary">?attr/labColorOnBackgroundSelector</item>
         <item name="android:textColorSecondary">?attr/labColorOnSurfaceVariantSelector</item>
         <item name="android:textColorHighlight">?attr/labColorPrimarySelector</item>
         <item name="android:textColorLink">?attr/labColorPrimarySelector</item>
-        <item name="android:textColorPrimaryDisableOnly">?attr/labColorOnSurfaceSelector</item>
+        <item name="android:textColorPrimaryDisableOnly">?attr/labColorOnBackgroundSelector</item>
         <item name="android:textColorHint">?attr/labColorOnSurfaceVariantSelector</item>
+        <!-- MATERIAL OVERRIDES END -->
     </style>
 
     <style name="Theme.Lab.Dark" parent="Theme.MaterialComponents.NoActionBar">
-        <!-- Color scheme START -->
+        <!-- COLOR SCHEME START -->
         <!-- Primary -->
         <item name="labColorPrimary">@color/lab_internal_sys_color_dark_primary</item>
         <item name="labColorPrimarySelector">@color/lab_internal_sys_color_selector_primary</item>
@@ -390,14 +395,15 @@
         <item name="labColorDividerVariant">@color/lab_internal_sys_color_dark_divider_variant</item>
         <item name="labColorDividerVariantSelector">@color/lab_internal_sys_color_selector_divider_variant</item>
         <item name="labColorDividerVariantSelectorDisabled">@color/lab_internal_sys_color_dark_divider_variant_disabled</item>
-        <!-- Color scheme END -->
+        <!-- COLOR SCHEME END -->
 
-        <!-- Emphasis -->
+        <!-- EMPHASIS START -->
         <item name="labEmphasisAlphaDisabled">@dimen/lab_internal_sys_emphasis_disabled</item>
         <item name="labEmphasisAlphaSmall">@dimen/lab_internal_sys_emphasis_small</item>
         <item name="labEmphasisAlphaMedium">@dimen/lab_internal_sys_emphasis_medium</item>
+        <!-- EMPHASIS END -->
 
-        <!-- Typography -->
+        <!-- TYPOGRAPHY START -->
         <item name="labFontFamilyRegular">@string/lab_internal_sys_font_family_regular</item>
         <item name="labFontFamilyMedium">@string/lab_internal_sys_font_family_medium</item>
         <item name="labFontFamilySemibold">@string/lab_internal_sys_font_family_semibold</item>
@@ -418,8 +424,9 @@
         <item name="labTextAppearanceLabelLarge">@style/TextAppearance.Lab.LabelLarge</item>
         <item name="labTextAppearanceLabelMedium">@style/TextAppearance.Lab.LabelMedium</item>
         <item name="labTextAppearanceLabelSmall">@style/TextAppearance.Lab.LabelSmall</item>
+        <!-- TYPOGRAPHY END -->
 
-        <!-- Shape -->
+        <!-- SHAPE START -->
         <item name="labShapeCornerSize">@dimen/lab_internal_sys_shape_corner_size</item>
         <item name="labShapeCornerSizeTopLeft">?attr/labShapeCornerSize</item>
         <item name="labShapeCornerSizeTopRight">?attr/labShapeCornerSize</item>
@@ -428,10 +435,9 @@
 
         <item name="labShapeAppearance">@style/ShapeAppearance.Lab.Default</item>
         <item name="labShapeAppearanceOverlay">@style/ShapeAppearanceOverlay.Lab.Default</item>
+        <!-- SHAPE END -->
 
-        <!-- Android theme overrides -->
-        <item name="android:windowBackground">?attr/labColorBackground</item>
-        
+        <!-- MATERIAL OVERRIDES START -->
         <!-- Material theme configuration override -->
         <item name="elevationOverlayEnabled">false</item>
 
@@ -456,17 +462,21 @@
         <item name="colorError">?attr/labColorError</item>
         <item name="colorOutline">?attr/labColorOutline</item>
         <item name="colorOutlineVariant">?attr/labColorOutlineVariant</item>
-        <item name="android:colorBackground">?attr/labColorBackground</item>
         <item name="colorOnBackground">?attr/labColorOnBackground</item>
 
+        <!-- Android theme overrides -->
+        <item name="android:colorBackground">?attr/labColorBackground</item>
+        <item name="android:windowBackground">?attr/labColorBackground</item>
+
         <!-- Material text color overrides -->
-        <item name="android:textColor">?attr/labColorOnSurfaceSelector</item>
-        <item name="android:textColorPrimary">?attr/labColorOnSurfaceSelector</item>
+        <item name="android:textColor">?attr/labColorOnBackgroundSelector</item>
+        <item name="android:textColorPrimary">?attr/labColorOnBackgroundSelector</item>
         <item name="android:textColorSecondary">?attr/labColorOnSurfaceVariantSelector</item>
         <item name="android:textColorHighlight">?attr/labColorPrimarySelector</item>
         <item name="android:textColorLink">?attr/labColorPrimarySelector</item>
-        <item name="android:textColorPrimaryDisableOnly">?attr/labColorOnSurfaceSelector</item>
+        <item name="android:textColorPrimaryDisableOnly">?attr/labColorOnBackgroundSelector</item>
         <item name="android:textColorHint">?attr/labColorOnSurfaceVariantSelector</item>
+        <!-- MATERIAL OVERRIDES END -->
     </style>
 
     <!-- Development theme that overrides Material colors with debug colors -->
