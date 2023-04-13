@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Emphasis values -->
-    <attr name="labEmphasisAlphaSmall" format="float"/>
-    <attr name="labEmphasisAlphaMedium" format="float"/>
-    <attr name="labEmphasisAlphaDisabled" format="float"/>
-
     <!-- Primary -->
     <attr name="labColorPrimary" format="color"/>
     <attr name="labColorPrimarySelector" format="color"/>

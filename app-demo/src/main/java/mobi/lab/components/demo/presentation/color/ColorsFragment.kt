@@ -146,10 +146,8 @@ class ColorsFragment : Fragment(), ViewBindingHolder<FragmentColorsBinding> by F
                         ColorItem(R.attr.labColorSurfaceSelector, "Surface"),
                         ColorItem(R.attr.labColorOnSurfaceSelector, "On Surface"),
                     ),
-                    ColorRow(
-                        ColorItem(R.attr.labColorOutlineSelector, "Outline"),
-                        ColorItem(R.attr.labColorDividerSelector, "Divider"),
-                    )
+                    ColorRow(ColorItem(R.attr.labColorOutlineSelector, "Outline")),
+                    ColorRow(ColorItem(R.attr.labColorDividerSelector, "Divider")),
                 )
             ),
             ColorSection(
@@ -159,10 +157,8 @@ class ColorsFragment : Fragment(), ViewBindingHolder<FragmentColorsBinding> by F
                         ColorItem(R.attr.labColorSurfaceVariantSelector, "Surface Variant"),
                         ColorItem(R.attr.labColorOnSurfaceVariantSelector, "On Surface Variant"),
                     ),
-                    ColorRow(
-                        ColorItem(R.attr.labColorOutlineVariantSelector, "Outline Variant"),
-                        ColorItem(R.attr.labColorDividerVariantSelector, "Divider Variant"),
-                    )
+                    ColorRow(ColorItem(R.attr.labColorOutlineVariantSelector, "Outline Variant")),
+                    ColorRow(ColorItem(R.attr.labColorDividerVariantSelector, "Divider Variant")),
                 )
             ),
         )

@@ -163,12 +163,6 @@
         <item name="labColorDividerVariantSelectorDisabled">@color/lab_internal_sys_color_light_divider_variant_disabled</item>
         <!-- COLOR SCHEME END -->
 
-        <!-- EMPHASIS START -->
-        <item name="labEmphasisAlphaDisabled">@dimen/lab_internal_sys_emphasis_disabled</item>
-        <item name="labEmphasisAlphaSmall">@dimen/lab_internal_sys_emphasis_small</item>
-        <item name="labEmphasisAlphaMedium">@dimen/lab_internal_sys_emphasis_medium</item>
-        <!-- EMPHASIS END -->
-
         <!-- TYPOGRAPHY START -->
         <item name="labFontFamilyRegular">@string/lab_internal_sys_font_family_regular</item>
         <item name="labFontFamilyMedium">@string/lab_internal_sys_font_family_medium</item>
@@ -396,12 +390,6 @@
         <item name="labColorDividerVariantSelector">@color/lab_internal_sys_color_selector_divider_variant</item>
         <item name="labColorDividerVariantSelectorDisabled">@color/lab_internal_sys_color_dark_divider_variant_disabled</item>
         <!-- COLOR SCHEME END -->
-
-        <!-- EMPHASIS START -->
-        <item name="labEmphasisAlphaDisabled">@dimen/lab_internal_sys_emphasis_disabled</item>
-        <item name="labEmphasisAlphaSmall">@dimen/lab_internal_sys_emphasis_small</item>
-        <item name="labEmphasisAlphaMedium">@dimen/lab_internal_sys_emphasis_medium</item>
-        <!-- EMPHASIS END -->
 
         <!-- TYPOGRAPHY START -->
         <item name="labFontFamilyRegular">@string/lab_internal_sys_font_family_regular</item>
