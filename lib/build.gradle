@@ -90,7 +90,6 @@ android {
 
 dependencies {
     implementation libs.kotlin
-    implementation libs.androidx.appcompat
     implementation libs.material
 }
 

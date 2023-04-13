@@ -107,7 +107,6 @@ dependencies {
     implementation libs.timber
 
     // UI
-    implementation libs.androidx.appcompat
     implementation libs.constraintlayout
     implementation libs.material
 }

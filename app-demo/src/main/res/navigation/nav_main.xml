@@ -37,19 +37,19 @@
 
     <fragment
         android:id="@+id/colorsFragment"
-        android:name="mobi.lab.components.demo.presentation.ColorsFragment"
+        android:name="mobi.lab.components.demo.presentation.color.ColorsFragment"
         android:label="Colors"
         tools:layout="@layout/fragment_colors" />
 
     <fragment
         android:id="@+id/typographyFragment"
-        android:name="mobi.lab.components.demo.presentation.TypographyFragment"
+        android:name="mobi.lab.components.demo.presentation.typography.TypographyFragment"
         android:label="Typography"
         tools:layout="@layout/fragment_typography" />
 
     <fragment
         android:id="@+id/textFieldFragment"
-        android:name="mobi.lab.components.demo.presentation.TextFieldFragment"
+        android:name="mobi.lab.components.demo.presentation.textfield.TextFieldFragment"
         android:label="TextField"
         tools:layout="@layout/fragment_text_field" />
 </navigation>

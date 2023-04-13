@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color="@color/lab_internal_ref_palette_neutral_variant60" android:alpha="@dimen/lab_internal_sys_emphasis_disabled"/>
+</selector>

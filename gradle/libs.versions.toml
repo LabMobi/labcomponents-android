@@ -12,7 +12,10 @@ navigation = '2.5.3'
 # Gradle plugin
 gradle-plugin-android = 'com.android.tools.build:gradle:7.4.2'
 gradle-plugin-kotlin = { module = 'org.jetbrains.kotlin:kotlin-gradle-plugin', version.ref = 'kotlin' }
-gradle-plugin-ktlint = 'org.jlleitschuh.gradle:ktlint-gradle:11.2.0'
+# NB! Make sure to update the kltint version set in the root build.gradle file. subprojects / ktlint / version
+# NB! ktlint-gradle doesn't always depend on the latest ktlint version, but since it is a thin wrapper around ktlint
+# NB! it can be usefult to use a newer version of ktlint to get ruleset updates, etc.
+gradle-plugin-ktlint = 'org.jlleitschuh.gradle:ktlint-gradle:11.3.1'
 gradle-plugin-gradleversions = 'com.github.ben-manes:gradle-versions-plugin:0.46.0'
 gradle-plugin-detekt = 'io.gitlab.arturbosch.detekt:detekt-gradle-plugin:1.22.0'
 
@@ -22,26 +25,9 @@ kotlin = { module = 'org.jetbrains.kotlin:kotlin-stdlib', version.ref = 'kotlin'
 # Android + UI
 material = 'com.google.android.material:material:1.8.0'
 constraintlayout = 'androidx.constraintlayout:constraintlayout:2.1.4'
-androidx-appcompat = 'androidx.appcompat:appcompat:1.6.1'
-androidx-core = 'androidx.core:core:1.9.0'
-androidx-livedata = 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.1'
-androidx-viewmodel = 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
 androidx-annotation = 'androidx.annotation:annotation:1.6.0'
 androidx-navigation-fragment = { module = 'androidx.navigation:navigation-fragment-ktx', version.ref = 'navigation' }
 androidx-navigation-ui = { module = 'androidx.navigation:navigation-ui-ktx', version.ref = 'navigation' }
 
 # Utilities
 timber = 'com.jakewharton.timber:timber:5.0.1'
-
-# TODO remove these dependencies
-# Testing
-test-junit = 'junit:junit:4.13.2'
-test-junit-kotlin = { module = 'org.jetbrains.kotlin:kotlin-test-junit', version.ref = 'kotlin' }
-test-mockito-core = 'org.mockito:mockito-core:5.1.1'
-test-mockito-kotlin = 'com.nhaarman.mockitokotlin2:mockito-kotlin:2.2.0'
-test-androidx-archtesting = 'androidx.arch.core:core-testing:2.2.0'
-test-androidx-testrunner = 'androidx.test:runner:1.5.2'
-test-androidx-junit = 'androidx.test.ext:junit-ktx:1.1.5'
-test-androidx-core = 'androidx.test:core-ktx:1.5.0'
-test-androidx-espresso-core = 'androidx.test.espresso:espresso-core:3.5.1'
-test-androidx-espresso-intents = 'androidx.test.espresso:espresso-intents:3.5.1'

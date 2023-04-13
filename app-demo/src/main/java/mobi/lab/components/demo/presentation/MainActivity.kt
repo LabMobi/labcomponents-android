@@ -34,14 +34,14 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        menu.add(0, MENU_ITEM_SWITCH_UI_MODE, 0, "Switch UI mode")
+        menu.add(0, MENU_ITEM_SWITCH_NIGHT_MODE, 0, "Switch UI mode")
         return true
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
-            MENU_ITEM_SWITCH_UI_MODE -> {
-                toggleUiMode()
+            MENU_ITEM_SWITCH_NIGHT_MODE -> {
+                toggleNightMode()
                 true
             }
             else -> super.onOptionsItemSelected(item)
@@ -53,7 +53,7 @@ class MainActivity : AppCompatActivity() {
         return navController.navigateUp() || super.onSupportNavigateUp()
     }
 
-    private fun toggleUiMode() {
+    private fun toggleNightMode() {
         val nightMode = if (isNightModeEnabled()) {
             AppCompatDelegate.MODE_NIGHT_NO
         } else {
@@ -72,6 +72,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     companion object {
-        private const val MENU_ITEM_SWITCH_UI_MODE = 0
+        private const val MENU_ITEM_SWITCH_NIGHT_MODE = 0
     }
 }
