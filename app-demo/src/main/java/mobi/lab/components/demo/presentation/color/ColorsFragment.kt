@@ -44,18 +44,21 @@ class ColorsFragment : Fragment(), ViewBindingHolder<FragmentColorsBinding> by F
                 row.items.map { item ->
                     val itemBinding = ColorViewColorItemBinding.inflate(inflater)
                     itemBinding.textName.text = item.name
-                    // Colors
-                    val backgroundColorStateList = MaterialColors.getColorStateList(
-                        itemBinding.root.context,
-                        item.attrId,
-                        ColorStateList.valueOf(ContextCompat.getColor(binding.root.context, R.color.lab_internal_todo))
-                    )
+
+                    val colors = resolveColors(item)
+
                     // Update text color based on background color
-                    itemBinding.textName.setTextColor(getTextColor(backgroundColorStateList.defaultColor))
+                    itemBinding.textName.setTextColor(colors.text)
+
                     // Color will add a drawable that we can tint
-                    itemBinding.root.setBackgroundColor(backgroundColorStateList.defaultColor)
+                    itemBinding.background.setBackgroundColor(colors.background.defaultColor)
+                    itemBinding.background.backgroundTintList = colors.background
+                    if (colors.foreground != null) {
+                        // Color will add a drawable that we can tint
+                        itemBinding.foreground.setBackgroundColor(colors.foreground.defaultColor)
+                        itemBinding.foreground.backgroundTintList = colors.foreground
+                    }
                     // Add the tint
-                    itemBinding.root.backgroundTintList = backgroundColorStateList
                     itemBinding.root.setOnClickListener {
                         // Do nothing. We need a click listener to add focused and pressed states
                     }
@@ -74,12 +77,16 @@ class ColorsFragment : Fragment(), ViewBindingHolder<FragmentColorsBinding> by F
                 label = "Primary",
                 rows = listOf(
                     ColorRow(
-                        ColorItem(R.attr.labColorPrimarySelector, "Primary"),
-                        ColorItem(R.attr.labColorOnPrimarySelector, "On Primary"),
+                        ColorItem("Primary", colorId = R.attr.labColorPrimarySelector),
+                        ColorItem("On Primary", colorId = R.attr.labColorOnPrimarySelector, surfaceId = R.attr.labColorPrimarySelector),
                     ),
                     ColorRow(
-                        ColorItem(R.attr.labColorPrimarySurfaceSelector, "Primary Surface"),
-                        ColorItem(R.attr.labColorOnPrimarySurfaceSelector, "On Primary Surface"),
+                        ColorItem("Primary Surface", colorId = R.attr.labColorPrimarySurfaceSelector),
+                        ColorItem(
+                            "On Primary Surface",
+                            colorId = R.attr.labColorOnPrimarySurfaceSelector,
+                            surfaceId = R.attr.labColorPrimarySurfaceSelector
+                        ),
                     )
                 )
             ),
@@ -87,12 +94,16 @@ class ColorsFragment : Fragment(), ViewBindingHolder<FragmentColorsBinding> by F
                 label = "Secondary",
                 rows = listOf(
                     ColorRow(
-                        ColorItem(R.attr.labColorSecondarySelector, "Secondary"),
-                        ColorItem(R.attr.labColorOnSecondarySelector, "On Secondary"),
+                        ColorItem("Secondary", colorId = R.attr.labColorSecondarySelector),
+                        ColorItem("On Secondary", colorId = R.attr.labColorOnSecondarySelector, surfaceId = R.attr.labColorSecondarySelector),
                     ),
                     ColorRow(
-                        ColorItem(R.attr.labColorSecondarySurfaceSelector, "Secondary Surface"),
-                        ColorItem(R.attr.labColorOnSecondarySurfaceSelector, "On Secondary Surface"),
+                        ColorItem("Secondary Surface", colorId = R.attr.labColorSecondarySurfaceSelector),
+                        ColorItem(
+                            "On Secondary Surface",
+                            colorId = R.attr.labColorOnSecondarySurfaceSelector,
+                            surfaceId = R.attr.labColorSecondarySurfaceSelector
+                        ),
                     ),
                 )
             ),
@@ -100,12 +111,16 @@ class ColorsFragment : Fragment(), ViewBindingHolder<FragmentColorsBinding> by F
                 label = "Error",
                 rows = listOf(
                     ColorRow(
-                        ColorItem(R.attr.labColorErrorSelector, "Error"),
-                        ColorItem(R.attr.labColorOnErrorSelector, "On Error"),
+                        ColorItem("Error", colorId = R.attr.labColorErrorSelector),
+                        ColorItem("On Error", colorId = R.attr.labColorOnErrorSelector, surfaceId = R.attr.labColorErrorSelector),
                     ),
                     ColorRow(
-                        ColorItem(R.attr.labColorErrorSurfaceSelector, "Error Surface"),
-                        ColorItem(R.attr.labColorOnErrorSurfaceSelector, "On Error Surface"),
+                        ColorItem("Error Surface", colorId = R.attr.labColorErrorSurfaceSelector),
+                        ColorItem(
+                            "On Error Surface",
+                            colorId = R.attr.labColorOnErrorSurfaceSelector,
+                            surfaceId = R.attr.labColorErrorSurfaceSelector
+                        ),
                     ),
                 )
             ),
@@ -113,12 +128,20 @@ class ColorsFragment : Fragment(), ViewBindingHolder<FragmentColorsBinding> by F
                 label = "Success",
                 rows = listOf(
                     ColorRow(
-                        ColorItem(R.attr.labColorSuccessSelector, "Success"),
-                        ColorItem(R.attr.labColorOnSuccessSelector, "On Success"),
+                        ColorItem("Success", colorId = R.attr.labColorSuccessSelector),
+                        ColorItem(
+                            "On Success",
+                            colorId = R.attr.labColorOnSuccessSelector,
+                            surfaceId = R.attr.labColorSuccessSelector
+                        ),
                     ),
                     ColorRow(
-                        ColorItem(R.attr.labColorSuccessSurfaceSelector, "Success Surface"),
-                        ColorItem(R.attr.labColorOnSuccessSurfaceSelector, "On Success Surface"),
+                        ColorItem("Success Surface", colorId = R.attr.labColorSuccessSurfaceSelector),
+                        ColorItem(
+                            "On Success Surface",
+                            colorId = R.attr.labColorOnSuccessSurfaceSelector,
+                            surfaceId = R.attr.labColorSuccessSurfaceSelector
+                        ),
                     )
                 )
             ),
@@ -126,12 +149,16 @@ class ColorsFragment : Fragment(), ViewBindingHolder<FragmentColorsBinding> by F
                 label = "Caution",
                 rows = listOf(
                     ColorRow(
-                        ColorItem(R.attr.labColorCautionSelector, "Caution"),
-                        ColorItem(R.attr.labColorOnCautionSelector, "On Caution"),
+                        ColorItem("Caution", colorId = R.attr.labColorCautionSelector),
+                        ColorItem("On Caution", colorId = R.attr.labColorOnCautionSelector, surfaceId = R.attr.labColorCautionSelector),
                     ),
                     ColorRow(
-                        ColorItem(R.attr.labColorCautionSurfaceSelector, "Caution Surface"),
-                        ColorItem(R.attr.labColorOnCautionSurfaceSelector, "On Caution Surface"),
+                        ColorItem("Caution Surface", colorId = R.attr.labColorCautionSurfaceSelector),
+                        ColorItem(
+                            "On Caution Surface",
+                            colorId = R.attr.labColorOnCautionSurfaceSelector,
+                            surfaceId = R.attr.labColorCautionSurfaceSelector
+                        ),
                     )
                 )
             ),
@@ -139,34 +166,33 @@ class ColorsFragment : Fragment(), ViewBindingHolder<FragmentColorsBinding> by F
                 label = "Neutral",
                 rows = listOf(
                     ColorRow(
-                        ColorItem(R.attr.labColorBackground, "Background"),
-                        ColorItem(R.attr.labColorOnBackgroundSelector, "On Background"),
+                        ColorItem("Background", colorId = R.attr.labColorBackground),
+                        ColorItem("On Background", colorId = R.attr.labColorOnBackgroundSelector, surfaceId = R.attr.labColorBackground),
                     ),
                     ColorRow(
-                        ColorItem(R.attr.labColorSurfaceSelector, "Surface"),
-                        ColorItem(R.attr.labColorOnSurfaceSelector, "On Surface"),
+                        ColorItem("Surface", colorId = R.attr.labColorSurfaceSelector),
+                        ColorItem("On Surface", colorId = R.attr.labColorOnSurfaceSelector, surfaceId = R.attr.labColorSurfaceSelector),
                     ),
-                    ColorRow(ColorItem(R.attr.labColorOutlineSelector, "Outline")),
-                    ColorRow(ColorItem(R.attr.labColorDividerSelector, "Divider")),
+                    ColorRow(ColorItem("Outline", colorId = R.attr.labColorOutlineSelector)),
+                    ColorRow(ColorItem("Divider", colorId = R.attr.labColorDividerSelector)),
                 )
             ),
             ColorSection(
                 label = "Neutral Variant",
                 rows = listOf(
                     ColorRow(
-                        ColorItem(R.attr.labColorSurfaceVariantSelector, "Surface Variant"),
-                        ColorItem(R.attr.labColorOnSurfaceVariantSelector, "On Surface Variant"),
+                        ColorItem("Surface Variant", colorId = R.attr.labColorSurfaceVariantSelector),
+                        ColorItem(
+                            "On Surface Variant",
+                            colorId = R.attr.labColorOnSurfaceVariantSelector,
+                            surfaceId = R.attr.labColorSurfaceVariantSelector
+                        ),
                     ),
-                    ColorRow(ColorItem(R.attr.labColorOutlineVariantSelector, "Outline Variant")),
-                    ColorRow(ColorItem(R.attr.labColorDividerVariantSelector, "Divider Variant")),
+                    ColorRow(ColorItem("Outline Variant", colorId = R.attr.labColorOutlineVariantSelector)),
+                    ColorRow(ColorItem("Divider Variant", colorId = R.attr.labColorDividerVariantSelector)),
                 )
             ),
         )
-    }
-
-    private fun getTextColor(@ColorInt backgroundColor: Int): Int {
-        // Use white text color if the background color is considered dark.
-        return if (MaterialColors.isColorLight(backgroundColor)) Color.BLACK else Color.WHITE
     }
 
     private fun setViewEnabled(view: View, enabled: Boolean) {
@@ -176,5 +202,43 @@ class ColorsFragment : Fragment(), ViewBindingHolder<FragmentColorsBinding> by F
             }
         }
         view.isEnabled = enabled
+    }
+
+    private fun resolveColors(item: ColorItem): ItemColors {
+        val colorId = item.colorId
+        val surfaceId = item.surfaceId
+        return if (surfaceId == null) {
+            // If there is no separate surface, then use the main color for the entire item and don't show a foreground color
+            ItemColors(background = getColorStateList(colorId), foreground = null)
+        } else {
+            // If there is are 2 colors. Use surface as the background and the color value as the foreground
+            ItemColors(background = getColorStateList(surfaceId), foreground = getColorStateList(colorId))
+        }
+    }
+
+    private fun getColorStateList(attrId: Int): ColorStateList {
+        val context = requireContext()
+        return MaterialColors.getColorStateList(
+            context,
+            attrId,
+            ColorStateList.valueOf(ContextCompat.getColor(context, R.color.lab_internal_todo))
+        )
+    }
+
+    private data class ItemColors(
+        val background: ColorStateList,
+        val foreground: ColorStateList?
+    ) {
+        /**
+         * Text color. Based on the background color value
+         */
+        val text: Int
+            @ColorInt
+            get() = getTextColor(background.defaultColor)
+
+        private fun getTextColor(@ColorInt backgroundColor: Int): Int {
+            // Use white text color if the background color is considered dark.
+            return if (MaterialColors.isColorLight(backgroundColor)) Color.BLACK else Color.WHITE
+        }
     }
 }

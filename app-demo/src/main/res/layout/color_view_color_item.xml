@@ -6,16 +6,25 @@
     android:layout_height="wrap_content">
 
     <!-- Use nested ViewGroups to avoid setting LayoutParams from code -->
-    <FrameLayout
+    <LinearLayout
+        android:id="@+id/background"
         android:layout_width="144dp"
         android:layout_height="96dp"
+        android:padding="4dp"
+        android:orientation="vertical"
         tools:ignore="UselessParent">
 
         <TextView
             android:id="@+id/text_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="4dp"
             android:hyphenationFrequency="none" />
-    </FrameLayout>
+
+        <View
+            android:id="@+id/foreground"
+            android:layout_marginTop="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
 </FrameLayout>

@@ -22,7 +22,7 @@
 
         <item name="labColorOnPrimary">@color/lab_internal_sys_color_light_on_primary</item>
         <item name="labColorOnPrimarySelector">@color/lab_internal_sys_color_selector_on_primary</item>
-        <item name="labColorOnPrimarySelectorDisabled">@color/lab_internal_sys_color_light_primary_disabled</item>
+        <item name="labColorOnPrimarySelectorDisabled">@color/lab_internal_sys_color_light_on_primary_disabled</item>
 
         <item name="labColorPrimarySurface">@color/lab_internal_sys_color_light_primary_surface</item>
         <item name="labColorPrimarySurfaceSelector">@color/lab_internal_sys_color_selector_primary_surface</item>
@@ -250,7 +250,7 @@
 
         <item name="labColorOnPrimary">@color/lab_internal_sys_color_dark_on_primary</item>
         <item name="labColorOnPrimarySelector">@color/lab_internal_sys_color_selector_on_primary</item>
-        <item name="labColorOnPrimarySelectorDisabled">@color/lab_internal_sys_color_dark_primary_disabled</item>
+        <item name="labColorOnPrimarySelectorDisabled">@color/lab_internal_sys_color_dark_on_primary_disabled</item>
 
         <item name="labColorPrimarySurface">@color/lab_internal_sys_color_dark_primary_surface</item>
         <item name="labColorPrimarySurfaceSelector">@color/lab_internal_sys_color_selector_primary_surface</item>

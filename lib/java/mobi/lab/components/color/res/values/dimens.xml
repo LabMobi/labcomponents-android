@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <item name="lab_internal_sys_emphasis_high" format="float" type="dimen">0.64</item>
     <item name="lab_internal_sys_emphasis_medium" format="float" type="dimen">0.12</item>
     <item name="lab_internal_sys_emphasis_small" format="float" type="dimen">0.08</item>
     <item name="lab_internal_sys_emphasis_disabled" format="float" type="dimen">0.40</item>
