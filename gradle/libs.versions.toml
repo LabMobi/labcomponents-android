@@ -1,33 +1,36 @@
 [versions]
+android-sdk-min = "23"
+android-sdk-target = "33"
+android-sdk-compile = "android-33"
 
-android-sdk-min = '23'
-android-sdk-target = '33'
-android-sdk-compile = 'android-33'
+android-gradle-plugin = "7.4.2"
+kotlin = "1.8.10"
+navigation = "2.5.3"
 
-kotlin = '1.8.10'
-navigation = '2.5.3'
+[plugins]
+# Gradle plugin
+android-application = { id = "com.android.application", version.ref = "android-gradle-plugin" }
+android-library = { id = "com.android.library", version.ref = "android-gradle-plugin" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }
+kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
+# NB! Make sure to update the kltint version set in the root build.gradle file. subprojects / ktlint / version
+# NB! ktlint-gradle doesn"t always depend on the latest ktlint version, but since it is a thin wrapper around ktlint
+# NB! it can be usefult to use a newer version of ktlint to get ruleset updates, etc.
+ktlint = { id = "org.jlleitschuh.gradle.ktlint", version = "11.3.1" }
+gradleVersions = { id = "com.github.ben-manes.versions", version = "0.46.0" }
+detekt = { id = "io.gitlab.arturbosch.detekt", version = "1.22.0" }
 
 [libraries]
-
-# Gradle plugin
-gradle-plugin-android = 'com.android.tools.build:gradle:7.4.2'
-gradle-plugin-kotlin = { module = 'org.jetbrains.kotlin:kotlin-gradle-plugin', version.ref = 'kotlin' }
-# NB! Make sure to update the kltint version set in the root build.gradle file. subprojects / ktlint / version
-# NB! ktlint-gradle doesn't always depend on the latest ktlint version, but since it is a thin wrapper around ktlint
-# NB! it can be usefult to use a newer version of ktlint to get ruleset updates, etc.
-gradle-plugin-ktlint = 'org.jlleitschuh.gradle:ktlint-gradle:11.3.1'
-gradle-plugin-gradleversions = 'com.github.ben-manes:gradle-versions-plugin:0.46.0'
-gradle-plugin-detekt = 'io.gitlab.arturbosch.detekt:detekt-gradle-plugin:1.22.0'
-
 # Language
-kotlin = { module = 'org.jetbrains.kotlin:kotlin-stdlib', version.ref = 'kotlin' }
+kotlin = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
 
 # Android + UI
-material = 'com.google.android.material:material:1.8.0'
-constraintlayout = 'androidx.constraintlayout:constraintlayout:2.1.4'
-androidx-annotation = 'androidx.annotation:annotation:1.6.0'
-androidx-navigation-fragment = { module = 'androidx.navigation:navigation-fragment-ktx', version.ref = 'navigation' }
-androidx-navigation-ui = { module = 'androidx.navigation:navigation-ui-ktx', version.ref = 'navigation' }
+material = "com.google.android.material:material:1.8.0"
+constraintlayout = "androidx.constraintlayout:constraintlayout:2.1.4"
+androidx-annotation = "androidx.annotation:annotation:1.6.0"
+androidx-navigation-fragment = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "navigation" }
+androidx-navigation-ui = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "navigation" }
 
 # Utilities
-timber = 'com.jakewharton.timber:timber:5.0.1'
+timber = "com.jakewharton.timber:timber:5.0.1"

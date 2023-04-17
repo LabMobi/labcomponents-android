@@ -305,7 +305,7 @@ public open class LabTextField @JvmOverloads constructor(
     private fun useEditText(action: (LabTextFieldEditText) -> Unit) {
         val editText = editText
         if (editText == null) {
-            Log.getInstance(this).e(Throwable(), "Inner EditText is null but accessed")
+            Log.getInstance(this).e(Throwable("LabTextField inner EditText is null"), "Inner EditText is null but accessed")
         } else {
             action(editText)
         }
