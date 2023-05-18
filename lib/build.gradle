@@ -35,9 +35,12 @@ android {
 
     buildFeatures {
         viewBinding = true
+        buildConfig = true
     }
 
     kotlinOptions {
+        jvmTarget = "1.8"
+
         // For Kotlin API strict mode.
         // In the future we should be able to do it easier.
         // When https://youtrack.jetbrains.com/issue/KT-37652 is fixed
