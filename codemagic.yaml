@@ -43,6 +43,8 @@ workflows:
   play-store-release-builds:
     name: Play Store Release builds
     instance_type: linux_x2
+    environment:
+      java: 17
     scripts:
       - name: Check 'main' branch
         script: if [ "$FCI_BRANCH" != "main" ]; then exit 1; fi
@@ -56,6 +58,8 @@ workflows:
   develop-builds:
     name: Dev builds
     instance_type: linux_x2
+    environment:
+      java: 17
     triggering:
       events:
         - push
@@ -75,6 +79,8 @@ workflows:
   merge-requests:
     name: Merge requests
     instance_type: linux_x2
+    environment:
+      java: 17
     triggering:
       events:
         - pull_request
