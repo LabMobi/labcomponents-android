@@ -21,10 +21,10 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:minHeight">56dp</item>
-        <item name="android:paddingStart">@dimen/margin</item>
-        <item name="android:paddingEnd">@dimen/margin</item>
-        <item name="android:paddingTop">@dimen/size_8</item>
-        <item name="android:paddingBottom">@dimen/size_8</item>
+        <item name="android:paddingStart">@dimen/margin_default</item>
+        <item name="android:paddingEnd">@dimen/margin_default</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
         <item name="android:background">?attr/selectableItemBackground</item>
         <item name="android:gravity">center_vertical</item>
     </style>
@@ -32,8 +32,8 @@
     <style name="Text.HeadlineLarge" parent="TextAppearance.Lab.HeadlineLarge">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginStart">@dimen/margin</item>
-        <item name="android:layout_marginEnd">@dimen/margin</item>
+        <item name="android:layout_marginStart">@dimen/margin_default</item>
+        <item name="android:layout_marginEnd">@dimen/margin_default</item>
         <item name="android:layout_marginTop">24dp</item>
         <item name="android:layout_marginBottom">24dp</item>
         <item name="android:textAllCaps">true</item>
@@ -42,8 +42,8 @@
     <style name="Text.HeadlineSmall" parent="TextAppearance.Lab.HeadlineSmall">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginStart">@dimen/margin</item>
-        <item name="android:layout_marginEnd">@dimen/margin</item>
+        <item name="android:layout_marginStart">@dimen/margin_default</item>
+        <item name="android:layout_marginEnd">@dimen/margin_default</item>
         <item name="android:layout_marginTop">24dp</item>
         <item name="android:layout_marginBottom">24dp</item>
         <item name="android:gravity">center</item>
@@ -53,9 +53,9 @@
     <style name="Text.TextStyle" parent="">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginStart">@dimen/margin</item>
-        <item name="android:layout_marginEnd">@dimen/margin</item>
-        <item name="android:layout_marginTop">@dimen/size_8</item>
+        <item name="android:layout_marginStart">@dimen/margin_default</item>
+        <item name="android:layout_marginEnd">@dimen/margin_default</item>
+        <item name="android:layout_marginTop">8dp</item>
         <item name="android:layout_marginBottom">12dp</item>
     </style>
 
