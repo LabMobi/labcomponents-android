@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="NewApi">
+    <!-- letterSpacing is calculated by figma spacing / textSize. -->
+    <!-- See https://stackoverflow.com/questions/39100969/how-to-calculate-letterspacing-for-textview-from-sketch-values -->
+
     <style name="TextAppearance.Lab" parent="TextAppearance.Material3.BodyLarge">
         <!-- Add base styles here -->
         <item name="android:textColor">@color/lab_internal_sys_color_selector_on_surface</item>
