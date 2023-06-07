@@ -22,10 +22,10 @@ Details on how to contribute to the project.
 6. Make sure the build succeeds in `Codemagic`. The project name is `labcomponents-android`.
 7. Create a merge request targeting the `develop` branch.
    1. A code review and approval from at least one other person from the Android community.
-   1. Tag Lauris Kruusamäe in the request.
+   1. Tag `Lauris Kruusamäe` in the request.
 8. If the review is approved, then merge the merge request to `develop`.
 9. Contact the Android community in Slack `#community-android` about releasing a new version of the project. 
-   1. Tag Lauris Kruusamäe for now for help with the release.
+   1. Tag `Lauris Kruusamäe` for now for help with the release.
    1. TODO: Write a proper release guide and possible automation 
 
 ## Dependency versioning
