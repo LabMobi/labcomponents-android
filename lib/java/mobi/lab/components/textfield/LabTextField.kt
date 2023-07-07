@@ -294,6 +294,11 @@ public open class LabTextField @JvmOverloads constructor(
         boxHelper?.boxBackgroundColor = boxBackgroundColor
     }
 
+    public fun setBoxCornerRadius(boxCornerRadius: Float) {
+        // Convenience function
+        setBoxCornerRadii(boxCornerRadius, boxCornerRadius, boxCornerRadius, boxCornerRadius)
+    }
+
     override fun setBoxCornerRadii(
         boxCornerRadiusTopStart: Float,
         boxCornerRadiusTopEnd: Float,
