@@ -17,6 +17,7 @@ import androidx.annotation.Dimension
 import androidx.annotation.Px
 import androidx.annotation.RequiresApi
 import androidx.core.view.updatePadding
+import com.google.android.material.shape.ShapeAppearanceModel
 import com.google.android.material.textfield.TextInputLayout
 import mobi.lab.components.R
 import mobi.lab.components.shared.DrawableUtil
@@ -306,6 +307,11 @@ public open class LabTextField @JvmOverloads constructor(
             bottomStartPx = boxCornerRadiusBottomStart,
             bottomEndPx = boxCornerRadiusBottomEnd
         )
+    }
+
+    override fun setShapeAppearanceModel(shapeAppearanceModel: ShapeAppearanceModel) {
+        super.setShapeAppearanceModel(shapeAppearanceModel)
+        boxHelper?.setShapeAppearanceModel(shapeAppearanceModel)
     }
 
     /**

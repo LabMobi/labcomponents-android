@@ -42,17 +42,17 @@ internal class LabTextFieldBoxBackgroundHelper(
             updateBoxState()
         }
 
+    private val context: Context
+        get() = textField.context
+
     private var boxCornerRadiusTopStartPx: Float = NO_VALUE_FLOAT
     private var boxCornerRadiusTopEndPx: Float = NO_VALUE_FLOAT
     private var boxCornerRadiusBottomStartPx: Float = NO_VALUE_FLOAT
     private var boxCornerRadiusBottomEndPx: Float = NO_VALUE_FLOAT
-
-    private val context: Context
-        get() = textField.context
-
-    private var shapeAppearanceModel: ShapeAppearanceModel
     private var boxBackground: MaterialShapeDrawable
     private var boxStrokeWidthPx: Int = boxStrokeWidthDefaultPx
+
+    private var shapeAppearanceModel: ShapeAppearanceModel
 
     init {
         val context = textField.context
@@ -84,6 +84,12 @@ internal class LabTextFieldBoxBackgroundHelper(
                 attributes.recycle()
             }
         }
+    }
+
+    fun setShapeAppearanceModel(shapeAppearanceModel: ShapeAppearanceModel) {
+        this.shapeAppearanceModel = shapeAppearanceModel
+        updateShapeAppearanceModel()
+        updateBoxState()
     }
 
     fun setBoxCornerRadii(topStartPx: Float, topEndPx: Float, bottomStartPx: Float, bottomEndPx: Float) {
