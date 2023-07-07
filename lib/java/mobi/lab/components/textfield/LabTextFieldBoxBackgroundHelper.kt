@@ -18,16 +18,41 @@ internal class LabTextFieldBoxBackgroundHelper(
     defStyleAttr: Int
 ) {
 
+    var boxStrokeWidthDefaultPx: Int = context.resources.getDimensionPixelSize(R.dimen.lab_internal_textfield_box_stroke_width)
+        set(value) {
+            field = value
+            updateBoxState()
+        }
+
+    var boxStrokeWidthFocusedPx: Int = context.resources.getDimensionPixelSize(R.dimen.lab_internal_textfield_box_stroke_width_focused)
+        set(value) {
+            field = value
+            updateBoxState()
+        }
+
+    var boxStrokeColor: ColorStateList? = null
+        set(value) {
+            field = value
+            updateBoxState()
+        }
+
+    var boxBackgroundColor: ColorStateList? = null
+        set(value) {
+            field = value
+            updateBoxState()
+        }
+
+    private var boxCornerRadiusTopStartPx: Float = NO_VALUE_FLOAT
+    private var boxCornerRadiusTopEndPx: Float = NO_VALUE_FLOAT
+    private var boxCornerRadiusBottomStartPx: Float = NO_VALUE_FLOAT
+    private var boxCornerRadiusBottomEndPx: Float = NO_VALUE_FLOAT
+
     private val context: Context
         get() = textField.context
 
     private var shapeAppearanceModel: ShapeAppearanceModel
     private var boxBackground: MaterialShapeDrawable
-    private var boxStrokeWidthDefaultPx: Int = context.resources.getDimensionPixelSize(R.dimen.lab_internal_textfield_box_stroke_width)
-    private var boxStrokeWidthFocusedPx: Int = context.resources.getDimensionPixelSize(R.dimen.lab_internal_textfield_box_stroke_width_focused)
     private var boxStrokeWidthPx: Int = boxStrokeWidthDefaultPx
-    private var boxStrokeColor: ColorStateList? = null
-    private var boxBackgroundColor: ColorStateList? = null
 
     init {
         val context = textField.context
@@ -45,33 +70,30 @@ internal class LabTextFieldBoxBackgroundHelper(
                 boxStrokeWidthFocusedPx = attributes.getDimensionPixelSize(R.styleable.LabTextField_boxStrokeWidthFocused, boxStrokeWidthFocusedPx)
                 boxStrokeWidthPx = boxStrokeWidthDefaultPx
 
-                val boxCornerRadiusTopStart = attributes.getDimension(R.styleable.LabTextField_boxCornerRadiusTopStart, -1f)
-                val boxCornerRadiusTopEnd = attributes.getDimension(R.styleable.LabTextField_boxCornerRadiusTopEnd, -1f)
-                val boxCornerRadiusBottomStart = attributes.getDimension(R.styleable.LabTextField_boxCornerRadiusBottomStart, -1f)
-                val boxCornerRadiusBottomEnd = attributes.getDimension(R.styleable.LabTextField_boxCornerRadiusBottomEnd, -1f)
-
-                val shapeBuilder = shapeAppearanceModel.toBuilder()
-                if (boxCornerRadiusTopStart >= 0) {
-                    shapeBuilder.setTopLeftCornerSize(boxCornerRadiusTopStart)
-                }
-                if (boxCornerRadiusTopEnd >= 0) {
-                    shapeBuilder.setTopRightCornerSize(boxCornerRadiusTopEnd)
-                }
-                if (boxCornerRadiusBottomEnd >= 0) {
-                    shapeBuilder.setBottomRightCornerSize(boxCornerRadiusBottomEnd)
-                }
-                if (boxCornerRadiusBottomStart >= 0) {
-                    shapeBuilder.setBottomLeftCornerSize(boxCornerRadiusBottomStart)
-                }
-                shapeAppearanceModel = shapeBuilder.build()
+                boxCornerRadiusTopStartPx = attributes.getDimension(R.styleable.LabTextField_boxCornerRadiusTopStart, NO_VALUE_FLOAT)
+                boxCornerRadiusTopEndPx = attributes.getDimension(R.styleable.LabTextField_boxCornerRadiusTopEnd, NO_VALUE_FLOAT)
+                boxCornerRadiusBottomStartPx = attributes.getDimension(R.styleable.LabTextField_boxCornerRadiusBottomStart, NO_VALUE_FLOAT)
+                boxCornerRadiusBottomEndPx = attributes.getDimension(R.styleable.LabTextField_boxCornerRadiusBottomEnd, NO_VALUE_FLOAT)
 
                 // We've read the attributes ourselves. Now clear the Filled TextInputLayout background's stroke
                 textField.boxStrokeWidth = 0
                 textField.boxStrokeWidthFocused = 0
+
+                updateShapeAppearanceModel()
             } finally {
                 attributes.recycle()
             }
         }
+    }
+
+    fun setBoxCornerRadii(topStartPx: Float, topEndPx: Float, bottomStartPx: Float, bottomEndPx: Float) {
+        boxCornerRadiusTopStartPx = topStartPx
+        boxCornerRadiusTopEndPx = topEndPx
+        boxCornerRadiusBottomStartPx = bottomStartPx
+        boxCornerRadiusBottomEndPx = bottomEndPx
+
+        updateShapeAppearanceModel()
+        updateBoxState()
     }
 
     @Suppress("FoldInitializerAndIfToElvis")
@@ -99,5 +121,26 @@ internal class LabTextFieldBoxBackgroundHelper(
         boxBackground.fillColor = boxBackgroundColor
 
         editText.background = boxBackground
+    }
+
+    private fun updateShapeAppearanceModel() {
+        val shapeBuilder = shapeAppearanceModel.toBuilder()
+        if (boxCornerRadiusTopStartPx >= 0) {
+            shapeBuilder.setTopLeftCornerSize(boxCornerRadiusTopStartPx)
+        }
+        if (boxCornerRadiusTopEndPx >= 0) {
+            shapeBuilder.setTopRightCornerSize(boxCornerRadiusTopEndPx)
+        }
+        if (boxCornerRadiusBottomEndPx >= 0) {
+            shapeBuilder.setBottomRightCornerSize(boxCornerRadiusBottomEndPx)
+        }
+        if (boxCornerRadiusBottomStartPx >= 0) {
+            shapeBuilder.setBottomLeftCornerSize(boxCornerRadiusBottomStartPx)
+        }
+        shapeAppearanceModel = shapeBuilder.build()
+    }
+
+    internal companion object {
+        internal const val NO_VALUE_FLOAT = -1f
     }
 }

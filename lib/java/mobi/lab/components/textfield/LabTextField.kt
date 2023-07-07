@@ -1,6 +1,8 @@
 package mobi.lab.components.textfield
 
 import android.content.Context
+import android.content.res.ColorStateList
+import android.os.Build
 import android.os.Bundle
 import android.os.Parcelable
 import android.text.TextUtils
@@ -10,10 +12,14 @@ import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
+import androidx.annotation.ColorInt
 import androidx.annotation.Dimension
+import androidx.annotation.Px
+import androidx.annotation.RequiresApi
 import androidx.core.view.updatePadding
 import com.google.android.material.textfield.TextInputLayout
 import mobi.lab.components.R
+import mobi.lab.components.shared.DrawableUtil
 import mobi.lab.components.shared.Log
 import mobi.lab.components.shared.ParcelCompat
 
@@ -63,6 +69,9 @@ public open class LabTextField @JvmOverloads constructor(
     private var textPaddingBottom: Int = NO_VALUE_INT
     private var textPaddingHorizontal: Int = NO_VALUE_INT
 
+    // A temporary solution to update the cursor color until the Material lib's support for this becomes available
+    private var cursorColorOverride: Int = NO_VALUE_INT
+
     init {
         attrs?.let {
             val attributes = context.obtainStyledAttributes(attrs, R.styleable.LabTextField, 0, defStyleAttr)
@@ -108,6 +117,7 @@ public open class LabTextField @JvmOverloads constructor(
 
         boxHelper?.updateBoxState()
         super.drawableStateChanged()
+        updateCursorColor()
 
         inDrawableStateChanged = false
     }
@@ -242,6 +252,63 @@ public open class LabTextField @JvmOverloads constructor(
     }
 
     /**
+     * Set a color for the cursor and text select handles. This overrides the default color from colorControlActivated value.
+     * NB! Only supported on API 29+
+     *
+     * @param color The new color override
+     */
+    @RequiresApi(Build.VERSION_CODES.Q)
+    public fun setCursorColorOverride(@ColorInt color: Int) {
+        cursorColorOverride = color
+        updateCursorColor()
+    }
+
+    public override fun setBoxStrokeWidth(@Px boxStrokeWidth: Int) {
+        super.setBoxStrokeWidth(boxStrokeWidth)
+        boxHelper?.boxStrokeWidthDefaultPx = boxStrokeWidth
+    }
+
+    public override fun setBoxStrokeWidthFocused(@Px boxStrokeWidthFocused: Int) {
+        super.setBoxStrokeWidthFocused(boxStrokeWidthFocused)
+        boxHelper?.boxStrokeWidthFocusedPx = boxStrokeWidthFocused
+    }
+
+    override fun setBoxStrokeColor(boxStrokeColor: Int) {
+        super.setBoxStrokeColor(boxStrokeColor)
+        boxHelper?.boxStrokeColor = ColorStateList.valueOf(boxStrokeColor)
+    }
+
+    override fun setBoxStrokeColorStateList(boxStrokeColor: ColorStateList) {
+        super.setBoxStrokeColorStateList(boxStrokeColor)
+        boxHelper?.boxStrokeColor = boxStrokeColor
+    }
+
+    override fun setBoxBackgroundColor(boxBackgroundColor: Int) {
+        super.setBoxBackgroundColor(boxBackgroundColor)
+        boxHelper?.boxBackgroundColor = ColorStateList.valueOf(boxBackgroundColor)
+    }
+
+    override fun setBoxBackgroundColorStateList(boxBackgroundColor: ColorStateList) {
+        super.setBoxBackgroundColorStateList(boxBackgroundColor)
+        boxHelper?.boxBackgroundColor = boxBackgroundColor
+    }
+
+    override fun setBoxCornerRadii(
+        boxCornerRadiusTopStart: Float,
+        boxCornerRadiusTopEnd: Float,
+        boxCornerRadiusBottomStart: Float,
+        boxCornerRadiusBottomEnd: Float
+    ) {
+        super.setBoxCornerRadii(boxCornerRadiusTopStart, boxCornerRadiusTopEnd, boxCornerRadiusBottomStart, boxCornerRadiusBottomEnd)
+        boxHelper?.setBoxCornerRadii(
+            topStartPx = boxCornerRadiusTopStart,
+            topEndPx = boxCornerRadiusTopEnd,
+            bottomStartPx = boxCornerRadiusBottomStart,
+            bottomEndPx = boxCornerRadiusBottomEnd
+        )
+    }
+
+    /**
      * Clear the error state.
      */
     public fun clearError() {
@@ -309,6 +376,24 @@ public open class LabTextField @JvmOverloads constructor(
         } else {
             action(editText)
         }
+    }
+
+    private fun updateCursorColor() {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.Q || cursorColorOverride == NO_VALUE_INT) {
+            // Not supported.
+            return
+        }
+
+        val editText = editText
+        if (editText == null) {
+            // Nothing to update
+            return
+        }
+
+        DrawableUtil.setDrawableColor(editText.textSelectHandleLeft, cursorColorOverride)
+        DrawableUtil.setDrawableColor(editText.textSelectHandleRight, cursorColorOverride)
+        DrawableUtil.setDrawableColor(editText.textSelectHandle, cursorColorOverride)
+        DrawableUtil.setDrawableColor(editText.textCursorDrawable, cursorColorOverride)
     }
 
     internal companion object {
