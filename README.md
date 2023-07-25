@@ -32,6 +32,7 @@ The project consists of the component library in `lib` module and components dem
 -   [Colors](docs/components/colors.md)
 -   [TextField](docs/components/textfield.md)
 -   [Theme](docs/components/theme.md)
+-   [Toolbar](docs/components/toolbar.md)
 -   [Typography](docs/components/typography.md)
 
 

@@ -21,9 +21,10 @@ class ComponentListFragment : Fragment(), ViewBindingHolder<FragmentComponentLis
         super.onViewCreated(view, savedInstanceState)
         val navController = findNavController()
         requireBinding {
-            itemTextField.setOnClickListener { navController.navigate(R.id.action_componentListFragment_to_textFieldFragment) }
-            itemTypography.setOnClickListener { navController.navigate(R.id.action_componentListFragment_to_typographyFragment) }
             itemColors.setOnClickListener { navController.navigate(R.id.action_componentListFragment_to_colorsFragment) }
+            itemTextField.setOnClickListener { navController.navigate(R.id.action_componentListFragment_to_textFieldFragment) }
+            itemToolbar.setOnClickListener { navController.navigate(R.id.action_componentListFragment_to_toolbarFragment) }
+            itemTypography.setOnClickListener { navController.navigate(R.id.action_componentListFragment_to_typographyFragment) }
         }
     }
 }

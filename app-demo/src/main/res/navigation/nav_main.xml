@@ -33,6 +33,14 @@
             app:exitAnim="@anim/nav_default_exit_anim"
             app:popEnterAnim="@anim/nav_default_pop_enter_anim"
             app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
+        <action
+            android:id="@+id/action_componentListFragment_to_toolbarFragment"
+            app:destination="@id/toolbarFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
     </fragment>
 
     <fragment
@@ -46,6 +54,12 @@
         android:name="mobi.lab.components.demo.presentation.typography.TypographyFragment"
         android:label="Typography"
         tools:layout="@layout/fragment_typography" />
+
+    <fragment
+        android:id="@+id/toolbarFragment"
+        android:name="mobi.lab.components.demo.presentation.toolbar.ToolbarFragment"
+        android:label="Toolbar"
+        tools:layout="@layout/fragment_toolbar" />
 
     <fragment
         android:id="@+id/textFieldFragment"

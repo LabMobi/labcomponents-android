@@ -21,6 +21,13 @@
     <View style="@style/Divider" />
 
     <TextView
+        android:id="@+id/item_toolbar"
+        style="@style/Text.ListItem"
+        android:text="Toolbar" />
+
+    <View style="@style/Divider" />
+
+    <TextView
         android:id="@+id/item_typography"
         style="@style/Text.ListItem"
         android:text="Typography" />

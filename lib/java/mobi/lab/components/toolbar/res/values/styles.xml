@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Widget.Lab.Toolbar" parent="Widget.LabComponents.Toolbar">
+        <item name="android:background">?attr/labColorPrimary</item>
+        <item name="navigationIconTint">?attr/labColorOnPrimary</item>
+        <item name="titleTextColor">?attr/labColorOnPrimary</item>
+        <item name="theme">@style/ThemeOverlay.Lab.Toolbar</item>
+    </style>
+
+    <style name="ThemeOverlay.Lab.Toolbar" parent="ThemeOverlay.MaterialComponents.Toolbar.Primary">
+        <item name="actionMenuTextColor">?attr/labColorOnPrimary</item>
+    </style>
+
+    <style name="Widget.LabComponents.Toolbar" parent="Widget.MaterialComponents.Toolbar">
+        <item name="android:background">?attr/colorPrimary</item>
+        <item name="android:elevation">0dp</item>
+        <item name="navigationIconTint">?attr/colorOnPrimary</item>
+        <item name="titleTextColor">?attr/colorOnPrimary</item>
+        <item name="theme">@style/ThemeOverlay.LabComponents.Toolbar</item>
+    </style>
+
+    <style name="ThemeOverlay.LabComponents.Toolbar" parent="ThemeOverlay.MaterialComponents.Toolbar.Primary">
+        <item name="actionMenuTextColor">?attr/colorOnPrimary</item>
+    </style>
+</resources>

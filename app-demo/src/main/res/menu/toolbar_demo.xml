@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="HardcodedText">
+
+    <item
+        android:id="@+id/menu_edit"
+        android:enabled="true"
+        android:title="Edit"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menu_search"
+        android:enabled="true"
+        android:icon="@drawable/ic_search"
+        android:title="Search"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menu_send"
+        android:enabled="true"
+        android:icon="@android:drawable/ic_menu_send"
+        android:title="Send"
+        app:showAsAction="never" />
+</menu>

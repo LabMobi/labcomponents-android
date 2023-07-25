@@ -10,6 +10,7 @@ def srcDirs = [
         'mobi/lab/components/shared',
         'mobi/lab/components/textfield',
         'mobi/lab/components/theme',
+        'mobi/lab/components/toolbar',
         'mobi/lab/components/typography',
 ]
 
@@ -53,7 +54,7 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
-    packagingOptions{
+    packagingOptions {
         merge '**/LICENSE.txt'
     }
 
