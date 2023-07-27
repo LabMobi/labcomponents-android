@@ -7,6 +7,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Added
 
 - Added LabTextField class that extends TextInputLayout.
+- Added LabToolbar to provide additional functionality for MaterialToolbar
 - Added a base Lab theme with our colors and text styles. 
 - Added an extensive Color system based on Figma Design Template.
 
