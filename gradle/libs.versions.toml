@@ -1,11 +1,11 @@
 [versions]
 android-sdk-min = "23"
-android-sdk-target = "33"
-android-sdk-compile = "android-33"
+android-sdk-target = "34"
+android-sdk-compile = "android-34"
 
-android-gradle-plugin = "8.0.1"
-kotlin = "1.8.21"
-navigation = "2.5.3"
+android-gradle-plugin = "8.1.2"
+kotlin = "1.9.10"
+navigation = "2.7.3"
 
 [plugins]
 # Gradle plugin
@@ -16,9 +16,9 @@ kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref =
 # NB! Make sure to update the kltint version set in the root build.gradle file. subprojects / ktlint / version
 # NB! ktlint-gradle doesn"t always depend on the latest ktlint version, but since it is a thin wrapper around ktlint
 # NB! it can be usefult to use a newer version of ktlint to get ruleset updates, etc.
-ktlint = { id = "org.jlleitschuh.gradle.ktlint", version = "11.3.2" }
-gradleVersions = { id = "com.github.ben-manes.versions", version = "0.46.0" }
-detekt = { id = "io.gitlab.arturbosch.detekt", version = "1.22.0" }
+ktlint = { id = "org.jlleitschuh.gradle.ktlint", version = "11.6.0" }
+gradleVersions = { id = "com.github.ben-manes.versions", version = "0.48.0" }
+detekt = { id = "io.gitlab.arturbosch.detekt", version = "1.23.1" }
 
 [libraries]
 # Language
@@ -27,7 +27,6 @@ kotlin = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin"
 # Android + UI
 material = "com.google.android.material:material:1.9.0"
 constraintlayout = "androidx.constraintlayout:constraintlayout:2.1.4"
-androidx-annotation = "androidx.annotation:annotation:1.6.0"
 androidx-navigation-fragment = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "navigation" }
 androidx-navigation-ui = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "navigation" }
 

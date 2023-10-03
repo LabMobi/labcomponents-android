@@ -44,7 +44,9 @@ class MainActivity : AppCompatActivity() {
                 toggleNightMode()
                 true
             }
-            else -> super.onOptionsItemSelected(item)
+            else -> {
+                super.onOptionsItemSelected(item)
+            }
         }
     }
 

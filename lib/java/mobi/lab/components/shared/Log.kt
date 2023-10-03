@@ -70,7 +70,9 @@ internal class Log private constructor(
                             android.util.Log.d(tag, message, throwable)
                         }
                     }
-                    LogImplementation.Level.ERROR -> android.util.Log.e(tag, message, throwable)
+                    LogImplementation.Level.ERROR -> {
+                        android.util.Log.e(tag, message, throwable)
+                    }
                 }
             }
         }

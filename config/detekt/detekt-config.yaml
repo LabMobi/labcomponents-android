@@ -22,6 +22,12 @@ style:
     active: true # Too hard to read without braces
   MandatoryBracesLoops:
     active: true # Too hard to read without braces
+  OptionalWhenBraces: # Disable the rule, because it still affects the outcome even though it is deprecated
+    active: false
+  BracesOnWhenStatements: # Let the writes choose but force consistency
+    active: true
+    singleLine: 'consistent'
+    multiLine: 'consistent'
   UnnecessaryApply:
     active: true # Let's make things easier to read
   VarCouldBeVal:
