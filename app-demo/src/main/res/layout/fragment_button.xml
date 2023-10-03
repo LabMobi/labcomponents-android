@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:ignore="HardcodedText">
+
+    <TextView
+        style="@style/Text.HeadlineLarge"
+        android:text="Button" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="48dp"
+        android:paddingEnd="48dp">
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/switch_enabled"
+            style="@style/Switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Enabled"
+            android:checked="true" />
+
+        <TextView
+            style="@style/Text.HeadlineSmall"
+            android:text="Filled button" />
+
+        <mobi.lab.components.button.LabButton
+            android:id="@+id/filled"
+            style="@style/Widget.Lab.Button.Filled"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_default"
+            android:text="Filled" />
+
+        <mobi.lab.components.button.LabButton
+            android:id="@+id/filled_big"
+            style="@style/Widget.Lab.Button.Filled.Big"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_default"
+            android:text="Filled Big" />
+
+        <TextView
+            style="@style/Text.HeadlineSmall"
+            android:text="Toned button" />
+
+        <mobi.lab.components.button.LabButton
+            android:id="@+id/tonal"
+            style="@style/Widget.Lab.Button.Tonal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_default"
+            android:text="Toned" />
+
+        <mobi.lab.components.button.LabButton
+            android:id="@+id/tonal_big"
+            style="@style/Widget.Lab.Button.Tonal.Big"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_default"
+            android:text="Toned Big" />
+
+    </LinearLayout>
+</LinearLayout>

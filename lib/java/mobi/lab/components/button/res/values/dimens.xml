@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="lab_internal_button_min_height">36dp</dimen>
+    <dimen name="lab_internal_button_padding_vertical">8dp</dimen>
+    <dimen name="lab_internal_button_padding_horizontal">12dp</dimen>
+    <dimen name="lab_internal_button_big_min_height">48dp</dimen>
+    <dimen name="lab_internal_button_big_padding_vertical">12dp</dimen>
+    <dimen name="lab_internal_button_big_padding_horizontal">24dp</dimen>
+</resources>

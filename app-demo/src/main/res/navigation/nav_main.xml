@@ -10,6 +10,15 @@
         android:name="mobi.lab.components.demo.presentation.ComponentListFragment"
         android:label="Mobi Lab Components"
         tools:layout="@layout/fragment_component_list" >
+
+        <action
+            android:id="@+id/action_componentListFragment_to_buttonFragment"
+            app:destination="@id/buttonFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
         <action
             android:id="@+id/action_componentListFragment_to_colorsFragment"
             app:destination="@id/colorsFragment"
@@ -44,6 +53,12 @@
     </fragment>
 
     <fragment
+        android:id="@+id/buttonFragment"
+        android:name="mobi.lab.components.demo.presentation.button.ButtonFragment"
+        android:label="Button"
+        tools:layout="@layout/fragment_button" />
+
+    <fragment
         android:id="@+id/colorsFragment"
         android:name="mobi.lab.components.demo.presentation.color.ColorsFragment"
         android:label="Colors"
@@ -51,7 +66,7 @@
 
     <fragment
         android:id="@+id/typographyFragment"
-        android:name="mobi.lab.components.demo.presentation.typography.TypographyFragment"
+        android:name="mobi.lab.components.demo.presentation.button.ButtonFragment"
         android:label="Typography"
         tools:layout="@layout/fragment_typography" />
 
