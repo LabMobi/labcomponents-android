@@ -111,7 +111,7 @@
             android:checked="false" />
 
         <TextView
-            style="@style/Text.HeadlineSmall"
+            style="@style/Text.HeadlineMedium"
             android:text="Customise TextFields" />
 
         <mobi.lab.components.textfield.LabTextField

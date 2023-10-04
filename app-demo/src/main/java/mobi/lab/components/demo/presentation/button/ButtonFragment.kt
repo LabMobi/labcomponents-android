@@ -21,6 +21,13 @@ class ButtonFragment : Fragment(), ViewBindingHolder<FragmentButtonBinding> by F
     }
 
     private fun FragmentButtonBinding.loopButtons(action: LabButton.() -> Unit) {
-        listOf(filled, filledBig, tonal, tonalBig).map(action)
+        listOf(
+            filled, filledIconStart, filledIconEnd,
+            filledBig, filledBigIconStart, filledBigIconEnd,
+            tonal, tonalIconStart, tonalIconEnd,
+            tonalBig, tonalBigIconStart, tonalBigIconEnd,
+            outlined, outlinedIconStart, outlinedIconEnd,
+            outlinedBig, outlinedBigIconStart, outlinedBigIconEnd,
+        ).map(action)
     }
 }
