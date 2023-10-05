@@ -165,7 +165,7 @@
         <item name="android:minWidth">@dimen/lab_internal_button_big_min_size</item>
     </style>
 
-    <style name="ThemeOverlay.LabComponents.Button.Tonal" parent="ThemeOverlay.Material3.Button.Tonal">
+    <style name="ThemeOverlay.LabComponents.Button.Tonal" parent="ThemeOverlay.Material3.Button.TonalButton">
     </style>
 
     <style name="Widget.LabComponents.Button.Outlined" parent="Widget.LabComponents.Button">
@@ -186,7 +186,7 @@
         <item name="android:minWidth">@dimen/lab_internal_button_big_min_size</item>
     </style>
 
-    <style name="ThemeOverlay.LabComponents.Button.Outlined" parent="ThemeOverlay.Material3.Button.Text">
+    <style name="ThemeOverlay.LabComponents.Button.Outlined" parent="ThemeOverlay.Material3.Button.TextButton">
         <item name="colorPrimary">?attr/colorSecondary</item>
         <item name="colorOnPrimary">?attr/colorOnSecondary</item>
     </style>
@@ -212,7 +212,7 @@
         <item name="android:minWidth">@dimen/lab_internal_button_big_min_size</item>
     </style>
 
-    <style name="ThemeOverlay.LabComponents.Button.Text" parent="ThemeOverlay.Material3.Button">
+    <style name="ThemeOverlay.LabComponents.Button.Text" parent="ThemeOverlay.Material3.Button.TextButton">
         <item name="colorPrimary">?attr/colorSecondary</item>
         <item name="colorOnPrimary">?attr/colorOnSecondary</item>
     </style>
