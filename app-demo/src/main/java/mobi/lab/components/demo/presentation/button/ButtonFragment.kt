@@ -28,6 +28,8 @@ class ButtonFragment : Fragment(), ViewBindingHolder<FragmentButtonBinding> by F
             tonalBig, tonalBigIconStart, tonalBigIconEnd,
             outlined, outlinedIconStart, outlinedIconEnd,
             outlinedBig, outlinedBigIconStart, outlinedBigIconEnd,
+            text, textIconStart, textIconEnd,
+            textBig, textBigIconStart, textBigIconEnd,
         ).map(action)
     }
 }
