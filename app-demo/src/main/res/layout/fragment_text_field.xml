@@ -224,7 +224,7 @@
 
         <mobi.lab.components.button.LabButton
             android:id="@+id/button_update"
-            style="@style/Widget.Lab.Button.Filled"
+            style="@style/Widget.Lab.Button.FilledButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_default"
