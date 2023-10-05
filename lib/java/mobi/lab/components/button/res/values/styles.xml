@@ -20,7 +20,10 @@
         <item name="shapeAppearance">?attr/labShapeAppearance</item>
         <item name="android:textColor">?attr/labColorOnPrimarySelector</item>
         <item name="iconTint">?attr/labColorOnPrimarySelector</item>
-        <item name="backgroundTint">@color/lab_internal_sys_button_filled_background</item>
+        <!-- TODO remove or restore this background based on state layer decision -->
+        <!-- <item name="backgroundTint">@color/lab_internal_button_filled_background</item>-->
+        <item name="backgroundTint">?attr/labColorPrimarySelector</item>
+        <item name="rippleColor">@null</item>
         <item name="materialThemeOverlay">@style/ThemeOverlay.Lab.Button.Filled</item>
     </style>
 
@@ -42,7 +45,10 @@
         <item name="shapeAppearance">?attr/labShapeAppearance</item>
         <item name="android:textColor">?attr/labColorOnSecondarySurfaceSelector</item>
         <item name="iconTint">?attr/labColorOnSecondarySurfaceSelector</item>
-        <item name="backgroundTint">@color/lab_internal_sys_button_tonal_background</item>
+        <!-- TODO remove or restore this background based on state layer decision -->
+<!--        <item name="backgroundTint">@color/lab_internal_button_tonal_background</item>-->
+        <item name="backgroundTint">?attr/labColorSecondarySurfaceSelector</item>
+        <item name="rippleColor">@null</item>
         <item name="materialThemeOverlay">@style/ThemeOverlay.Lab.Button.Tonal</item>
     </style>
 
@@ -60,12 +66,15 @@
     </style>
 
     <style name="Widget.Lab.Button.Outlined" parent="Widget.LabComponents.Button.Outlined">
-        <!-- TODO update -->
         <item name="android:textAppearance">?attr/labTextAppearanceLabelLarge</item>
         <item name="shapeAppearance">?attr/labShapeAppearance</item>
-        <item name="android:textColor">?attr/labColorOnSecondarySurfaceSelector</item>
-        <item name="iconTint">?attr/labColorOnSecondarySurfaceSelector</item>
-        <item name="backgroundTint">@color/lab_internal_sys_button_tonal_background</item>
+        <item name="android:textColor">@color/lab_internal_button_outlined_text</item>
+        <item name="iconTint">@color/lab_internal_button_outlined_text</item>
+        <!-- TODO remove or restore this background based on state layer decision -->
+        <!-- <item name="backgroundTint">@android:color/transparent</item>-->
+        <item name="backgroundTint">@color/lab_internal_button_outlined_background</item>
+        <item name="strokeColor">?attr/labColorOutlineVariantSelector</item>
+        <item name="rippleColor">@null</item>
         <item name="materialThemeOverlay">@style/ThemeOverlay.Lab.Button.Outlined</item>
     </style>
 
@@ -117,7 +126,8 @@
     </style>
 
     <style name="ThemeOverlay.LabComponents.Button.Filled" parent="ThemeOverlay.Material3.Button">
-        <item name="colorOnPrimary">@color/lab_internal_button_filled_ripple</item>
+        <!-- TODO do we need this? -->
+<!--        <item name="colorOnPrimary">@color/lab_internal_button_filled_ripple</item>-->
     </style>
 
     <style name="Widget.LabComponents.Button.Tonal" parent="Widget.Material3.Button.TonalButton">
@@ -152,7 +162,9 @@
     </style>
 
     <style name="ThemeOverlay.LabComponents.Button.Tonal" parent="ThemeOverlay.Material3.Button">
-        <item name="colorOnPrimary">@color/lab_internal_button_tonal_ripple</item>
+        <!-- TODO somehow tint the ripple -->
+<!--        <item name="colorOnPrimary">@color/lab_internal_button_tonal_ripple</item>-->
+        <item name="colorOnPrimary">?attr/labColorOnSecondarySurface</item>
     </style>
 
     <style name="Widget.LabComponents.Button.Outlined" parent="Widget.Material3.Button.OutlinedButton">
@@ -170,10 +182,11 @@
         <item name="android:minWidth">@dimen/lab_internal_button_min_size</item>
 
         <!-- TODO provide values for these -->
-        <!--        <item name="android:textAppearance">?attr/labTextAppearanceLabelLarge</item>-->
-        <!--        <item name="shapeAppearance">?attr/labShapeAppearance</item>-->
-        <!--        <item name="android:textColor">?attr/labColorOnSecondarySurfaceSelector</item>-->
-        <!--        <item name="backgroundTint">@color/lab_internal_sys_button_tonal_background</item>-->
+<!--        <item name="android:textAppearance">?attr/labTextAppearanceLabelLarge</item>-->
+<!--        <item name="shapeAppearance">?attr/labShapeAppearance</item>-->
+<!--        <item name="android:textColor">?attr/labColorOnPrimarySurfaceSelector</item>-->
+<!--        <item name="backgroundTint">@color/lab_internal_sys_button_outlined_background</item>-->
+        <item name="strokeWidth">@dimen/lab_internal_button_stroke_width</item>
         <item name="materialThemeOverlay">@style/ThemeOverlay.LabComponents.Button.Outlined</item>
     </style>
 
@@ -187,8 +200,8 @@
     </style>
 
     <style name="ThemeOverlay.LabComponents.Button.Outlined" parent="ThemeOverlay.Material3.Button">
-        <item name="colorOnPrimary">@color/lab_internal_button_tonal_ripple</item>
+        <!-- TODO find a way to color the ripple here? -->
+<!--        <item name="colorOnPrimary">@color/lab_internal_button_outlined_ripple</item>-->
     </style>
-
     <!-- LabComponents styles END -->
 </resources>

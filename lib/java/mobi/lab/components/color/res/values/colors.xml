@@ -12,8 +12,8 @@
     <color name="lab_internal_sys_color_light_on_primary_disabled">@color/lab_internal_ref_palette_neutral10_emph_disabled</color>
 
     <color name="lab_internal_sys_color_light_primary_surface">@color/lab_internal_ref_palette_primary95</color>
-    <color name="lab_internal_sys_color_light_primary_surface_focused">@color/lab_internal_ref_palette_primary50_emph_high</color>
-    <color name="lab_internal_sys_color_light_primary_surface_pressed">@color/lab_internal_ref_palette_primary50_emph_high</color>
+    <color name="lab_internal_sys_color_light_primary_surface_focused">@color/lab_internal_ref_palette_primary95_emph_high</color>
+    <color name="lab_internal_sys_color_light_primary_surface_pressed">@color/lab_internal_ref_palette_primary95_emph_high</color>
     <color name="lab_internal_sys_color_light_primary_surface_disabled">@color/lab_internal_ref_palette_neutral10_emph_small</color>
 
     <color name="lab_internal_sys_color_light_on_primary_surface">@color/lab_internal_ref_palette_primary10</color>

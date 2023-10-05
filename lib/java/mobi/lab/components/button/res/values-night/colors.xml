@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <color name="lab_internal_button_filled_ripple">@color/lab_internal_ref_palette_neutral100</color>
-    <color name="lab_internal_button_tonal_ripple">@color/lab_internal_ref_palette_neutral0</color>
-    <color name="lab_internal_button_outlined_ripple">@color/lab_internal_todo2</color>
-</resources>

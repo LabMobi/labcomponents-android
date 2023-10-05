@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="lab_internal_button_stroke_width">1dp</dimen>
     <dimen name="lab_internal_button_icon_padding">8dp</dimen>
     <dimen name="lab_internal_button_min_size">36dp</dimen>
     <dimen name="lab_internal_button_padding_vertical">8dp</dimen>
