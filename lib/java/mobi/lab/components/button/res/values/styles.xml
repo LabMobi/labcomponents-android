@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- TODO (1) Remove unused color resources -->
     <!-- TODO (2) Create LabComponents styles to bypass Theme.Lab -->
 
     <!-- LAB STYLES START -->
@@ -83,11 +82,11 @@
     <style name="Widget.Lab.Button.TextButton" parent="Widget.LabComponents.Button.TextButton">
         <item name="android:textAppearance">?attr/labTextAppearanceLabelLarge</item>
         <item name="shapeAppearance">?attr/labShapeAppearance</item>
-        <item name="android:textColor">@color/lab_internal_button_outlined_text</item>
-        <item name="iconTint">@color/lab_internal_button_outlined_text</item>
+        <item name="android:textColor">@color/lab_internal_button_text_text</item>
+        <item name="iconTint">@color/lab_internal_button_text_text</item>
         <!-- TODO remove or restore this background based on state layer decision -->
         <!-- <item name="backgroundTint">@android:color/transparent</item>-->
-        <item name="backgroundTint">@color/lab_internal_button_outlined_background</item>
+        <item name="backgroundTint">@color/lab_internal_button_text_background</item>
         <item name="rippleColor">@null</item>
         <item name="materialThemeOverlay">@style/ThemeOverlay.Lab.Button.TextButton</item>
     </style>
