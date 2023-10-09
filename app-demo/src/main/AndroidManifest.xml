@@ -26,5 +26,11 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name="mobi.lab.components.demo.presentation.MaterialThemeActivity"
+            android:theme="@style/AppTheme.Material"
+            android:windowSoftInputMode="adjustResize">
+        </activity>
     </application>
 </manifest>

@@ -1,6 +1,5 @@
 package mobi.lab.components.demo.presentation
 
-import android.content.Intent
 import android.content.res.Configuration
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,35 +7,39 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
-import androidx.navigation.NavController
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.NavigationUI.setupActionBarWithNavController
-import mobi.lab.components.demo.R
-import mobi.lab.components.demo.databinding.ActivityMainBinding
+import mobi.lab.components.button.LabButton
+import mobi.lab.components.demo.databinding.ActivityMaterialThemeBinding
 
-class MainActivity : AppCompatActivity() {
-
-    private lateinit var binding: ActivityMainBinding
+/**
+ * Test activity to test LabComponents themes.
+ * We don't have support for opening this Activity from the UI. It's just a convenience for development.
+ */
+class MaterialThemeActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(LayoutInflater.from(this))
+        val binding = ActivityMaterialThemeBinding.inflate(LayoutInflater.from(this))
         setContentView(binding.root)
-
-        setSupportActionBar(binding.toolbar)
+        binding.switchEnabled.setOnCheckedChangeListener { _, isChecked ->
+            binding.loopButtons { isEnabled = isChecked }
+        }
     }
 
-    override fun onPostCreate(savedInstanceState: Bundle?) {
-        super.onPostCreate(savedInstanceState)
-        val navController = findNavController()
-        val appBarConfiguration = AppBarConfiguration(navController.graph)
-        setupActionBarWithNavController(this, navController, appBarConfiguration)
+    private fun ActivityMaterialThemeBinding.loopButtons(action: LabButton.() -> Unit) {
+        listOf(
+            filled, filledIconStart, filledIconEnd,
+            filledBig, filledBigIconStart, filledBigIconEnd,
+            tonal, tonalIconStart, tonalIconEnd,
+            tonalBig, tonalBigIconStart, tonalBigIconEnd,
+            outlined, outlinedIconStart, outlinedIconEnd,
+            outlinedBig, outlinedBigIconStart, outlinedBigIconEnd,
+            text, textIconStart, textIconEnd,
+            textBig, textBigIconStart, textBigIconEnd,
+        ).map(action)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menu.add(0, MENU_ITEM_SWITCH_NIGHT_MODE, 0, "Switch UI mode")
-        menu.add(0, MENU_ITEM_SWITCH_MATERIAL_THEME, 1, "Open Material Activity")
         return true
     }
 
@@ -46,19 +49,10 @@ class MainActivity : AppCompatActivity() {
                 toggleNightMode()
                 true
             }
-            MENU_ITEM_SWITCH_MATERIAL_THEME -> {
-                startActivity(Intent(this, MaterialThemeActivity::class.java))
-                true
-            }
             else -> {
                 super.onOptionsItemSelected(item)
             }
         }
-    }
-
-    override fun onSupportNavigateUp(): Boolean {
-        val navController = findNavController()
-        return navController.navigateUp() || super.onSupportNavigateUp()
     }
 
     private fun toggleNightMode() {
@@ -75,12 +69,7 @@ class MainActivity : AppCompatActivity() {
         return uiMode.and(Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_YES
     }
 
-    private fun findNavController(): NavController {
-        return findNavController(R.id.nav_host_fragment)
-    }
-
     companion object {
         private const val MENU_ITEM_SWITCH_NIGHT_MODE = 0
-        private const val MENU_ITEM_SWITCH_MATERIAL_THEME = 1
     }
 }

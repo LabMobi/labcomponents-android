@@ -11,6 +11,15 @@
         <item name="labFontFamilyBold">@font/font_bold</item>
     </style>
 
+    <!-- Theme to test our components as direct descendats of Material themes -->
+    <!-- See LabComponentsActivity -->
+    <style name="AppTheme.Material" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:statusBarColor">@color/black</item>
+        <item name="colorPrimary">#8800FF</item>
+        <item name="colorSecondary">#00FFCC</item>
+    </style>
+
     <style name="Divider" parent="">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">1dp</item>

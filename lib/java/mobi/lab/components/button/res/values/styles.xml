@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- TODO (2) Create LabComponents styles to bypass Theme.Lab -->
-
     <!-- LAB STYLES START -->
     <style name="Widget.Lab.Button.Filled" parent="Widget.LabComponents.Button.Filled">
         <item name="android:textAppearance">?attr/labTextAppearanceLabelLarge</item>
@@ -12,6 +10,7 @@
         <item name="materialThemeOverlay">@style/ThemeOverlay.Lab.Button.Filled</item>
         <item name="android:elevation">?attr/labElevation</item>
         <item name="elevation">?attr/labElevation</item>
+        <item name="rippleColor">@null</item>
     </style>
 
     <style name="Widget.Lab.Button.Filled.Big">
@@ -36,6 +35,7 @@
         <item name="materialThemeOverlay">@style/ThemeOverlay.Lab.Button.Tonal</item>
         <item name="android:elevation">?attr/labElevation</item>
         <item name="elevation">?attr/labElevation</item>
+        <item name="rippleColor">@null</item>
     </style>
 
     <style name="Widget.Lab.Button.Tonal.Big">
@@ -61,6 +61,7 @@
         <item name="materialThemeOverlay">@style/ThemeOverlay.Lab.Button.Outlined</item>
         <item name="android:elevation">0dp</item>
         <item name="elevation">0dp</item>
+        <item name="rippleColor">@null</item>
     </style>
 
     <style name="Widget.Lab.Button.Outlined.Big">
@@ -85,6 +86,7 @@
         <item name="materialThemeOverlay">@style/ThemeOverlay.Lab.Button.Text</item>
         <item name="android:elevation">0dp</item>
         <item name="elevation">0dp</item>
+        <item name="rippleColor">@null</item>
     </style>
 
     <style name="Widget.Lab.Button.Text.Big">
@@ -109,7 +111,6 @@
         <item name="android:elevation">@dimen/lab_internal_mat_bridge_elevation</item>
         <item name="elevation">@dimen/lab_internal_mat_bridge_elevation</item>
         <item name="android:stateListAnimator">@null</item>
-        <item name="rippleColor">@null</item>
         <item name="android:paddingLeft">@dimen/lab_internal_button_padding_horizontal</item>
         <item name="android:paddingRight">@dimen/lab_internal_button_padding_horizontal</item>
         <item name="android:paddingTop">@dimen/lab_internal_button_padding_vertical</item>
@@ -120,12 +121,6 @@
     </style>
 
     <style name="Widget.LabComponents.Button.Filled" parent="Widget.LabComponents.Button">
-        <!-- TODO provide values for these -->
-<!--        <item name="android:textAppearance">?attr/labTextAppearanceLabelLarge</item>-->
-<!--        <item name="shapeAppearance">?attr/labShapeAppearance</item>-->
-<!--        <item name="android:textColor">?attr/labColorOnPrimarySelector</item>-->
-<!--        <item name="iconTint"-->
-<!--        <item name="backgroundTint">@color/lab_internal_sys_button_filled_background</item>-->
         <item name="materialThemeOverlay">@style/ThemeOverlay.LabComponents.Button.Filled</item>
     </style>
 
@@ -143,11 +138,6 @@
     </style>
 
     <style name="Widget.LabComponents.Button.Tonal" parent="Widget.LabComponents.Button">
-        <!-- TODO provide values for these -->
-<!--        <item name="android:textAppearance">?attr/labTextAppearanceLabelLarge</item>-->
-<!--        <item name="shapeAppearance">?attr/labShapeAppearance</item>-->
-<!--        <item name="android:textColor">?attr/labColorOnSecondarySurfaceSelector</item>-->
-<!--        <item name="backgroundTint">@color/lab_internal_sys_button_tonal_background</item>-->
         <item name="materialThemeOverlay">@style/ThemeOverlay.LabComponents.Button.Tonal</item>
     </style>
 
@@ -185,8 +175,7 @@
     </style>
 
     <style name="ThemeOverlay.LabComponents.Button.Outlined" parent="ThemeOverlay.Material3.Button.TextButton">
-        <item name="colorPrimary">?attr/colorSecondary</item>
-        <item name="colorOnPrimary">?attr/colorOnSecondary</item>
+        <!-- Add additional changes here if needed -->
     </style>
 
     <style name="Widget.LabComponents.Button.Text" parent="Widget.LabComponents.Button">
@@ -212,8 +201,7 @@
     </style>
 
     <style name="ThemeOverlay.LabComponents.Button.Text" parent="ThemeOverlay.Material3.Button.TextButton">
-        <item name="colorPrimary">?attr/colorSecondary</item>
-        <item name="colorOnPrimary">?attr/colorOnSecondary</item>
+        <!-- Add additional changes here if needed -->
     </style>
     <!-- LABCOMPONENTS STYLES END -->
 </resources>
