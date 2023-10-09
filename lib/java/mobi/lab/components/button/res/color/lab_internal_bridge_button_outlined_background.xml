@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_focused="true" android:color="@color/lab_internal_bridge_color_primary_emph_medium"/>
-    <item android:state_pressed="true" android:color="@color/lab_internal_bridge_color_primary_emph_medium"/>
-    <item android:color="@android:color/transparent"/>
-</selector>

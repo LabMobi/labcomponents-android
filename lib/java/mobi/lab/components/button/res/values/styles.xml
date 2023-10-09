@@ -8,11 +8,10 @@
         <item name="shapeAppearance">?attr/labShapeAppearance</item>
         <item name="android:textColor">?attr/labColorOnPrimarySelector</item>
         <item name="iconTint">?attr/labColorOnPrimarySelector</item>
-        <!-- TODO remove or restore this background based on state layer decision -->
-        <!-- <item name="backgroundTint">@color/lab_internal_button_filled_background</item>-->
         <item name="backgroundTint">?attr/labColorPrimarySelector</item>
-        <item name="rippleColor">@null</item>
         <item name="materialThemeOverlay">@style/ThemeOverlay.Lab.Button.Filled</item>
+        <item name="android:elevation">?attr/labElevation</item>
+        <item name="elevation">?attr/labElevation</item>
     </style>
 
     <style name="Widget.Lab.Button.Filled.Big">
@@ -33,11 +32,10 @@
         <item name="shapeAppearance">?attr/labShapeAppearance</item>
         <item name="android:textColor">?attr/labColorOnSecondarySurfaceSelector</item>
         <item name="iconTint">?attr/labColorOnSecondarySurfaceSelector</item>
-        <!-- TODO remove or restore this background based on state layer decision -->
-<!--        <item name="backgroundTint">@color/lab_internal_button_tonal_background</item>-->
         <item name="backgroundTint">?attr/labColorSecondarySurfaceSelector</item>
-        <item name="rippleColor">@null</item>
         <item name="materialThemeOverlay">@style/ThemeOverlay.Lab.Button.Tonal</item>
+        <item name="android:elevation">?attr/labElevation</item>
+        <item name="elevation">?attr/labElevation</item>
     </style>
 
     <style name="Widget.Lab.Button.Tonal.Big">
@@ -58,12 +56,11 @@
         <item name="shapeAppearance">?attr/labShapeAppearance</item>
         <item name="android:textColor">@color/lab_internal_button_outlined_text</item>
         <item name="iconTint">@color/lab_internal_button_outlined_text</item>
-        <!-- TODO remove or restore this background based on state layer decision -->
-        <!-- <item name="backgroundTint">@android:color/transparent</item>-->
         <item name="backgroundTint">@color/lab_internal_button_outlined_background</item>
         <item name="strokeColor">?attr/labColorOutlineVariantSelector</item>
-        <item name="rippleColor">@null</item>
         <item name="materialThemeOverlay">@style/ThemeOverlay.Lab.Button.Outlined</item>
+        <item name="android:elevation">0dp</item>
+        <item name="elevation">0dp</item>
     </style>
 
     <style name="Widget.Lab.Button.Outlined.Big">
@@ -84,11 +81,10 @@
         <item name="shapeAppearance">?attr/labShapeAppearance</item>
         <item name="android:textColor">@color/lab_internal_button_text_text</item>
         <item name="iconTint">@color/lab_internal_button_text_text</item>
-        <!-- TODO remove or restore this background based on state layer decision -->
-        <!-- <item name="backgroundTint">@android:color/transparent</item>-->
         <item name="backgroundTint">@color/lab_internal_button_text_background</item>
-        <item name="rippleColor">@null</item>
         <item name="materialThemeOverlay">@style/ThemeOverlay.Lab.Button.Text</item>
+        <item name="android:elevation">0dp</item>
+        <item name="elevation">0dp</item>
     </style>
 
     <style name="Widget.Lab.Button.Text.Big">
@@ -110,9 +106,10 @@
         <!-- These are common values for all the buttons -->
         <item name="android:insetBottom">0dp</item>
         <item name="android:insetTop">0dp</item>
-        <item name="android:elevation">0dp</item>
-        <item name="elevation">0dp</item>
+        <item name="android:elevation">@dimen/lab_internal_mat_bridge_elevation</item>
+        <item name="elevation">@dimen/lab_internal_mat_bridge_elevation</item>
         <item name="android:stateListAnimator">@null</item>
+        <item name="rippleColor">@null</item>
         <item name="android:paddingLeft">@dimen/lab_internal_button_padding_horizontal</item>
         <item name="android:paddingRight">@dimen/lab_internal_button_padding_horizontal</item>
         <item name="android:paddingTop">@dimen/lab_internal_button_padding_vertical</item>
@@ -123,7 +120,6 @@
     </style>
 
     <style name="Widget.LabComponents.Button.Filled" parent="Widget.LabComponents.Button">
-
         <!-- TODO provide values for these -->
 <!--        <item name="android:textAppearance">?attr/labTextAppearanceLabelLarge</item>-->
 <!--        <item name="shapeAppearance">?attr/labShapeAppearance</item>-->
@@ -143,8 +139,7 @@
     </style>
 
     <style name="ThemeOverlay.LabComponents.Button.Filled" parent="ThemeOverlay.Material3.Button">
-        <!-- TODO do we need this? -->
-<!--        <item name="colorOnPrimary">@color/lab_internal_button_filled_ripple</item>-->
+        <!-- Add additional changes here if needed -->
     </style>
 
     <style name="Widget.LabComponents.Button.Tonal" parent="Widget.LabComponents.Button">
@@ -166,15 +161,18 @@
     </style>
 
     <style name="ThemeOverlay.LabComponents.Button.Tonal" parent="ThemeOverlay.Material3.Button.TonalButton">
+        <!-- Add additional changes here if needed -->
     </style>
 
     <style name="Widget.LabComponents.Button.Outlined" parent="Widget.LabComponents.Button">
-        <item name="android:textColor">@color/lab_internal_bridge_button_outlined_text</item>
-        <item name="iconTint">@color/lab_internal_bridge_button_outlined_text</item>
-        <item name="backgroundTint">@color/lab_internal_bridge_button_outlined_background</item>
+        <item name="android:textColor">@color/lab_internal_mat_bridge_button_outlined_text</item>
+        <item name="iconTint">@color/lab_internal_mat_bridge_button_outlined_text</item>
+        <item name="backgroundTint">@color/lab_internal_mat_bridge_button_outlined_background</item>
         <item name="strokeWidth">@dimen/lab_internal_button_stroke_width</item>
-        <item name="strokeColor">@color/lab_internal_bridge_button_outlined_stroke</item>
+        <item name="strokeColor">@color/lab_internal_mat_bridge_button_outlined_stroke</item>
         <item name="materialThemeOverlay">@style/ThemeOverlay.LabComponents.Button.Outlined</item>
+        <item name="android:elevation">0dp</item>
+        <item name="elevation">0dp</item>
     </style>
 
     <style name="Widget.LabComponents.Button.Outlined.Big">
@@ -191,16 +189,17 @@
         <item name="colorOnPrimary">?attr/colorOnSecondary</item>
     </style>
 
-
     <style name="Widget.LabComponents.Button.Text" parent="Widget.LabComponents.Button">
         <item name="android:paddingLeft">@dimen/lab_internal_button_text_padding</item>
         <item name="android:paddingRight">@dimen/lab_internal_button_text_padding</item>
         <item name="android:paddingTop">@dimen/lab_internal_button_text_padding</item>
         <item name="android:paddingBottom">@dimen/lab_internal_button_text_padding</item>
-        <item name="android:textColor">@color/lab_internal_bridge_button_outlined_text</item>
-        <item name="iconTint">@color/lab_internal_bridge_button_outlined_text</item>
-        <item name="backgroundTint">@color/lab_internal_bridge_button_outlined_background</item>
+        <item name="android:textColor">@color/lab_internal_mat_bridge_button_outlined_text</item>
+        <item name="iconTint">@color/lab_internal_mat_bridge_button_outlined_text</item>
+        <item name="backgroundTint">@color/lab_internal_mat_bridge_button_outlined_background</item>
         <item name="materialThemeOverlay">@style/ThemeOverlay.LabComponents.Button.Text</item>
+        <item name="android:elevation">0dp</item>
+        <item name="elevation">0dp</item>
     </style>
 
     <style name="Widget.LabComponents.Button.Text.Big">

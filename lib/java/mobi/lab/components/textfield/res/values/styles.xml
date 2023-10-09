@@ -71,7 +71,7 @@
         <item name="boxCollapsedPaddingTop">10dp</item>
         <item name="boxBackgroundColor">@android:color/transparent</item>
         <!-- Bridge color to add error state to our TextField -->
-        <item name="boxStrokeColor">@color/lab_internal_textfield_material_bridge_stroke</item>
+        <item name="boxStrokeColor">@color/lab_internal_mat_bridge_textfield_stroke</item>
 
         <item name="shapeAppearance">?attr/shapeAppearance</item>
         <item name="shapeAppearanceOverlay">?attr/shapeAppearanceOverlay</item>
@@ -84,7 +84,7 @@
         <item name="editTextStyle">@style/Widget.LabComponents.TextFieldEditText</item>
         <!-- This overrides error icon color in disabled state -->
         <item name="colorOnError">?attr/colorError</item>
-        <item name="colorOutline">@color/lab_internal_textfield_material_bridge_outline</item>
+        <item name="colorOutline">@color/lab_internal_mat_bridge_textfield_outline</item>
     </style>
 
     <style name="Widget.LabComponents.TextFieldEditText" parent="Widget.MaterialComponents.TextInputEditText.FilledBox">
