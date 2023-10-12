@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menu.add(0, MENU_ITEM_SWITCH_NIGHT_MODE, 0, "Switch UI mode")
-        // Restore this for development purposes. We don't want to display always display this option to everyone
+        // Uncomment this to open MaterialThemeActivity to validate components with a regular Material theme
 //        menu.add(0, MENU_ITEM_SWITCH_MATERIAL_THEME, 1, "Open Material Activity")
         return true
     }

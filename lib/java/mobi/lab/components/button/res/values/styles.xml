@@ -22,6 +22,14 @@
         <item name="android:minWidth">@dimen/lab_internal_button_big_min_size</item>
     </style>
 
+    <style name="Widget.Lab.Button.Filled.Icon">
+        <item name="android:paddingLeft">@dimen/lab_internal_button_padding_icon_edge</item>
+    </style>
+
+    <style name="Widget.Lab.Button.Filled.Big.Icon">
+        <item name="android:paddingLeft">@dimen/lab_internal_button_big_padding_icon_edge</item>
+    </style>
+
     <style name="ThemeOverlay.Lab.Button.Filled" parent="ThemeOverlay.LabComponents.Button.Filled">
         <!-- Add additional changes here if needed -->
     </style>
@@ -45,6 +53,14 @@
         <item name="android:paddingBottom">@dimen/lab_internal_button_big_padding_vertical</item>
         <item name="android:minHeight">@dimen/lab_internal_button_big_min_size</item>
         <item name="android:minWidth">@dimen/lab_internal_button_big_min_size</item>
+    </style>
+
+    <style name="Widget.Lab.Button.Tonal.Icon">
+        <item name="android:paddingLeft">@dimen/lab_internal_button_padding_icon_edge</item>
+    </style>
+
+    <style name="Widget.Lab.Button.Tonal.Big.Icon">
+        <item name="android:paddingLeft">@dimen/lab_internal_button_big_padding_icon_edge</item>
     </style>
 
     <style name="ThemeOverlay.Lab.Button.Tonal" parent="ThemeOverlay.LabComponents.Button.Tonal">
@@ -73,6 +89,14 @@
         <item name="android:minWidth">@dimen/lab_internal_button_big_min_size</item>
     </style>
 
+    <style name="Widget.Lab.Button.Outlined.Icon">
+        <item name="android:paddingLeft">@dimen/lab_internal_button_padding_icon_edge</item>
+    </style>
+
+    <style name="Widget.Lab.Button.Outlined.Big.Icon">
+        <item name="android:paddingLeft">@dimen/lab_internal_button_big_padding_icon_edge</item>
+    </style>
+
     <style name="ThemeOverlay.Lab.Button.Outlined" parent="ThemeOverlay.LabComponents.Button.Outlined">
         <!-- Add additional changes here if needed -->
     </style>
@@ -96,6 +120,14 @@
         <item name="android:paddingBottom">@dimen/lab_internal_button_text_big_padding</item>
         <item name="android:minHeight">@dimen/lab_internal_button_big_min_size</item>
         <item name="android:minWidth">@dimen/lab_internal_button_big_min_size</item>
+    </style>
+
+    <style name="Widget.Lab.Button.Text.Icon">
+        <item name="android:paddingLeft">@dimen/lab_internal_button_padding_icon_edge</item>
+    </style>
+
+    <style name="Widget.Lab.Button.Text.Big.Icon">
+        <item name="android:paddingLeft">@dimen/lab_internal_button_big_padding_icon_edge</item>
     </style>
 
     <style name="ThemeOverlay.Lab.Button.Text" parent="ThemeOverlay.LabComponents.Button.Text">
@@ -133,6 +165,14 @@
         <item name="android:minWidth">@dimen/lab_internal_button_big_min_size</item>
     </style>
 
+    <style name="Widget.LabComponents.Button.Filled.Icon">
+        <item name="android:paddingLeft">@dimen/lab_internal_button_padding_icon_edge</item>
+    </style>
+
+    <style name="Widget.LabComponents.Button.Filled.Big.Icon">
+        <item name="android:paddingLeft">@dimen/lab_internal_button_big_padding_icon_edge</item>
+    </style>
+
     <style name="ThemeOverlay.LabComponents.Button.Filled" parent="ThemeOverlay.Material3.Button">
         <!-- Add additional changes here if needed -->
     </style>
@@ -150,6 +190,14 @@
         <item name="android:minWidth">@dimen/lab_internal_button_big_min_size</item>
     </style>
 
+    <style name="Widget.LabComponents.Button.Tonal.Icon">
+        <item name="android:paddingLeft">@dimen/lab_internal_button_padding_icon_edge</item>
+    </style>
+
+    <style name="Widget.LabComponents.Button.Tonal.Big.Icon">
+        <item name="android:paddingLeft">@dimen/lab_internal_button_big_padding_icon_edge</item>
+    </style>
+
     <style name="ThemeOverlay.LabComponents.Button.Tonal" parent="ThemeOverlay.Material3.Button.TonalButton">
         <!-- Add additional changes here if needed -->
     </style>
@@ -163,6 +211,14 @@
         <item name="materialThemeOverlay">@style/ThemeOverlay.LabComponents.Button.Outlined</item>
         <item name="android:elevation">0dp</item>
         <item name="elevation">0dp</item>
+    </style>
+
+    <style name="Widget.LabComponents.Button.Outlined.Icon">
+        <item name="android:paddingLeft">@dimen/lab_internal_button_padding_icon_edge</item>
+    </style>
+
+    <style name="Widget.LabComponents.Button.Outlined.Big.Icon">
+        <item name="android:paddingLeft">@dimen/lab_internal_button_big_padding_icon_edge</item>
     </style>
 
     <style name="Widget.LabComponents.Button.Outlined.Big">
@@ -198,6 +254,14 @@
         <item name="android:paddingBottom">@dimen/lab_internal_button_text_big_padding</item>
         <item name="android:minHeight">@dimen/lab_internal_button_big_min_size</item>
         <item name="android:minWidth">@dimen/lab_internal_button_big_min_size</item>
+    </style>
+
+    <style name="Widget.LabComponents.Button.Text.Icon">
+        <item name="android:paddingLeft">@dimen/lab_internal_button_padding_icon_edge</item>
+    </style>
+
+    <style name="Widget.LabComponents.Button.Text.Big.Icon">
+        <item name="android:paddingLeft">@dimen/lab_internal_button_big_padding_icon_edge</item>
     </style>
 
     <style name="ThemeOverlay.LabComponents.Button.Text" parent="ThemeOverlay.Material3.Button.TextButton">

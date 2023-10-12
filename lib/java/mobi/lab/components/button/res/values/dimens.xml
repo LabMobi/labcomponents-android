@@ -10,4 +10,6 @@
     <dimen name="lab_internal_button_big_min_size">48dp</dimen>
     <dimen name="lab_internal_button_big_padding_vertical">12dp</dimen>
     <dimen name="lab_internal_button_big_padding_horizontal">24dp</dimen>
+    <dimen name="lab_internal_button_padding_icon_edge">12dp</dimen>
+    <dimen name="lab_internal_button_big_padding_icon_edge">16dp</dimen>
 </resources>
