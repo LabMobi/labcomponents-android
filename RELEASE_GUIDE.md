@@ -1,4 +1,4 @@
-# Lab Encrypted Storage Library Release Guide
+# Mobi Lab Design Components for Android Library Release Guide
 
 Disclaimer: This release guide assumes you are an employee of Mobi Lab and have access to the company's account in Codemagic CI.
 
