@@ -25,6 +25,7 @@ classes
 out/
 target
 captures/
+publish.properties
 
 # Allow sharing inspection profiles
 !.idea/inspectionProfiles/
