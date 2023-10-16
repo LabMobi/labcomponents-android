@@ -13,6 +13,7 @@ These components are based on [Material Components for Android](https://github.c
 | Lab Components | Material Components |
 |----------------|:--------------------|
 | 0.0.3          | 1.8.0               |
+| 0.0.8          | 1.10.0             |
 
 ## Description
 
@@ -30,6 +31,7 @@ The project consists of the component library in `lib` module and components dem
 ## List of components
 
 -   [Colors](docs/components/colors.md)
+-   [Button](docs/components/button.md)
 -   [TextField](docs/components/textfield.md)
 -   [Theme](docs/components/theme.md)
 -   [Toolbar](docs/components/toolbar.md)

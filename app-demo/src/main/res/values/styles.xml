@@ -11,6 +11,15 @@
         <item name="labFontFamilyBold">@font/font_bold</item>
     </style>
 
+    <!-- Theme to test our components as direct descendats of Material themes -->
+    <!-- See LabComponentsActivity -->
+    <style name="AppTheme.Material" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:statusBarColor">@color/black</item>
+        <item name="colorPrimary">#8800FF</item>
+        <item name="colorSecondary">#00FFCC</item>
+    </style>
+
     <style name="Divider" parent="">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">1dp</item>
@@ -30,7 +39,7 @@
     </style>
 
     <style name="Text.HeadlineLarge" parent="TextAppearance.Lab.HeadlineLarge">
-        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginStart">@dimen/margin_default</item>
         <item name="android:layout_marginEnd">@dimen/margin_default</item>
@@ -39,14 +48,19 @@
         <item name="android:textAllCaps">true</item>
     </style>
 
-    <style name="Text.HeadlineSmall" parent="TextAppearance.Lab.HeadlineSmall">
-        <item name="android:layout_width">match_parent</item>
+    <style name="Text.HeadlineMedium" parent="TextAppearance.Lab.HeadlineMedium">
+        <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginStart">@dimen/margin_default</item>
-        <item name="android:layout_marginEnd">@dimen/margin_default</item>
         <item name="android:layout_marginTop">24dp</item>
         <item name="android:layout_marginBottom">24dp</item>
-        <item name="android:gravity">center</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="Text.HeadlineSmall" parent="TextAppearance.Lab.HeadlineSmall">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
         <item name="android:textAllCaps">false</item>
     </style>
 

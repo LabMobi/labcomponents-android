@@ -7,6 +7,13 @@
     tools:ignore="HardcodedText">
 
     <TextView
+        android:id="@+id/item_buttons"
+        style="@style/Text.ListItem"
+        android:text="Button" />
+
+    <View style="@style/Divider" />
+
+    <TextView
         android:id="@+id/item_colors"
         style="@style/Text.ListItem"
         android:text="Colors" />

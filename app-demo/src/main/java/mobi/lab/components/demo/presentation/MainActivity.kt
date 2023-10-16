@@ -1,5 +1,6 @@
 package mobi.lab.components.demo.presentation
 
+import android.content.Intent
 import android.content.res.Configuration
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -35,6 +36,8 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menu.add(0, MENU_ITEM_SWITCH_NIGHT_MODE, 0, "Switch UI mode")
+        // Uncomment this to open MaterialThemeActivity to validate components with a regular Material theme
+//        menu.add(0, MENU_ITEM_SWITCH_MATERIAL_THEME, 1, "Open Material Activity")
         return true
     }
 
@@ -44,7 +47,13 @@ class MainActivity : AppCompatActivity() {
                 toggleNightMode()
                 true
             }
-            else -> super.onOptionsItemSelected(item)
+            MENU_ITEM_SWITCH_MATERIAL_THEME -> {
+                startActivity(Intent(this, MaterialThemeActivity::class.java))
+                true
+            }
+            else -> {
+                super.onOptionsItemSelected(item)
+            }
         }
     }
 
@@ -73,5 +82,6 @@ class MainActivity : AppCompatActivity() {
 
     companion object {
         private const val MENU_ITEM_SWITCH_NIGHT_MODE = 0
+        private const val MENU_ITEM_SWITCH_MATERIAL_THEME = 1
     }
 }
