@@ -6,9 +6,7 @@
     <color name="lab_internal_sys_color_light_primary">@color/lab_internal_ref_palette_primary50</color>
     <color name="lab_internal_sys_color_light_primary_focused">@color/lab_internal_ref_palette_primary40</color>
     <color name="lab_internal_sys_color_light_primary_pressed">@color/lab_internal_ref_palette_primary40</color>
-    <!-- TODO restore this color. Temparily blended background and disabled state into an opaque color -->
-<!--    <color name="lab_internal_sys_color_light_primary_disabled">@color/lab_internal_ref_palette_neutral10_emph_medium</color>-->
-    <color name="lab_internal_sys_color_light_primary_disabled">#e3e3e4</color>
+    <color name="lab_internal_sys_color_light_primary_disabled">@color/lab_internal_ref_palette_neutral10_emph_medium</color>
 
     <color name="lab_internal_sys_color_light_on_primary">@color/lab_internal_ref_palette_neutral100</color>
     <color name="lab_internal_sys_color_light_on_primary_disabled">@color/lab_internal_ref_palette_neutral10_emph_disabled</color>
@@ -31,13 +29,9 @@
     <color name="lab_internal_sys_color_light_on_secondary_disabled">@color/lab_internal_ref_palette_neutral10_emph_disabled</color>
 
     <color name="lab_internal_sys_color_light_secondary_surface">@color/lab_internal_ref_palette_secondary95</color>
-    <!-- TODO update these colors. Temporarily blended background and pressed, focused, disabled states into opaque colors -->
-<!--    <color name="lab_internal_sys_color_light_secondary_surface_focused">@color/lab_internal_ref_palette_secondary95_emph_high</color>-->
-<!--    <color name="lab_internal_sys_color_light_secondary_surface_pressed">@color/lab_internal_ref_palette_secondary95_emph_high</color>-->
-<!--    <color name="lab_internal_sys_color_light_secondary_surface_disabled">@color/lab_internal_ref_palette_neutral10_emph_small</color>-->
-    <color name="lab_internal_sys_color_light_secondary_surface_focused">#e8f3ff</color>
-    <color name="lab_internal_sys_color_light_secondary_surface_pressed">#e8f3ff</color>
-    <color name="lab_internal_sys_color_light_secondary_surface_disabled">#ededee</color>
+    <color name="lab_internal_sys_color_light_secondary_surface_focused">@color/lab_internal_ref_palette_secondary95_emph_high</color>
+    <color name="lab_internal_sys_color_light_secondary_surface_pressed">@color/lab_internal_ref_palette_secondary95_emph_high</color>
+    <color name="lab_internal_sys_color_light_secondary_surface_disabled">@color/lab_internal_ref_palette_neutral10_emph_small</color>
 
     <color name="lab_internal_sys_color_light_on_secondary_surface">@color/lab_internal_ref_palette_secondary10</color>
     <color name="lab_internal_sys_color_light_on_secondary_surface_disabled">@color/lab_internal_ref_palette_neutral10_emph_disabled</color>
@@ -134,9 +128,7 @@
     <color name="lab_internal_sys_color_dark_primary">@color/lab_internal_ref_palette_primary80</color>
     <color name="lab_internal_sys_color_dark_primary_focused">@color/lab_internal_ref_palette_primary90</color>
     <color name="lab_internal_sys_color_dark_primary_pressed">@color/lab_internal_ref_palette_primary90</color>
-    <!-- TODO restore this color. Temparily blended background and disabled state into an opaque color -->
-<!--    <color name="lab_internal_sys_color_dark_primary_disabled">@color/lab_internal_ref_palette_neutral90_emph_medium</color>-->
-    <color name="lab_internal_sys_color_dark_primary_disabled">#1b1b1d</color>
+    <color name="lab_internal_sys_color_dark_primary_disabled">@color/lab_internal_ref_palette_neutral90_emph_medium</color>
 
     <color name="lab_internal_sys_color_dark_on_primary">@color/lab_internal_ref_palette_primary20</color>
     <color name="lab_internal_sys_color_dark_on_primary_disabled">@color/lab_internal_ref_palette_neutral90_emph_disabled</color>
@@ -159,13 +151,9 @@
     <color name="lab_internal_sys_color_dark_on_secondary_disabled">@color/lab_internal_ref_palette_neutral90_emph_disabled</color>
 
     <color name="lab_internal_sys_color_dark_secondary_surface">@color/lab_internal_ref_palette_secondary30</color>
-    <!-- TODO update these colors. Temporarily blended background and pressed, focused states into opaque colors -->
-<!--    <color name="lab_internal_sys_color_dark_secondary_surface_focused">@color/lab_internal_ref_palette_secondary30_emph_high</color>-->
-<!--    <color name="lab_internal_sys_color_dark_secondary_surface_pressed">@color/lab_internal_ref_palette_secondary30_emph_high</color>-->
-<!--    <color name="lab_internal_sys_color_dark_secondary_surface_disabled">@color/lab_internal_ref_palette_neutral90_emph_small</color>-->
-    <color name="lab_internal_sys_color_dark_secondary_surface_focused">#242a31</color>
-    <color name="lab_internal_sys_color_dark_secondary_surface_pressed">#242a31</color>
-    <color name="lab_internal_sys_color_dark_secondary_surface_disabled">#121212</color>
+    <color name="lab_internal_sys_color_dark_secondary_surface_focused">@color/lab_internal_ref_palette_secondary30_emph_high</color>
+    <color name="lab_internal_sys_color_dark_secondary_surface_pressed">@color/lab_internal_ref_palette_secondary30_emph_high</color>
+    <color name="lab_internal_sys_color_dark_secondary_surface_disabled">@color/lab_internal_ref_palette_neutral90_emph_small</color>
 
     <color name="lab_internal_sys_color_dark_on_secondary_surface">@color/lab_internal_ref_palette_secondary90</color>
     <color name="lab_internal_sys_color_dark_on_secondary_surface_disabled">@color/lab_internal_ref_palette_neutral90_emph_disabled</color>

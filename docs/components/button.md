@@ -22,3 +22,9 @@ All these properties are supported in the same way as MaterialButton. Our LabBut
 However, any specific configurations are best done by providing custom values for these 4 properties. 
 
 Examples can be taken from this project's button style implementations.
+
+## Elevation
+
+Our design system buttons don't have elevation and use semi-transparent state colors by default. 
+
+When elevation is required, the colors need to become opaque. The elevation shadow will become visible through the button if elevation and transparent colors are used at the same time. 

@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <declare-styleable name="Elevation">
-        <!-- Default elevation value. Used for Buttons, Cards and other surfaces -->
-        <attr name="labElevation" format="dimension" />
-    </declare-styleable>
-</resources>

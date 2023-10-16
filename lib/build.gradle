@@ -6,7 +6,6 @@ plugins {
 def srcDirs = [
         'mobi/lab/components/button',
         'mobi/lab/components/color',
-        'mobi/lab/components/elevation',
         'mobi/lab/components/shape',
         'mobi/lab/components/shared',
         'mobi/lab/components/textfield',
