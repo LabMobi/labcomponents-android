@@ -16,8 +16,10 @@ definitions:
     - lib/build/outputs/**/mapping.txt
   debug-emails: &debugEmails
     - lauris.kruusamae@lab.mobi
+    - harri.kirik@lab.mobi
   release-emails: &releaseEmails
     - lauris.kruusamae@lab.mobi
+    - harri.kirik@lab.mobi
   scripts:
     # Local setup
     - &stepLocalSetup
