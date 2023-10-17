@@ -35,7 +35,7 @@ The project consists of the component library in `lib` module and the components
 - [Directory Structure](docs/directory_structure.md)
 - [Resource Visibility](docs/resource_visibility.md)
 - [Contributing](docs/contributing.md)
-- [Release Guide](docs/release_guide.md)
+- [Release Guide](RELEASE_GUIDE.md)
 - [Material Components for Android](https://github.com/material-components/material-components-android) (external)
 
 ## List of components
