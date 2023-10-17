@@ -1,4 +1,8 @@
 plugins {
+    // This is a core plugin and versioned together with Gradle
+    id 'maven-publish'
+    // This is a core plugin and versioned together with Gradle
+    id 'signing'
     alias libs.plugins.android.library
     alias libs.plugins.kotlin.android
 }
@@ -62,6 +66,7 @@ android {
         compileSdkVersion libs.versions.android.sdk.compile.get()
         targetSdkVersion libs.versions.android.sdk.target.get()
         minSdkVersion libs.versions.android.sdk.min.get()
+        setVersion "${rootProject.ext.libraryVersion}"
     }
 
     buildTypes.all {
@@ -92,6 +97,12 @@ android {
     lint {
         fatal "StopShip"
     }
+
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+        }
+    }
 }
 
 dependencies {
@@ -109,3 +120,72 @@ buildLibDebug.description = "Build the debug version of components lib"
 task buildLibRelease(dependsOn: ["buildLibDebug"])
 buildLibRelease.group = GROUP_CI_BUILD_TASKS
 buildLibRelease.description = "Build the release version of components lib"
+
+task buildAndPublishRelease(dependsOn: ['buildLibRelease', 'publish'])
+buildAndPublishRelease.group = GROUP_CI_BUILD_TASKS
+buildAndPublishRelease.description = "Build the library release version and publish it"
+
+publish.mustRunAfter tasks.findByPath('buildLibRelease')
+
+Properties properties = new Properties()
+try {
+    properties.load(project.rootProject.file('publish.properties').newDataInputStream())
+} catch (Exception ignored) {
+    println "publish.properties missing"
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                groupId = 'mobi.lab.labcomponents'
+                artifactId = 'labcomponents'
+                from components.release
+                pom {
+                    packaging = 'aar'
+                    name = 'Mobi Lab Components library.'
+                    description = 'The Android implementation of the Mobi Lab design system components.'
+                    url = 'https://github.com/LabMobi/labcomponents-android'
+
+                    licenses {
+                        license {
+                            name = 'The MIT License'
+                            url = 'https://opensource.org/licenses/mit-license.php'
+                        }
+                    }
+                    developers {
+                        developer {
+                            name = properties.getProperty("publish_developer_name")
+                            name = properties.getProperty("publish_developer_name")
+                            email = properties.getProperty("publish_developer_email")
+                            organization = properties.getProperty("publish_developer_organization")
+                            organizationUrl = properties.getProperty("publish_developer_organization_url")
+                        }
+                    }
+                    scm {
+                        connection = 'https://github.com/LabMobi/labcomponents-android.git'
+                        developerConnection = 'https://github.com/LabMobi/labcomponents-android.git'
+                        url = 'https://github.com/LabMobi/labcomponents-android'
+                    }
+                }
+            }
+        }
+        repositories {
+            maven {
+                name = "OSSRH"
+                url = "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2"
+                credentials {
+                    username = properties.getProperty("publish_ossrh_username")
+                    password = properties.getProperty("publish_ossrh_password")
+                }
+            }
+        }
+    }
+
+    signing {
+        def signingKey = properties.getProperty("signing_key")
+        def signingPassword = properties.getProperty("signing_password")
+        useInMemoryPgpKeys(signingKey, signingPassword)
+        sign publishing.publications
+    }
+}

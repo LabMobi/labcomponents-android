@@ -11,14 +11,7 @@ This has the benefit of clearly defining the connections between components and 
 
 However, since this system is still in progress on the design side, it cannot be properly implemented in this library.
 
-JIRA task: [https://labmobi.atlassian.net/browse/P42-190](https://labmobi.atlassian.net/browse/P42-190)
-
-## Distribution process
-
-Current release process includes building a version in Codemagic and including the resulting `.aar` file locally in to a project.
-A proper distribution process will be set up in the future.
-
-JIRA task: [https://labmobi.atlassian.net/browse/P42-179](https://labmobi.atlassian.net/browse/P42-179)
+JIRA task (Mobi Lab internal): [https://labmobi.atlassian.net/browse/P42-190](https://labmobi.atlassian.net/browse/P42-190)
 
 ## Compose support
 
@@ -29,4 +22,4 @@ Compose support is not a part of the project (yet). There are 2 main reasons for
 
 However, there will be a version of the library that sets up a Theme for Compose and creates wrappers or clones for the existing widgets as needed.
 
-JIRA task: [https://labmobi.atlassian.net/browse/P42-194](https://labmobi.atlassian.net/browse/P42-194)
+JIRA task (Mobi Lab internal): [https://labmobi.atlassian.net/browse/P42-194](https://labmobi.atlassian.net/browse/P42-194)

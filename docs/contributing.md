@@ -4,10 +4,10 @@ Details on how to contribute to the project.
 
 ## Links
 
-- [Directory Structure](docs/directory_structure.md)
-- [Resource Visibility](docs/resource_visibility.md)
+- [Directory Structure](directory_structure.md)
+- [Resource Visibility](resource_visibility.md)
 - [Git branching strategy](https://confluence.lab.mobi/display/DEV/Git+branching+strategy)
-- [Release Guide](docs/release_guide.md)
+- [RELEASE_GUIDE.md](../RELEASE_GUIDE.md)
 
 ## Workflow
 
@@ -18,15 +18,18 @@ Details on how to contribute to the project.
 4. Document the changes in `CHANGELOG.md` in the project's root directory
 5. Document the changes in the changed components documentation page in `docs` dir.
    1. Add a new page to `docs/components` if a new component was added.
-   2. Add a link to the component doc in `docs/main.md`.
+   2. Add a link to the component doc in [README.md](../README.md).
 6. Make sure the build succeeds in `Codemagic`. The project name is `labcomponents-android`.
+   1. Note: If you do not have access to Codemagic then build locally and/or discuss with `Lauris Kruusamäe` and `Harri Kirik` about getting access.
+
 7. Create a merge request targeting the `develop` branch.
-   1. A code review and approval from at least one other person from the Android community.
-   1. Tag `Lauris Kruusamäe` in the request.
+   1. A code review and approval from at least one other person from the community.
+   1. Tag `Lauris Kruusamäe` and `Harri Kirik` in the request.
 8. If the review is approved, then merge the merge request to `develop`.
-9. Contact the Android community in Slack `#community-android` about releasing a new version of the project. 
-   1. Tag `Lauris Kruusamäe` for now for help with the release.
-   1. TODO: Write a proper release guide and possible automation 
+9. Follow the [RELEASE_GUIDE.md](../RELEASE_GUIDE.md) and release the library
+   1. If you do not have access then contact  `Lauris Kruusamäe` and `Harri Kirik`, then can help or make the release themselves
+
+10. OPTIONAL: If Mobi Lab employee, then contact the Android community in Slack `#community-android` about releasing a new version of the project. 
 
 ## Dependency versioning
 

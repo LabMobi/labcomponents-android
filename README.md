@@ -2,22 +2,32 @@
 
 # Mobi Lab Components
 
-Mobi Lab Components (LabComponents) help developers execute our internal design system's components.
+Mobi Lab Components (LabComponents) help developers execute our internal design system's components on the Android platform.
 
-The components provide implementations for [Mobi Lab's design system](https://www.figma.com/file/gxt4iyWGyliILJSOCLXonl/P42-design-system-template-(Duplicate-this!)).
+Maven Central artifact available from https://central.sonatype.com/search?q=mobi.lab.labcomponents
+
+```groovy
+implementation 'mobi.lab.labcomponents:labcomponents:x.y.z' // Check the latest version from Maven Central
+```
+
+The components provide implementations for [Mobi Lab's design system](https://www.figma.com/file/gxt4iyWGyliILJSOCLXonl/P42-design-system-template?type=design&node-id=1652-14713&mode=design&t=j4TbnOpahS3korsT-0).
 
 These components are based on [Material Components for Android](https://github.com/material-components/material-components-android).
 
-**Compatible versions:**
+## Compatible versions
 
 | Lab Components | Material Components |
 |----------------|:--------------------|
 | 0.0.3          | 1.8.0               |
 | 0.0.8          | 1.10.0             |
+| 0.0.9 | 1.10.0 |
+| 0.1.0 | 1.10.0 |
 
 ## Description
 
-The project consists of the component library in `lib` module and components demo application in `app-demo` module.
+The library contains a ready-to-use implementation of the components from Mobi Lab's design system. Mobi Lab's design system allows teams to focus on solving business problems instead of reinventing basic design system and UI components at the design and implementation phases.
+
+The project consists of the component library in `lib` module and the components demo application in `app-demo` module.
 
 ## Links
 
@@ -25,7 +35,7 @@ The project consists of the component library in `lib` module and components dem
 - [Directory Structure](docs/directory_structure.md)
 - [Resource Visibility](docs/resource_visibility.md)
 - [Contributing](docs/contributing.md)
-- [Release Guide](docs/release_guide.md)
+- [Release Guide](RELEASE_GUIDE.md)
 - [Material Components for Android](https://github.com/material-components/material-components-android) (external)
 
 ## List of components
