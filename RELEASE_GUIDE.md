@@ -13,7 +13,7 @@ Note: Every time you notice something in this guide is out-of-date or incorrect 
 - Original Sonatype OSSRH JIRA issue: https://issues.sonatype.org/browse/OSSRH-66630
   - Can be used to add user access
 - Project access Lab's internal Confluence: https://labmobi.atlassian.net/wiki/spaces/DEV/pages/15990951/Sonatype+Maven+Access+Credentials
-- Codemagic CI: https://codemagic.io/app/63b41fd5cfcd2ca8301a0424/settings
+- Codemagic CI: https://codemagic.io/app/652e729c5991ed8dfccbe3c3/settings
 - OSSRH guide: https://central.sonatype.org/publish/publish-guide/
 
 ## Prerequisites

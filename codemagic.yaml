@@ -23,7 +23,7 @@ definitions:
   scripts:
     # Local setup
     - &stepLocalSetup
-      name: Set up local properties and permissons
+      name: Set up local properties and permissions
       script: |
         chmod +x gradlew
         echo "sdk.dir=$ANDROID_SDK_ROOT" > "$FCI_BUILD_DIR/local.properties"
