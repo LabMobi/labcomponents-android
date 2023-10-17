@@ -69,6 +69,8 @@ workflows:
       groups:
         - publishing_props
     scripts:
+      - name: Check 'main' branch
+        script: if [ "$FCI_BRANCH" != "main" ]; then exit 1; fi
       - *stepLocalSetup
       - *stepCheckCode
       - *stepBuildPublish

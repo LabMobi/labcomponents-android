@@ -25,7 +25,7 @@ There are multiple layers of color definitions used throughout the components:
 
 Colors set by the theme. These should be used when the color should be definable by the integrator.
 
-```
+```xml
 ?attr/labColorPrimary
 ?attr/labColorSecondarySelector
 ```
@@ -36,7 +36,7 @@ Internal semantic color resources. These are reusable across different themes, e
 
 **NB! There are separate colors for `light` and `dark` themes.**
 
-```
+```xml
 @color/lab_internal_sys_color_light_primary
 @color/lab_internal_sys_color_light_secondary
 
@@ -51,7 +51,7 @@ The main idea here is to reuse these definitions across `light` and `dark` mode 
 
 These values have no semantic meaning and thus should not be used anywhere expect the `Color System Resources` level.
 
-```
+```xml
 @color/lab_internal_ref_palette_primary60
 @color/lab_internal_ref_palette_secondary80
 ```
