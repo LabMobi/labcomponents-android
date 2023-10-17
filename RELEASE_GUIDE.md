@@ -74,9 +74,9 @@ git merge develop
 git push
 ```
 
-4) Start the release build (`release-builds (Release builds for verification (main branch only))`) at Codemagic CI from the `main` branch, make sure it built fine and everything is in green.
+4) Start the release build (`release-builds (Release builds for verification (main branch only))`) at Codemagic CI from the `main` branch, make sure it builds fine and everything is in green.
 
-5) Start the publish build (`publish-builds Publish to Maven builds (main branch only)`) at Codemagic CI from the `main` branch, make sure it built fine and everything is in green.
+5) Start the publish build (`publish-builds Publish to Maven builds (main branch only)`) at Codemagic CI from the `main` branch, make sure it builds fine and everything is in green.
 
 6) Open up  https://s01.oss.sonatype.org/, navigate to Build Promotion -> Staging repositories, check the published repository there. 
 
