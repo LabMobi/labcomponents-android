@@ -28,6 +28,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - ..
 
+## 0.0.10 - 2023.10.18
+
+### Changed
+
+- Button .Big styles are now default styles with no extra ending. For example. Widget.Lab.Button.Filled is now the same as Widget.Lab.Button.Filled used to be.
+- Added button .Small styles to represent the old default styles. 
+
 ## 0.0.9 - 2023.10.17
 
 ### Added

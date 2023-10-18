@@ -28,13 +28,13 @@ class MaterialThemeActivity : AppCompatActivity() {
     private fun ActivityMaterialThemeBinding.loopButtons(action: LabButton.() -> Unit) {
         listOf(
             filled, filledIconStart, filledIconEnd,
-            filledBig, filledBigIconStart, filledBigIconEnd,
+            filledSmall, filledSmallIconStart, filledSmallIconEnd,
             tonal, tonalIconStart, tonalIconEnd,
-            tonalBig, tonalBigIconStart, tonalBigIconEnd,
+            tonalSmall, tonalSmallIconStart, tonalSmallIconEnd,
             outlined, outlinedIconStart, outlinedIconEnd,
-            outlinedBig, outlinedBigIconStart, outlinedBigIconEnd,
+            outlinedSmall, outlinedSmallIconStart, outlinedSmallIconEnd,
             text, textIconStart, textIconEnd,
-            textBig, textBigIconStart, textBigIconEnd,
+            textSmall, textSmallIconStart, textSmallIconEnd,
         ).map(action)
     }
 
