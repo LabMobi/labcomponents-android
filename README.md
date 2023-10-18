@@ -21,7 +21,7 @@ These components are based on [Material Components for Android](https://github.c
 | 0.0.3          | 1.8.0               |
 | 0.0.8          | 1.10.0             |
 | 0.0.9 | 1.10.0 |
-| 0.1.0 | 1.10.0 |
+| 0.0.10 | 1.10.0 |
 
 ## Description
 
