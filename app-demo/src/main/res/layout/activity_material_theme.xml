@@ -51,7 +51,7 @@
 
             <mobi.lab.components.button.LabButton
                 android:id="@+id/filled"
-                style="@style/Widget.LabComponents.Button.Filled"
+                style="@style/Widget.Lab.Button.Filled"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_default"
@@ -60,7 +60,7 @@
 
             <mobi.lab.components.button.LabButton
                 android:id="@+id/filled_icon_start"
-                style="@style/Widget.LabComponents.Button.Filled"
+                style="@style/Widget.LabComponents.Button.Filled.Icon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_default"
@@ -84,8 +84,8 @@
                 />
 
             <mobi.lab.components.button.LabButton
-                android:id="@+id/filled_big"
-                style="@style/Widget.LabComponents.Button.Filled.Big"
+                android:id="@+id/filled_small"
+                style="@style/Widget.LabComponents.Button.Filled.Small"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_default"
@@ -94,25 +94,25 @@
                 android:text="Filled" />
 
             <mobi.lab.components.button.LabButton
-                android:id="@+id/filled_big_icon_start"
-                style="@style/Widget.LabComponents.Button.Filled.Big"
+                android:id="@+id/filled_small_icon_start"
+                style="@style/Widget.LabComponents.Button.Filled.Small.Icon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_default"
                 android:layout_marginStart="@dimen/margin_default"
                 android:layout_marginEnd="@dimen/margin_default"
-                android:text="Filled Big"
+                android:text="Filled Small"
                 app:icon="@drawable/ic_placeholder16" />
 
             <mobi.lab.components.button.LabButton
-                android:id="@+id/filled_big_icon_end"
-                style="@style/Widget.LabComponents.Button.Filled.Big"
+                android:id="@+id/filled_small_icon_end"
+                style="@style/Widget.LabComponents.Button.Filled.Small"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_default"
                 android:layout_marginStart="@dimen/margin_default"
                 android:layout_marginEnd="@dimen/margin_default"
-                android:text="Filled Big"
+                android:text="Filled Small"
                 app:iconGravity="end"
                 app:icon="@drawable/ic_placeholder16" />
 
@@ -133,7 +133,7 @@
 
             <mobi.lab.components.button.LabButton
                 android:id="@+id/tonal_icon_start"
-                style="@style/Widget.LabComponents.Button.Tonal"
+                style="@style/Widget.LabComponents.Button.Tonal.Icon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_default"
@@ -157,35 +157,35 @@
                 />
 
             <mobi.lab.components.button.LabButton
-                android:id="@+id/tonal_big"
-                style="@style/Widget.LabComponents.Button.Tonal.Big"
+                android:id="@+id/tonal_small"
+                style="@style/Widget.LabComponents.Button.Tonal.Small"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_default"
                 android:layout_marginStart="@dimen/margin_default"
                 android:layout_marginEnd="@dimen/margin_default"
-                android:text="Tonal Big" />
+                android:text="Tonal Small" />
 
             <mobi.lab.components.button.LabButton
-                android:id="@+id/tonal_big_icon_start"
-                style="@style/Widget.LabComponents.Button.Tonal.Big"
+                android:id="@+id/tonal_small_icon_start"
+                style="@style/Widget.LabComponents.Button.Tonal.Small.Icon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_default"
                 android:layout_marginStart="@dimen/margin_default"
                 android:layout_marginEnd="@dimen/margin_default"
-                android:text="Tonal Big"
+                android:text="Tonal Small"
                 app:icon="@drawable/ic_placeholder16" />
 
             <mobi.lab.components.button.LabButton
-                android:id="@+id/tonal_big_icon_end"
-                style="@style/Widget.LabComponents.Button.Tonal.Big"
+                android:id="@+id/tonal_small_icon_end"
+                style="@style/Widget.LabComponents.Button.Tonal.Small"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_default"
                 android:layout_marginStart="@dimen/margin_default"
                 android:layout_marginEnd="@dimen/margin_default"
-                android:text="Tonal Big"
+                android:text="Tonal Small"
                 app:iconGravity="end"
                 app:icon="@drawable/ic_placeholder16" />
 
@@ -206,7 +206,7 @@
 
             <mobi.lab.components.button.LabButton
                 android:id="@+id/outlined_icon_start"
-                style="@style/Widget.LabComponents.Button.Outlined"
+                style="@style/Widget.LabComponents.Button.Outlined.Icon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_default"
@@ -229,35 +229,35 @@
                 app:icon="@drawable/ic_placeholder16" />
 
             <mobi.lab.components.button.LabButton
-                android:id="@+id/outlined_big"
-                style="@style/Widget.LabComponents.Button.Outlined.Big"
+                android:id="@+id/outlined_small"
+                style="@style/Widget.LabComponents.Button.Outlined.Small"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_default"
                 android:layout_marginStart="@dimen/margin_default"
                 android:layout_marginEnd="@dimen/margin_default"
-                android:text="Outlined Big" />
+                android:text="Outlined Small" />
 
             <mobi.lab.components.button.LabButton
-                android:id="@+id/outlined_big_icon_start"
-                style="@style/Widget.LabComponents.Button.Outlined.Big"
+                android:id="@+id/outlined_small_icon_start"
+                style="@style/Widget.LabComponents.Button.Outlined.Small.Icon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_default"
                 android:layout_marginStart="@dimen/margin_default"
                 android:layout_marginEnd="@dimen/margin_default"
-                android:text="Outlined Big"
+                android:text="Outlined Small"
                 app:icon="@drawable/ic_placeholder16" />
 
             <mobi.lab.components.button.LabButton
-                android:id="@+id/outlined_big_icon_end"
-                style="@style/Widget.LabComponents.Button.Outlined.Big"
+                android:id="@+id/outlined_small_icon_end"
+                style="@style/Widget.LabComponents.Button.Outlined.Small"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_default"
                 android:layout_marginStart="@dimen/margin_default"
                 android:layout_marginEnd="@dimen/margin_default"
-                android:text="Outlined Big"
+                android:text="Outlined Small"
                 app:iconGravity="end"
                 app:icon="@drawable/ic_placeholder16" />
 
@@ -278,7 +278,7 @@
 
             <mobi.lab.components.button.LabButton
                 android:id="@+id/text_icon_start"
-                style="@style/Widget.LabComponents.Button.Text"
+                style="@style/Widget.LabComponents.Button.Text.Icon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_default"
@@ -302,35 +302,35 @@
                 />
 
             <mobi.lab.components.button.LabButton
-                android:id="@+id/text_big"
-                style="@style/Widget.LabComponents.Button.Text.Big"
+                android:id="@+id/text_small"
+                style="@style/Widget.LabComponents.Button.Text.Small"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_default"
                 android:layout_marginStart="@dimen/margin_default"
                 android:layout_marginEnd="@dimen/margin_default"
-                android:text="Text Big" />
+                android:text="Text Small" />
 
             <mobi.lab.components.button.LabButton
-                android:id="@+id/text_big_icon_start"
-                style="@style/Widget.LabComponents.Button.Text.Big"
+                android:id="@+id/text_small_icon_start"
+                style="@style/Widget.LabComponents.Button.Text.Small.Icon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_default"
                 android:layout_marginStart="@dimen/margin_default"
                 android:layout_marginEnd="@dimen/margin_default"
-                android:text="Text Big"
+                android:text="Text Small"
                 app:icon="@drawable/ic_placeholder16" />
 
             <mobi.lab.components.button.LabButton
-                android:id="@+id/text_big_icon_end"
-                style="@style/Widget.LabComponents.Button.Text.Big"
+                android:id="@+id/text_small_icon_end"
+                style="@style/Widget.LabComponents.Button.Text.Small"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_default"
                 android:layout_marginStart="@dimen/margin_default"
                 android:layout_marginEnd="@dimen/margin_default"
-                android:text="Text Big"
+                android:text="Text Small"
                 app:iconGravity="end"
                 app:icon="@drawable/ic_placeholder16" />
         </LinearLayout>

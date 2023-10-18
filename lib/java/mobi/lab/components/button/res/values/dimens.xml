@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="lab_internal_button_text_padding">8dp</dimen>
-    <dimen name="lab_internal_button_text_big_padding">12dp</dimen>
+    <dimen name="lab_internal_button_text_small_padding">8dp</dimen>
+    <dimen name="lab_internal_button_text_padding">12dp</dimen>
     <dimen name="lab_internal_button_stroke_width">1dp</dimen>
     <dimen name="lab_internal_button_icon_padding">8dp</dimen>
-    <dimen name="lab_internal_button_min_size">36dp</dimen>
-    <dimen name="lab_internal_button_padding_vertical">8dp</dimen>
-    <dimen name="lab_internal_button_padding_horizontal">12dp</dimen>
-    <dimen name="lab_internal_button_big_min_size">48dp</dimen>
-    <dimen name="lab_internal_button_big_padding_vertical">12dp</dimen>
-    <dimen name="lab_internal_button_big_padding_horizontal">24dp</dimen>
-    <dimen name="lab_internal_button_padding_icon_edge">12dp</dimen>
-    <dimen name="lab_internal_button_big_padding_icon_edge">16dp</dimen>
+    <dimen name="lab_internal_button_min_size">48dp</dimen>
+    <dimen name="lab_internal_button_padding_vertical">12dp</dimen>
+    <dimen name="lab_internal_button_padding_horizontal">24dp</dimen>
+    <dimen name="lab_internal_button_small_min_size">36dp</dimen>
+    <dimen name="lab_internal_button_small_padding_vertical">8dp</dimen>
+    <dimen name="lab_internal_button_small_padding_horizontal">12dp</dimen>
+    <dimen name="lab_internal_button_padding_icon_edge">16dp</dimen>
+    <dimen name="lab_internal_button_small_padding_icon_edge">12dp</dimen>
 </resources>
