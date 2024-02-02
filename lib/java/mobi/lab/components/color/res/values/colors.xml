@@ -304,7 +304,7 @@
     <color name="lab_internal_ref_palette_neutral_variant90">#DEE2ED</color>
 
     <!-- Debug colors for development -->
-    <color name="lab_internal_todo">#50FF00FF</color>
+    <color name="lab_internal_todo">#FF00FF</color>
     <color name="lab_internal_todo2">#00FFFF</color>
     <color name="lab_internal_todo3">#FFFF00</color>
 </resources>

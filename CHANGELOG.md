@@ -2,7 +2,7 @@
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/). This project does not use semantic versioning.
 
-## 0.0.11 [UNRELEASED]
+## 0.0.12 [UNRELEASED]
 
 ### Added
 
@@ -27,6 +27,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Security
 
 - ..
+
+
+## 0.0.11 - 2024.02.02
+
+### Changed
+
+- LabTextField.`setCursorColorOverride` replaced with `setCursorColor` and `setCursorErrorColor` from MaterialTextInputLayout.
+- Updated Material dependency to version 1.11.0
 
 ## 0.0.10 - 2023.10.18
 
