@@ -12,7 +12,6 @@ import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
-import androidx.annotation.ColorInt
 import androidx.annotation.Dimension
 import androidx.annotation.Px
 import androidx.annotation.RequiresApi
@@ -71,7 +70,8 @@ public open class LabTextField @JvmOverloads constructor(
     private var textPaddingHorizontal: Int = NO_VALUE_INT
 
     // A temporary solution to update the cursor color until the Material lib's support for this becomes available
-    private var cursorColorOverride: Int = NO_VALUE_INT
+    private var cursorColorOverride: ColorStateList? = null
+    private var cursorErrorColorOverride: ColorStateList? = null
 
     init {
         attrs?.let {
@@ -90,6 +90,11 @@ public open class LabTextField @JvmOverloads constructor(
         }
 
         boxHelper = LabTextFieldBoxBackgroundHelper(this, attrs, defStyleAttr)
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            cursorColorOverride = cursorColor
+            cursorErrorColorOverride = cursorErrorColor
+        }
     }
 
     override fun addView(child: View, index: Int, params: ViewGroup.LayoutParams) {
@@ -256,11 +261,31 @@ public open class LabTextField @JvmOverloads constructor(
      * Set a color for the cursor and text select handles. This overrides the default color from colorControlActivated value.
      * NB! Only supported on API 29+
      *
-     * @param color The new color override
+     * We want to modify the default behaviour here because the material lib's cursorColor does not override the select handle colors.
+     *
+     * @param cursorColor The new color override
+     * TODO: material 1.12.0: Check if select handles are added
      */
     @RequiresApi(Build.VERSION_CODES.Q)
-    public fun setCursorColorOverride(@ColorInt color: Int) {
-        cursorColorOverride = color
+    override fun setCursorColor(cursorColor: ColorStateList?) {
+        super.setCursorColor(cursorColor)
+        cursorColorOverride = cursorColor
+        updateCursorColor()
+    }
+
+    /**
+     * Set a color for the cursor and text select handles in error mode. This overrides the default color from colorControlActivated value.
+     * NB! Only supported on API 29+
+     *
+     * We want to modify the default behaviour here because the material lib's cursorErrorColor does not override the select handle colors.
+     *
+     * @param cursorErrorColor The new color override
+     * TODO: material 1.12.0: Check if select handles are added
+     */
+    @RequiresApi(Build.VERSION_CODES.Q)
+    override fun setCursorErrorColor(cursorErrorColor: ColorStateList?) {
+        super.setCursorErrorColor(cursorErrorColor)
+        cursorErrorColorOverride = cursorErrorColor
         updateCursorColor()
     }
 
@@ -390,7 +415,7 @@ public open class LabTextField @JvmOverloads constructor(
     }
 
     private fun updateCursorColor() {
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.Q || cursorColorOverride == NO_VALUE_INT) {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.Q) {
             // Not supported.
             return
         }
@@ -401,10 +426,19 @@ public open class LabTextField @JvmOverloads constructor(
             return
         }
 
-        DrawableUtil.setDrawableColor(editText.textSelectHandleLeft, cursorColorOverride)
-        DrawableUtil.setDrawableColor(editText.textSelectHandleRight, cursorColorOverride)
-        DrawableUtil.setDrawableColor(editText.textSelectHandle, cursorColorOverride)
-        DrawableUtil.setDrawableColor(editText.textCursorDrawable, cursorColorOverride)
+        val color = if (isOnError()) cursorErrorColorOverride else cursorColorOverride
+        if (color == null) {
+            return
+        }
+
+        DrawableUtil.setTintList(editText.textSelectHandleLeft, color)
+        DrawableUtil.setTintList(editText.textSelectHandleRight, color)
+        DrawableUtil.setTintList(editText.textSelectHandle, color)
+        DrawableUtil.setTintList(editText.textCursorDrawable, color)
+    }
+
+    private fun isOnError(): Boolean {
+        return errorState
     }
 
     internal companion object {
