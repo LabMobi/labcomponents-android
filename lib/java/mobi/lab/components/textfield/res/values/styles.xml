@@ -72,6 +72,9 @@
         <item name="boxBackgroundColor">@android:color/transparent</item>
         <!-- Bridge color to add error state to our TextField -->
         <item name="boxStrokeColor">@color/lab_internal_mat_bridge_textfield_stroke</item>
+        <!-- TODO: material 1.12.0: Check if this feature is still relevant -->
+        <!-- Define this so that we can use it in our internal cursor color override logic -->
+        <item name="cursorColor">?attr/colorControlActivated</item>
 
         <item name="shapeAppearance">?attr/shapeAppearance</item>
         <item name="shapeAppearanceOverlay">?attr/shapeAppearanceOverlay</item>

@@ -28,6 +28,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - ..
 
+## 0.0.12 - 2024.02.05
+
+### Fixed
+
+- LabTextField cursor error color override not resetting itself after error state is cleared.
+
 
 ## 0.0.11 - 2024.02.02
 
