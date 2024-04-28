@@ -2,7 +2,7 @@
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/). This project does not use semantic versioning.
 
-## 0.0.13 [UNRELEASED]
+## 0.0.14 [UNRELEASED]
 
 ### Added
 
@@ -27,6 +27,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Security
 
 - ..
+
+## 0.0.13 - 2024.04.28
+
+### Changed
+
+- Added more granular font attributes to different TextAppearance styles. More values to define in the beginning but makes the styles reusable. Additionally, the entire typography styles file can be copy-pasted into projects to remove dependencies on the underlying design system's default values.
 
 ## 0.0.12 - 2024.02.05
 

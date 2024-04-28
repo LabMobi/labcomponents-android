@@ -164,10 +164,24 @@
         <!-- COLOR SCHEME END -->
 
         <!-- TYPOGRAPHY START -->
-        <item name="labFontFamilyRegular">@string/lab_internal_sys_font_family_regular</item>
-        <item name="labFontFamilyMedium">@string/lab_internal_sys_font_family_medium</item>
-        <item name="labFontFamilySemibold">@string/lab_internal_sys_font_family_semibold</item>
-        <item name="labFontFamilyBold">@string/lab_internal_sys_font_family_bold</item>
+        <item name="labFontFamilyDisplayLarge">@string/lab_internal_sys_font_family_regular</item>
+        <item name="labFontFamilyDisplayMedium">@string/lab_internal_sys_font_family_regular</item>
+        <item name="labFontFamilyDisplaySmall">@string/lab_internal_sys_font_family_regular</item>
+        <item name="labFontFamilyHeadlineLarge">@string/lab_internal_sys_font_family_regular</item>
+        <item name="labFontFamilyHeadlineMedium">@string/lab_internal_sys_font_family_regular</item>
+        <item name="labFontFamilyHeadlineSmall">@string/lab_internal_sys_font_family_regular</item>
+        <item name="labFontFamilyTitleLarge">@string/lab_internal_sys_font_family_regular</item>
+        <item name="labFontFamilyTitleMedium">@string/lab_internal_sys_font_family_medium</item>
+        <item name="labFontFamilyTitleSmall">@string/lab_internal_sys_font_family_medium</item>
+        <item name="labFontFamilyBodyLarge">@string/lab_internal_sys_font_family_medium</item>
+        <item name="labFontFamilyBodyLargeEmphasis">@string/lab_internal_sys_font_family_bold</item>
+        <item name="labFontFamilyBodyMedium">@string/lab_internal_sys_font_family_regular</item>
+        <item name="labFontFamilyBodyMediumEmphasis">@string/lab_internal_sys_font_family_semibold</item>
+        <item name="labFontFamilyBodySmall">@string/lab_internal_sys_font_family_regular</item>
+        <item name="labFontFamilyBodySmallEmphasis">@string/lab_internal_sys_font_family_semibold</item>
+        <item name="labFontFamilyLabelLarge">@string/lab_internal_sys_font_family_medium</item>
+        <item name="labFontFamilyLabelMedium">@string/lab_internal_sys_font_family_medium</item>
+        <item name="labFontFamilyLabelSmall">@string/lab_internal_sys_font_family_medium</item>
 
         <item name="labTextAppearanceDisplayLarge">@style/TextAppearance.Lab.DisplayLarge</item>
         <item name="labTextAppearanceDisplayMedium">@style/TextAppearance.Lab.DisplayMedium</item>
@@ -392,10 +406,24 @@
         <!-- COLOR SCHEME END -->
 
         <!-- TYPOGRAPHY START -->
-        <item name="labFontFamilyRegular">@string/lab_internal_sys_font_family_regular</item>
-        <item name="labFontFamilyMedium">@string/lab_internal_sys_font_family_medium</item>
-        <item name="labFontFamilySemibold">@string/lab_internal_sys_font_family_semibold</item>
-        <item name="labFontFamilyBold">@string/lab_internal_sys_font_family_bold</item>
+        <item name="labFontFamilyDisplayLarge">@string/lab_internal_sys_font_family_regular</item>
+        <item name="labFontFamilyDisplayMedium">@string/lab_internal_sys_font_family_regular</item>
+        <item name="labFontFamilyDisplaySmall">@string/lab_internal_sys_font_family_regular</item>
+        <item name="labFontFamilyHeadlineLarge">@string/lab_internal_sys_font_family_regular</item>
+        <item name="labFontFamilyHeadlineMedium">@string/lab_internal_sys_font_family_regular</item>
+        <item name="labFontFamilyHeadlineSmall">@string/lab_internal_sys_font_family_regular</item>
+        <item name="labFontFamilyTitleLarge">@string/lab_internal_sys_font_family_regular</item>
+        <item name="labFontFamilyTitleMedium">@string/lab_internal_sys_font_family_medium</item>
+        <item name="labFontFamilyTitleSmall">@string/lab_internal_sys_font_family_medium</item>
+        <item name="labFontFamilyBodyLarge">@string/lab_internal_sys_font_family_medium</item>
+        <item name="labFontFamilyBodyLargeEmphasis">@string/lab_internal_sys_font_family_bold</item>
+        <item name="labFontFamilyBodyMedium">@string/lab_internal_sys_font_family_regular</item>
+        <item name="labFontFamilyBodyMediumEmphasis">@string/lab_internal_sys_font_family_semibold</item>
+        <item name="labFontFamilyBodySmall">@string/lab_internal_sys_font_family_regular</item>
+        <item name="labFontFamilyBodySmallEmphasis">@string/lab_internal_sys_font_family_semibold</item>
+        <item name="labFontFamilyLabelLarge">@string/lab_internal_sys_font_family_medium</item>
+        <item name="labFontFamilyLabelMedium">@string/lab_internal_sys_font_family_medium</item>
+        <item name="labFontFamilyLabelSmall">@string/lab_internal_sys_font_family_medium</item>
 
         <item name="labTextAppearanceDisplayLarge">@style/TextAppearance.Lab.DisplayLarge</item>
         <item name="labTextAppearanceDisplayMedium">@style/TextAppearance.Lab.DisplayMedium</item>

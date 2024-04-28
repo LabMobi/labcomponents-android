@@ -16,8 +16,22 @@
     <attr name="labTextAppearanceLabelMedium" format="reference" />
     <attr name="labTextAppearanceLabelSmall" format="reference" />
 
-    <attr name="labFontFamilyRegular" format="reference" />
-    <attr name="labFontFamilyMedium" format="reference" />
-    <attr name="labFontFamilySemibold" format="reference" />
-    <attr name="labFontFamilyBold" format="reference" />
+    <attr name="labFontFamilyDisplayLarge" format="reference" />
+    <attr name="labFontFamilyDisplayMedium" format="reference" />
+    <attr name="labFontFamilyDisplaySmall" format="reference" />
+    <attr name="labFontFamilyHeadlineLarge" format="reference" />
+    <attr name="labFontFamilyHeadlineMedium" format="reference" />
+    <attr name="labFontFamilyHeadlineSmall" format="reference" />
+    <attr name="labFontFamilyTitleLarge" format="reference" />
+    <attr name="labFontFamilyTitleMedium" format="reference" />
+    <attr name="labFontFamilyTitleSmall" format="reference" />
+    <attr name="labFontFamilyBodyLarge" format="reference" />
+    <attr name="labFontFamilyBodyLargeEmphasis" format="reference" />
+    <attr name="labFontFamilyBodyMedium" format="reference" />
+    <attr name="labFontFamilyBodyMediumEmphasis" format="reference" />
+    <attr name="labFontFamilyBodySmall" format="reference" />
+    <attr name="labFontFamilyBodySmallEmphasis" format="reference" />
+    <attr name="labFontFamilyLabelLarge" format="reference" />
+    <attr name="labFontFamilyLabelMedium" format="reference" />
+    <attr name="labFontFamilyLabelSmall" format="reference" />
 </resources>

@@ -10,8 +10,8 @@
     </style>
 
     <style name="TextAppearance.Lab.DisplayLarge">
-        <item name="fontFamily">?attr/labFontFamilyRegular</item>
-        <item name="android:fontFamily">?attr/labFontFamilyRegular</item>
+        <item name="fontFamily">?attr/labFontFamilyDisplayLarge</item>
+        <item name="android:fontFamily">?attr/labFontFamilyDisplayLarge</item>
         <item name="android:textSize">56sp</item>
         <item name="lineHeight">64sp</item>
         <item name="android:lineHeight">64sp</item>
@@ -19,8 +19,8 @@
     </style>
 
     <style name="TextAppearance.Lab.DisplayMedium">
-        <item name="fontFamily">?attr/labFontFamilyRegular</item>
-        <item name="android:fontFamily">?attr/labFontFamilyRegular</item>
+        <item name="fontFamily">?attr/labFontFamilyDisplayMedium</item>
+        <item name="android:fontFamily">?attr/labFontFamilyDisplayMedium</item>
         <item name="android:textSize">45sp</item>
         <item name="lineHeight">52sp</item>
         <item name="android:lineHeight">52sp</item>
@@ -28,8 +28,8 @@
     </style>
 
     <style name="TextAppearance.Lab.DisplaySmall">
-        <item name="fontFamily">?attr/labFontFamilyRegular</item>
-        <item name="android:fontFamily">?attr/labFontFamilyRegular</item>
+        <item name="fontFamily">?attr/labFontFamilyDisplaySmall</item>
+        <item name="android:fontFamily">?attr/labFontFamilyDisplaySmall</item>
         <item name="android:textSize">36sp</item>
         <item name="lineHeight">44sp</item>
         <item name="android:lineHeight">44sp</item>
@@ -37,8 +37,8 @@
     </style>
 
     <style name="TextAppearance.Lab.HeadlineLarge">
-        <item name="fontFamily">?attr/labFontFamilyRegular</item>
-        <item name="android:fontFamily">?attr/labFontFamilyRegular</item>
+        <item name="fontFamily">?attr/labFontFamilyHeadlineLarge</item>
+        <item name="android:fontFamily">?attr/labFontFamilyHeadlineLarge</item>
         <item name="android:textSize">32sp</item>
         <item name="lineHeight">40sp</item>
         <item name="android:lineHeight">40sp</item>
@@ -46,8 +46,8 @@
     </style>
 
     <style name="TextAppearance.Lab.HeadlineMedium">
-        <item name="fontFamily">?attr/labFontFamilyRegular</item>
-        <item name="android:fontFamily">?attr/labFontFamilyRegular</item>
+        <item name="fontFamily">?attr/labFontFamilyHeadlineMedium</item>
+        <item name="android:fontFamily">?attr/labFontFamilyHeadlineMedium</item>
         <item name="android:textSize">28sp</item>
         <item name="lineHeight">36sp</item>
         <item name="android:lineHeight">36sp</item>
@@ -55,8 +55,8 @@
     </style>
 
     <style name="TextAppearance.Lab.HeadlineSmall">
-        <item name="fontFamily">?attr/labFontFamilyRegular</item>
-        <item name="android:fontFamily">?attr/labFontFamilyRegular</item>
+        <item name="fontFamily">?attr/labFontFamilyHeadlineSmall</item>
+        <item name="android:fontFamily">?attr/labFontFamilyHeadlineSmall</item>
         <item name="android:textSize">24sp</item>
         <item name="lineHeight">32sp</item>
         <item name="android:lineHeight">32sp</item>
@@ -64,8 +64,8 @@
     </style>
 
     <style name="TextAppearance.Lab.TitleLarge">
-        <item name="fontFamily">?attr/labFontFamilyRegular</item>
-        <item name="android:fontFamily">?attr/labFontFamilyRegular</item>
+        <item name="fontFamily">?attr/labFontFamilyTitleLarge</item>
+        <item name="android:fontFamily">?attr/labFontFamilyTitleLarge</item>
         <item name="android:textSize">22sp</item>
         <item name="lineHeight">28sp</item>
         <item name="android:lineHeight">28sp</item>
@@ -73,8 +73,8 @@
     </style>
 
     <style name="TextAppearance.Lab.TitleMedium">
-        <item name="fontFamily">?attr/labFontFamilyMedium</item>
-        <item name="android:fontFamily">?attr/labFontFamilyMedium</item>
+        <item name="fontFamily">?attr/labFontFamilyTitleMedium</item>
+        <item name="android:fontFamily">?attr/labFontFamilyTitleMedium</item>
         <item name="android:textSize">16sp</item>
         <item name="lineHeight">24sp</item>
         <item name="android:lineHeight">24sp</item>
@@ -82,8 +82,8 @@
     </style>
 
     <style name="TextAppearance.Lab.TitleSmall">
-        <item name="fontFamily">?attr/labFontFamilyMedium</item>
-        <item name="android:fontFamily">?attr/labFontFamilyMedium</item>
+        <item name="fontFamily">?attr/labFontFamilyTitleSmall</item>
+        <item name="android:fontFamily">?attr/labFontFamilyTitleSmall</item>
         <item name="android:textSize">14sp</item>
         <item name="lineHeight">20sp</item>
         <item name="android:lineHeight">20sp</item>
@@ -91,8 +91,8 @@
     </style>
 
     <style name="TextAppearance.Lab.BodyLarge">
-        <item name="fontFamily">?attr/labFontFamilyMedium</item>
-        <item name="android:fontFamily">?attr/labFontFamilyMedium</item>
+        <item name="fontFamily">?attr/labFontFamilyBodyLarge</item>
+        <item name="android:fontFamily">?attr/labFontFamilyBodyLarge</item>
         <item name="android:textSize">16sp</item>
         <item name="lineHeight">24sp</item>
         <item name="android:lineHeight">24sp</item>
@@ -100,13 +100,13 @@
     </style>
 
     <style name="TextAppearance.Lab.BodyLarge.Emphasis">
-        <item name="fontFamily">?attr/labFontFamilySemibold</item>
-        <item name="android:fontFamily">?attr/labFontFamilySemibold</item>
+        <item name="fontFamily">?attr/labFontFamilyBodyLargeEmphasis</item>
+        <item name="android:fontFamily">?attr/labFontFamilyBodyLargeEmphasis</item>
     </style>
 
     <style name="TextAppearance.Lab.BodyMedium">
-        <item name="fontFamily">?attr/labFontFamilyMedium</item>
-        <item name="android:fontFamily">?attr/labFontFamilyMedium</item>
+        <item name="fontFamily">?attr/labFontFamilyBodyMedium</item>
+        <item name="android:fontFamily">?attr/labFontFamilyBodyMedium</item>
         <item name="android:textSize">14sp</item>
         <item name="lineHeight">20sp</item>
         <item name="android:lineHeight">20sp</item>
@@ -114,13 +114,13 @@
     </style>
 
     <style name="TextAppearance.Lab.BodyMedium.Emphasis">
-        <item name="fontFamily">?attr/labFontFamilySemibold</item>
-        <item name="android:fontFamily">?attr/labFontFamilySemibold</item>
+        <item name="fontFamily">?attr/labFontFamilyBodyMediumEmphasis</item>
+        <item name="android:fontFamily">?attr/labFontFamilyBodyMediumEmphasis</item>
     </style>
 
     <style name="TextAppearance.Lab.BodySmall">
-        <item name="fontFamily">?attr/labFontFamilyMedium</item>
-        <item name="android:fontFamily">?attr/labFontFamilyMedium</item>
+        <item name="fontFamily">?attr/labFontFamilyBodySmall</item>
+        <item name="android:fontFamily">?attr/labFontFamilyBodySmall</item>
         <item name="android:textSize">12sp</item>
         <item name="lineHeight">16sp</item>
         <item name="android:lineHeight">16sp</item>
@@ -128,13 +128,13 @@
     </style>
 
     <style name="TextAppearance.Lab.BodySmall.Emphasis">
-        <item name="fontFamily">?attr/labFontFamilySemibold</item>
-        <item name="android:fontFamily">?attr/labFontFamilySemibold</item>
+        <item name="fontFamily">?attr/labFontFamilyBodySmallEmphasis</item>
+        <item name="android:fontFamily">?attr/labFontFamilyBodySmallEmphasis</item>
     </style>
 
     <style name="TextAppearance.Lab.LabelLarge">
-        <item name="fontFamily">?attr/labFontFamilyMedium</item>
-        <item name="android:fontFamily">?attr/labFontFamilyMedium</item>
+        <item name="fontFamily">?attr/labFontFamilyLabelLarge</item>
+        <item name="android:fontFamily">?attr/labFontFamilyLabelLarge</item>
         <item name="android:textSize">14sp</item>
         <item name="lineHeight">20sp</item>
         <item name="android:lineHeight">20sp</item>
@@ -142,8 +142,8 @@
     </style>
 
     <style name="TextAppearance.Lab.LabelMedium">
-        <item name="fontFamily">?attr/labFontFamilyMedium</item>
-        <item name="android:fontFamily">?attr/labFontFamilyMedium</item>
+        <item name="fontFamily">?attr/labFontFamilyLabelMedium</item>
+        <item name="android:fontFamily">?attr/labFontFamilyLabelMedium</item>
         <item name="android:textSize">12sp</item>
         <item name="lineHeight">16sp</item>
         <item name="android:lineHeight">16sp</item>
@@ -151,8 +151,8 @@
     </style>
 
     <style name="TextAppearance.Lab.LabelSmall">
-        <item name="fontFamily">?attr/labFontFamilyMedium</item>
-        <item name="android:fontFamily">?attr/labFontFamilyMedium</item>
+        <item name="fontFamily">?attr/labFontFamilyLabelSmall</item>
+        <item name="android:fontFamily">?attr/labFontFamilyLabelSmall</item>
         <item name="android:textSize">11sp</item>
         <item name="lineHeight">16sp</item>
         <item name="android:lineHeight">16sp</item>
