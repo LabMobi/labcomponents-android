@@ -28,7 +28,6 @@ android {
     sourceSets {
         main.java.srcDir 'java'
         main.resources.srcDir 'java/resources'
-        main.java.includes = srcDirs.collect { it + '/**/*.kt' }
         main.java.excludes = [
                 '**/build/**',
         ]
