@@ -4,11 +4,18 @@
         <item name="android:background">?attr/labColorPrimary</item>
         <item name="navigationIconTint">?attr/labColorOnPrimary</item>
         <item name="titleTextColor">?attr/labColorOnPrimary</item>
+        <item name="titleTextAppearance">@style/TextAppearance.Lab.TitleLarge</item>
         <item name="theme">@style/ThemeOverlay.Lab.Toolbar</item>
     </style>
 
     <style name="ThemeOverlay.Lab.Toolbar" parent="ThemeOverlay.MaterialComponents.Toolbar.Primary">
         <item name="actionMenuTextColor">?attr/labColorOnPrimary</item>
+        <item name="popupTheme">@style/ThemeOverlay.Lab.Toolbar.Popup</item>
+    </style>
+
+    <style name="ThemeOverlay.Lab.Toolbar.Popup" parent="">
+        <item name="textAppearanceSmallPopupMenu">@style/TextAppearance.Lab.BodyLarge</item>
+        <item name="textAppearanceLargePopupMenu">@style/TextAppearance.Lab.BodyLarge</item>
     </style>
 
     <style name="Widget.LabComponents.Toolbar" parent="Widget.MaterialComponents.Toolbar">

@@ -16,11 +16,12 @@ These components are based on [Material Components for Android](https://github.c
 
 ## Compatible versions
 
-| Lab Components  | Material Components |
-|-----------------|:--------------------|
-| 0.0.3           | 1.8.0               |
-| 0.0.8 .. 0.0.10 | 1.10.0              |
-| 0.0.11 ..       | 1.11.0              |
+| Lab Components   | Material Components |
+|------------------|:--------------------|
+| 0.0.3            | 1.8.0               |
+| 0.0.8 .. 0.0.10  | 1.10.0              |
+| 0.0.11 .. 0.0.13 | 1.11.0              |
+| 0.0.14 ..        | 1.12.0              |
 
 ## Description
 

@@ -2,31 +2,18 @@
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/). This project does not use semantic versioning.
 
-## 0.0.14 [UNRELEASED]
-
-### Added
-
-- ..
+## 0.0.15 [UNRELEASED]
 
 ### Changed
 
-- ..
+- ...
 
-### Deprecated
+## 0.0.14 - 2024.06.03 [UNRELEASED]
 
-- ..
+### Changed
 
-### Removed
-
-- ..
-
-### Fixed 
-
-- ..
-
-### Security
-
-- ..
+- Updated Material lib support to 1.12.0. 
+- Added default text styles to Lab.Toolbar style.
 
 ## 0.0.13 - 2024.04.28
 
