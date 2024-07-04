@@ -2,4 +2,6 @@
 <resources>
     <style name="Theme.Lab.DayNight" parent="Theme.Lab.Dark" />
     <style name="Theme.Lab.DayNight.Develop" parent="Theme.Lab.Dark.Develop" />
+    <style name="Theme.LabComponents.DayNight" parent="Theme.LabComponents.Dark" />
+    <style name="Theme.LabComponents.DayNight.Develop" parent="Theme.LabComponents.Dark.Develop" />
 </resources>

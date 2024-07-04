@@ -2,13 +2,19 @@
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/). This project does not use semantic versioning.
 
-## 0.0.15 [UNRELEASED]
+## 0.0.16 - [UNRELEASED]
 
 ### Changed
 
 - ...
 
-## 0.0.14 - 2024.06.03 [UNRELEASED]
+## 0.0.15 - 2024.07.04
+
+### Changed
+
+- Added separate Theme.LabComponents and Theme.Lab themes. Theme.LabComponents inherits from MaterialComponents and Theme.Lab from Material3 themes.
+
+## 0.0.14 - 2024.06.03
 
 ### Changed
 
