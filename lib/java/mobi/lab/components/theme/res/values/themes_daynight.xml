@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="Theme.Lab.DayNight" parent="Theme.Lab.Light" />
+    <style name="Theme.LabComponents.DayNight" parent="Theme.LabComponents.Light" />
     <style name="Theme.Lab.DayNight.Develop" parent="Theme.Lab.Light.Develop" />
+    <style name="Theme.LabComponents.DayNight.Develop" parent="Theme.LabComponents.Light.Develop" />
 </resources>
