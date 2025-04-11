@@ -14,16 +14,16 @@ android {
     }
 
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = libs.versions.jvmTarget.get()
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.valueOf(libs.versions.javaCompatibility.get())
+        targetCompatibility = JavaVersion.valueOf(libs.versions.javaCompatibility.get())
     }
 
     defaultConfig {
-        compileSdkVersion libs.versions.android.sdk.compile.get()
+        compileSdk = libs.versions.android.sdk.compile.get().toInteger()
         targetSdkVersion libs.versions.android.sdk.target.get()
         minSdkVersion libs.versions.android.sdk.min.get()
         applicationId "mobi.lab.components.demo"
@@ -86,9 +86,9 @@ android {
         fatal "StopShip"
     }
 
-    android.applicationVariants.all { variant ->
-        variant.outputs.all { output ->
-            output.outputFileName = "${archivesBaseName}-${variant.name}-${variant.versionName}.apk"
+    android.applicationVariants.configureEach { variant ->
+        variant.outputs.configureEach { output ->
+            output.outputFileName = "${base.archivesName.get()}-${variant.name}-${variant.versionName}.apk"
         }
     }
 }
@@ -110,10 +110,14 @@ dependencies {
 
 def GROUP_CI_BUILD_TASKS = "Build"
 
-task buildAllDebug(dependsOn: ["build", ":lib:buildLibDebug"])
-buildAllDebug.group = GROUP_CI_BUILD_TASKS
-buildAllDebug.description = "Build the debug version"
+tasks.register('buildAllDebug') {
+    group = GROUP_CI_BUILD_TASKS
+    description = "Build the debug version"
+    dependsOn "build", ":lib:buildLibDebug"
+}
 
-task buildAllRelease(dependsOn: ["build", ":lib:buildLibRelease"])
-buildAllRelease.group = GROUP_CI_BUILD_TASKS
-buildAllRelease.description = "Build the release version"
+tasks.register('buildAllRelease') {
+    group = GROUP_CI_BUILD_TASKS
+    description = "Build the release version"
+    dependsOn "build", ":lib:buildLibRelease"
+}
