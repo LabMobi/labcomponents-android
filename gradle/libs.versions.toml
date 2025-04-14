@@ -30,8 +30,10 @@ kotlin = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin"
 # Android + UI
 material = "com.google.android.material:material:1.12.0"
 constraintlayout = "androidx.constraintlayout:constraintlayout:2.2.1"
+androidx-activity = "androidx.activity:activity-ktx:1.10.1"
 androidx-navigation-fragment = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "navigation" }
 androidx-navigation-ui = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "navigation" }
+androidx-core = "androidx.core:core:1.16.0"
 
 # Utilities
 timber = "com.jakewharton.timber:timber:5.0.1"

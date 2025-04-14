@@ -6,7 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import mobi.lab.components.button.LabButton
+import mobi.lab.components.demo.R
 import mobi.lab.components.demo.databinding.FragmentButtonBinding
+import mobi.lab.components.demo.util.EdgeToEdgeSpec
+import mobi.lab.components.demo.util.EdgeToEdgeUtil
 import mobi.lab.components.demo.util.FragmentBindingHolder
 import mobi.lab.components.demo.util.ViewBindingHolder
 
@@ -17,6 +20,7 @@ class ButtonFragment : Fragment(), ViewBindingHolder<FragmentButtonBinding> by F
             switchEnabled.setOnCheckedChangeListener { _, isChecked ->
                 loopButtons { isEnabled = isChecked }
             }
+            EdgeToEdgeUtil.applyPaddings(containerButtons, EdgeToEdgeSpec.AVOID_BAR_AND_CUTOUT_SET_BOTTOM, true)
         }
     }
 

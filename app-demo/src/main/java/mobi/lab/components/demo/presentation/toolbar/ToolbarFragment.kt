@@ -8,6 +8,8 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import mobi.lab.components.demo.R
 import mobi.lab.components.demo.databinding.FragmentToolbarBinding
+import mobi.lab.components.demo.util.EdgeToEdgeSpec
+import mobi.lab.components.demo.util.EdgeToEdgeUtil
 import mobi.lab.components.demo.util.FragmentBindingHolder
 import mobi.lab.components.demo.util.ViewBindingHolder
 import mobi.lab.components.toolbar.LabToolbar
@@ -18,6 +20,7 @@ class ToolbarFragment : Fragment(), ViewBindingHolder<FragmentToolbarBinding> by
         return createBinding(FragmentToolbarBinding.inflate(inflater), this) {
             initToolbar(toolbarElevation)
             initToolbar(toolbarNoElevation)
+            EdgeToEdgeUtil.applyPaddings(containerToolbars, EdgeToEdgeSpec.AVOID_BAR_AND_CUTOUT_SET_BOTTOM, true)
         }
     }
 

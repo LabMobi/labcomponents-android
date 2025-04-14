@@ -11,6 +11,8 @@ import androidx.core.view.MenuHost
 import androidx.core.view.MenuProvider
 import androidx.fragment.app.Fragment
 import mobi.lab.components.demo.databinding.FragmentTextFieldBinding
+import mobi.lab.components.demo.util.EdgeToEdgeSpec
+import mobi.lab.components.demo.util.EdgeToEdgeUtil
 import mobi.lab.components.demo.util.FragmentBindingHolder
 import mobi.lab.components.demo.util.ViewBindingHolder
 import mobi.lab.components.textfield.LabTextField
@@ -34,6 +36,7 @@ class TextFieldFragment : Fragment(), ViewBindingHolder<FragmentTextFieldBinding
             }
 
             buttonUpdate.setOnClickListener { updateTextFields() }
+            EdgeToEdgeUtil.applyPaddings(containerTextFields, EdgeToEdgeSpec.AVOID_BAR_AND_CUTOUT_SET_BOTTOM, true)
         }
     }
 

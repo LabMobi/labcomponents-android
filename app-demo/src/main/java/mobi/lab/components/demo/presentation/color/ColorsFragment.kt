@@ -16,6 +16,8 @@ import mobi.lab.components.R
 import mobi.lab.components.demo.databinding.ColorViewColorItemBinding
 import mobi.lab.components.demo.databinding.ColorViewColorSectionBinding
 import mobi.lab.components.demo.databinding.FragmentColorsBinding
+import mobi.lab.components.demo.util.EdgeToEdgeSpec
+import mobi.lab.components.demo.util.EdgeToEdgeUtil
 import mobi.lab.components.demo.util.FragmentBindingHolder
 import mobi.lab.components.demo.util.ViewBindingHolder
 
@@ -27,6 +29,7 @@ class ColorsFragment : Fragment(), ViewBindingHolder<FragmentColorsBinding> by F
             switchEnabled.setOnCheckedChangeListener { _, isChecked ->
                 setViewEnabled(containerColors, isChecked)
             }
+            EdgeToEdgeUtil.applyPaddings(containerColors, EdgeToEdgeSpec.AVOID_BAR_AND_CUTOUT_SET_BOTTOM, true)
         }
     }
 
