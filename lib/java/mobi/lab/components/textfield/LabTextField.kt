@@ -264,7 +264,7 @@ public open class LabTextField @JvmOverloads constructor(
      * We want to modify the default behaviour here because the material lib's cursorColor does not override the select handle colors.
      *
      * @param cursorColor The new color override
-     * TODO: material 1.12.0: Check if select handles are added
+     * TODO: material 1.13.0: Check if select handles are added
      */
     @RequiresApi(Build.VERSION_CODES.Q)
     override fun setCursorColor(cursorColor: ColorStateList?) {
@@ -280,7 +280,7 @@ public open class LabTextField @JvmOverloads constructor(
      * We want to modify the default behaviour here because the material lib's cursorErrorColor does not override the select handle colors.
      *
      * @param cursorErrorColor The new color override
-     * TODO: material 1.12.0: Check if select handles are added
+     * TODO: material 1.13.0: Check if select handles are added
      */
     @RequiresApi(Build.VERSION_CODES.Q)
     override fun setCursorErrorColor(cursorErrorColor: ColorStateList?) {
