@@ -14,7 +14,6 @@ import mobi.lab.components.demo.util.ViewBindingHolder
 class TypographyFragment : Fragment(), ViewBindingHolder<FragmentTypographyBinding> by FragmentBindingHolder() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-
         return createBinding(FragmentTypographyBinding.inflate(inflater), this) {
             EdgeToEdgeUtil.applyPaddings(containerTypography, EdgeToEdgeSpec.AVOID_BAR_AND_CUTOUT_SET_BOTTOM, true)
         }

@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import mobi.lab.components.button.LabButton
-import mobi.lab.components.demo.R
 import mobi.lab.components.demo.databinding.FragmentButtonBinding
 import mobi.lab.components.demo.util.EdgeToEdgeSpec
 import mobi.lab.components.demo.util.EdgeToEdgeUtil
