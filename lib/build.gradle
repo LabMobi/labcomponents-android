@@ -18,10 +18,10 @@ def srcDirs = [
         'mobi/lab/components/typography',
 ]
 
-project.archivesBaseName = "labcomponents"
+project.base.archivesName.set("labcomponents")
 
 android {
-    namespace "mobi.lab.components"
+    namespace = "mobi.lab.components"
 
     // A trick taken from material-components-android to keep everything in a single R namespace
     // and still keep the sources separate for maintainability.
@@ -43,7 +43,7 @@ android {
     }
 
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = libs.versions.jvmTarget.get()
 
         // For Kotlin API strict mode.
         // In the future we should be able to do it easier.
@@ -53,8 +53,8 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.valueOf(libs.versions.javaCompatibility.get())
+        targetCompatibility = JavaVersion.valueOf(libs.versions.javaCompatibility.get())
     }
 
     packagingOptions {
@@ -62,13 +62,13 @@ android {
     }
 
     defaultConfig {
-        compileSdkVersion libs.versions.android.sdk.compile.get()
+        compileSdk = libs.versions.android.sdk.compile.get().toInteger()
         targetSdkVersion libs.versions.android.sdk.target.get()
         minSdkVersion libs.versions.android.sdk.min.get()
         setVersion "${rootProject.ext.libraryVersion}"
     }
 
-    buildTypes.all {
+    buildTypes.configureEach {
         consumerProguardFiles 'proguard-rules.pro'
     }
 
@@ -82,13 +82,13 @@ android {
         }
     }
 
-    libraryVariants.all { variant ->
+    libraryVariants.configureEach { variant ->
         variant.outputs.all { output ->
             if (variant.buildType.getName().contains("release")) {
                 // Don't add the variant name to release artefacts
-                outputFileName = "${archivesBaseName}-${rootProject.ext.libraryVersion}.aar"
+                outputFileName = "${base.archivesName.get()}-${rootProject.ext.libraryVersion}.aar"
             } else {
-                outputFileName = "${archivesBaseName}-${variant.name}-${rootProject.ext.libraryVersion}.aar"
+                outputFileName = "${base.archivesName.get()}-${variant.name}-${rootProject.ext.libraryVersion}.aar"
             }
         }
     }
@@ -112,19 +112,25 @@ dependencies {
 
 def GROUP_CI_BUILD_TASKS = "Build"
 
-task buildLibDebug(dependsOn: ["build"])
-buildLibDebug.group = GROUP_CI_BUILD_TASKS
-buildLibDebug.description = "Build the debug version of components lib"
+tasks.register('buildLibDebug') {
+    group = GROUP_CI_BUILD_TASKS
+    description = "Build the debug version of components lib"
+    dependsOn "build"
+}
 
-task buildLibRelease(dependsOn: ["buildLibDebug"])
-buildLibRelease.group = GROUP_CI_BUILD_TASKS
-buildLibRelease.description = "Build the release version of components lib"
+tasks.register('buildLibRelease') {
+    group = GROUP_CI_BUILD_TASKS
+    description = "Build the release version of components lib"
+    dependsOn "buildLibDebug"
+}
 
-task buildAndPublishRelease(dependsOn: ['buildLibRelease', 'publish'])
-buildAndPublishRelease.group = GROUP_CI_BUILD_TASKS
-buildAndPublishRelease.description = "Build the library release version and publish it"
+tasks.register('buildAndPublishRelease') {
+    group = "Publish"
+    description = "Build the library release version and publish it"
+    dependsOn "buildLibRelease", 'publish'
+}
 
-publish.mustRunAfter tasks.findByPath('buildLibRelease')
+tasks.named('publish').get().mustRunAfter tasks.named('buildLibRelease').get()
 
 Properties properties = new Properties()
 try {

@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuItem
+import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.navigation.NavController
@@ -14,16 +15,22 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI.setupActionBarWithNavController
 import mobi.lab.components.demo.R
 import mobi.lab.components.demo.databinding.ActivityMainBinding
+import mobi.lab.components.demo.util.EdgeToEdgeSpec
+import mobi.lab.components.demo.util.EdgeToEdgeUtil
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        enableEdgeToEdge()
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(LayoutInflater.from(this))
         setContentView(binding.root)
-
+        // As we use the navigation component then we set the top and left-right paddings here in the Activity
+        // The bottom one is handled by the Fragments
+        EdgeToEdgeUtil.applyPaddings(binding.root, EdgeToEdgeSpec.AVOID_BAR_AND_CUTOUT_SET_LEFT_TOP_RIGHT, false)
+        EdgeToEdgeUtil.setLightStatusBarIcons(window)
         setSupportActionBar(binding.toolbar)
     }
 
@@ -47,10 +54,12 @@ class MainActivity : AppCompatActivity() {
                 toggleNightMode()
                 true
             }
+
             MENU_ITEM_SWITCH_MATERIAL_THEME -> {
                 startActivity(Intent(this, MaterialThemeActivity::class.java))
                 true
             }
+
             else -> {
                 super.onOptionsItemSelected(item)
             }

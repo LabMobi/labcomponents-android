@@ -15,7 +15,7 @@ publish_developer_organization_url=<FILL>
 signing_key=<FILL>
 # Signing key password
 signing_password=<FILL>
-# OSSRH (https://s01.oss.sonatype.org) account username
+# OSSRH (https://s01.oss.sonatype.org) token username https://central.sonatype.org/publish/generate-token/
 publish_ossrh_username=<FILL>
-# OSSRH account password
+# OSSRH token password https://central.sonatype.org/publish/generate-token/
 publish_ossrh_password=<FILL>

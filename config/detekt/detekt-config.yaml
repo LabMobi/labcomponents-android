@@ -18,12 +18,12 @@ style:
     excludeLabeled: true # Exclude labeled returns
     excludeReturnFromLambda: true
     excludeGuardClauses: true # Exclude null guards
-  MandatoryBracesIfStatements:
+  BracesOnIfStatements:
     active: true # Too hard to read without braces
+    singleLine: 'never'
+    multiLine: 'always'
   MandatoryBracesLoops:
     active: true # Too hard to read without braces
-  OptionalWhenBraces: # Disable the rule, because it still affects the outcome even though it is deprecated
-    active: false
   BracesOnWhenStatements: # Let the writer choose but force consistency
     active: true
     singleLine: 'consistent'
