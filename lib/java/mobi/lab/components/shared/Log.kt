@@ -16,7 +16,8 @@ internal class Log private constructor(
         fun writeLog(level: Level, tag: String, throwable: Throwable?, message: String?)
 
         enum class Level {
-            DEBUG, ERROR
+            DEBUG,
+            ERROR,
         }
     }
 
