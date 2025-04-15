@@ -4,10 +4,10 @@ plugins {
     alias libs.plugins.kotlin.parcelize
 }
 
-project.archivesBaseName = "labcomponents-demo"
+project.base.archivesName.set("labcomponents-demo")
 
 android {
-    namespace "mobi.lab.components.demo"
+    namespace = "mobi.lab.components.demo"
 
     buildFeatures {
         viewBinding = true
@@ -56,11 +56,11 @@ android {
             // (Think about the logging lib before turning this off)
             minifyEnabled true
             proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
-            signingConfig signingConfigs.releaseSigning
+            signingConfig = signingConfigs.releaseSigning
         }
 
         debug {
-            signingConfig signingConfigs.debugSigning
+            signingConfig = signingConfigs.debugSigning
         }
     }
 
@@ -69,9 +69,9 @@ android {
         warning "ParcelCreator"
 
         // In general we want to check for problems. Any time, all the time.
-        checkReleaseBuilds true
+        checkReleaseBuilds = true
         // And fail the build if we have errors
-        abortOnError true
+        abortOnError = true
 
         // Level depends on the type of the job
         /// Fail the build if buildNevercodeRelease target is called and we have missing translations!

@@ -18,10 +18,10 @@ def srcDirs = [
         'mobi/lab/components/typography',
 ]
 
-project.archivesBaseName = "labcomponents"
+project.base.archivesName.set("labcomponents")
 
 android {
-    namespace "mobi.lab.components"
+    namespace = "mobi.lab.components"
 
     // A trick taken from material-components-android to keep everything in a single R namespace
     // and still keep the sources separate for maintainability.
