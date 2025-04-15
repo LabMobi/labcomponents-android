@@ -17,7 +17,6 @@ subprojects {
     // KTLint (Kotlin code style enforcer)
     apply(plugin: libs.plugins.ktlint.get().pluginId)
     ktlint {
-        version = "0.48.2"
         outputToConsole = true
     }
 
