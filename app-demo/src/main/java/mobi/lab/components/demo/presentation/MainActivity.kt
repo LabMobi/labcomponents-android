@@ -30,7 +30,9 @@ class MainActivity : AppCompatActivity() {
         // As we use the navigation component then we set the top and left-right paddings here in the Activity
         // The bottom one is handled by the Fragments
         EdgeToEdgeUtil.applyPaddings(binding.root, EdgeToEdgeSpec.AVOID_BAR_AND_CUTOUT_SET_LEFT_TOP_RIGHT, false)
-        EdgeToEdgeUtil.setLightStatusBarIcons(window)
+        if (isNightModeEnabled()) {
+            EdgeToEdgeUtil.setLightStatusBarIcons(window)
+        }
         setSupportActionBar(binding.toolbar)
     }
 
