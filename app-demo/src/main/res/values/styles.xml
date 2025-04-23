@@ -3,7 +3,6 @@
 
     <style name="AppTheme" parent="Theme.Lab.DayNight.Develop">
         <!-- Customize your theme here. -->
-        <item name="android:statusBarColor">@color/black</item>
         <!-- Use the fonts from platform design. These are not part of the actual components lib but a part of the demo app -->
         <item name="labFontFamilyDisplayLarge">@font/font_regular</item>
         <item name="labFontFamilyDisplayMedium">@font/font_regular</item>
@@ -88,9 +87,9 @@
     </style>
 
     <style name="Toolbar" parent="Widget.MaterialComponents.Toolbar">
-        <item name="android:background">@color/black</item>
+        <item name="android:background">?attr/labColorBackground</item>
         <item name="android:elevation">1dp</item>
-        <item name="titleTextColor">@color/white</item>
+        <item name="titleTextColor">?attr/labColorOnSurface</item>
         <item name="titleMarginStart">64dp</item>
         <item name="theme">@style/ThemeOverlay.Toolbar</item>
     </style>
@@ -100,7 +99,7 @@
     </style>
 
     <style name="ThemeOverlay.Toolbar" parent="">
-        <item name="android:textColorSecondary">@color/white</item>
-        <item name="actionMenuTextColor">@color/white</item>
+        <item name="android:textColorSecondary">?attr/labColorOnSurface</item>
+        <item name="actionMenuTextColor">?attr/labColorOnSurface</item>
     </style>
 </resources>
