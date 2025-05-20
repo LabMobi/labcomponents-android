@@ -1,16 +1,22 @@
 ![Mobi Lab](docs/assets/mobilab-header-logo.png)
 
-# Mobi Lab Components
+# Mobi Lab Components (the View-based legacy library)
 
-Mobi Lab Components (LabComponents) help developers use Mobi Lab's design system's components on the Android platform.
+--
+
+**Notice of depreciation:** 
+
+**As both Mobi Lab and Google with their Android platform are focusing more and more on Compose-based UI then the development of this View-based library is stopped and the library is considered as depreciated.** Prefer to use https://github.com/LabMobi/labcomponents-compose instead.
+
+--
+
+Mobi Lab Components (LabComponents) help developers use Mobi Lab's design system's components on the Android platform. This is the View-based library. For Compose, see https://github.com/LabMobi/labcomponents-compose.
 
 Maven Central artifact available from https://central.sonatype.com/search?q=mobi.lab.labcomponents
 
 ```groovy
 implementation 'mobi.lab.labcomponents:labcomponents:x.y.z' // Check the latest version from Maven Central
 ```
-
-The components provide Android implementations for [Mobi Lab's P42 design system template](https://www.figma.com/design/gxt4iyWGyliILJSOCLXonl/P42-design-system-template?node-id=3812-7169&node-type=canvas).
 
 These components are based on [Material Components for Android](https://github.com/material-components/material-components-android).
 
