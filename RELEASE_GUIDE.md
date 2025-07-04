@@ -7,18 +7,18 @@ Note: Every time you notice something in this guide is out-of-date or incorrect 
 ## Links
 
 - Repository on GitHub: https://github.com/LabMobi/labcomponents-android
-- Sonatype OSSRH Nexus UI: [https://s01.oss.sonatype.org](https://s01.oss.sonatype.org/)
+- Sonatype OSSRH UI: https://central.sonatype.com/publishing
 - Artifacts on Maven Central: https://repo1.maven.org/maven2/mobi/lab/labcomponents/labcomponents/ (can take some time)
   - Artifacts on Sonatype OSSRH: https://s01.oss.sonatype.org/content/groups/public/mobi/lab/labcomponents/labcomponents/ (available right away after publishing)
-- Original Sonatype OSSRH JIRA issue: https://issues.sonatype.org/browse/OSSRH-66630
-  - Can be used to add user access
 - Project access Lab's internal Confluence: https://labmobi.atlassian.net/wiki/spaces/DEV/pages/15990951/Sonatype+Maven+Access+Credentials
 - Codemagic CI: https://codemagic.io/app/652e729c5991ed8dfccbe3c3/settings
-- OSSRH guide: https://central.sonatype.org/publish/publish-guide/
+- OSSRH guides:
+  - https://central.sonatype.org/publish/publish-portal-ossrh-staging-api/
+  - https://central.sonatype.org/publish/generate-portal-token/
 
 ## Prerequisites
 
-1. Access to Lab's accounts at Codemagic (https://codemagic.io/apps) and OSSRH https://s01.oss.sonatype.org/. For manual publishing access to credentials at https://confluence.lab.mobi/display/DEV/Sonatype+Maven+Access+Credentials
+1. Access to Lab's accounts at Codemagic (https://codemagic.io/apps) and OSSRH https://central.sonatype.com/publishing. For manual publishing access to credentials at https://confluence.lab.mobi/display/DEV/Sonatype+Maven+Access+Credentials
 
 2. Make sure all the new features have been committed to `develop` branch.
 
@@ -78,12 +78,12 @@ git push
 
 5) Start the publish build (`publish-builds Publish to Maven builds (main branch only)`) at Codemagic CI from the `main` branch, make sure it builds fine and everything is in green.
 
-6) Open up  https://s01.oss.sonatype.org/, navigate to Build Promotion -> Staging repositories, check the published repository there. 
+6) Open up https://central.sonatype.com/publishing, navigate to Build Promotion -> Staging repositories, check the published repository there. 
 
 - There should be a repository with the same version number
 - Download the `labcomponents-x.y.z.aar` artifact from there, make sure it is ok. 
 
-7. Publish the staging repository at  https://s01.oss.sonatype.org/ as follows:
+7. Publish the staging repository at https://central.sonatype.com/publishing as follows:
 
    - First mark it as `Closed`. This button triggers a validation process for your project. If the validation passes then proceed. Fix the issues otherwise 
      - If you need to remove the repo and start again then use `Drop`
